@@ -35,24 +35,12 @@ body.menu-active {
   padding: 2rem 0;
 }
 
-.header .logo {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: #fff;
-  white-space: nowrap;
-  font-weight: var(--font-Mukta);
+.logo {
+  height: 7.5rem;
+  position: relative;
 }
 
-.logo span {
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  opacity: 1;
-  font-weight: var(--font-Mukta);
-}
-
-.header .logo span {
+.header .logo  {
   vertical-align: middle;
   margin-top: 0.3rem;
 }

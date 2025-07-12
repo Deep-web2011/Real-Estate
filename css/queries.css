@@ -53,6 +53,10 @@
     margin-top: 2rem;
     margin-bottom: 1.4rem;
   }
+  .awards-section {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 1064px) {
@@ -89,6 +93,7 @@
     margin-left: 2rem;
     padding: 1.5rem;
   }
+
 }
 
 @media (max-width: 750px) {
@@ -357,7 +362,7 @@
     font-size: 14px;
   }
 
-  .buttons .btn-hero-secondary {
+  .buttons .btn-hero-primary {
     display: none;
   }
 
@@ -372,11 +377,19 @@
     width: 350px;
     margin-top: -3rem;
   }
+
+  .hero-text-box {
+    padding: 0;
+  }
 }
 
 @media (max-width: 320px) {
   .hero-content {
     width: 90%;
+  }
+
+  .hero-text-box {
+    padding: 0 2rem;
   }
 
   .hero-img-box {
