@@ -81,7 +81,6 @@
 
 /*//////////////////Listing Section /////////////////////////*/
 
-
 .listings-section {
   padding: 2rem 4rem;
   margin-top: 4rem;
@@ -115,8 +114,8 @@
   margin: 0;
 }
 
-.listings-list li:first-child::before {
-  border-bottom: 1px solid red;
+.listings-list li:first-child {
+  border-top: 1px solid #b8bbbe;
 }
 
 .listings-list li {
@@ -125,7 +124,7 @@
 }
 
 .listings-list li:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid #b8bbbe;
 }
 
 .listings-list a {
@@ -173,7 +172,6 @@
   border-radius: 0.5rem;
   display: block;
 }
-
 
 /*///////////////testimonials /////////////////////*/
 .carousel-nav {
@@ -233,7 +231,7 @@
 }
 
 .testimonials-header h2 {
-  font-size: var(--text-size9);
+  font-size: var(--text-size12);
   font-weight: 600;
   color: var(--color-bg);
   margin-bottom: 0;
@@ -244,7 +242,7 @@
 .google-reviews-button {
   background-color: var(--color-bg);
   color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 2.5rem 5rem;
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 600;
@@ -255,7 +253,7 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   justify-content: center;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-family: var(--font-Mukta);
   letter-spacing: 2px;
 }
@@ -321,20 +319,21 @@
 }
 
 .testimonial-text {
-  font-size: 1.65rem;
+  font-size: var(--text-size6);
   color: var(--color-btn-primary);
   margin-bottom: 1rem;
   flex-grow: 1;
   font-family: var(--font-Mukta);
-  line-height: 20px;
+  line-height: 25px;
+  letter-spacing: 1.3px;
 }
 
 .testimonial-author {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--text-size4);
   color: var(--color-btn-primary);
   text-transform: uppercase;
   font-family: var(--font-Mukta);
+  font-weight: 700;
 }
 
 .footer {
@@ -630,5 +629,3 @@
     text-align: right;
   }
 }
-
-
