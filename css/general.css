@@ -557,6 +557,7 @@
 .copyright-info {
   font-size: var(--text-size3);
   text-align: center;
+  font-family: var(--font-Mukta);
 }
 
 .copyright-info a {
