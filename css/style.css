@@ -216,6 +216,7 @@ body {
   font-weight: 500;
   border: 1px solid #fff;
   text-decoration: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .buttons .btn-hero-secondary {
@@ -255,6 +256,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .hero-img-box {
@@ -329,10 +331,11 @@ body {
   font-family: var(--font-Mukta);
   font-size: 16px;
   letter-spacing: 2.5px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .primary-btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.05, 1.05);
 }
 
 .secondary-btn {
@@ -362,7 +365,6 @@ body {
 }
 
 .image-card:hover {
-  transform: translateY(-10px);
   cursor: pointer;
 }
 
@@ -448,6 +450,10 @@ body {
   margin-top: 5rem;
 }
 
+.upper-margin {
+  margin-top: 5rem;
+}
+
 .sell-left-content {
   padding: 2rem;
   display: flex;
@@ -487,10 +493,10 @@ body {
   color: #fffdf9;
   font-weight: 300;
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .sell-button:hover {
-  transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -669,10 +675,7 @@ body {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   font-family: "Mukta", sans-serif;
   font-size: 1.6rem;
-}
-
-.evaluation-button:hover {
-  transform: translateY(-4px);
+  transition: transform 0.3s ease-in-out;
 }
 
 .sell-left-content .sell-text {
@@ -720,7 +723,7 @@ body {
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05, 1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
@@ -803,6 +806,9 @@ body {
   padding: 2rem;
 }
 
+.message-grid {
+  grid-column: 1 / 3;
+}
 .your-move-image img {
   width: 100%;
   height: auto;
@@ -815,7 +821,7 @@ body {
   font-size: var(--text-size9);
   font-weight: 400;
   color: var(--color-bg);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
   font-family: var(--font-heading);
 }
@@ -867,7 +873,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #31261d;
+  border-color: #390943;
 }
 
 .form-group textarea {
@@ -883,7 +889,7 @@ body {
 .submit-button {
   background-color: var(--color-bg);
   color: #ffffff;
-  padding: 2rem 4rem;
+  padding: 18px 48px;
   border: none;
   border-radius: 9px;
   font-size: 15px;
@@ -896,6 +902,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-Mukta);
+  transition: transform 0.3s ease-in-out
 }
 
 .sell-btn-flex {
@@ -908,4 +915,11 @@ body {
   max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
+}
+
+.social-icons a:hover,
+.buttons .btn-hero:hover,
+.sell-button:hover,
+.evaluation-button:hover,.submit-button:hover {
+  transform: scale(1.05, 1.05);
 }

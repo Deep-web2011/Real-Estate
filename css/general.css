@@ -139,8 +139,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-.listings-list a:hover {
-  transform: translateY(-3px);
+.listings-list > li {
+  transition: transform 0.3s ease-in-out;
 }
 
 .listings-list .arrow {
@@ -148,11 +148,6 @@
   color: var(--color-bg);
   transition: transform 0.3s ease-in-out;
   font-weight: 600;
-}
-
-.listings-list a:hover .arrow {
-  transform: translateX(0.25rem);
-  color: var(--color-btn-primary);
 }
 
 .listings-image-container {
@@ -256,10 +251,11 @@
   font-size: 2rem;
   font-family: var(--font-Mukta);
   letter-spacing: 2px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .google-reviews-button:hover {
-  transform: translateY(-2px);
+  transform: scale(1.05, 1.05);
   box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15);
 }
 
@@ -434,6 +430,7 @@
 .subscribe-button svg {
   width: 1.5rem;
   height: 1.5rem;
+  fill: var(--color-bg);
 }
 
 .section-middle {
@@ -444,13 +441,15 @@
   column-gap: 2rem;
   row-gap: 1rem;
   text-align: center;
+  letter-spacing: 1.2px;
+  transition: transform 0.3s ease-in-out
 }
 
 .link-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .link-list a,
@@ -478,6 +477,7 @@
 .contact-info {
   margin-bottom: 1.5rem;
   line-height: 2;
+  letter-spacing: 1.2px;
 }
 
 .contact-info p {
@@ -519,6 +519,7 @@
   flex-direction: column;
   align-items: center;
   line-height: 2;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-media-links a {
@@ -555,7 +556,7 @@
 }
 
 .copyright-info {
-  font-size: 10px;
+  font-size: var(--text-size3);
   text-align: center;
 }
 
@@ -566,6 +567,14 @@
 
 .copyright-info a:hover {
   text-decoration: underline;
+}
+
+.listings-list > li:hover {
+  transform: scale(1.02, 1.02);
+}
+
+.social-media-links > a:hover, .link-list > ul > li:hover {
+  transform: scale(1.05, 1.05);
 }
 
 @media (min-width: 768px) {
