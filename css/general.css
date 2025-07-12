@@ -69,11 +69,11 @@
   position: absolute;
   z-index: 3;
   font-size: var(--text-size8);
-  padding: 0 1rem;
+  padding: 0 2em;
   color: #fff;
   bottom: 5%;
   left: 4%;
-  font-family: var(--font-heading);
+  font-family: var(--font-Mukta);
   text-align: left;
   text-transform: capitalize;
   font-weight: 400;
@@ -120,7 +120,7 @@
 
 .listings-list li {
   border-bottom: 1px solid #b8bbbe;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .listings-list li:last-child {
@@ -135,7 +135,7 @@
   color: var(--color-btn-primary);
   font-size: var(--text-size6);
   font-weight: 550;
-  font-family: "DM Serif Text", serif;
+  font-family: var(--font-Mukta);
   transition: all 0.3s ease-in-out;
 }
 
@@ -320,8 +320,7 @@
   margin-bottom: 1rem;
   flex-grow: 1;
   font-family: var(--font-Mukta);
-  line-height: 25px;
-  letter-spacing: 1.3px;
+  line-height: 1.45;
 }
 
 .testimonial-author {

@@ -118,8 +118,6 @@ body {
   margin: 0 auto;
 }
 
-
-
 /* Sticky Navigation */
 .sticky .header {
   position: fixed;
@@ -256,8 +254,8 @@ body {
 }
 
 .hero-img-box {
-  margin-top: 4rem;
-  margin-left: 1rem;
+  margin-top: 13rem;
+  margin-left: -5rem;
 }
 
 .hero-img-box img {
@@ -390,7 +388,7 @@ body {
 .communities {
   background-color: var(--color-bg);
   color: #fff;
-  margin-top: 16rem;
+  margin-top: 8rem;
   padding: 8rem 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -414,7 +412,6 @@ body {
 .communities-content-left h3 {
   font-size: var(--text-size14);
   line-height: 1.2;
-  letter-spacing: -0.025em;
   font-family: "DM Serif Text", serif;
   font-weight: 300;
 }
@@ -533,10 +530,10 @@ body {
 }
 
 .benefit-text h1 {
-  font-size: var(--text-size7);
+  font-size: var(--text-size5);
   color: #390943;
   margin-bottom: 1rem;
-  font-family: "DM Serif Text", serif;
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 
@@ -749,7 +746,7 @@ body {
 }
 
 .blog-card-meta {
-  font-size: 1.65rem;
+  font-size: 1.3rem;
   color: #390943;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -759,11 +756,10 @@ body {
 }
 
 .blog-card-text {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #5c5c5c;
   margin-bottom: 1.5rem;
   flex-grow: 1;
-  letter-spacing: 1px;
   font-family: var(--font-Mukta);
   margin: 1rem 0;
 }
@@ -776,7 +772,7 @@ body {
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
   align-self: flex-start;
@@ -899,7 +895,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-Mukta);
-  transition: transform 0.3s ease-in-out
+  transition: transform 0.3s ease-in-out;
 }
 
 .sell-btn-flex {
@@ -917,6 +913,7 @@ body {
 .social-icons a:hover,
 .buttons .btn-hero:hover,
 .sell-button:hover,
-.evaluation-button:hover,.submit-button:hover {
+.evaluation-button:hover,
+.submit-button:hover {
   transform: scale(1.05, 1.05);
 }
