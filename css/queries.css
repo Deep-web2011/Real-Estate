@@ -1,3 +1,9 @@
+@media (max-width: 1800px) {
+  .header .logo {
+    margin-left: 0 !important;
+  }
+}
+
 @media (max-width: 1400px) {
   .header {
     padding: 0;
