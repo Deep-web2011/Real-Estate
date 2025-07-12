@@ -313,10 +313,7 @@ body {
   color: #5c5c5c;
 }
 
-.every-move-text .every-move-award {
-  font-weight: 600;
-  color: #390943;
-}
+
 
 .btn {
   display: inline-block;
@@ -458,7 +455,7 @@ body {
 }
 
 .sell-left-content h2 {
-  font-size: var(--text-size13);
+  font-size: var(--text-size12);
   margin-bottom: 1.2rem;
   color: var(--color-btn-primary);
   margin-bottom: 1rem;
