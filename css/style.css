@@ -148,7 +148,6 @@ body {
 .section-hero {
   background-color: #390943;
   display: grid;
-  /* padding: 5rem 0 0 0; */
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
