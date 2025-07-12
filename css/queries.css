@@ -89,11 +89,9 @@
     margin-left: 2rem;
     padding: 1.5rem;
   }
-  
 }
 
-@media(max-width: 750px) {
-  
+@media (max-width: 750px) {
 }
 
 @media (max-width: 768px) {
@@ -233,6 +231,11 @@
   }
 
   .sell-left-content,
+  .sell-right-content {
+    align-items: stretch;
+  }
+
+  .sell-left-content,
   .sell-right-content,
   .blog-container,
   .testimonial-container {
@@ -364,7 +367,7 @@
   }
 }
 
-@media(max-width: 450px){
+@media (max-width: 450px) {
   .hero-img-box img {
     width: 350px;
     margin-top: -3rem;
@@ -393,7 +396,6 @@
     margin-left: 0;
     margin-right: 0;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
