@@ -296,7 +296,7 @@ body {
 }
 
 .every-move-text h2 {
-  font-size: var(--text-size8);
+  font-size: var(--text-size10);
   line-height: 1.3;
   margin-bottom: 2.4rem;
   font-weight: 300;
@@ -310,6 +310,7 @@ body {
   color: var(--secondary-text-color);
   margin-bottom: 1.6rem;
   font-family: var(--font-Mukta);
+  color: #5c5c5c;
 }
 
 .every-move-text .every-move-award {
