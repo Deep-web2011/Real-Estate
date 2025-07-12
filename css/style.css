@@ -271,7 +271,7 @@ body {
 
 .award-item {
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
   align-items: center;
 }
 

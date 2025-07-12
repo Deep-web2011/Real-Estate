@@ -93,7 +93,6 @@
     margin-left: 2rem;
     padding: 1.5rem;
   }
-
 }
 
 @media (max-width: 750px) {
@@ -380,6 +379,15 @@
 
   .hero-text-box {
     padding: 0;
+  }
+
+  .award-item {
+    gap: 1rem;
+  }
+
+  .sell-section {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
