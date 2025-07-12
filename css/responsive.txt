@@ -1,0 +1,449 @@
+@media (max-width: 1400px) {
+  .header {
+    padding: 0;
+  }
+
+  .section-hero {
+    grid-template-columns: none;
+  } //remove duplicate code  
+
+  .hero-content {
+    grid-row: 2 / 3;
+    grid-column: unset;
+    justify-items: center;
+  }
+
+  .hero-icons-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: center;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+  .social-icons-columns .social-icons {
+    padding: 0;
+  }
+
+  .social-icons a {
+    height: 5rem;
+    width: 5rem;
+    font-size: 1.7rem;
+  }
+  .hero-img-box {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .award-item {
+    display: flex;
+    justify-content: center;
+  }
+  .awards-section-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    padding: 0;
+  }
+
+  .hero-content {
+    justify-items: unset;
+  }
+
+  .hero-text-box {
+    margin: 0 2rem;
+  }
+
+  .hero-text-box h2 {
+    font-size: 4.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-text-box h4 {
+    font-size: 3.8rem;
+    margin-top: -1rem;
+  }
+
+  .social-icons-columns .social-icons {
+    display: none;
+  }
+
+  .btn {
+    padding: 12px 48px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-content {
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .hero-content {
+    grid-row: 1 / 2;
+    padding: 0 4.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .hero-content h4 {
+    font-size: 38px;
+  }
+
+  .hero-img-box img {
+    width: 350px;
+  }
+
+  .buttons .btn-hero {
+    font-size: 14px;
+  }
+
+  .buttons .btn-hero-secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-content {
+    width: 90%;
+  }
+}
+@media (max-width: 1400px) {
+  .header {
+    padding: 0;
+  }
+
+  .section-hero {
+    grid-template-columns: none;
+  }
+
+  .hero-content {
+    grid-row: 2 / 3;
+    grid-column: unset;
+    justify-items: center;
+  }
+
+  .hero-icons-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: center;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+  .social-icons-columns .social-icons {
+    padding: 0;
+  }
+
+  .social-icons a {
+    height: 5rem;
+    width: 5rem;
+    font-size: 1.7rem;
+  }
+  .hero-img-box {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .award-item {
+    display: flex;
+    justify-content: center;
+  }
+  .awards-section-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    padding: 0;
+  }
+
+  .hero-content {
+    justify-items: unset;
+  }
+
+  .hero-text-box {
+    margin: 0 2rem;
+  }
+
+  .hero-text-box h2 {
+    font-size: 4.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-text-box h4 {
+    font-size: 3.8rem;
+    margin-top: -1rem;
+  }
+
+  .social-icons-columns .social-icons {
+    display: none;
+  }
+
+  .btn {
+    padding: 12px 48px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-content {
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .hero-content {
+    grid-row: 1 / 2;
+    padding: 0 4.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .hero-content h4 {
+    font-size: 38px;
+  }
+
+  .hero-img-box img {
+    width: 350px;
+  }
+
+  .buttons .btn-hero {
+    font-size: 14px;
+  }
+
+  .buttons .btn-hero-secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-content {
+    width: 90%;
+  }
+}
+@media (max-width: 1400px) {
+  .header {
+    padding: 0;
+  }
+
+  .section-hero {
+    grid-template-columns: none;
+  }
+
+  .hero-content {
+    grid-row: 2 / 3;
+    grid-column: unset;
+    justify-items: center;
+  }
+
+  .hero-icons-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: center;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+  .social-icons-columns .social-icons {
+    padding: 0;
+  }
+
+  .social-icons a {
+    height: 5rem;
+    width: 5rem;
+    font-size: 1.7rem;
+  }
+  .hero-img-box {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .award-item {
+    display: flex;
+    justify-content: center;
+  }
+  .awards-section-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    padding: 0;
+  }
+
+  .hero-content {
+    justify-items: unset;
+  }
+
+  .hero-text-box {
+    margin: 0 2rem;
+  }
+
+  .hero-text-box h2 {
+    font-size: 4.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-text-box h4 {
+    font-size: 3.8rem;
+    margin-top: -1rem;
+  }
+
+  .social-icons-columns .social-icons {
+    display: none;
+  }
+
+  .btn {
+    padding: 12px 48px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-content {
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .hero-content {
+    grid-row: 1 / 2;
+    padding: 0 4.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .hero-content h4 {
+    font-size: 38px;
+  }
+
+  .hero-img-box img {
+    width: 350px;
+  }
+
+  .buttons .btn-hero {
+    font-size: 14px;
+  }
+
+  .buttons .btn-hero-secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-content {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .stats-container {
+    /* Tablet layout: 2 columns for stats, 1 for divider */
+    /* The third stat will span all columns on a new row */
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto; /* Two rows for the layout */
+    gap: 2rem; /* Keep existing gap or adjust for tablet */
+    justify-items: center; /* Center items horizontally within grid cells */
+    align-items: center; /* Center items vertically within grid cells */
+    max-width: 700px; /* Adjust max-width for tablet if needed to fit the 2-column layout better */
+  }
+
+  /* Explicitly place the first stat item */
+  .stats-container .stat-item:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* Explicitly place the first divider */
+  .stats-container .stat-divider:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 1;
+    display: block; /* Ensure this divider is visible */
+  }
+
+  /* Explicitly place the second stat item */
+  .stats-container .stat-item:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  /* Hide the second divider on tablets */
+  .stats-container .stat-divider:nth-of-type(2) {
+    display: none;
+  }
+
+  /* Explicitly place the third stat item, spanning all columns on the second row */
+  .stats-container .stat-item:nth-of-type(3) {
+    grid-column: 1 / -1; /* Span from the first column line to the last */
+    grid-row: 2;
+    margin-top: 4rem; /* Add space above the third stat for separation */
+  }
+}
+
+/* Responsive adjustments for Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .stats-container {
+    /* Stack items vertically on small screens */
+    grid-template-columns: 1fr;
+    gap: 4rem; /* More gap when stacked vertically */
+  }
+
+  .stat-item {
+    /* Ensure items are centered when stacked */
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-divider {
+    display: none; /* Hide all dividers on mobile */
+  }
+
+  
+}

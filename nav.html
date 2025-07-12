@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-btn-primary: #390943; /* Updated primary color */
+            --primary-text-color: #333; /* For submenu text */
+            --background-color: #eee; /* For submenu line */
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f3f4f6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        html {
+            overflow-x: hidden; /* Prevent horizontal scrolling for html element */
+        }
+
+        html.menu-active,
+        body.menu-active {
+            overflow-y: hidden;
+            height: 100%;
+        }
+
+        body.menu-active {
+            background-color: #e2e8f0;
+        }
+
+        .header {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: #31261d;
+            padding: 0 3.2rem;
+            box-sizing: border-box;
+        }
+
+        .header-inner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1300px; /* Updated max-width */
+            margin: auto;
+            padding: 2rem 0; /* Adjusted padding */
+        }
+
+        .header .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #fff;
+            white-space: nowrap; /* Prevent logo from wrapping */
+        }
+
+        .logo span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .header .logo span {
+            vertical-align: middle;
+        }
+
+        .header .menu {
+            /* On desktop, this will naturally align with flexbox of header-inner-content */
+        }
+
+        .header .menu .head {
+            display: none; /* Hidden by default, shown on mobile */
+        }
+
+        .header .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Ensure ul items are in a row on desktop */
+        }
+
+        .header .menu > ul > li {
+            display: inline-block;
+            position: relative; /* Needed for dropdown positioning */
+        }
+
+        .header .menu > ul > li:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+
+        .header .menu > ul > li:last-child {
+            border-bottom: none !important;
+        }
+
+        .header .menu a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: #fff;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .header .menu > ul > li > a {
+            padding: 1.5rem 0;
+            font-size: 1.6rem;
+        }
+
+        .header .menu .dropdown {
+            position: relative;
+        }
+
+        .header .menu > ul > .dropdown > a {
+            padding-right: 0.9375rem;
+        }
+
+        .header .menu i {
+            font-size: 0.625rem;
+            pointer-events: none;
+            user-select: none;
+            position: absolute;
+            color: hsl(0, 0%, 100%);
+            top: calc(50% - 0.3125rem);
+        }
+
+        .header .menu > ul > li > i {
+            right: 0;
+        }
+
+        .header .menu .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0; /* Aligned with parent on desktop */
+            width: 22rem;
+            padding: 2rem 0;
+            background-color: #fff;
+            box-shadow: 0 0 0.3125rem hsla(0, 0%, 0%, 0.5);
+            z-index: 1;
+            transform-origin: top;
+            transform: scaleY(0);
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease; /* Smooth transition for dropdown */
+            display: block; /* Ensure sub-menu itself is a block container */
+        }
+
+        .header .menu .sub-menu li {
+            display: block; /* Force sub-menu list items to stack vertically */
+        }
+
+        .header .menu .sub-menu a {
+            position: relative;
+            padding: 0.375rem 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary-text-color);
+        }
+
+        .header .menu .sub-menu a::after {
+            content: "";
+            position: absolute;
+            bottom: 0.25rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            height: 0.0625rem;
+            background-color: var(--background-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .header .menu .sub-menu li:last-child > a::after {
+            content: none !important;
+            background-color: transparent !important;
+            height: 0 !important;
+        }
+
+        .header .menu .sub-menu i {
+            transform: rotate(-90deg);
+            right: 1.5rem;
+            color: var(--primary-text-color);
+            top: calc(50% - 0.3125rem); /* Align with text */
+        }
+
+        .header .menu .sub-menu .dropdown > a {
+            padding-right: 2.125rem;
+        }
+
+        .header .menu .sub-menu .sub-menu-left {
+            position: absolute; /* Absolute position for nested submenu */
+            left: 100%; /* Position to the right of its parent li */
+            top: 0; /* Align top with its parent li */
+            width: 22rem; /* Same width as parent submenu */
+            padding: 2rem 0;
+            background-color: #fff;
+            box-shadow: 0 0 0.3125rem hsla(0, 0%, 0%, 0.5);
+            z-index: 2; /* Higher z-index for nested menu */
+            transform-origin: left top; /* Transform from left top */
+            transform: scale(0); /* Hidden by default */
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: block; /* Ensure it's a column layout */
+        }
+
+        .header .menu .sub-menu .sub-menu-left li {
+            display: block; /* Force nested sub-menu list items to stack vertically */
+        }
+
+        .header .menu > ul > li:hover > .sub-menu,
+        .header .menu .sub-menu > li.dropdown:hover > .sub-menu { /* Added .dropdown to target only dropdown list items */
+            opacity: 1;
+            transform: scaleY(1); /* Show dropdown */
+            visibility: visible;
+        }
+
+        .header .menu .sub-menu > li.dropdown:hover > .sub-menu {
+            transform: scale(1); /* Show nested dropdown */
+        }
+
+        .header-right {
+            display: none; /* Hidden on desktop */
+        }
+
+        .header-right > * {
+            margin-left: 1.5625rem;
+        }
+
+        /* Desktop styles for the contact button within the menu */
+        .header .menu .contact-button {
+            background-color: #5c5c5c;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+            display: inline-block; /* To make it appear like a button in the row */
+            margin-left: 2.5rem; /* Add some spacing from the last menu item */
+        }
+
+        .header .menu .contact-button:hover {
+            background-color: #4a4a4a;
+        }
+
+
+        /* Mobile specific styles */
+        @media (max-width: 1191px) { /* Changed breakpoint to 1191px */
+            .header {
+                padding: 0 2rem;
+            }
+
+            .header-inner-content {
+                padding: 1.5rem 0;
+                justify-content: space-between; /* Revert to space-between for mobile */
+            }
+
+            .header .menu {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #31261d;
+                overflow-y: auto;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .header .menu.active {
+                transform: translateX(0);
+            }
+
+            .header .menu .head {
+                display: flex; /* Show head on mobile */
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .header .menu .head .logo {
+                font-size: 2.2rem;
+            }
+
+            .header .menu .close-menu-btn {
+                background: none;
+                border: none;
+                font-size: 2.5rem;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .header .menu .close-menu-btn::before {
+                content: "\2715"; /* X mark */
+            }
+
+            .header .menu > ul {
+                display: block; /* Stack ul items vertically on mobile */
+            }
+
+            .header .menu > ul > li {
+                display: block;
+                margin-right: 0 !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .header .menu > ul > li > a {
+                padding: 1.5rem 2rem;
+                font-size: 1.8rem;
+            }
+
+            .header .menu > ul > li > i {
+                right: 2rem;
+                top: 1.8rem;
+                transform: rotate(0deg); /* Reset rotation for mobile */
+                transition: transform 0.3s ease;
+            }
+
+            .header .menu .sub-menu {
+                position: static; /* Static positioning for mobile */
+                width: 100%;
+                padding: 0;
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0.1); /* Slightly different background for sub-menu */
+                transform: none; /* No scaling on mobile */
+                visibility: visible; /* Always visible if parent is open */
+                opacity: 1; /* Always opaque if parent is open */
+                max-height: 0; /* Hide by default */
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            .header .menu .sub-menu.active {
+                max-height: 500px; /* Adjust as needed for content */
+            }
+
+            .header .menu .sub-menu a {
+                padding: 1rem 3rem; /* Indent sub-menu items */
+                font-size: 1.6rem;
+                color: #fff;
+            }
+
+            .header .menu .sub-menu a::after {
+                left: 3rem;
+                right: 3rem;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .header .menu .sub-menu .sub-menu-left {
+                position: static;
+                width: 100%;
+                padding: 0;
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0.2); /* Deeper background for nested sub-menu */
+                transform: none;
+                visibility: visible;
+                opacity: 1;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            .header .menu .sub-menu .sub-menu-left.active {
+                max-height: 500px;
+            }
+
+            .header .menu .sub-menu .sub-menu-left a {
+                padding-left: 4rem; /* Further indent nested items */
+            }
+
+            .header .menu > ul > li:hover > .sub-menu,
+            .header .menu .sub-menu > li.dropdown:hover > .sub-menu {
+                opacity: 1;
+                transform: none; /* Disable transform on hover for mobile */
+                visibility: visible;
+            }
+
+            .header-right {
+                display: flex; /* Show hamburger on mobile */
+                align-items: center;
+            }
+
+            .header-right .open-menu-btn {
+                display: block; /* Show hamburger on mobile */
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+
+            .header-right .open-menu-btn .line {
+                display: block;
+                width: 2.5rem;
+                height: 0.25rem;
+                background-color: #fff;
+                margin: 0.5rem 0;
+                transition: all 0.3s ease;
+            }
+
+            /* Hamburger icon animation for active state */
+            .header-right .open-menu-btn.active .line-1 {
+                transform: translateY(0.75rem) rotate(45deg);
+            }
+            .header-right .open-menu-btn.active .line-2 {
+                opacity: 0;
+            }
+            .header-right .open-menu-btn.active .line-3 {
+                transform: translateY(-0.75rem) rotate(-45deg);
+            }
+
+            /* Hide the open-menu-btn when the menu is active */
+            body.menu-active .header-right .open-menu-btn {
+                display: none;
+                opacity: 0; /* Ensure it's fully transparent */
+                pointer-events: none; /* Make it unclickable */
+            }
+
+            /* Mobile styling for the contact button within the menu */
+            .header .menu .contact-button {
+                display: block; /* Make it a block item in the mobile menu */
+                width: auto; /* Allow it to naturally size */
+                margin-left: 0; /* Remove desktop margin */
+                padding: 1.5rem 2rem; /* Match other mobile menu items */
+                text-align: left; /* Align text within the button */
+                border-radius: 0; /* Remove border-radius for mobile menu item */
+                background-color: transparent; /* Make it blend with the menu */
+                font-weight: 400; /* Adjust font weight for mobile menu */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add a separator */
+            }
+            .header .menu .contact-button:hover {
+                background-color: rgba(255, 255, 255, 0.1); /* Hover for mobile menu */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner-content">
+            <div class="logo">
+                RUTUL VADADORIYA
+                <span>REALTOR</span>
+            </div>
+
+            <nav class="menu">
+                <div class="head">
+                    <div class="logo">
+                        RUTUL VADADORIYA
+                        <span>REALTOR</span>
+                    </div>
+                    <button type="button" class="close-menu-btn"></button>
+                </div>
+
+                <ul>
+                    <li class="dropdown">
+                        <a href="/index.html">Home</a>
+                        <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="#">FEATURED LISTINGS</a></li>
+                            <li><a href="#">Map Search</a></li>
+                            <li class="dropdown">
+                                <a href="#">Communities</a>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                <ul class="sub-menu sub-menu-left">
+                                    <li><a href="#">team1</a></li>
+                                    <li><a href="#">team2</a></li>
+                                    <li><a href="#">team3</a></li>
+                                    <li><a href="#">team4</a></li>
+                                    <li><a href="#">team5</a></li>
+                                    <li><a href="#">team6</a></li>
+                                    <li><a href="#">team7</a></li>
+                                    <li><a href="#">team8</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">About</a>
+                        <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="/about.html">About Hello</a></li>
+                            <li><a href="/testimonials.html">Testimonials</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Sellers</a>
+                        <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="#">Selling Resources</a></li>
+                            <li><a href="#">Instant Home Evolution</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Buyers</a>
+                        <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="#">Buying Resources</a></li>
+                            <li><a href="#">Mortgage Calculator</a></li>
+                            <li><a href="#">Neighbourhood Guide</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blogs</a></li>
+                    <!-- New button added here -->
+                    <li><a href="#" class="contact-button">519-992-6700</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <button class="open-menu-btn" aria-label="Open menu">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openMenuBtn = document.querySelector('.open-menu-btn');
+            const closeMenuBtn = document.querySelector('.close-menu-btn');
+            const menu = document.querySelector('.menu');
+            const body = document.body;
+            const html = document.documentElement;
+
+            openMenuBtn.addEventListener('click', () => {
+                menu.classList.add('active');
+                body.classList.add('menu-active');
+                html.classList.add('menu-active');
+                openMenuBtn.classList.add('active');
+            });
+
+            closeMenuBtn.addEventListener('click', () => {
+                menu.classList.remove('active');
+                body.classList.remove('menu-active');
+                html.classList.remove('menu-active');
+                openMenuBtn.classList.remove('active');
+            });
+
+            // Handle dropdowns for mobile
+            const dropdowns = document.querySelectorAll('.menu .dropdown > a');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    // Only prevent default and handle dropdown if on mobile breakpoint
+                    if (window.innerWidth <= 1191) {
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const subMenu = parentLi.querySelector('.sub-menu');
+                        const dropdownIcon = this.querySelector('.dropdown-icon');
+
+                        if (subMenu) {
+                            // Close other open sub-menus at the same level
+                            parentLi.parentElement.querySelectorAll('.sub-menu.active').forEach(openSubMenu => {
+                                if (openSubMenu !== subMenu) {
+                                    openSubMenu.classList.remove('active');
+                                    openSubMenu.style.maxHeight = '0';
+                                    const siblingDropdownIcon = openSubMenu.parentElement.querySelector('.dropdown-icon');
+                                    if (siblingDropdownIcon) {
+                                        siblingDropdownIcon.style.transform = 'rotate(0deg)';
+                                    }
+                                }
+                            });
+
+                            // Toggle current sub-menu
+                            subMenu.classList.toggle('active');
+                            if (subMenu.classList.contains('active')) {
+                                subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+                                if (dropdownIcon) {
+                                    dropdownIcon.style.transform = 'rotate(90deg)';
+                                }
+                            } else {
+                                subMenu.style.maxHeight = '0';
+                                if (dropdownIcon) {
+                                    dropdownIcon.style.transform = 'rotate(0deg)';
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Handle nested dropdowns for mobile
+            const nestedDropdowns = document.querySelectorAll('.menu .sub-menu .dropdown > a');
+            nestedDropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 1191) { // Updated breakpoint
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const subMenu = parentLi.querySelector('.sub-menu-left');
+                        const dropdownIcon = this.querySelector('.dropdown-icon');
+
+                        if (subMenu) {
+                            // Close other open nested sub-menus at the same level
+                            parentLi.parentElement.querySelectorAll('.sub-menu-left.active').forEach(openSubMenu => {
+                                if (openSubMenu !== subMenu) {
+                                    openSubMenu.classList.remove('active');
+                                    openSubMenu.style.maxHeight = '0';
+                                    const siblingDropdownIcon = openSubMenu.parentElement.querySelector('.dropdown-icon');
+                                    if (siblingDropdownIcon) {
+                                        siblingDropdownIcon.style.transform = 'rotate(0deg)';
+                                    }
+                                }
+                            });
+
+                            // Toggle current nested sub-menu
+                            subMenu.classList.toggle('active');
+                            if (subMenu.classList.contains('active')) {
+                                subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+                                if (dropdownIcon) {
+                                    dropdownIcon.style.transform = 'rotate(90deg)';
+                                }
+                            } else {
+                                subMenu.style.maxHeight = '0';
+                                if (dropdownIcon) {
+                                    dropdownIcon.style.transform = 'rotate(0deg)';
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Close menu and reset states when window is resized to desktop size
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 1191) { // Updated breakpoint
+                    menu.classList.remove('active');
+                    body.classList.remove('menu-active');
+                    html.classList.remove('menu-active');
+                    openMenuBtn.classList.remove('active');
+                    // Reset mobile dropdown states
+                    document.querySelectorAll('.sub-menu.active').forEach(subMenu => {
+                        subMenu.classList.remove('active');
+                        subMenu.style.maxHeight = 'auto'; // Allow content to flow naturally on desktop
+                    });
+                    document.querySelectorAll('.dropdown-icon').forEach(icon => {
+                        icon.style.transform = 'rotate(0deg)';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-yH7sA6ZlO6z1jh7HgypSnQ0ml4e4a3OTyoRn+sWOPfGiXTmDDxhz6B0dE6uY8xuvRfNLzmuyQXTTTjRMkQXhGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-inner-content">
+        <div class="logo">
+          RUTUL VADADORIYA
+          <span>REALTOR</span>
+        </div>
+
+        <nav class="menu">
+          <div class="head">
+            <div class="logo">
+              RUTUL VADADORIYA
+              <span>REALTOR</span>
+            </div>
+            <button type="button" class="close-menu-btn"></button>
+          </div>
+
+          <ul>
+            <li class="dropdown">
+              <a href="/index.html">Home</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">FEATURED LISTINGS</a></li>
+                <li><a href="#">Map Search</a></li>
+                <li class="dropdown">
+                  <a href="#">Communities</a>
+                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                  <ul class="sub-menu sub-menu-left">
+                    <li><a href="#">team1</a></li>
+                    <li><a href="#">team2</a></li>
+                    <li><a href="#">team3</a></li>
+                    <li><a href="#">team4</a></li>
+                    <li><a href="#">team5</a></li>
+                    <li><a href="#">team6</a></li>
+                    <li><a href="#">team7</a></li>
+                    <li><a href="#">team8</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="">About</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="/about.html">About Hello</a></li>
+                <li><a href="/testimonials.html">Testimonials</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Sellers</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">Selling Resources</a></li>
+                <li><a href="#">Instant Home Evolution</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Buyers</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">Buying Resources</a></li>
+                <li><a href="#">Mortgage Calculator</a></li>
+                <li><a href="#">Neighbourhood Guide</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blogs</a></li>
+            <!-- New button added here -->
+            <li><a href="#" class="contact-button">519-992-6700</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <button class="open-menu-btn" aria-label="Open menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero-content">
+          <div class="hero-text-box">
+            <h2 class="hero-heading">Where Real Stories</h2>
+
+            <h4 class="hero-subheading">Meet Real Success</h4>
+            <div class="hero-paragraph">
+              <p>&nbsp;#1 Realtor® in Canada (Top 30 under 30, Remax-2024)</p>
+            </div>
+            <div class="buttons hero-buttons">
+              <a href="#cta" class="btn btn-hero">INSTANT EVOLUTION</a>
+              <a href="#how" class="btn btn-hero btn-hero-secondary"
+                >FIND YOUR DREAM HOME</a
+              >
+            </div>
+            <div class="awards-section-wrapper">
+              <div class="awards-section">
+                <!-- Original content -->
+                <div class="award-item">
+                  <svg
+                    class="omni-image"
+                    width="79"
+                    height="53"
+                    viewBox="0 0 79 53"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g clip-path="url(#clip0_154_927)">
+                      <path
+                        d="M45.2022 20.4174C44.7896 20.5 44.6658 20.1836 44.4044 19.9938C42.9794 18.9511 41.5076 17.9608 40.0605 16.9456C39.7167 16.7035 39.1747 16.1561 38.7703 16.1231C38.0385 16.0598 37.7854 16.5165 37.2765 16.8796C36.0688 17.7407 34.8584 18.5907 33.6589 19.4656C33.3783 19.6719 32.4622 20.5412 32.1816 20.4724C32.1128 20.4559 32.0303 20.3707 32.0138 20.3019C32.3109 19.1575 32.7758 18.035 33.1445 16.9016C34.7786 11.8425 36.2779 6.72832 37.9257 1.68019C38.0468 1.30605 38.1678 0.819118 38.4457 0.546766C38.6218 0.516505 38.9711 1.41609 39.0344 1.59766C39.0757 1.7132 39.0482 1.8425 39.0839 1.94429C41.0729 7.82323 43.0069 13.6692 44.9711 19.5591C45.0592 19.826 45.3288 20.0103 45.2022 20.4174Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M61.9063 16.3323C62.0438 16.2442 62.7618 16.6129 62.9352 16.7064C68.2419 19.6087 73.5981 24.357 77.4386 29.0007C78.0245 29.7105 78.4289 29.8701 78.3987 30.9512C78.3849 31.4464 78.3987 32.1754 78.2996 32.6348C78.2364 32.9374 78.1621 33.0585 77.8347 33.0943C77.0919 33.1795 75.7137 33.1685 74.9296 33.163C74.8003 33.163 73.9833 33.0695 73.9338 33.031C73.5541 32.4285 73.2763 31.7573 72.9049 31.1548C72.5527 30.5826 72.0796 29.8893 71.6917 29.3309C68.9957 25.4437 65.744 21.9333 62.0658 18.9567C61.7715 18.5441 61.909 17.4272 61.898 16.8797C61.898 16.7559 61.7825 16.4065 61.9035 16.3295L61.9063 16.3323Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M19.1389 20.8135C19.0481 20.4889 19.2847 20.3376 19.37 20.0872C19.9725 18.3073 20.4952 16.5081 21.0702 14.7255C21.5983 13.0859 22.2091 11.4408 22.718 9.77363C22.8061 9.48202 23.0674 8.07075 23.227 7.97171C23.3122 7.91944 23.4195 7.92769 23.5131 7.95245L27.8432 20.5769C27.7606 20.8327 27.3095 20.5604 27.1664 20.4779C26.5034 20.0872 25.7579 19.3747 25.0977 18.9153C24.6685 18.6182 24.2008 18.3733 23.8047 18.0295C23.2545 17.7984 22.8611 18.3596 22.4567 18.6292C21.6094 19.1931 20.1926 20.4366 19.381 20.7667C19.2985 20.7997 19.2325 20.8383 19.1362 20.819L19.1389 20.8135Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M53.5625 7.81219C53.6588 7.78743 53.6835 7.81218 53.7496 7.87271C53.9311 8.04327 54.1265 9.20145 54.2255 9.50957C54.6299 10.7613 55.1581 12.002 55.5845 13.2317C56.286 15.251 56.8032 17.3995 57.5762 19.4243C57.656 19.6333 58.341 20.6072 57.8376 20.6842C57.4772 20.7393 56.2805 19.6278 55.9174 19.3692C55.8321 19.3087 55.6973 19.3005 55.5955 19.2289C55.1416 18.9043 54.4703 18.2798 53.9972 18.0543C53.3589 17.7516 53.1031 18.2743 52.6932 18.5659C51.9119 19.1217 51.0481 19.5893 50.3823 20.2826C50.1127 20.3183 49.6808 20.8713 49.4662 20.808C49.1003 20.7007 49.667 19.7241 49.7413 19.5095C50.8775 16.1533 51.8569 12.7723 52.971 9.40503C53.0701 9.10517 53.2764 7.88921 53.5625 7.81219Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M22.022 46.3788C22.674 46.233 23.0399 46.6677 23.425 47.1244C23.8679 47.6526 24.3081 48.2303 24.7455 48.775C24.9656 49.0473 25.3865 49.8506 25.7029 49.8699C26.3659 49.9084 26.0715 49.0694 26.0633 48.709C26.0523 48.2991 25.9917 46.9731 26.0798 46.6732C26.1816 46.3238 26.8941 46.244 27.1252 46.5247C27.4168 46.8878 27.1857 48.9153 27.1857 49.5013C27.1857 50.3183 27.3535 51.405 27.2572 52.2083C27.2049 52.6512 26.4099 52.5521 26.1265 52.3403L23.4278 48.9015C23.0977 48.6374 22.8858 48.8933 22.8391 49.2399C22.7098 50.1835 22.9326 51.3582 22.8226 52.3266C22.7318 52.5962 21.6671 52.6319 21.7084 52.1422C21.8212 50.4504 21.5708 48.5907 21.7084 46.9208C21.7276 46.6787 21.7497 46.4366 22.022 46.3761V46.3788Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M43.1416 46.3817C43.59 46.3019 44.6189 46.3377 45.1085 46.3625C46.264 46.4257 47.7055 46.6568 47.8458 48.0488C47.9228 48.7999 47.7495 49.3446 47.1883 49.8342C46.8857 50.0983 46.418 50.1176 46.7316 50.7476C46.894 51.0722 47.8293 52.0571 47.8458 52.2799C47.8678 52.6045 47.147 52.5385 46.8857 52.5082C46.5226 52.4642 46.0549 51.8177 45.8348 51.5124C45.7385 51.3776 45.7275 51.2015 45.6312 51.0557C45.4387 50.7613 44.938 50.3982 44.5776 50.3872C43.3259 50.3487 44.0686 51.8645 43.7578 52.3459C43.59 52.6045 42.9325 52.6375 42.7564 52.4147C42.7124 52.3597 42.6354 51.3968 42.6271 51.2235C42.5858 50.2579 42.6354 49.2208 42.6271 48.2524C42.6216 47.7325 42.4896 46.5 43.1416 46.3845V46.3817ZM44.33 47.5041C44.1209 47.5371 43.8651 47.6087 43.8183 47.8508C43.7798 48.0543 43.7908 49.0282 43.8788 49.174C43.9063 49.2208 44.0439 49.3281 44.0989 49.3501C44.297 49.4298 45.6477 49.4381 45.8816 49.3858C46.0191 49.3556 46.5528 48.9154 46.6051 48.7889C46.8499 48.1836 46.3878 47.5426 45.755 47.4876C45.4249 47.4601 44.6491 47.4519 44.33 47.5014V47.5041Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M30.2751 35.5564C30.8721 35.4849 31.8267 35.4821 32.3714 35.7325C35.5323 37.1878 34.7676 41.3501 31.3728 41.804C29.6782 42.0323 27.8212 40.7448 27.6562 38.9952C27.5159 37.5124 28.7813 35.7352 30.2751 35.5536V35.5564ZM30.7346 36.544C30.652 36.5605 29.967 36.8769 29.8707 36.9347C28.7676 37.5922 28.6163 39.1657 29.4636 40.0983C30.1376 40.8411 31.6066 40.9319 32.3714 40.2937C33.4471 39.3968 33.337 37.7545 32.2009 36.9622C31.8955 36.7503 31.0949 36.4697 30.7346 36.544Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M29.414 46.3789C29.7772 46.2991 31.0922 46.3294 31.5131 46.3624C33.967 46.5495 35.7497 48.566 34.4594 50.9648C34.0468 51.7324 32.8006 52.3569 31.956 52.4889C31.4883 52.5632 29.934 52.5687 29.4608 52.5082C29.2517 52.4807 29.1114 52.3596 29.0977 52.145C29.2105 50.4532 28.9601 48.5935 29.0977 46.9236C29.1169 46.6815 29.1389 46.4394 29.4113 46.3789H29.414ZM30.6685 47.5041C30.4842 47.5371 30.2641 47.6499 30.2256 47.8534L30.2586 51.0529C30.3521 51.1547 30.4402 51.2895 30.5887 51.317C30.8418 51.3665 31.6204 51.3417 31.9092 51.3225C33.4415 51.2097 33.989 49.5206 33.2875 48.2881C32.8556 47.5316 31.447 47.3665 30.6685 47.5068V47.5041Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M14.6382 13.6967C14.8253 13.804 14.817 15.0558 14.784 15.3061C14.7455 15.606 14.2008 15.9058 13.9395 16.0434C12.9271 16.5743 11.7276 17.0007 10.7345 17.5895C6.75929 19.9443 3.52133 23.2951 0.830831 27.0255C0.627255 27.2345 0.4787 27.7325 0.332895 27.914C0.140324 28.1506 0.00277235 27.848 2.13212e-05 27.6499C-0.0027297 27.2676 0.261369 27.1933 0.42643 26.9512C0.591492 26.7091 0.737296 26.4037 0.896856 26.1671C4.14582 21.3529 8.16782 17.4546 13.1774 14.423C13.469 14.247 14.121 13.8343 14.3906 13.7215C14.4677 13.6885 14.5612 13.6527 14.6382 13.6967Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M36.6712 46.3788C37.9175 46.4421 39.3287 46.2495 40.5557 46.3623C41.2627 46.4283 41.3645 47.4957 40.608 47.5315C39.8514 47.5673 38.9546 47.4132 38.1761 47.4902C37.8624 47.5205 37.5461 47.603 37.5461 47.9827C37.5461 48.0707 37.6066 48.6347 37.6258 48.6979C37.6479 48.7722 37.7194 48.83 37.7854 48.8685C38.1678 49.0858 39.7166 48.8575 40.2806 48.9455C40.8445 49.0336 40.8308 49.7406 40.3356 49.8534C39.6891 49.9992 38.5392 49.7131 37.9367 49.8974C37.4525 50.0459 37.3783 51.2454 37.9862 51.3719C38.9766 51.3197 39.967 51.3554 40.9601 51.4352C41.1967 51.5095 41.1417 52.3128 41.0426 52.4118C40.9573 52.4971 40.795 52.5026 40.6822 52.5136C39.7414 52.5989 37.8569 52.5989 36.9161 52.5136C36.729 52.4971 36.5777 52.4779 36.4567 52.3128L36.4209 46.929C36.4264 46.7585 36.4814 46.4394 36.6657 46.3843L36.6712 46.3788Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M60.0328 46.2496C60.7315 46.123 61.3505 46.3349 61.942 46.6842C63.1909 47.4243 63.5623 49.1354 63.1854 50.4614C62.4619 53.0061 59.2982 53.394 58.0823 50.9428C57.4441 49.6608 57.7302 47.7791 58.8636 46.8631C58.9296 46.8108 59.9667 46.2606 60.0328 46.2496ZM60.3656 47.4408C59.1579 47.5701 58.8911 48.7915 58.9956 49.8314C59.0286 50.1643 59.279 50.8603 59.5211 51.0886C59.997 51.5398 61.2212 51.5783 61.6256 51.0088C62.1731 50.2331 62.2611 49.1024 61.8264 48.2551C61.5101 47.6388 61.0782 47.3637 60.3684 47.4408H60.3656Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M52.7783 35.5563C53.7384 35.4462 54.3492 35.5563 55.0672 36.1973C57.2102 38.0982 55.7274 42.6182 52.4454 41.6581C50.649 41.1326 50.1043 38.9098 50.7591 37.3004C51.0837 36.5026 51.8952 35.6553 52.7756 35.5535L52.7783 35.5563ZM52.9049 36.5412C52.8306 36.5632 52.0988 37.1161 52.0521 37.2069C51.5569 38.1588 51.5871 39.9222 52.561 40.5577C52.8141 40.7227 53.3148 40.7255 53.6119 40.6842C54.5912 40.5494 54.9296 39.0418 54.8306 38.222C54.7370 37.4545 53.7577 36.2881 52.9049 36.5439V36.5412Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M36.2117 35.5482C36.3740 35.5014 36.5501 35.6032 36.7207 35.6059C38.0494 35.6334 39.1003 35.3116 40.1814 36.2359C41.4937 37.3583 40.7592 39.4986 39.0260 39.6885C38.5226 39.7435 37.6065 39.5647 37.2131 39.9223C36.8197 40.2799 37.4497 41.2951 36.8720 41.5591C36.5446 41.7105 36.1594 41.7297 35.9614 41.3831C35.7798 41.0612 35.9724 40.6431 35.9669 40.3267C35.9504 39.2510 35.8953 38.1561 35.8953 37.0915C35.8953 36.6981 35.7578 35.6775 36.2090 35.5482H36.2117ZM37.7303 36.6073C37.4854 36.6431 37.1581 36.8466 37.1003 37.1025C37.0535 37.3088 37.1113 38.4670 37.2131 38.6128C37.3644 38.8274 38.4345 38.8136 38.7069 38.7751C39.0755 38.7256 39.5817 38.2662 39.5982 37.8810C39.6065 37.6692 39.4799 37.1768 39.3314 37.0227C39.1306 36.8109 38.0191 36.5688 37.7303 36.6101V36.6073Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M14.9656 46.3789C15.3205 46.3211 15.5626 46.4697 15.6947 46.8081C15.6699 47.4628 15.6286 48.1231 15.6396 48.7778C15.6451 49.1354 15.6396 49.4793 15.6424 49.8314C15.6424 50.3541 15.9202 51.0116 16.4182 51.2345C17.2792 51.6169 18.4732 51.4436 18.7263 50.4092C18.9794 49.3748 18.7373 48.0240 18.7428 46.9924C18.7455 46.3404 19.5213 46.1506 19.8019 46.5275C20.0083 46.8053 19.9340 48.2771 19.9340 48.7118C19.9340 48.8823 19.8625 49.0502 19.8597 49.2372C19.8487 50.1038 20.0495 50.5962 19.5901 51.4711C19.0179 52.5550 17.0647 52.8218 16.0220 52.3569C15.3343 52.0488 14.8226 51.6169 14.6218 50.8548C14.4209 50.0928 14.4457 47.7379 14.5172 46.9236C14.5447 46.6100 14.6355 46.4339 14.9656 46.3789Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M52.4427 46.3789C52.7371 46.2936 53.6972 46.3651 54.0796 46.3624C54.3161 46.3624 54.5637 46.3624 54.8003 46.3624C55.1827 46.3651 56.1456 46.2468 56.3189 46.6292C56.7398 47.5646 54.9544 48.2166 54.9681 48.7090C54.9736 48.9401 55.6366 49.1849 55.8457 49.3472C56.5472 49.8809 56.6105 50.5797 56.3189 51.3830C56.1126 51.9470 55.2570 52.5109 54.6683 52.5714C53.7412 52.6650 53.2157 52.5439 52.4344 52.1010C52.3574 52.0570 51.9530 51.6636 51.9393 51.6003C51.8870 51.4023 52.4399 50.9979 52.6243 50.9814C53.0479 50.9401 53.0672 51.2124 53.3560 51.3142C53.6449 51.4160 54.2941 51.4903 54.5912 51.4353C55.4000 51.2840 55.5651 50.3184 54.8058 49.9305C54.3271 49.6856 52.7646 49.9965 53.3285 48.9181C53.3478 48.8796 53.7769 48.4422 53.8457 48.3789C54.0741 48.1671 54.8663 47.8342 54.3051 47.5288C53.7164 47.2069 52.6903 47.8094 52.1648 47.2235C52.1291 46.9869 52.1703 46.4587 52.4454 46.3816L52.4427 46.3789Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M48.4896 7.892000000000001C48.6299 7.82598 49.2764 7.86724 49.2269 8.09833C49.1883 8.27715 47.9394 9.00342 47.7165 9.16298C46.6547 9.93051 45.6093 10.7063 44.5501 11.4738C44.2503 11.6912 44.0494 12.1891 43.6203 11.7352L42.5859 8.74482C42.5116 8.4257 42.3383 7.99654 42.7950 7.93602C44.5281 7.70768 46.7179 8.1506 48.4923 7.892H48.4896Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M27.9807 8.0708L34.4071 8.07905C34.6299 8.1946 34.6079 8.4697 34.5639 8.68428C34.4758 9.12169 33.7496 11.3665 33.5515 11.6994C33.3534 12.0323 33.1526 11.9938 32.8417 11.826C32.1209 11.4353 31.1884 10.5907 30.4841 10.0901C30.0879 9.8067 29.6890 9.50684 29.2956 9.23173C29.1086 9.09968 27.6835 8.38442 27.9807 8.07355V8.0708Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M45.4525 35.5564C46.4703 35.6802 47.5240 35.5124 48.5391 35.6004C48.6547 35.6114 49.0150 35.6527 49.0673 35.7297C49.1113 35.9718 49.1471 36.3377 49.0233 36.5523C48.9463 36.6871 48.7977 36.7201 48.7014 36.8246C48.4126 37.1327 48.0824 37.3501 47.8404 37.6142C47.1939 38.3267 48.1292 38.3047 48.5006 38.5440C49.1581 38.9677 49.2874 39.6142 49.1333 40.3597C49.0921 40.5633 48.6932 41.2318 48.5281 41.3391C48.0659 41.6307 47.0976 41.8673 46.5556 41.8095C46.1760 41.7682 44.9353 41.3638 44.7757 41.0144C44.6547 40.7503 44.8775 40.3762 45.1168 40.3019C45.6588 40.1369 45.9064 40.6155 46.3631 40.6788C46.6492 40.7173 47.3424 40.7283 47.5763 40.5825C48.3520 40.0956 48.0274 39.2153 47.2104 39.1052C46.7014 39.0365 46.0329 39.3116 45.9917 38.5385C45.9531 37.8150 46.5446 37.8040 46.9188 37.3473C47.8018 36.2662 46.4071 36.5990 45.8321 36.5963C45.7358 36.5963 45.0453 36.5110 45.0068 36.4918C44.9160 36.4477 44.8362 36.2414 44.8225 36.1424C44.7537 35.6637 45.0646 35.6087 45.4552 35.5509L45.4525 35.5564Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M25.7248 35.5535C26.1099 35.5535 26.6326 35.5535 26.6629 36.0350C26.7427 37.2674 25.4579 36.4201 24.7867 36.8685C24.4428 37.0968 24.6161 37.3279 24.6161 37.6168C24.6134 38.8272 24.6161 40.0377 24.6106 41.2481C24.5198 41.7241 23.4387 41.8176 23.3562 41.1876C23.2516 40.4091 23.4304 39.3664 23.4249 38.5439C23.4249 38.4228 23.3617 38.2908 23.3562 38.1505C23.3479 37.8561 23.4635 37.3362 23.3947 37.1216C23.1471 36.3403 21.5515 37.1024 21.3919 36.4173C21.2956 36.0074 21.3424 35.6581 21.8046 35.6058C22.8417 35.4847 24.6216 35.5508 25.7220 35.5563L25.7248 35.5535Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M46.6354 12.5083C47.0012 12.4258 47.8843 12.5606 48.3382 12.5634C48.7481 12.5634 49.1801 12.5716 49.5927 12.5634C49.9338 12.5579 50.9985 12.3240 51.0122 12.8550L50.2970 14.8522C50.2172 14.9898 50.1071 15.1493 49.9256 15.1356L46.4208 12.7587L46.4565 12.5936C46.5116 12.5551 46.5693 12.5221 46.6354 12.5083Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M56.5337 12.5083C57.0866 12.5771 60.3411 12.3598 60.5804 12.5221C60.6492 12.5688 60.6547 12.6486 60.6465 12.7229L57.3150 15.1383C56.7868 14.9045 56.7895 14.2387 56.6382 13.7628C56.5337 13.4354 55.9972 12.6266 56.5337 12.5083Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M29.6835 12.4477C29.9861 12.4422 30.3190 12.4312 30.5556 12.6623C30.5968 12.8383 29.8541 13.1575 29.7028 13.2620C28.9215 13.8040 28.1842 14.4394 27.4112 14.9979C27.2626 15.0914 26.9655 15.1299 26.8527 14.9786C26.8389 14.5880 26.6079 14.3377 26.4951 14.0158C26.4510 13.8892 26.4731 13.7462 26.4318 13.6169C26.3575 13.3913 26.0356 12.8136 26.1649 12.6238C26.2777 12.5385 26.4263 12.5082 26.5638 12.4945C27.4744 12.4009 28.7289 12.4670 29.6862 12.4477H29.6835Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M16.8171 12.5110C17.7277 12.4670 18.8143 12.5825 19.7689 12.5660C20.0908 12.5605 20.4237 12.3844 20.7235 12.5935L20.7868 12.8548L20.0963 15.0749C19.7634 15.4050 18.8391 14.4587 18.5420 14.2496C18.1073 13.9443 17.6589 13.6471 17.2187 13.3280C17.0729 13.2235 16.3246 12.8659 16.3659 12.6623C16.4567 12.5605 16.6905 12.5165 16.8143 12.5110H16.8171Z"
+                        fill="white"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_154_927">
+                        <rect
+                          width="78.3987"
+                          height="52.0522"
+                          fill="white"
+                          transform="translate(0 0.546875)"
+                        ></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-icons-container">
+          <div class="social-icons-columns">
+            <div class="social-icons">
+              <a href="https://www.google.com" target="_blank" class="icon-link"
+                ><i class="fab fa-google"></i
+              ></a>
+
+              <a href="https://www.google.com" target="_blank" class="icon-link"
+                ><i class="fa-solid fa-rss"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/YOUR_PROFILE"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://wa.me/YOUR_PHONE_NUMBER"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/YOUR_PROFILE"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@YOUR_USERNAME"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="hero-img-box">
+            <img
+              src="img/rutul_vayadoriya_remax_hero_2x.webp"
+              alt="Photo of top Canadian Realtor® Rutul Vadadoriya"
+              class="hero-img"
+              loading="lazy"
+              style="transform: translate(0)"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number">150+</span>
+            <span class="stat-description">DEALS IN 2.5 YEARS</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">200+</span>
+            <span class="stat-description">SATISFIED CLIENTS</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100 M+</span>
+            <span class="stat-description">SALES IN LAST 2.5 YEARS</span>
+          </div>
+        </div>
+      </section>
+
+      <!--every-move section-->
+      <section class="every-move-section">
+        <div class="container every-move-content">
+          <div class="every-move-text">
+            <h2 class="heading-secondary">
+              Your Strategic Partner In Every Move
+            </h2>
+            <p>From building machines to building futures.</p>
+            <p>
+              I started as a mechanical engineer — precision, detail, and system
+              thinking were my world.
+            </p>
+            <p>
+              But when I turned investor, I saw what was missing in real estate:
+              clarity, trust, and real guidance.
+            </p>
+            <p>
+              Since then, I’ve helped over 100 families navigate the GTA market
+              — not by selling dreams, but by building them with data, care, and
+              unstoppable strategy.
+            </p>
+            <p class="every-move-award">Top 30 Under 30 RE/MAX Canada.</p>
+            <p class="every-move-award">#1 Agent at REMAX Metropolis 2024.</p>
+            <p>Awards matter. But your journey matters more.</p>
+            <div class="every-move-buttons">
+              <a href="#" class="btn primary-btn">MY STORY &rarr;</a>
+              <!-- <a href="#" class="btn secondary-btn">ગુજરાતી માં વાંચો &rarr;</a> -->
+            </div>
+          </div>
+          <div class="image-card grid-image-1">
+            <video
+              class="video"
+              src="https://iss-cdn.myrealpage.com/w/w=rutul-vadadoriya.myrealpagewebsite.com/_media/Media/rutul-vadadoriya-video%20(1).mp4#t=0.001"
+              playsinline=""
+              disablepictureinpicture="true"
+              data-autoplay="true"
+              onmouseenter="this.setAttribute('controls','controls')"
+              onmouseleave="this.removeAttribute('controls')"
+              loop=""
+              data-speed="1"
+            ></video>
+          </div>
+          <div class="image-card grid-image-2">
+            <img
+              src="https://iss-cdn.myrealpage.com/VGBhB-3Q4m7oTUdHEVEa9pgtt4ZdqYHVdTVmiqerKB0/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9ydXR1bC12YWRhZG9yaXlhLXJlYWx0b3IuanBnP3Q9MTczOTU1MTM5NDE3MQ?t=1739551394171"
+              alt="Rutul Vadadoriya"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Community Section-->
+      <section class="communities">
+        <div class="container communities-grid">
+          <!-- Left Content Block -->
+          <div class="communities-content-left">
+            <h3>Building Homes.<br />Strengthening Communities.</h3>
+          </div>
+
+          <!-- Right Content Block -->
+          <div class="communities-content-right">
+            <p>Behind every closing is a new beginning.</p>
+            <p>
+              Every family that finds a home makes the community stronger. Every
+              client success echoes through neighborhoods.
+            </p>
+            <p>
+              I don't just sell properties — I invest in people, stories, and
+              futures.
+            </p>
+            <p>
+              Giving back isn't a slogan. It's the only way real communities
+              thrive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Image Section-->
+      <section class="image-section">
+        <img
+          src="https://iss-cdn.myrealpage.com/vrWMKPAQHlP4w1FAIAJnXuSBHcx16_EqVGBrA8LulsM/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvdG9yb250by1yZWFsLWVzdGF0ZS5qcGc_dD0xNzM5NDc4NTcwNjM1?t=1739478570635"
+          alt="city-center"
+        />
+        <h1>Opportunities waiting for you</h1>
+      </section>
+
+      <!--Listing sections-->
+      <section class="listings-section">
+        <div class="listings-grid">
+          <!-- Left: Listings Content -->
+          <div class="listings-content">
+            <ul class="listings-list">
+              <li>
+                <a href="#"
+                  >Featured Listings <span class="arrow">&rarr;</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Yorkville Listings <span class="arrow">&rarr;</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Harbourfront Listings <span class="arrow">&rarr;</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Rosedale Listings <span class="arrow">&rarr;</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >The Bridle Path Listings <span class="arrow">&rarr;</span></a
+                >
+              </li>
+              <li>
+                <a href="#">Map Search <span class="arrow">&rarr;</span></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Listing Image -->
+          <div class="listings-image-container">
+            <img
+              src="img/Canada_street.png"
+              alt="Classic Building"
+              onerror="this.onerror=null;"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="sell-section">
+        <div class="container sell-grid">
+          <div class="sell-left-content">
+            <h2>Sell With Confidence</h2>
+            <p>I don't just list homes. I position them to win.</p>
+            <a href="#" class="sell-button">UNLOCK MY SELLER'S PLAYBOOK</a>
+
+            <div class="sell-left-image-container">
+              <img
+                src="https://iss-cdn.myrealpage.com/NZLPoqvQOs3pgRZ7KJvotf_md7gC5X5anaGZo8ENwcw/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9taW5pbWFsaXN0LWhvbWUtaW50ZXJpb3ItZGVzaWduLXByb3BlcnR5LmpwZz90PTE3Mzk0Nzg2MjIxOTk?t=1739478622199"
+                alt="Modern interior with dining table"
+              />
+            </div>
+          </div>
+
+          <div class="sell-right-content">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib21uaS1pbWFnZSIgd2lkdGg9IjY3IiBoZWlnaHQ9IjY4IiB2aWV3Qm94PSIwIDAgNjcgNjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiA8cGF0aCBkPSJNNDIuNzczNiA0NC43NTVDMzkuNTY1NiA0OS4xMDcyIDM2LjU1MzUgNTIuNTU2NiAzNS44NTkyIDUzLjMzOThMMzMuNTExOSA1Ni4wMTU2TDMxLjEzODQgNTMuMzQxMUMzMC40NDM5IDUyLjU1OCAyNy40MjgzIDQ5LjExMDUgMjQuMjE3OSA0NC43NTc2QzE3LjkxMSA0NS45NTI3IDE0IDQ4LjMwOTUgMTQgNTEuMDk0NkMxNCA1NS43NDUyIDI0LjA0NjYgNTguMjU0NiAzMy41IDU4LjI1NDZDNDIuOTUzNCA1OC4yNTQ2IDUzIDU1Ljc0NTUgNTMgNTEuMDk0NkM1MyA0OC4yOTkzIDQ5LjA5MDMgNDUuOTQ2NyA0Mi43NzM3IDQ0Ljc1NDZMNDIuNzczNiA0NC43NTVaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0zMy41MDQ2IDUyLjI1NDZMMzQuMjMyNCA1MS4zNDY4QzM0LjgxNjUgNTAuNjI2MyA0OC41IDMzLjYzMzEgNDguNSAyNS41MDEzQzQ4LjUgMTcuMDkzMyA0MS43NzggMTAuMjU0NiAzMy41MDQ2IDEwLjI1NDZDMjUuMjMxNSAxMC4yNTQ2IDE4LjUgMTcuMDkzNyAxOC41IDI1LjUwMTNDMTguNSAzMy42MzI3IDMyLjE4MzQgNTAuNjI2MiAzMi43NjcyIDUxLjM0NjNMMzMuNTA0NiA1Mi4yNTQ2Wk0yMi45NzE0IDI1Ljk1NTVDMjIuOTcxNCAxOS45NjUyIDI3LjY5MjIgMTUuMTAwMSAzMy41MDQ2IDE1LjEwMDFDMzkuMzA3NSAxNS4xMDAxIDQ0LjAzNzggMTkuOTY1MiA0NC4wMzc4IDI1Ljk1NTVDNDQuMDM3OCAzMS45MzU4IDM5LjMwNzUgMzYuODEwOCAzMy41MDQ2IDM2LjgxMDhDMjcuNjkyMiAzNi44MTA3IDIyLjk3MTQgMzEuOTM1OCAyMi45NzE0IDI1Ljk1NTVaIiBmaWxsPSIjMUU3QzlGIi8+IDwvc3ZnPg=="
+                  alt="Location Svg"
+                />
+              </div>
+              <div class="benefit-text">
+                <h3>Maximum Exposure, Better Results</h3>
+                <p>
+                  Certified Negotiation Expert (CNE) tactics plus proven
+                  marketing strategies get you better offers, faster.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib21uaS1pbWFnZSIgd2lkdGg9IjY3IiBoZWlnaHQ9IjYzIiB2aWV3Qm94PSIwIDAgNjcgNjMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiA8cGF0aCBkPSJNMTYuMTk1OSA5LjQwNzNDMTguMDYxMiA4LjU0MDQ4IDE4Ljk2NzUgNi4wODQ5MSAxOC4yMjEzIDMuOTIwNzdMMTcuMDczMSAwLjU5NjQzNkwxNi4xNDg3IDEuMDI0NTlDMTQuMjgzMyAxLjg4OTQ3IDEzLjM3NzEgNC4zNDUwNCAxNC4xMjMyIDYuNTExMTJMMTUuMjc1MiA5LjgzNzgyTDE2LjE5NTkgOS40MDczWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMTEuMjQ5NyAxMy44ODU5QzEyLjgxNjIgMTIuNzIzOCAxMy4xNzY2IDEwLjQ3MTYgMTIuMDUyNCA4Ljg1NzMzTDEwLjMxNzggNi4zNzI1Nkw5LjU0MzMzIDYuOTQzNzdDNy45NzY4MyA4LjEwNTkxIDcuNjE2NDMgMTAuMzU4MSA4Ljc0MDY0IDExLjk3MjNMMTAuNDcxNiAxNC40NTg4TDExLjI0OTcgMTMuODg1OVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTUuMTY3NjMgMTIuMTQ4Mkw0LjQ0MjggMTIuOTIxNkMyLjk3ODc4IDE0LjQ5MDggMy4xODI5NSAxNi44NDI3IDQuODk4MDUgMTguMTc2OUw3LjUzNzk2IDIwLjIzNDRMOC4yNjA4OCAxOS40NTkzQzkuNzI5MDcgMTcuODkyMiA5LjUyNDg5IDE1LjUzODIgNy44MDU2MyAxNC4yMDU3TDUuMTY3NjMgMTIuMTQ4MloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTEuNTUyOTggMjAuMDgxNUMwLjYyNjQ2NSAyMi4xMDk5IDEuMzczMDggMjQuNTc3OCAzLjIyMzY1IDI1LjU5OTNMNi4wNzQgMjcuMTY1M0w2LjUzMTY3IDI2LjE2MjVDNy40NjE2NCAyNC4xMzQxIDYuNzExNTggMjEuNjY2MiA0Ljg2MSAyMC42NDI4TDIuMDE2MiAxOS4wNzkxTDEuNTUyOTggMjAuMDgxNVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTAuMDg1MjIyNyAyOC4yODIzQy0wLjMzMTI3NiAzMC41NDA2IDAuODE5MDI1IDMyLjc5MDkgMi42NTg1OCAzMy4zMDc1TDUuNDg0NDMgMzQuMDk2Nkw1LjY5MDgxIDMyLjk3OThDNi4xMDczMSAzMC43MTkxIDQuOTUzNTMgMjguNDcxMiAzLjExNzQ1IDI3Ljk1NDZMMC4yOTE2MDIgMjcuMTY1NUwwLjA4NTIyMjcgMjguMjgyM1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTguMDg2MTkgMzkuODE1Nkw4LjA2NzY3IDM4LjgyMUM4LjAyODkxIDM2LjgxMzggNi4zMzg1MSAzNS4yMTc2IDQuMjk2NzEgMzUuMjUyM0wxLjE1NTE1IDM1LjMwODVMMS4xNzM2NiAzNi4zMDMxQzEuMjEwNjkgMzguMzEwMyAyLjg5OTA1IDM5LjkwNjUgNC45NDA4NSAzOS44NzE4TDguMDg2MTkgMzkuODE1NloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTcuNzA3MDcgNDYuNjc5NUwxMC4zOTY1IDQ1Ljg3NTlMMTAuMTY1NSA0NC45MDg4QzkuNzAxNzIgNDIuOTUwOSA3LjkwNTIzIDQxLjc4NTcgNi4xNTQ4NyA0Mi4zMDdMMy40NjU0NSA0My4xMDg5TDMuNjk2NDQgNDQuMDc3N0M0LjE1ODY5IDQ2LjAzNzMgNS45NTMzNyA0Ny4xOTg3IDcuNzA3MDcgNDYuNjc5NVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTE1LjAxNzIgNTAuNjc4NkwxNC41NDI5IDQ5LjgyMDJDMTMuNTgxOCA0OC4wODM3IDExLjM3ODggNDcuNDQ5NiA5LjYyODIyIDQ4LjQwMDlMNi45MzEwMyA0OS44NjEzTDcuNDA5MDQgNTAuNzE5OEM4LjM3MDExIDUyLjQ1NDMgMTAuNTY5NSA1My4wODg3IDEyLjMyMzcgNTIuMTM3TDE1LjAxNzIgNTAuNjc4NloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTIwLjEyMTYgNTMuNjc2NUMxOC43NjA5IDUyLjI5NzIgMTYuNDU3NiA1Mi4yMDU1IDE0Ljk4MDggNTMuNDc0NUwxMi43MDY4IDU1LjQyMjFMMTMuMzc4MiA1Ni4xMDQyQzE0LjczODggNTcuNDgzNSAxNy4wNDIxIDU3LjU3MTggMTguNTE5IDU2LjMwNjJMMjAuNzkzIDU0LjM1NjdMMjAuMTIxNiA1My42NzY1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMjEuNDU5IDU3LjQ0ODhMMTkuNjM3OSA1OS42NzAxTDIwLjUyMTMgNjAuMTQyMkMyMi4zMDc1IDYxLjEwMDYgMjQuNzE0OSA2MC43MDU1IDI1LjkwMSA1OS4yNjIyTDI3LjcyNDEgNTcuMDQxTDI2Ljg0MDggNTYuNTY3MkMyNS4wNTQ2IDU1LjYxMDIgMjIuNjQ3MiA1Ni4wMDU1IDIxLjQ1OSA1Ny40NDg4WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMjIuMTQ2NCAxMS41MDM1QzIwLjc3NzQgMTAuNjQ3OCAxOC44NDMyIDEwLjg5MjggMTcuODI5NiAxMi4wNTM4TDE3LjMyNzYgMTIuNjI4NkwxOS40MzYgMTMuOTQ3OEMyMC44MDg1IDE0LjgwMzUgMjIuNzQzMSAxNC41NiAyMy43NTY3IDEzLjM5OTNMMjQuMjU4NyAxMi44MjNMMjIuMTQ2NCAxMS41MDM1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMTkuNjM3OCAxNS41NTlMMTcuNTc0NiAxNC42NjkxQzE2LjIzNzMgMTQuMDg5NSAxNC42OTY0IDE0Ljc0NzQgMTQuMTM3OSAxNi4xMzg1TDEzLjg2MTkgMTYuODI1NEwxNS45MjIxIDE3LjcxMzRDMTcuMjYyNSAxOC4yOTMgMTguODAwMyAxNy42MzUxIDE5LjM1ODggMTYuMjQ1OUwxOS42Mzc4IDE1LjU1OVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTE3LjE4NjIgMjAuMjEzOUwxNy4zMjc1IDE5LjQ2NzdMMTQuNDQ3IDE5LjExMThDMTIuNTc2MSAxOC44Nzk3IDEwLjgyNzEgMTkuOTA5NiAxMC41Mzc4IDIxLjQxMTlMMTAuMzk2NSAyMi4xNTYyTDEzLjI3NDkgMjIuNTEyM0MxNS4xNDM1IDIyLjc0MjggMTYuODk4OCAyMS43MTQ1IDE3LjE4NjEgMjAuMjEzOEwxNy4xODYyIDIwLjIxMzlaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik05LjI1NDUgMjYuNTA0MUw5LjMzMzQ4IDI3LjE2NTJMMTIuMDY2OSAyNi45ODM3QzEzLjg0NzkgMjYuODY1OCAxNS4xNjIgMjUuNjkwMyAxNS4wMDQ0IDI0LjM1OTFMMTQuOTI1NCAyMy42OTk3TDEyLjE4NzggMjMuODgxMkMxMC40MDg3IDIzLjk5NzUgOS4wOTQ2MyAyNS4xNzMgOS4yNTQ1IDI2LjUwNDJWMjYuNTA0MVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTkuMzk3MjUgMzIuMjc5Nkw5LjY0ODAzIDMyLjk0MUwxMS45MzgyIDMyLjIzNjNDMTMuNDI1NiAzMS43NzgzIDE0LjIxNzUgMzAuMzIyMyAxMy43MDcxIDI4Ljk4MzVMMTMuNDUyNyAyOC4zMjAzTDExLjE2NjEgMjkuMDI1QzkuNjc2NyAyOS40ODQ3IDguODg0ODUgMzAuOTQwNyA5LjM5NzI1IDMyLjI3OTZaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0xMS4zNTM5IDM4LjcxNzNMMTMuNTg1MSAzNy40MzU5QzE1LjAzMzcgMzYuNjAwNiAxNS40NTM0IDM0Ljg3NDYgMTQuNTIwMyAzMy41ODEzTDE0LjA1OTggMzIuOTQxNEwxMS44Mjg2IDM0LjIyMTJDMTAuMzggMzUuMDU2NSA5Ljk2MDI5IDM2Ljc4MjQgMTAuODkzMyAzOC4wNzkzTDExLjM1MzkgMzguNzE3M1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTE0LjAwMDggNDQuNDkzTDE1LjQ4MDIgNDIuNTY4MUMxNi40NDE2IDQxLjMxMjggMTYuMzk1NSAzOS4zMzY5IDE1LjM3ODcgMzguMTUxN0wxNC44NzgzIDM3LjU2MkwxMy4zOTg5IDM5LjQ4OTFDMTIuNDM3NSA0MC43NDQ0IDEyLjQ4MzYgNDIuNzE4NiAxMy41MDA0IDQzLjkwNTVMMTQuMDAwOCA0NC40OTNaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0xNy41MzEyIDQ3LjUzODNMMTguMTY2MiA0Ny45NTg0TDE5LjI4ODYgNDUuNjY2N0MyMC4wMTg5IDQ0LjE3NjQgMTkuNTY2NiA0Mi4yODkzIDE4LjI3NjYgNDEuNDQzNUwxNy42NDE2IDQxLjAyNzNMMTYuNTE5MiA0My4zMTY5QzE1Ljc5MjIgNDQuODA1NiAxNi4yNDQ2IDQ2LjY5NjMgMTcuNTMxMiA0Ny41MzgyVjQ3LjUzODNaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0yMi4zMTc2IDUxLjE4NTRMMjMuMjgwNCA1MS40MjRMMjQuMTIxNyA0OC43NTc2QzI0LjY2NzEgNDcuMDIzIDIzLjUzNSA0NS4yMjQ5IDIxLjU4NDEgNDQuNzMzNEwyMC42MjE0IDQ0LjQ5MjlMMTkuNzc1NCA0Ny4xNjM0QzE5LjIyNzggNDguODk2MiAyMC4zNjQ5IDUwLjcwMDMgMjIuMzE3NiA1MS4xODU0WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMjguNzc5NSA1My43MzQ2TDI4Ljg3NzMgNTEuMTQxQzI4Ljk0MzUgNDkuNDUxMyAyNy4zNjU2IDQ4LjA0MyAyNS4zNTU1IDQ3Ljk4NzRMMjQuMzU4NSA0Ny45NTg3TDI0LjI2MDcgNTAuNTU0MUMyNC4xOTQ1IDUyLjI0MTcgMjUuNzcyNSA1My42NTQyIDI3Ljc4MjUgNTMuNzA3N0wyOC43Nzk1IDUzLjczNDZaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik01MS43MjczIDkuODM3ODJMNTIuODc1MSA2LjUxMTEyQzUzLjYyNDggNC4zNDg5MiA1Mi43MTUxIDEuODkzMzUgNTAuODUwNCAxLjAyNDU5TDQ5LjkzIDAuNTk2NDM2TDQ4Ljc3ODQgMy45MjI4QzQ4LjAzMjUgNi4wODMwNSA0OC45Mzg1IDguNTM4MiA1MC44MDMyIDkuNDA5MzJMNTEuNzI3MyA5LjgzNzgyWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTcuNDU0NCA2Ljk0Mzc3TDU2LjY4MDIgNi4zNzI1Nkw1NC45NDk5IDguODU3MzJDNTMuODIyNiAxMC40NzE1IDU0LjE4MjUgMTIuNzIzNyA1NS43NTIzIDEzLjg4NTlMNTYuNTI2NCAxNC40NTg4TDU4LjI1NjcgMTEuOTcyM0M1OS4zODM3IDEwLjM1NjQgNTkuMDI1NCA4LjEwNDE3IDU3LjQ1NDQgNi45NDM3N1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTYxLjgzNiAxMi4xNDgyTDU5LjE5MjQgMTQuMjA1N0M1Ny40NzQ5IDE1LjU0MiA1Ny4yNzIzIDE3Ljg5MzkgNTguNzM2NSAxOS40NTkzTDU5LjQ2MDQgMjAuMjM0NEw2Mi4wOTk5IDE4LjE3NjlDNjMuODE3NCAxNi44Mzg5IDY0LjAyIDE0LjQ4ODcgNjIuNTU5OSAxMi45MjE2TDYxLjgzNiAxMi4xNDgyWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNjAuNDY5IDI2LjE2MjZMNjAuOTI2OCAyNy4xNjUzTDYzLjc3MzggMjUuNTk5NEM2NS42MjY4IDI0LjU4MDMgNjYuMzc1MyAyMi4xMTQzIDY1LjQ0NDggMjAuMDgxOEw2NC45OTA4IDE5LjA3OTFMNjIuMTQgMjAuNjQyOEM2MC4yODUyIDIxLjY2NDUgNTkuNTM4OCAyNC4xMzQ1IDYwLjQ2OSAyNi4xNjI1TDYwLjQ2OSAyNi4xNjI2WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNjYuNjUwMiAyNy4xNjU1TDYzLjI1OTEgMjcuOTU0NkM2MS4wNTE3IDI4LjQ2NjkgNTkuNjcxMyAzMC43MTQ4IDYwLjE3MTEgMzIuOTc5OEw2MC40MTg4IDM0LjA5NjZMNjMuODA5OCAzMy4zMDc1QzY2LjAxMzEgMzIuNzk1MiA2Ny4zOTc2IDMwLjU0NTMgNjYuODk3OCAyOC4yODIzTDY2LjY1MDIgMjcuMTY1NVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTU4LjkzMjIgMzguODIxTDU4LjkxMzcgMzkuODE1NUw2Mi4wNTUzIDM5Ljg3MThDNjQuMDk5MSAzOS45MDgyIDY1Ljc4NzEgMzguMzEgNjUuODI2MiAzNi4zMDMxTDY1Ljg0NDcgMzUuMzA4Nkw2Mi43MDMyIDM1LjI1MjRDNjAuNjU3NiAzNS4yMTQgNTguOTY5MiAzNi44MTIxIDU4LjkzMjIgMzguODIxWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTYuODM0MyA0NC45MDlMNTYuNjAzNCA0NS44NzYxTDU5LjI5NDkgNDYuNjc5OEM2MS4wNDEgNDcuMTk5IDYyLjgzNjcgNDYuMDMzOCA2My4zMDM1IDQ0LjA3NzhMNjMuNTM0NCA0My4xMDlMNjAuODQzIDQyLjMwN0M1OS4wOTY4IDQxLjc4NTcgNTcuMzAxMiA0Mi45NTA5IDU2LjgzNDMgNDQuOTA5WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTIuNDYwOCA0OS44MTg3TDUxLjk4MjggNTAuNjc2NUw1NC42OCA1Mi4xMzcyQzU2LjQzMDUgNTMuMDg3OCA1OC42MzM2IDUyLjQ1NTkgNTkuNTk0NyA1MC43MjEyTDYwLjA2OSA0OS44NjM1TDU3LjM3NTUgNDguNDAyN0M1NS42MjMzIDQ3LjQ0ODMgNTMuNDIzOSA0OC4wODM4IDUyLjQ2MDggNDkuODE4N1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTQ2Ljg4MTQgNTMuNjc4Mkw0Ni4yMDY5IDU0LjM1ODJMNDguNDgzNSA1Ni4zMDcxQzQ5Ljk2MTggNTcuNTcyMiA1Mi4yNjE5IDU3LjQ4MjQgNTMuNjE4NiA1Ni4xMDUyTDU0LjI5MzEgNTUuNDIzM0w1Mi4wMjAyIDUzLjQ3NjJDNTAuNTM5OSA1Mi4yMDQyIDQ4LjIzOCA1Mi4yOTc1IDQ2Ljg4MTQgNTMuNjc4MloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTQwLjE1OTIgNTYuNTY4MUwzOS4yNzYgNTcuMDQxOEw0MS4wOTY2IDU5LjI2MjVDNDIuMjgyNCA2MC43MDU0IDQ0LjY5NzIgNjEuMTAwNyA0Ni40NzkgNjAuMTQyMkw0Ny4zNjIyIDU5LjY3MDJMNDUuNTM5NCA1Ny40NDk1QzQ0LjM1NTcgNTYuMDA1MiA0MS45NDQ5IDU1LjYwOTkgNDAuMTU5MSA1Ni41NjhMNDAuMTU5MiA1Ni41NjgxWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDQuODQ5OCAxMS41MDM1TDQyLjc0MTUgMTIuODIyOEw0My4yNDM0IDEzLjM5OTJDNDQuMjU3IDE0LjU2MDEgNDYuMTg3NyAxNC44MDM1IDQ3LjU2MDIgMTMuOTQ3N0w0OS42NzI1IDEyLjYyODRMNDkuMTcwNSAxMi4wNTM2QzQ4LjE1NTIgMTAuODkyOCA0Ni4yMjA2IDEwLjY0NzggNDQuODQ5OCAxMS41MDM1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDkuNDIyMiAxNC42NjgzTDQ3LjM2MjEgMTUuNTU4NEw0Ny42MzggMTYuMjQ1NEM0OC4xOTY1IDE3LjYzNTEgNDkuNzM1OSAxOC4yOTMxIDUxLjA3NDcgMTcuNzEzNEw1My4xMzc5IDE2LjgyNTJMNTIuODU4NyAxNi4xMzgxQzUyLjMwMDQgMTQuNzQ2OSA1MC43NjQ0IDE0LjA5MDUgNDkuNDIyMiAxNC42NjgzWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTIuNTQ4NyAxOS4xMTEzTDQ5LjY3MjQgMTkuNDY3Mkw0OS44MTM3IDIwLjIxMzVDNTAuMTAzIDIxLjcxNDIgNTEuODUxNyAyMi43NDQgNTMuNzI3MSAyMi41MTJMNTYuNjAzNCAyMi4xNTYxTDU2LjQ2MjEgMjEuNDExOEM1Ni4xNzUxIDE5LjkwODkgNTQuNDI0IDE4Ljg4MDkgNTIuNTQ4NyAxOS4xMTE0VjE5LjExMTNaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik01NC44MDkyIDIzLjg4MTJMNTIuMDcwNSAyMy42OTk3TDUxLjk5NTYgMjQuMzU5MUM1MS44MzgxIDI1LjY5MDMgNTMuMTQ3NyAyNi44NjU4IDU0LjkyODIgMjYuOTgzN0w1Ny42NjY4IDI3LjE2NTJMNTcuNzQ1OCAyNi41MDQxQzU3LjkwMzcgMjUuMTc0NSA1Ni41ODk5IDIzLjk5OTIgNTQuODA5MSAyMy44ODEyTDU0LjgwOTIgMjMuODgxMloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTU3LjYwNTIgMzIuMjc5NkM1OC4xMTI3IDMwLjk0MDggNTcuMzIwMyAyOS40ODQ4IDU1LjgzMiAyOS4wMjVMNTMuNTQ0MSAyOC4zMjAzTDUzLjI5MzEgMjguOTgzNUM1Mi43ODIxIDMwLjMyMjMgNTMuNTc0NCAzMS43Nzg0IDU1LjA2MzEgMzIuMjM2M0w1Ny4zNTEgMzIuOTQxTDU3LjYwNTIgMzIuMjc5NloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTU2LjEwNzMgMzguMDc5M0M1Ny4wMzc5IDM2Ljc4MjEgNTYuNjIyNCAzNS4wNTgxIDU1LjE3MDggMzQuMjIxMkw1Mi45NDEgMzIuOTQxNEw1Mi40ODA3IDMzLjU4MTNDNTEuNTQ2MSAzNC44NzUgNTEuOTY1NiAzNi42MDEgNTMuNDE3MiAzNy40MzU5TDU1LjY0MyAzOC43MTczTDU2LjEwNzMgMzguMDc5M1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTUzLjIzNjggNDMuOTA1NUM1NC41OTI0IDQyLjcyNDMgNTQuNjQ5NCA0MC43NDQ0IDUzLjM3MTkgMzkuNDg5MUw1MS4zOTg3IDM3LjU2Mkw1MC43MjgzIDM4LjE1MTdDNDkuMzcyNyAzOS4zMzI5IDQ5LjMxNTcgNDEuMzEyOCA1MC41OTU1IDQyLjU2ODFMNTIuNTYwNiA0NC40OTNMNTMuMjM2OCA0My45MDU1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDkuMzU4MSA0MS4wMjczTDQ4LjcyMDUgNDEuNDQ3NEM0Ny40MzUyIDQyLjI5MTIgNDYuOTgxNCA0NC4xODA1IDQ3LjcwOTUgNDUuNjY4N0w0OC44MzA4IDQ3Ljk1ODRMNDkuNDY4NCA0Ny41NDA0QzUwLjc1NzIgNDYuNjk0NSA1MS4yMDc1IDQ0LjgwNzMgNTAuNDc5NSA0My4zMTkxTDQ5LjM1ODEgNDEuMDI3M1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTQ1LjQxOTcgNDQuNzMzM0M0My40Njc3IDQ1LjIyMDUgNDIuMzMxNiA0Ny4wMTk5IDQyLjg3ODkgNDguNzU2Mkw0My43MjQ0IDUxLjQyNEw0NC42ODY2IDUxLjE4MTNDNDYuNjM4NSA1MC42OTgzIDQ3Ljc3NDcgNDguODk3IDQ3LjIyMjcgNDcuMTYwN0w0Ni4zODE5IDQ0LjQ5MjlMNDUuNDE5NyA0NC43MzMzWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDIuNzM5NiA1MC41NTQxTDQyLjYzNzIgNDcuOTU4N0w0MS42NDU3IDQ3Ljk4NzRDMzkuNjMyOCA0OC4wNDMgMzguMDYxMyA0OS40NTUyIDM4LjEyMjMgNTEuMTQxTDM4LjIyNDcgNTMuNzM0NkwzOS4yMTYyIDUzLjcwNzdDNDEuMjI5MSA1My42NTQzIDQyLjgwMSA1Mi4yNDE3IDQyLjczOTYgNTAuNTU0MVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTM1LjgzNDMgNTcuMDc0NUMzNi4wMjg0IDU3LjAzODIgMzYuMjEzIDU2Ljk5MDYgMzYuNDExIDU2Ljk2OEM1MC45Njc4IDU1LjMzNDkgNjEuNTA4MSA0MS45MjUyIDU5LjkwODUgMjcuMDc0MkM1OC44ODA0IDE3LjU1MjkgNTIuOTE4NCA5LjIxMDM2IDQ0LjM0NTUgNS4zMDIxM0M0My44NzE0IDUuMDgzMjMgNDMuMzI0NyA1LjMwMjEzIDQzLjExMzkgNS43ODE4N0M0Mi45MDMxIDYuMjYxNiA0My4xMTM5IDYuODI0OSA0My41ODQyIDcuMDM4MTdDNTEuNTUzOCAxMC42Njk5IDU3LjA5ODIgMTguNDI2MyA1OC4wNTM3IDI3LjI4MjFDNTkuNTQxIDQxLjA5IDQ5Ljc0IDUzLjU1NzggMzYuMjA3MyA1NS4wNzY4QzM1LjI2NjYgNTUuMTgzMiAzNC4zNjE2IDU1LjQxNzYgMzMuNTA5MSA1NS43NjAyQzMyLjY1MjQgNTUuNDE1OCAzMS43NDk1IDU1LjE4MTUgMzAuODA4OCA1NS4wNzY4QzIyLjEzMTYgNTQuMTAyMSAxNC41MjMzIDQ4LjQ1MDkgMTAuOTYyOCA0MC4zMTcyQzguMjcwMTggMzQuMTcyOCA4LjA4MzU3IDI3LjMzMTYgMTAuNDM4NiAyMS4wNDQ4QzEyLjc5NzQgMTQuNzU5NCAxNy40MDY2IDkuNzg1MjcgMjMuNDMxNiA3LjA0MjczQzIzLjkwMTkgNi44Mjk0OCAyNC4xMTI3IDYuMjY2MTkgMjMuOTAxOSA1Ljc4NjQzQzIzLjY4ODggNS4zMDY0IDIzLjEzODMgNS4wODkyOSAyMi42NjggNS4zMDY0QzE2LjE5MTEgOC4yNTg1NSAxMS4yMjc1IDEzLjYwNTYgOC42OTQ5MyAyMC4zNjY4QzYuMTYyMyAyNy4xMjc5IDYuMzYyMzQgMzQuNDkwNiA5LjI2MDI4IDQxLjA5NzJDMTMuMDkxMiA0OS44NDE4IDIxLjI3MDMgNTUuOTIzOCAzMC42MDQzIDU2Ljk3MjNDMzAuNzk4NSA1Ni45OTUyIDMwLjk4MzEgNTcuMDQyOCAzMS4xNzkgNTcuMDc3QzI5LjYzMDIgNTguMjI2OCAyOC4zODc1IDU5Ljc5NTEgMjcuNjMzNSA2MS42NjQ0QzI3LjQzOTMgNjIuMTUxNSAyNy42NjcgNjIuNzA5NSAyOC4xNDI5IDYyLjkwNzNDMjguMjYwNCA2Mi45NTMxIDI4LjM3OTkgNjIuOTc1NyAyOC40OTU3IDYyLjk3NTdDMjguODYzNCA2Mi45NzU3IDI5LjIxMDMgNjIuNzU1IDI5LjM1OTYgNjIuMzg3NEMzMC4xNjk2IDYwLjM3NTMgMzEuNjYyNSA1OC43OTU0IDMzLjUxMTYgNTcuODU3MUMzNS4zNTM1IDU4Ljc5NTQgMzYuODU1NyA2MC4zNzUzIDM3LjY2MzYgNjIuMzg3NEMzNy44MTI5IDYyLjc1MjkgMzguMTU5OCA2Mi45NzU3IDM4LjUyNzUgNjIuOTc1N0MzOC42NDUgNjIuOTc1NyAzOC43NjQ2IDYyLjk1MjggMzguODgwMyA2Mi45MDUyQzM5LjM1NzkgNjIuNzA3MSAzOS41ODM5IDYyLjE1MTUgMzkuMzg0MSA2MS42NjRDMzguNjI0OSA1OS43ODk0IDM3LjM4MTkgNTguMjIyOSAzNS44MzMxIDU3LjA3NTFMMzUuODM0MyA1Ny4wNzQ1WiIgZmlsbD0iIzFFN0M5RiIvPiA8L3N2Zz4="
+                  alt="benefit-icon-image"
+                />
+              </div>
+              <div class="benefit-text">
+                <h3>Market Knowledge You Can Trust</h3>
+                <p>
+                  My engineering mind + market instincts = accurate pricing and
+                  strategic timing.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib21uaS1pbWFnZSIgd2lkdGg9IjY3IiBoZWlnaHQ9IjY4IiB2aWV3Qm94PSIwIDAgNjcgNjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiA8cGF0aCBkPSJNNTQuNDU2OSAyNy4xODZDNTQuODIzIDI2LjI3MzMgNTQuOTQ0MiAyNi4wMzA5IDU1LjMwNzggMjUuMTE4Mkw1OC4zNSAyNC42OTI4QzU5LjE0MTUgMjQuNTcxNiA1OS43NDk5IDIzLjkwMTQgNTkuNzQ5OSAyMy4wNTA1VjE5LjQ1OTJDNTkuNzQ5OSAxOC42Njc4IDU5LjE0MTUgMTcuOTM4MSA1OC4zNSAxNy44MTY4TDU1LjMwNzggMTcuMzkxNEM1NC45NDE4IDE2LjQ3ODcgNTQuODIwNiAxNi4yMzYzIDU0LjQ1NjkgMTUuMzIzN0w1Ni4yODIzIDEyLjgyODFDNTYuNzY5NSAxMi4xNTc4IDU2LjcwNzcgMTEuMjQ1MSA1Ni4wOTkzIDEwLjY5ODVMNTMuNjY1NSA4LjIwMjlDNTMuMDU3IDcuNTk0NDUgNTIuMTQ0NCA3LjUzMjY0IDUxLjUzNTkgOC4wMTk4OUw0OS4wNDAzIDkuODQ1MjNDNDguMTI3NyA5LjQ3OTIxIDQ3Ljg4NTIgOS4zNTc5OSA0Ni45NzI2IDguOTk0MzdMNDYuNTQ3MSA1Ljk1MjEzQzQ2LjQyNTkgNS4xNjA2OSA0NS43NTU3IDQuNTUyMjUgNDQuOTA0OCA0LjU1MjI1SDQxLjM3NTNDNDAuNTgzOSA0LjU1MjI1IDM5Ljg1NDIgNS4xNjA2OSAzOS43MzMgNS45NTIxM0wzOS4zMDc2IDguOTk0MzdDMzguMzk0OSA5LjM2MDM5IDM4LjE1MjUgOS40ODE2IDM3LjIzOTggOS44NDUyM0wzNC43NDQyIDguMDE5ODlDMzQuMDczOSA3LjUzMjY1IDMzLjE2MTMgNy41OTQ0NSAzMi42MTQ2IDguMjAyOUwzMC4xMTkgMTAuNjk4NUMyOS41MTA2IDExLjMwNjkgMjkuNDQ4OCAxMi4yMTk2IDI5LjkzNiAxMi44MjgxTDMxLjc2MTQgMTUuMzIzN0MzMS4zOTUzIDE2LjIzNjMgMzEuMjc0MSAxNi40Nzg3IDMwLjkxMDUgMTcuMzkxNEwyNy44NjgzIDE3LjgxNjhDMjcuMDc2OCAxNy45MzgxIDI2LjQ2ODQgMTguNjA4MyAyNi40Njg0IDE5LjQ1OTJWMjIuOTg4NkMyNi40Njg0IDIzLjgzOTUgMjcuMDc2OCAyNC41MDk4IDI3Ljg2ODMgMjQuNjMxTDMwLjkxMDUgMjUuMDU2NEMzMS4yNzY1IDI1Ljk2OTEgMzEuMzk3NyAyNi4yMTE1IDMxLjc2MTQgMjcuMTI0MkwyOS45MzYgMjkuNTU4QzI5LjQ0ODggMzAuMjI4MiAyOS41MTA2IDMxLjE0MDkgMzAuMTE5IDMxLjY4NzVMMzIuNjE0NiAzNC4xODMxQzMzLjIyMzEgMzQuNzkxNiAzNC4xMzU4IDM0Ljg1MzQgMzQuNzQ0MiAzNC4zNjYyTDM3LjIzOTggMzIuNTQwOEMzOC4xNTI1IDMyLjkwNjggMzguMzk0OSAzMy4wMjggMzkuMzA3NiAzMy4zOTE3TDM5LjczMyAzNi40MzM5QzM5Ljg1NDIgMzcuMjI1MyA0MC41MjQ0IDM3LjgzMzggNDEuMzc1MyAzNy44MzM4SDQ0LjkwNDhDNDUuNjk2MiAzNy44MzM4IDQ2LjQyNTkgMzcuMjI1MyA0Ni41NDcxIDM2LjQzMzlMNDYuOTcyNiAzMy4zOTE3QzQ3Ljg4NTIgMzMuMDI1NyA0OC4xMjc3IDMyLjkwNDQgNDkuMDQwMyAzMi41NDA4TDUxLjUzNTkgMzQuMzY2MkM1Mi4yMDYyIDM0Ljg1MzQgNTMuMTE4OSAzNC43OTE2IDUzLjY2NTUgMzQuMTgzMUw1Ni4xNjExIDMxLjY4NzVDNTYuNzY5NSAzMS4wNzkxIDU2LjgzMTMgMzAuMTY2NCA1Ni4zNDQxIDI5LjU1OEw1NC40NTY5IDI3LjE4NlpNNDMuMTM4OCAyOC4wMzkyQzM5LjQyNjMgMjguMDM5MiAzNi4zODQgMjQuOTk3IDM2LjM4NCAyMS4yODQ1QzM2LjM4NCAxNy41NzE4IDM5LjQyNjMgMTQuNTI5NyA0My4xMzg4IDE0LjUyOTdDNDYuODUxMyAxNC41Mjk3IDQ5Ljg5MzYgMTcuNTcxOSA0OS44OTM2IDIxLjI4NDVDNDkuODkzNiAyNC45OTcyIDQ2Ljg1MTQgMjguMDM5MiA0My4xMzg4IDI4LjAzOTJaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik01NC45NDQxIDQxLjQyNTRMNDYuMTIxNiA0My40MzM4QzQ2LjEyMTYgNDMuNjE2OCA0Ni4xMjE2IDQzLjc5OTggNDYuMDU5OCA0My45ODA0QzQ1Ljc1NTYgNDYuNDc2IDQzLjc0NzMgNDguNDIyNSA0MS4zMTM1IDQ4LjcyNjdMNDAuNzY2OSA0OC43ODg1QzM3LjU0MTYgNDkuMjE0IDM0LjI1NyA0OS4zMzUyIDMxLjAzMTcgNDkuMjE0TDI4LjM1NTUgNDkuMDkyOEMyNy45MzAxIDQ5LjA5MjggMjcuNTY0MSA0OC45MDk4IDI3LjI1OTggNDguNjA1NUMyNi45NTU2IDQ4LjMwMTMgMjYuODM0NCA0Ny44NzU5IDI2LjgzNDQgNDcuNDUwNEMyNi44MzQ0IDQ3LjAyNSAyNy4wMTc0IDQ2LjY1OSAyNy4zMjE2IDQ2LjM1NDhDMjcuNjI1OSA0Ni4wNTA2IDI4LjA1MTMgNDUuOTI5MyAyOC40NzY3IDQ1LjkyOTNMMzEuMTUyOSA0Ni4wNTA2QzM0LjI1NyA0Ni4xNzE4IDM3LjI5OTMgNDYuMDUwNiA0MC4zNDE1IDQ1LjY4NDVMNDAuODg4MSA0NS42MjI3QzQxLjk4MzggNDUuNTAxNSA0Mi43NzUzIDQ0LjY0ODMgNDIuOTU1OSA0My41NTVDNDMuMDE3NyA0Mi45NDY1IDQyLjg5NDEgNDIuMjc2MyA0Mi40Njg3IDQxLjc5MTRDNDIuMDQzMiA0MS4zMDQyIDQxLjQ5NDIgNDEgNDAuODg1NyA0MC44Nzg4TDI3LjAxMjYgMzkuMjk1OUMyNS40OTE1IDM5LjExMjggMjMuOTcwNCAzOS40Nzg5IDIyLjYzMjMgNDAuMjcwM0wxMy43NDc5IDQ1Ljk4ODdMMjEuNTk1OSA1Ny40ODc0TDMzLjE1NjQgNTkuNTU1MUMzNS4xNjQ3IDU5LjkyMTEgMzcuMjMyNSA1OS40OTMzIDM4LjkzNjYgNTguNEw1Ny4xMjgyIDQ2LjQxNDFDNTcuNzk4NCA0NS45ODg3IDU4LjIyMzggNDUuMzE4NSA1OC4zNDUxIDQ0LjUyN0M1OC40NjYzIDQzLjczNTUgNTguMjgzMyA0My4wMDU5IDU3LjczNjYgNDIuMzM1NkM1Ny4wMTE3IDQxLjU0NjUgNTUuOTE2IDQxLjE4MDUgNTQuOTQ0IDQxLjQyNTNMNTQuOTQ0MSA0MS40MjU0WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNi43NTQgNTAuNzk0M0M2LjE0NTU1IDUxLjIxOTcgNS45NjI1NiA1Mi4wMTEyIDYuMzg3OTggNTIuNjE5NkwxMi42NTU1IDYxLjc0NjNDMTMuMDgwOSA2Mi4zNTQ4IDEzLjg3MjQgNjIuNTM3OCAxNC40ODA4IDYyLjExMjRMMTguOTgyNCA1OS4wMDgzTDExLjI1ODEgNDcuNjkwMkw2Ljc1NCA1MC43OTQzWiIgZmlsbD0iIzFFN0M5RiIvPiA8L3N2Zz4="
+                  alt="Personal service"
+                />
+              </div>
+              <div class="benefit-text">
+                <h3>Personalized Service, Every Step</h3>
+                <p>
+                  Listing, staging, offers, closing — I stay by your side,
+                  hands-on, until your goal is achieved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-evaluation-section">
+        <img src="img/Classic_Home.png" alt="Modern home interior" />
+        <div class="overlay"></div>
+        <div class="evaluation-content">
+          <h6>Your Home's True Value</h6>
+          <h3>Instant Home Evaluation!</h3>
+          <p>
+            Forget automated guesses.<br />I deliver personalized, data-backed
+            home evaluations — factoring in real market trends, local insights,
+            and your property’s unique edge.<br />Determine your home’s fair
+            market price.<br />Make every move smart.
+          </p>
+          <a href="#" class="evaluation-button">GET YOUR EVALUATION</a>
+        </div>
+      </section>
+
+      <section class="sell-section">
+        <div class="container sell-grid">
+          <div class="sell-right-content">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib21uaS1pbWFnZSIgd2lkdGg9IjY3IiBoZWlnaHQ9IjY4IiB2aWV3Qm94PSIwIDAgNjcgNjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiA8cGF0aCBkPSJNNDIuNzczNiA0NC43NTVDMzkuNTY1NiA0OS4xMDcyIDM2LjU1MzUgNTIuNTU2NiAzNS44NTkyIDUzLjMzOThMMzMuNTExOSA1Ni4wMTU2TDMxLjEzODQgNTMuMzQxMUMzMC40NDM5IDUyLjU1OCAyNy40MjgzIDQ5LjExMDUgMjQuMjE3OSA0NC43NTc2QzE3LjkxMSA0NS45NTI3IDE0IDQ4LjMwOTUgMTQgNTEuMDk0NkMxNCA1NS43NDUyIDI0LjA0NjYgNTguMjU0NiAzMy41IDU4LjI1NDZDNDIuOTUzNCA1OC4yNTQ2IDUzIDU1Ljc0NTUgNTMgNTEuMDk0NkM1MyA0OC4yOTkzIDQ5LjA5MDMgNDUuOTQ2NyA0Mi43NzM3IDQ0Ljc1NDZMNDIuNzczNiA0NC43NTVaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0zMy41MDQ2IDUyLjI1NDZMMzQuMjMyNCA1MS4zNDY4QzM0LjgxNjUgNTAuNjI2MyA0OC41IDMzLjYzMzEgNDguNSAyNS41MDEzQzQ4LjUgMTcuMDkzMyA0MS43NzggMTAuMjU0NiAzMy41MDQ2IDEwLjI1NDZDMjUuMjMxNSAxMC4yNTQ2IDE4LjUgMTcuMDkzNyAxOC41IDI1LjUwMTNDMTguNSAzMy42MzI3IDMyLjE4MzQgNTAuNjI2MiAzMi43NjcyIDUxLjM0NjNMMzMuNTA0NiA1Mi4yNTQ2Wk0yMi45NzE0IDI1Ljk1NTVDMjIuOTcxNCAxOS45NjUyIDI3LjY5MjIgMTUuMTAwMSAzMy41MDQ2IDE1LjEwMDFDMzkuMzA3NSAxNS4xMDAxIDQ0LjAzNzggMTkuOTY1MiA0NC4wMzc4IDI1Ljk1NTVDNDQuMDM3OCAzMS45MzU4IDM5LjMwNzUgMzYuODEwOCAzMy41MDQ2IDM2LjgxMDhDMjcuNjkyMiAzNi44MTA3IDIyLjk3MTQgMzEuOTM1OCAyMi45NzE0IDI1Ljk1NTVaIiBmaWxsPSIjMUU3QzlGIi8+IDwvc3ZnPg=="
+                  alt="Location Svg"
+                />
+              </div>
+              <div class="benefit-text">
+                <h3>Tailored Guidance for First- Time Buyers</h3>
+                <p>Clear steps, smart advice, no confusion.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib21uaS1pbWFnZSIgd2lkdGg9IjY3IiBoZWlnaHQ9IjYzIiB2aWV3Qm94PSIwIDAgNjcgNjMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiA8cGF0aCBkPSJNMTYuMTk1OSA5LjQwNzNDMTguMDYxMiA4LjU0MDQ4IDE4Ljk2NzUgNi4wODQ5MSAxOC4yMjEzIDMuOTIwNzdMMTcuMDczMSAwLjU5NjQzNkwxNi4xNDg3IDEuMDI0NTlDMTQuMjgzMyAxLjg4OTQ3IDEzLjM3NzEgNC4zNDUwNCAxNC4xMjMyIDYuNTExMTJMMTUuMjc1MiA5LjgzNzgyTDE2LjE5NTkgOS40MDczWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMTEuMjQ5NyAxMy44ODU5QzEyLjgxNjIgMTIuNzIzOCAxMy4xNzY2IDEwLjQ3MTYgMTIuMDUyNCA4Ljg1NzMzTDEwLjMxNzggNi4zNzI1Nkw5LjU0MzMzIDYuOTQzNzdDNy45NzY4MyA4LjEwNTkxIDcuNjE2NDMgMTAuMzU4MSA4Ljc0MDY0IDExLjk3MjNMMTAuNDcxNiAxNC40NTg4TDExLjI0OTcgMTMuODg1OVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTUuMTY3NjMgMTIuMTQ4Mkw0LjQ0MjggMTIuOTIxNkMyLjk3ODc4IDE0LjQ5MDggMy4xODI5NSAxNi44NDI3IDQuODk4MDUgMTguMTc2OUw3LjUzNzk2IDIwLjIzNDRMOC4yNjA4OCAxOS40NTkzQzkuNzI5MDcgMTcuODkyMiA5LjUyNDg5IDE1LjUzODIgNy44MDU2MyAxNC4yMDU3TDUuMTY3NjMgMTIuMTQ4MloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTEuNTUyOTggMjAuMDgxNUMwLjYyNjQ2NSAyMi4xMDk5IDEuMzczMDggMjQuNTc3OCAzLjIyMzY1IDI1LjU5OTNMNi4wNzQgMjcuMTY1M0w2LjUzMTY3IDI2LjE2MjVDNy40NjE2NCAyNC4xMzQxIDYuNzExNTggMjEuNjY2MiA0Ljg2MSAyMC42NDI4TDIuMDE2MiAxOS4wNzkxTDEuNTUyOTggMjAuMDgxNVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTAuMDg1MjIyNyAyOC4yODIzQy0wLjMzMTI3NiAzMC41NDA2IDAuODE5MDI1IDMyLjc5MDkgMi42NTg1OCAzMy4zMDc1TDUuNDg0NDMgMzQuMDk2Nkw1LjY5MDgxIDMyLjk3OThDNi4xMDczMSAzMC43MTkxIDQuOTUzNTMgMjguNDcxMiAzLjExNzQ1IDI3Ljk1NDZMMC4yOTE2MDIgMjcuMTY1NUwwLjA4NTIyMjcgMjguMjgyM1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTguMDg2MTkgMzkuODE1Nkw4LjA2NzY3IDM4LjgyMUM4LjAyODkxIDM2LjgxMzggNi4zMzg1MSAzNS4yMTc2IDQuMjk2NzEgMzUuMjUyM0wxLjE1NTE1IDM1LjMwODVMMS4xNzM2NiAzNi4zMDMxQzEuMjEwNjkgMzguMzEwMyAyLjg5OTA1IDM5LjkwNjUgNC45NDA4NSAzOS44NzE4TDguMDg2MTkgMzkuODE1NloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTcuNzA3MDcgNDYuNjc5NUwxMC4zOTY1IDQ1Ljg3NTlMMTAuMTY1NSA0NC45MDg4QzkuNzAxNzIgNDIuOTUwOSA3LjkwNTIzIDQxLjc4NTcgNi4xNTQ4NyA0Mi4zMDdMMy40NjU0NSA0My4xMDg5TDMuNjk2NDQgNDQuMDc3N0M0LjE1ODY5IDQ2LjAzNzMgNS45NTMzNyA0Ny4xOTg3IDcuNzA3MDcgNDYuNjc5NVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTE1LjAxNzIgNTAuNjc4NkwxNC41NDI5IDQ5LjgyMDJDMTMuNTgxOCA0OC4wODM3IDExLjM3ODggNDcuNDQ5NiA5LjYyODIyIDQ4LjQwMDlMNi45MzEwMyA0OS44NjEzTDcuNDA5MDQgNTAuNzE5OEM4LjM3MDExIDUyLjQ1NDMgMTAuNTY5NSA1My4wODg3IDEyLjMyMzcgNTIuMTM3TDE1LjAxNzIgNTAuNjc4NloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTIwLjEyMTYgNTMuNjc2NUMxOC43NjA5IDUyLjI5NzIgMTYuNDU3NiA1Mi4yMDU1IDE0Ljk4MDggNTMuNDc0NUwxMi43MDY4IDU1LjQyMjFMMTMuMzc4MiA1Ni4xMDQyQzE0LjczODggNTcuNDgzNSAxNy4wNDIxIDU3LjU3MTggMTguNTE5IDU2LjMwNjJMMjAuNzkzIDU0LjM1NjdMMjAuMTIxNiA1My42NzY1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMjEuNDU5IDU3LjQ0ODhMMTkuNjM3OSA1OS42NzAxTDIwLjUyMTMgNjAuMTQyMkMyMi4zMDc1IDYxLjEwMDYgMjQuNzE0OSA2MC43MDU1IDI1LjkwMSA1OS4yNjIyTDI3LjcyNDEgNTcuMDQxTDI2Ljg0MDggNTYuNTY3MkMyNS4wNTQ2IDU1LjYxMDIgMjIuNjQ3MiA1Ni4wMDU1IDIxLjQ1OSA1Ny40NDg4WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMjIuMTQ2NCAxMS41MDM1QzIwLjc3NzQgMTAuNjQ3OCAxOC44NDMyIDEwLjg5MjggMTcuODI5NiAxMi4wNTM4TDE3LjMyNzYgMTIuNjI4NkwxOS40MzYgMTMuOTQ3OEMyMC44MDg1IDE0LjgwMzUgMjIuNzQzMSAxNC41NiAyMy43NTY3IDEzLjM5OTNMMjQuMjU4NyAxMi44MjNMMjIuMTQ2NCAxMS41MDM1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMTkuNjM3OCAxNS41NTlMMTcuNTc0NiAxNC42NjkxQzE2LjIzNzMgMTQuMDg5NSAxNC42OTY0IDE0Ljc0NzQgMTQuMTM3OSAxNi4xMzg1TDEzLjg2MTkgMTYuODI1NEwxNS45MjIxIDE3LjcxMzRDMTcuMjYyNSAxOC4yOTMgMTguODAwMyAxNy42MzUxIDE5LjM1ODggMTYuMjQ1OUwxOS42Mzc4IDE1LjU1OVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTE3LjE4NjIgMjAuMjEzOUwxNy4zMjc1IDE5LjQ2NzdMMTQuNDQ3IDE5LjExMThDMTIuNTc2MSAxOC44Nzk3IDEwLjgyNzEgMTkuOTA5NiAxMC41Mzc4IDIxLjQxMTlMMTAuMzk2NSAyMi4xNTYyTDEzLjI3NDkgMjIuNTEyM0MxNS4xNDM1IDIyLjc0MjggMTYuODk4OCAyMS43MTQ1IDE3LjE4NjEgMjAuMjEzOEwxNy4xODYyIDIwLjIxMzlaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik05LjI1NDUgMjYuNTA0MUw5LjMzMzQ4IDI3LjE2NTJMMTIuMDY2OSAyNi45ODM3QzEzLjg0NzkgMjYuODY1OCAxNS4xNjIgMjUuNjkwMyAxNS4wMDQ0IDI0LjM1OTFMMTQuOTI1NCAyMy42OTk3TDEyLjE4NzggMjMuODgxMkMxMC40MDg3IDIzLjk5NzUgOS4wOTQ2MyAyNS4xNzMgOS4yNTQ1IDI2LjUwNDJWMjYuNTA0MVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTkuMzk3MjUgMzIuMjc5Nkw5LjY0ODAzIDMyLjk0MUwxMS45MzgyIDMyLjIzNjNDMTMuNDI1NiAzMS43NzgzIDE0LjIxNzUgMzAuMzIyMyAxMy43MDcxIDI4Ljk4MzVMMTMuNDUyNyAyOC4zMjAzTDExLjE2NjEgMjkuMDI1QzkuNjc2NyAyOS40ODQ3IDguODg0ODUgMzAuOTQwNyA5LjM5NzI1IDMyLjI3OTZaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0xMS4zNTM5IDM4LjcxNzNMMTMuNTg1MSAzNy40MzU5QzE1LjAzMzcgMzYuNjAwNiAxNS40NTM0IDM0Ljg3NDYgMTQuNTIwMyAzMy41ODEzTDE0LjA1OTggMzIuOTQxNEwxMS44Mjg2IDM0LjIyMTJDMTAuMzggMzUuMDU2NSA5Ljk2MDI5IDM2Ljc4MjQgMTAuODkzMyAzOC4wNzkzTDExLjM1MzkgMzguNzE3M1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTE0LjAwMDggNDQuNDkzTDE1LjQ4MDIgNDIuNTY4MUMxNi40NDE2IDQxLjMxMjggMTYuMzk1NSAzOS4zMzY5IDE1LjM3ODcgMzguMTUxN0wxNC44NzgzIDM3LjU2MkwxMy4zOTg5IDM5LjQ4OTFDMTIuNDM3NSA0MC43NDQ0IDEyLjQ4MzYgNDIuNzE4NiAxMy41MDA0IDQzLjkwNTVMMTQuMDAwOCA0NC40OTNaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0xNy41MzEyIDQ3LjUzODNMMTguMTY2MiA0Ny45NTg0TDE5LjI4ODYgNDUuNjY2N0MyMC4wMTg5IDQ0LjE3NjQgMTkuNTY2NiA0Mi4yODkzIDE4LjI3NjYgNDEuNDQzNUwxNy42NDE2IDQxLjAyNzNMMTYuNTE5MiA0My4zMTY5QzE1Ljc5MjIgNDQuODA1NiAxNi4yNDQ2IDQ2LjY5NjMgMTcuNTMxMiA0Ny41MzgyVjQ3LjUzODNaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik0yMi4zMTc2IDUxLjE4NTRMMjMuMjgwNCA1MS40MjRMMjQuMTIxNyA0OC43NTc2QzI0LjY2NzEgNDcuMDIzIDIzLjUzNSA0NS4yMjQ5IDIxLjU4NDEgNDQuNzMzNEwyMC42MjE0IDQ0LjQ5MjlMMTkuNzc1NCA0Ny4xNjM0QzE5LjIyNzggNDguODk2MiAyMC4zNjQ5IDUwLjcwMDMgMjIuMzE3NiA1MS4xODU0WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNMjguNzc5NSA1My43MzQ2TDI4Ljg3NzMgNTEuMTQxQzI4Ljk0MzUgNDkuNDUxMyAyNy4zNjU2IDQ4LjA0MyAyNS4zNTU1IDQ3Ljk4NzRMMjQuMzU4NSA0Ny45NTg3TDI0LjI2MDcgNTAuNTU0MUMyNC4xOTQ1IDUyLjI0MTcgMjUuNzcyNSA1My42NTQyIDI3Ljc4MjUgNTMuNzA3N0wyOC43Nzk1IDUzLjczNDZaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik01MS43MjczIDkuODM3ODJMNTIuODc1MSA2LjUxMTEyQzUzLjYyNDggNC4zNDg5MiA1Mi43MTUxIDEuODkzMzUgNTAuODUwNCAxLjAyNDU5TDQ5LjkzIDAuNTk2NDM2TDQ4Ljc3ODQgMy45MjI4QzQ4LjAzMjUgNi4wODMwNSA0OC45Mzg1IDguNTM4MiA1MC44MDMyIDkuNDA5MzJMNTEuNzI3MyA5LjgzNzgyWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTcuNDU0NCA2Ljk0Mzc3TDU2LjY4MDIgNi4zNzI1Nkw1NC45NDk5IDguODU3MzJDNTMuODIyNiAxMC40NzE1IDU0LjE4MjUgMTIuNzIzNyA1NS43NTIzIDEzLjg4NTlMNTYuNTI2NCAxNC40NTg4TDU4LjI1NjcgMTEuOTcyM0M1OS4zODM3IDEwLjM1NjQgNTkuMDI1NCA4LjEwNDE3IDU3LjQ1NDQgNi45NDM3N1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTYxLjgzNiAxMi4xNDgyTDU5LjE5MjQgMTQuMjA1N0M1Ny40NzQ5IDE1LjU0MiA1Ny4yNzIzIDE3Ljg5MzkgNTguNzM2NSAxOS40NTkzTDU5LjQ2MDQgMjAuMjM0NEw2Mi4wOTk5IDE4LjE3NjlDNjMuODE3NCAxNi44Mzg5IDY0LjAyIDE0LjQ4ODcgNjIuNTU5OSAxMi45MjE2TDYxLjgzNiAxMi4xNDgyWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNjAuNDY5IDI2LjE2MjZMNjAuOTI2OCAyNy4xNjUzTDYzLjc3MzggMjUuNTk5NEM2NS42MjY4IDI0LjU4MDMgNjYuMzc1MyAyMi4xMTQzIDY1LjQ0NDggMjAuMDgxOEw2NC45OTA4IDE5LjA3OTFMNjIuMTQgMjAuNjQyOEM2MC4yODUyIDIxLjY2NDUgNTkuNTM4OCAyNC4xMzQ1IDYwLjQ2OSAyNi4xNjI1TDYwLjQ2OSAyNi4xNjI2WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNjYuNjUwMiAyNy4xNjU1TDYzLjI1OTEgMjcuOTU0NkM2MS4wNTE3IDI4LjQ2NjkgNTkuNjcxMyAzMC43MTQ4IDYwLjE3MTEgMzIuOTc5OEw2MC40MTg4IDM0LjA5NjZMNjMuODA5OCAzMy4zMDc1QzY2LjAxMzEgMzIuNzk1MiA2Ny4zOTc2IDMwLjU0NTMgNjYuODk3OCAyOC4yODIzTDY2LjY1MDIgMjcuMTY1NVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTU4LjkzMjIgMzguODIxTDU4LjkxMzcgMzkuODE1NUw2Mi4wNTUzIDM5Ljg3MThDNjQuMDk5MSAzOS45MDgyIDY1Ljc4NzEgMzguMzEgNjUuODI2MiAzNi4zMDMxTDY1Ljg0NDcgMzUuMzA4Nkw2Mi43MDMyIDM1LjI1MjRDNjAuNjU3NiAzNS4yMTQgNTguOTY5MiAzNi44MTIxIDU4LjkzMjIgMzguODIxWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTYuODM0MyA0NC45MDlMNTYuNjAzNCA0NS44NzYxTDU5LjI5NDkgNDYuNjc5OEM2MS4wNDEgNDcuMTk5IDYyLjgzNjcgNDYuMDMzOCA2My4zMDM1IDQ0LjA3NzhMNjMuNTM0NCA0My4xMDlMNjAuODQzIDQyLjMwN0M1OS4wOTY4IDQxLjc4NTcgNTcuMzAxMiA0Mi45NTA5IDU2LjgzNDMgNDQuOTA5WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTIuNDYwOCA0OS44MTg3TDUxLjk4MjggNTAuNjc2NUw1NC42OCA1Mi4xMzcyQzU2LjQzMDUgNTMuMDg3OCA1OC42MzM2IDUyLjQ1NTkgNTkuNTk0NyA1MC43MjEyTDYwLjA2OSA0OS44NjM1TDU3LjM3NTUgNDguNDAyN0M1NS42MjMzIDQ3LjQ0ODMgNTMuNDIzOSA0OC4wODM4IDUyLjQ2MDggNDkuODE4N1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTQ2Ljg4MTQgNTMuNjc4Mkw0Ni4yMDY5IDU0LjM1ODJMNDguNDgzNSA1Ni4zMDcxQzQ5Ljk2MTggNTcuNTcyMiA1Mi4yNjE5IDU3LjQ4MjQgNTMuNjE4NiA1Ni4xMDUyTDU0LjI5MzEgNTUuNDIzM0w1Mi4wMjAyIDUzLjQ3NjJDNTAuNTM5OSA1Mi4yMDQyIDQ4LjIzOCA1Mi4yOTc1IDQ2Ljg4MTQgNTMuNjc4MloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTQwLjE1OTIgNTYuNTY4MUwzOS4yNzYgNTcuMDQxOEw0MS4wOTY2IDU5LjI2MjVDNDIuMjgyNCA2MC43MDU0IDQ0LjY5NzIgNjEuMTAwNyA0Ni40NzkgNjAuMTQyMkw0Ny4zNjIyIDU5LjY3MDJMNDUuNTM5NCA1Ny40NDk1QzQ0LjM1NTcgNTYuMDA1MiA0MS45NDQ5IDU1LjYwOTkgNDAuMTU5MSA1Ni41NjhMNDAuMTU5MiA1Ni41NjgxWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDQuODQ5OCAxMS41MDM1TDQyLjc0MTUgMTIuODIyOEw0My4yNDM0IDEzLjM5OTJDNDQuMjU3IDE0LjU2MDEgNDYuMTg3NyAxNC44MDM1IDQ3LjU2MDIgMTMuOTQ3N0w0OS42NzI1IDEyLjYyODRMNDkuMTcwNSAxMi4wNTM2QzQ4LjE1NTIgMTAuODkyOCA0Ni4yMjA2IDEwLjY0NzggNDQuODQ5OCAxMS41MDM1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDkuNDIyMiAxNC42NjgzTDQ3LjM2MjEgMTUuNTU4NEw0Ny42MzggMTYuMjQ1NEM0OC4xOTY1IDE3LjYzNTEgNDkuNzM1OSAxOC4yOTMxIDUxLjA3NDcgMTcuNzEzNEw1My4xMzc5IDE2LjgyNTJMNTIuODU4NyAxNi4xMzgxQzUyLjMwMDQgMTQuNzQ2OSA1MC43NjQ0IDE0LjA5MDUgNDkuNDIyMiAxNC42NjgzWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNTIuNTQ4NyAxOS4xMTEzTDQ5LjY3MjQgMTkuNDY3Mkw0OS44MTM3IDIwLjIxMzVDNTAuMTAzIDIxLjcxNDIgNTEuODUxNyAyMi43NDQgNTMuNzI3MSAyMi41MTJMNTYuNjAzNCAyMi4xNTYxTDU2LjQ2MjEgMjEuNDExOEM1Ni4xNzUxIDE5LjkwODkgNTQuNDI0IDE4Ljg4MDkgNTIuNTQ4NyAxOS4xMTE0VjE5LjExMTNaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik01NC44MDkyIDIzLjg4MTJMNTIuMDcwNSAyMy42OTk3TDUxLjk5NTYgMjQuMzU5MUM1MS44MzgxIDI1LjY5MDMgNTMuMTQ3NyAyNi44NjU4IDU0LjkyODIgMjYuOTgzN0w1Ny42NjY4IDI3LjE2NTJMNTcuNzQ1OCAyNi41MDQxQzU3LjkwMzcgMjUuMTc0NSA1Ni41ODk5IDIzLjk5OTIgNTQuODA5MSAyMy44ODEyTDU0LjgwOTIgMjMuODgxMloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTU3LjYwNTIgMzIuMjc5NkM1OC4xMTI3IDMwLjk0MDggNTcuMzIwMyAyOS40ODQ4IDU1LjgzMiAyOS4wMjVMNTMuNTQ0MSAyOC4zMjAzTDUzLjI5MzEgMjguOTgzNUM1Mi43ODIxIDMwLjMyMjMgNTMuNTc0NCAzMS43Nzg0IDU1LjA2MzEgMzIuMjM2M0w1Ny4zNTEgMzIuOTQxTDU3LjYwNTIgMzIuMjc5NloiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTU2LjEwNzMgMzguMDc5M0M1Ny4wMzc5IDM2Ljc4MjEgNTYuNjIyNCAzNS4wNTgxIDU1LjE3MDggMzQuMjIxMkw1Mi45NDEgMzIuOTQxNEw1Mi40ODA3IDMzLjU4MTNDNTEuNTQ2MSAzNC44NzUgNTEuOTY1NiAzNi42MDEgNTMuNDE3MiAzNy40MzU5TDU1LjY0MyAzOC43MTczTDU2LjEwNzMgMzguMDc5M1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTUzLjIzNjggNDMuOTA1NUM1NC41OTI0IDQyLjcyNDMgNTQuNjQ5NCA0MC43NDQ0IDUzLjM3MTkgMzkuNDg5MUw1MS4zOTg3IDM3LjU2Mkw1MC43MjgzIDM4LjE1MTdDNDkuMzcyNyAzOS4zMzI5IDQ5LjMxNTcgNDEuMzEyOCA1MC41OTU1IDQyLjU2ODFMNTIuNTYwNiA0NC40OTNMNTMuMjM2OCA0My45MDU1WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDkuMzU4MSA0MS4wMjczTDQ4LjcyMDUgNDEuNDQ3NEM0Ny40MzUyIDQyLjI5MTIgNDYuOTgxNCA0NC4xODA1IDQ3LjcwOTUgNDUuNjY4N0w0OC44MzA4IDQ3Ljk1ODRMNDkuNDY4NCA0Ny41NDA0QzUwLjc1NzIgNDYuNjk0NSA1MS4yMDc1IDQ0LjgwNzMgNTAuNDc5NSA0My4zMTkxTDQ5LjM1ODEgNDEuMDI3M1oiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTQ1LjQxOTcgNDQuNzMzM0M0My40Njc3IDQ1LjIyMDUgNDIuMzMxNiA0Ny4wMTk5IDQyLjg3ODkgNDguNzU2Mkw0My43MjQ0IDUxLjQyNEw0NC42ODY2IDUxLjE4MTNDNDYuNjM4NSA1MC42OTgzIDQ3Ljc3NDcgNDguODk3IDQ3LjIyMjcgNDcuMTYwN0w0Ni4zODE5IDQ0LjQ5MjlMNDUuNDE5NyA0NC43MzMzWiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNDIuNzM5NiA1MC41NTQxTDQyLjYzNzIgNDcuOTU4N0w0MS42NDU3IDQ3Ljk4NzRDMzkuNjMyOCA0OC4wNDMgMzguMDYxMyA0OS40NTUyIDM4LjEyMjMgNTEuMTQxTDM4LjIyNDcgNTMuNzM0NkwzOS4yMTYyIDUzLjcwNzdDNDEuMjI5MSA1My42NTQzIDQyLjgwMSA1Mi4yNDE3IDQyLjczOTYgNTAuNTU0MVoiIGZpbGw9IiMxRTdDOUYiLz4gPHBhdGggZD0iTTM1LjgzNDMgNTcuMDc0NUMzNi4wMjg0IDU3LjAzODIgMzYuMjEzIDU2Ljk5MDYgMzYuNDExIDU2Ljk2OEM1MC45Njc4IDU1LjMzNDkgNjEuNTA4MSA0MS45MjUyIDU5LjkwODUgMjcuMDc0MkM1OC44ODA0IDE3LjU1MjkgNTIuOTE4NCA5LjIxMDM2IDQ0LjM0NTUgNS4zMDIxM0M0My44NzE0IDUuMDgzMjMgNDMuMzI0NyA1LjMwMjEzIDQzLjExMzkgNS43ODE4N0M0Mi45MDMxIDYuMjYxNiA0My4xMTM5IDYuODI0OSA0My41ODQyIDcuMDM4MTdDNTEuNTUzOCAxMC42Njk5IDU3LjA5ODIgMTguNDI2MyA1OC4wNTM3IDI3LjI4MjFDNTkuNTQxIDQxLjA5IDQ5Ljc0IDUzLjU1NzggMzYuMjA3MyA1NS4wNzY4QzM1LjI2NjYgNTUuMTgzMiAzNC4zNjE2IDU1LjQxNzYgMzMuNTA5MSA1NS43NjAyQzMyLjY1MjQgNTUuNDE1OCAzMS43NDk1IDU1LjE4MTUgMzAuODA4OCA1NS4wNzY4QzIyLjEzMTYgNTQuMTAyMSAxNC41MjMzIDQ4LjQ1MDkgMTAuOTYyOCA0MC4zMTcyQzguMjcwMTggMzQuMTcyOCA4LjA4MzU3IDI3LjMzMTYgMTAuNDM4NiAyMS4wNDQ4QzEyLjc5NzQgMTQuNzU5NCAxNy40MDY2IDkuNzg1MjcgMjMuNDMxNiA3LjA0MjczQzIzLjkwMTkgNi44Mjk0OCAyNC4xMTI3IDYuMjY2MTkgMjMuOTAxOSA1Ljc4NjQzQzIzLjY4ODggNS4zMDY0IDIzLjEzODMgNS4wODkyOSAyMi42NjggNS4zMDY0QzE2LjE5MTEgOC4yNTg1NSAxMS4yMjc1IDEzLjYwNTYgOC42OTQ5MyAyMC4zNjY4QzYuMTYyMyAyNy4xMjc5IDYuMzYyMzQgMzQuNDkwNiA5LjI2MDI4IDQxLjA5NzJDMTMuMDkxMiA0OS44NDE4IDIxLjI3MDMgNTUuOTIzOCAzMC42MDQzIDU2Ljk3MjNDMzAuNzk4NSA1Ni45OTUyIDMwLjk4MzEgNTcuMDQyOCAzMS4xNzkgNTcuMDc3QzI5LjYzMDIgNTguMjI2OCAyOC4zODc1IDU5Ljc5NTEgMjcuNjMzNSA2MS42NjQ0QzI3LjQzOTMgNjIuMTUxNSAyNy42NjcgNjIuNzA5NSAyOC4xNDI5IDYyLjkwNzNDMjguMjYwNCA2Mi45NTMxIDI4LjM3OTkgNjIuOTc1NyAyOC40OTU3IDYyLjk3NTdDMjguODYzNCA2Mi45NzU3IDI5LjIxMDMgNjIuNzU1IDI5LjM1OTYgNjIuMzg3NEMzMC4xNjk2IDYwLjM3NTMgMzEuNjYyNSA1OC43OTU0IDMzLjUxMTYgNTcuODU3MUMzNS4zNTM1IDU4Ljc5NTQgMzYuODU1NyA2MC4zNzUzIDM3LjY2MzYgNjIuMzg3NEMzNy44MTI5IDYyLjc1MjkgMzguMTU5OCA2Mi45NzU3IDM4LjUyNzUgNjIuOTc1N0MzOC42NDUgNjIuOTc1NyAzOC43NjQ2IDYyLjk1MjggMzguODgwMyA2Mi45MDUyQzM5LjM1NzkgNjIuNzA3MSAzOS41ODM5IDYyLjE1MTUgMzkuMzg0MSA2MS42NjRDMzguNjI0OSA1OS43ODk0IDM3LjM4MTkgNTguMjIyOSAzNS44MzMxIDU3LjA3NTFMMzUuODM0MyA1Ny4wNzQ1WiIgZmlsbD0iIzFFN0M5RiIvPiA8L3N2Zz4="
+                  alt="benefit-icon-image"
+                />
+              </div>
+              <div class="benefit-text">
+                <h3>Expertise in Investments and New Construction</h3>
+                <p>Smart identification aligned with goals and budgets</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib21uaS1pbWFnZSIgd2lkdGg9IjY3IiBoZWlnaHQ9IjY4IiB2aWV3Qm94PSIwIDAgNjcgNjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiA8cGF0aCBkPSJNNTQuNDU2OSAyNy4xODZDNTQuODIzIDI2LjI3MzMgNTQuOTQ0MiAyNi4wMzA5IDU1LjMwNzggMjUuMTE4Mkw1OC4zNSAyNC42OTI4QzU5LjE0MTUgMjQuNTcxNiA1OS43NDk5IDIzLjkwMTQgNTkuNzQ5OSAyMy4wNTA1VjE5LjQ1OTJDNTkuNzQ5OSAxOC42Njc4IDU5LjE0MTUgMTcuOTM4MSA1OC4zNSAxNy44MTY4TDU1LjMwNzggMTcuMzkxNEM1NC45NDE4IDE2LjQ3ODcgNTQuODIwNiAxNi4yMzYzIDU0LjQ1NjkgMTUuMzIzN0w1Ni4yODIzIDEyLjgyODFDNTYuNzY5NSAxMi4xNTc4IDU2LjcwNzcgMTEuMjQ1MSA1Ni4wOTkzIDEwLjY5ODVMNTMuNjY1NSA4LjIwMjlDNTMuMDU3IDcuNTk0NDUgNTIuMTQ0NCA3LjUzMjY0IDUxLjUzNTkgOC4wMTk4OUw0OS4wNDAzIDkuODQ1MjNDNDguMTI3NyA5LjQ3OTIxIDQ3Ljg4NTIgOS4zNTc5OSA0Ni45NzI2IDguOTk0MzdMNDYuNTQ3MSA1Ljk1MjEzQzQ2LjQyNTkgNS4xNjA2OSA0NS43NTU3IDQuNTUyMjUgNDQuOTA0OCA0LjU1MjI1SDQxLjM3NTNDNDAuNTgzOSA0LjU1MjI1IDM5Ljg1NDIgNS4xNjA2OSAzOS43MzMgNS45NTIxM0wzOS4zMDc2IDguOTk0MzdDMzguMzk0OSA5LjM2MDM5IDM4LjE1MjUgOS40ODE2IDM3LjIzOTggOS44NDUyM0wzNC43NDQyIDguMDE5ODlDMzQuMDczOSA3LjUzMjY1IDMzLjE2MTMgNy41OTQ0NSAzMi42MTQ2IDguMjAyOUwzMC4xMTkgMTAuNjk4NUMyOS41MTA2IDExLjMwNjkgMjkuNDQ4OCAxMi4yMTk2IDI5LjkzNiAxMi44MjgxTDMxLjc2MTQgMTUuMzIzN0MzMS4zOTUzIDE2LjIzNjMgMzEuMjc0MSAxNi40Nzg3IDMwLjkxMDUgMTcuMzkxNEwyNy44NjgzIDE3LjgxNjhDMjcuMDc2OCAxNy45MzgxIDI2LjQ2ODQgMTguNjA4MyAyNi40Njg0IDE5LjQ1OTJWMjIuOTg4NkMyNi40Njg0IDIzLjgzOTUgMjcuMDc2OCAyNC41MDk4IDI3Ljg2ODMgMjQuNjMxTDMwLjkxMDUgMjUuMDU2NEMzMS4yNzY1IDI1Ljk2OTEgMzEuMzk3NyAyNi4yMTE1IDMxLjc2MTQgMjcuMTI0MkwyOS45MzYgMjkuNTU4QzI5LjQ0ODggMzAuMjI4MiAyOS41MTA2IDMxLjE0MDkgMzAuMTE5IDMxLjY4NzVMMzIuNjE0NiAzNC4xODMxQzMzLjIyMzEgMzQuNzkxNiAzNC4xMzU4IDM0Ljg1MzQgMzQuNzQ0MiAzNC4zNjYyTDM3LjIzOTggMzIuNTQwOEMzOC4xNTI1IDMyLjkwNjggMzguMzk0OSAzMy4wMjggMzkuMzA3NiAzMy4zOTE3TDM5LjczMyAzNi40MzM5QzM5Ljg1NDIgMzcuMjI1MyA0MC41MjQ0IDM3LjgzMzggNDEuMzc1MyAzNy44MzM4SDQ0LjkwNDhDNDUuNjk2MiAzNy44MzM4IDQ2LjQyNTkgMzcuMjI1MyA0Ni41NDcxIDM2LjQzMzlMNDYuOTcyNiAzMy4zOTE3QzQ3Ljg4NTIgMzMuMDI1NyA0OC4xMjc3IDMyLjkwNDQgNDkuMDQwMyAzMi41NDA4TDUxLjUzNTkgMzQuMzY2MkM1Mi4yMDYyIDM0Ljg1MzQgNTMuMTE4OSAzNC43OTE2IDUzLjY2NTUgMzQuMTgzMUw1Ni4xNjExIDMxLjY4NzVDNTYuNzY5NSAzMS4wNzkxIDU2LjgzMTMgMzAuMTY2NCA1Ni4zNDQxIDI5LjU1OEw1NC40NTY5IDI3LjE4NlpNNDMuMTM4OCAyOC4wMzkyQzM5LjQyNjMgMjguMDM5MiAzNi4zODQgMjQuOTk3IDM2LjM4NCAyMS4yODQ1QzM2LjM4NCAxNy41NzE4IDM5LjQyNjMgMTQuNTI5NyA0My4xMzg4IDE0LjUyOTdDNDYuODUxMyAxNC41Mjk3IDQ5Ljg5MzYgMTcuNTcxOSA0OS44OTM2IDIxLjI4NDVDNDkuODkzNiAyNC45OTcyIDQ2Ljg1MTQgMjguMDM5MiA0My4xMzg4IDI4LjAzOTJaIiBmaWxsPSIjMUU3QzlGIi8+IDxwYXRoIGQ9Ik01NC45NDQxIDQxLjQyNTRMNDYuMTIxNiA0My40MzM4QzQ2LjEyMTYgNDMuNjE2OCA0Ni4xMjE2IDQzLjc5OTggNDYuMDU5OCA0My45ODA0QzQ1Ljc1NTYgNDYuNDc2IDQzLjc0NzMgNDguNDIyNSA0MS4zMTM1IDQ4LjcyNjdMNDAuNzY2OSA0OC43ODg1QzM3LjU0MTYgNDkuMjE0IDM0LjI1NyA0OS4zMzUyIDMxLjAzMTcgNDkuMjE0TDI4LjM1NTUgNDkuMDkyOEMyNy45MzAxIDQ5LjA5MjggMjcuNTY0MSA0OC45MDk4IDI3LjI1OTggNDguNjA1NUMyNi45NTU2IDQ4LjMwMTMgMjYuODM0NCA0Ny44NzU5IDI2LjgzNDQgNDcuNDUwNEMyNi44MzQ0IDQ3LjAyNSAyNy4wMTc0IDQ2LjY1OSAyNy4zMjE2IDQ2LjM1NDhDMjcuNjI1OSA0Ni4wNTA2IDI4LjA1MTMgNDUuOTI5MyAyOC40NzY3IDQ1LjkyOTNMMzEuMTUyOSA0Ni4wNTA2QzM0LjI1NyA0Ni4xNzE4IDM3LjI5OTMgNDYuMDUwNiA0MC4zNDE1IDQ1LjY4NDVMNDAuODg4MSA0NS42MjI3QzQxLjk4MzggNDUuNTAxNSA0Mi43NzUzIDQ0LjY0ODMgNDIuOTU1OSA0My41NTVDNDMuMDE3NyA0Mi45NDY1IDQyLjg5NDEgNDIuMjc2MyA0Mi40Njg3IDQxLjc5MTRDNDIuMDQzMiA0MS4zMDQyIDQxLjQ5NDIgNDEgNDAuODg1NyA0MC44Nzg4TDI3LjAxMjYgMzkuMjk1OUMyNS40OTE1IDM5LjExMjggMjMuOTcwNCAzOS40Nzg5IDIyLjYzMjMgNDAuMjcwM0wxMy43NDc5IDQ1Ljk4ODdMMjEuNTk1OSA1Ny40ODc0TDMzLjE1NjQgNTkuNTU1MUMzNS4xNjQ3IDU5LjkyMTEgMzcuMjMyNSA1OS40OTMzIDM4LjkzNjYgNTguNEw1Ny4xMjgyIDQ2LjQxNDFDNTcuNzk4NCA0NS45ODg3IDU4LjIyMzggNDUuMzE4NSA1OC4zNDUxIDQ0LjUyN0M1OC40NjYzIDQzLjczNTUgNTguMjgzMyA0My4wMDU5IDU3LjczNjYgNDIuMzM1NkM1Ny4wMTE3IDQxLjU0NjUgNTUuOTE2IDQxLjE4MDUgNTQuOTQ0IDQxLjQyNTNMNTQuOTQ0MSA0MS40MjU0WiIgZmlsbD0iIzFFN0M5RiIvPiA8cGF0aCBkPSJNNi43NTQgNTAuNzk0M0M2LjE0NTU1IDUxLjIxOTcgNS45NjI1NiA1Mi4wMTEyIDYuMzg3OTggNTIuNjE5NkwxMi42NTU1IDYxLjc0NjNDMTMuMDgwOSA2Mi4zNTQ4IDEzLjg3MjQgNjIuNTM3OCAxNC40ODA4IDYyLjExMjRMMTguOTgyNCA1OS4wMDgzTDExLjI1ODEgNDcuNjkwMkw2Ljc1NCA1MC43OTQzWiIgZmlsbD0iIzFFN0M5RiIvPiA8L3N2Zz4="
+                  alt="Personal service"
+                />
+              </div>
+              <div class="benefit-text">
+                <h3>Multilingual Support for Seamless Communication</h3>
+                <p>
+                  Fluent in English, Hindi, and Gujarati — ensuring smooth
+                  communication and cultural understanding.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="sell-left-content right-margin">
+            <h2 class="home">Find the Right Home. Build the Right Future.</h2>
+            <p class="sell-description">
+              Whether it’s your first home, your next move, or your next
+              investment — you deserve more than listings. <br />
+            </p>
+            <div class="sell-btn-flex">
+              <p class="sell-text">
+                You deserve a guide who listens, tailors, and empowers.
+              </p>
+              <a href="#" class="sell-button">GET MY BUYER'S GUIDE</a>
+            </div>
+
+            <div class="sell-left-image-container">
+              <img
+                src="https://iss-cdn.myrealpage.com/5s1OgkFUJBSZxzj534wdg9StNgl8iqh09WIGKyTPKRc/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9taW5pbWFsaXN0LW1vZGVybi1saXZpbmctcm9vbS5qcGc_dD0xNzM5NDc4ODI1MTQ3?t=1739478825147"
+                alt="Modern interior with dining table"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="horizontal-border"></section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <div class="testimonial-container">
+          <div class="testimonials-header">
+            <h2>Stories You Can Trust</h2>
+            <a href="#" class="google-reviews-button">
+              <span class="star-icon">&#9733;</span>
+              <!-- Unicode star character -->
+              READ ALL 229+ REVIEWS ON GOOGLE
+            </a>
+          </div>
+
+          <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-grid" id="testimonialsGrid">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-card">
+                <!-- Data attribute for JS rating -->
+                <p class="testimonial-text">
+                  "I recommend him to everyone. If you are looking for a
+                  property, we are behind Rutul. In his role as he help us in
+                  locating our dream home in a community at the perfect
+                  landing..."
+                </p>
+                <div class="testimonial-author">KRISHNA KAKADIYA</div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "He exceeded our expectations in every way, and we are
+                  incredibly grateful for his help. We recently had the pleasure
+                  working with Rutul during our first time home-buying journey,
+                  and I can recommend him highly enough! From our very first
+                  meeting he..."
+                </p>
+                <div class="testimonial-author">BHARGAV GADHVI</div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "He exceeded our expectations in every way, and we are
+                  incredibly grateful for his help. We recently had the pleasure
+                  working with Rutul during our first time home-buying journey,
+                  and I can recommend him highly enough! From our very first
+                  meeting he..."
+                </p>
+                <div class="testimonial-author">URVASHI PAREKH</div>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "As a first-time homebuyer, I had a lot of questions, and
+                  Rutul was always patient, informative, and quick to respond.
+                  From the start to finish, my experience was nothing short of
+                  outstanding. As a first-time homebuyer, I had a lot of
+                  questions, and Rutul was always patient, informative..."
+                </p>
+                <div class="testimonial-author">BHAVTA PATEL</div>
+              </div>
+              <!-- Testimonial 5 -->
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "Rutul is an exceptional realtor! He went above and beyond to
+                  help us find our dream home. His knowledge of the market and
+                  negotiation skills are truly impressive. Highly recommend him
+                  for anyone looking to buy or sell!"
+                </p>
+                <div class="testimonial-author">JOHN DOE</div>
+              </div>
+              <!-- Testimonial 6 -->
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "Working with Rutul was a fantastic experience. He was very
+                  responsive and guided us through every step of the selling
+                  process. We got a great offer thanks to his strategic advice.
+                  Will definitely work with him again."
+                </p>
+                <div class="testimonial-author">JANE SMITH</div>
+              </div>
+            </div>
+          </div>
+          <!-- Navigation Arrows for Testimonials -->
+          <div class="carousel-nav">
+            <button id="prev-btn">&larr;</button>
+            <button id="next-btn">&rarr;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section class="blog-section">
+        <div class="blog-container">
+          <div class="blog-header">
+            <h2>Smart Decisions Start With Smart Information</h2>
+          </div>
+          <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?ixid=M3wyMjY3NjN8MHwxfHNlYXJjaHwxMjN8fG1vZGVybiUyMGxpZ2h0bmluZyUyMGF0JTIwaG9tZXxlbnwwfHx8fDE3Mzk1NjkwMDV8MA&ixlib=rb-4.0.3&w=1200"
+                alt="What Renovations Should You Make to Your Home Before Selling?"
+              />
+              <div class="blog-card-content">
+                <h3>
+                  What Renovations Should You Make to Your Home Before Selling?
+                </h3>
+                <p class="blog-card-meta">
+                  POSTED BY RUTUL VADADORIYA ON FEB 14, 2025
+                </p>
+                <p class="blog-card-text">
+                  Getting your home ready to sell doesn't mean you need to spend
+                  a fortune. The right updates can help...
+                </p>
+                <a href="#" class="read-post-button">READ POST</a>
+              </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="blog-card">
+              <img
+                src="https://images.pexels.com/photos/19396040/pexels-photo-19396040.jpeg?w=1200"
+                alt="How Do You Get the Best Price For Your Home in Toronto?"
+              />
+              <div class="blog-card-content">
+                <h3>How Do You Get the Best Price For Your Home in Toronto?</h3>
+                <p class="blog-card-meta">
+                  POSTED BY RUTUL VADADORIYA ON FEB 14, 2025
+                </p>
+                <p class="blog-card-text">
+                  Getting top dollar for your home in Toronto doesn't happen by
+                  luck. It takes preparation, strategy, and...
+                </p>
+                <a href="#" class="read-post-button">READ POST</a>
+              </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="blog-card">
+              <img
+                src="https://iss-cdn.myrealpage.com/Foo3ZHxBxyMCWJHSCUHjSGtMJxcM308Rm3W-nlyU33g/rs:auto:1600:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9yZWFsdG9yLWluLXRvcm9udG8tYWR2aWNlLXJ1dHVsLXZhZGFkb3JpeWEuanBnP3Q9MTczOTU2ODY3NjkxOQ?t=1739568676919"
+                alt="When Should You Sell?"
+              />
+              <div class="blog-card-content">
+                <h3>When Should You Sell?</h3>
+                <p class="blog-card-meta">
+                  POSTED BY RUTUL VADADORIYA ON FEB 14, 2025
+                </p>
+                <p class="blog-card-text">
+                  It's a question I hear all the time: "When is the right time
+                  to sell my home?" The truth is, there isn't...
+                </p>
+                <a href="#" class="read-post-button">READ POST</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Your Move Starts Here Section -->
+      <section class="your-move-section">
+        <div class="container your-move-grid">
+          <div class="your-move-image">
+            <img
+              src="https://iss-cdn.myrealpage.com/dWG11ObCIzj54v-gPdwJMil5erOf_6Uc-PfXjVShfeM/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL2x5bm4taGVhZHNob3QucG5nP3Q9MTczODY1Nzk3MzYyNw?t=1738657973627"
+              alt="Rutul Vadadoriya Headshot"
+            />
+          </div>
+          <div class="your-move-content">
+            <h2>Your Move Starts Here</h2>
+            <p>Tell me your dream. I'll help you make it real.</p>
+            <form class="your-move-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">NAME: *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">LAST NAME:</label>
+                  <input type="text" id="lastName" name="lastName" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">PHONE: *</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">EMAIL: *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">MESSAGE:</label>
+                  <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="submit-button-container">
+                <button type="submit" class="submit-button">
+                  LET'S GET STARTED
+                  <span style="margin-left: 0.5rem">&rarr;</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="flex-wrap">
+          <!-- Left Section: Logo, Newsletter -->
+          <div class="section-left">
+            <div class="logo-title">
+              <h2>Rutul Vadadoriya</h2>
+              <p>Realtor® CNE. M.ENG</p>
+            </div>
+            <p class="newsletter-text">
+              Get exclusive access to my properties directly to your inbox!
+            </p>
+            <div class="email-input-group">
+              <input
+                type="email"
+                placeholder="E-mail Address*"
+                class="email-input"
+              />
+              <button class="subscribe-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Middle Section: Links -->
+          <div class="section-middle">
+            <div class="link-list">
+              <ul>
+                <li><a href="#">Featured Listings</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">ગુજરાતી</a></li>
+                <li><a href="#">Testimonials</a></li>
+              </ul>
+            </div>
+            <div class="link-list">
+              <ul>
+                <li><a href="#">Seller's Guide</a></li>
+                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">Instant Home Evaluation</a></li>
+                <li><a href="#">Blog & Resources</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Section: Contact Info & Social Media -->
+          <div class="section-right">
+            <div class="contact-info">
+              <p class="font-medium">
+                RE/MAX METROPOLIS BROKERAGE, INDEPENDENTLY OWNED & OPERATED
+              </p>
+              <p>Markham, ON L3R 5N4</p>
+              <p style="margin-top: 0.5rem">
+                <a href="mailto:RutulV408@gmail.com">RutulV408@gmail.com</a>
+              </p>
+              <p>Direct: 519-992-6700</p>
+            </div>
+            <!-- <div class="remax-logo-container">
+              <img
+                src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
+                alt="RE/MAX Metropolis Brokerage Logo"
+                class="remax-logo"
+              />
+              <p>INDEPENDENTLY OWNED & OPERATED</p>
+            </div> -->
+            <div class="social-media-links">
+              <a href="#"
+                ><i class="fas fa-rss"></i
+                ><span style="margin-left: 1rem">Blog</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-facebook-f"></i><span>Facebook</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-instagram"></i
+                ><span style="margin-left: 1rem">Instagram</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-tiktok"></i
+                ><span style="margin-left: 1rem">TikTok</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-linkedin-in"></i
+                ><span style="margin-left: 1rem">LinkedIn</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-google"></i
+                ><span style="margin-left: 1rem">Google Business</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-whatsapp"></i
+                ><span style="margin-left: 1rem">WhatsApp</span></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="bottom-bar">
+          <!-- <div class="myrealpage-logo-container">
+            <img
+              src="https://placehold.co/100x20/000000/FFFFFF?text=my+RealPage"
+              alt="my RealPage logo"
+              class="myrealpage-logo"
+            />
+          </div> -->
+          <div class="copyright-info">
+            <p>
+              &copy; 2025 Rutul Vadadoriya. All rights reserved. | Maintained by
+              GHS | <a href="#">Privacy Policy</a> |
+              <a href="#">Real Estate Websites by myRealPage</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
