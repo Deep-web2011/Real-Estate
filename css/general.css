@@ -60,6 +60,7 @@
 
 .image-section img {
   width: 100%;
+  height: 341px;
   display: block;
   object-fit: cover;
 }
@@ -79,6 +80,8 @@
 }
 
 /*//////////////////Listing Section /////////////////////////*/
+
+
 .listings-section {
   padding: 2rem 4rem;
   margin-top: 4rem;
@@ -94,7 +97,7 @@
   margin: auto;
 }
 
-.listings-content {
+/* .listings-content {
   background-color: #ffffff;
   border-radius: 0.75rem;
 }
@@ -104,7 +107,7 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--primary-text-color);
-}
+} */
 
 .listings-list {
   list-style: none;
@@ -112,9 +115,13 @@
   margin: 0;
 }
 
+.listings-list li:first-child::before {
+  border-bottom: 1px solid red;
+}
+
 .listings-list li {
-  border-bottom: 1px solid #e2e8f0;
-  padding: 1rem 0;
+  border-bottom: 1px solid #b8bbbe;
+  padding: 1rem 1rem;
 }
 
 .listings-list li:last-child {
@@ -128,7 +135,7 @@
   text-decoration: none;
   color: var(--color-btn-primary);
   font-size: var(--text-size6);
-  font-weight: 400;
+  font-weight: 550;
   font-family: "DM Serif Text", serif;
   transition: all 0.3s ease-in-out;
 }
@@ -138,9 +145,10 @@
 }
 
 .listings-list .arrow {
-  font-size: 1.5rem;
-  color: #18181a;
+  font-size: var(--text-size6);
+  color: var(--color-bg);
   transition: transform 0.3s ease-in-out;
+  font-weight: 600;
 }
 
 .listings-list a:hover .arrow {
@@ -165,6 +173,7 @@
   border-radius: 0.5rem;
   display: block;
 }
+
 
 /*///////////////testimonials /////////////////////*/
 .carousel-nav {
