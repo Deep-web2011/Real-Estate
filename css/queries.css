@@ -151,9 +151,12 @@
   }
 
   .every-move-text {
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
   }
 
+  .image-card {
+    padding: 0;
+  }
   .primary-btn,
   .secondary-btn {
     padding: 18px 48px;
@@ -174,6 +177,9 @@
     padding: 0;
   }
 
+  .sell-grid {
+    gap: 1.2rem;
+  }
   .sell-left-image-container img {
     margin: auto -1rem;
   }
