@@ -24,7 +24,7 @@
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
-  --spacing-xxl:15rem;
+  --spacing-xxl: 15rem;
 }
 
 a {
@@ -59,8 +59,6 @@ img {
   padding: 0;
 }
 
-
-
 .build-section {
   padding: var(--spacing-xxl) var(--spacing-md);
   background-color: var(--color-white);
@@ -80,7 +78,7 @@ img {
 }
 
 .heading-build {
-  font-size: var(--text-size-h2);
+  font-size: var(--text-size-h1);
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
