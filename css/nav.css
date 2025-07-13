@@ -40,7 +40,7 @@ body.menu-active {
   position: relative;
 }
 
-.header .logo  {
+.header .logo {
   vertical-align: middle;
   margin-top: 0.3rem;
   margin-left: -2rem;
@@ -224,7 +224,6 @@ body.menu-active {
   .header {
     padding: 0 2rem;
   }
-
 
   .header-inner-content {
     padding: 1.5rem 0;

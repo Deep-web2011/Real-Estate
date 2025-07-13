@@ -3,33 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <link rel="icon" href="img/Sabah-favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <title>SABAH Fadai PREC - Century 21 Realtor</title>
   </head>
-
   <body>
     <header class="header">
-      <div class="container">
-        <div class="logo">
-          SABAH FADAI
-          <span>REALTOR</span>
-        </div>
+      <div class="header-inner-content">
+        <a href="/index.html">
+          <img
+            class="logo"
+            alt="Sabah logo"
+            src="img/Sabah-Logo-fotor-bg-remover.png"
+          />
+        </a>
+
         <nav class="menu">
           <div class="head">
-            <div class="logo">
-              SABAH FADAI
-              <span>REALTOR</span>
-            </div>
+            <a href="#">
+              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+            </a>
+
             <button type="button" class="close-menu-btn"></button>
           </div>
+
           <ul>
             <li class="dropdown">
-              <a href="/index.html">Listings</a>
+              <a href="">Listings</a>
               <i class="fa-solid fa-chevron-down dropdown-icon"></i>
               <ul class="sub-menu">
                 <li><a href="#">FEATURED LISTINGS</a></li>
@@ -51,14 +58,15 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#">About</a>
+              <a href="">About</a>
               <i class="fa-solid fa-chevron-down dropdown-icon"></i>
               <ul class="sub-menu">
-                <li><a href="/about.html">About Hello</a></li>
+                <li><a href="/about.html">About SABAH</a></li>
                 <li><a href="/testimonials.html">Testimonials</a></li>
                 <li><a href="/contact.html">Contact</a></li>
               </ul>
             </li>
+
             <li class="dropdown">
               <a href="#">Sellers</a>
               <i class="fa-solid fa-chevron-down dropdown-icon"></i>
@@ -67,6 +75,7 @@
                 <li><a href="#">Instant Home Evolution</a></li>
               </ul>
             </li>
+
             <li class="dropdown">
               <a href="#">Buyers</a>
               <i class="fa-solid fa-chevron-down dropdown-icon"></i>
@@ -77,8 +86,11 @@
               </ul>
             </li>
             <li><a href="#">Blogs</a></li>
+            <!-- New button added here -->
+            <li><a href="#" class="contact-button">778-549-2522</a></li>
           </ul>
         </nav>
+
         <div class="header-right">
           <button class="open-menu-btn" aria-label="Open menu">
             <span class="line line-1"></span>
@@ -90,6 +102,7 @@
     </header>
 
     <main>
+      <!-- Stats Section -->
       <section class="stats-section">
         <div class="stats-container">
           <div class="stat-item">
@@ -109,65 +122,73 @@
         </div>
       </section>
 
-      <section class="section-hero-video">
-        <div class="hero-video-container">
-          <div class="text-content">
-            <h2 class="heading-main">
-              From Solving Problems To Building Dreams
+      <section class="build-section">
+        <div class="container build-container">
+          <div class="build-text-content">
+            <h2 class="heading-build">
+              From Solving Problems to Building Dreams
             </h2>
-            <p class="paragraph">
+            <p class="paragraph-blueprint">
               I spent years solving problems with blueprints and machines. Then,
               I realized my true blueprint was helping people build lives.
             </p>
-            <p class="paragraph">
+            <p class="paragraph-investing">
               Investing across Ontario showed me a truth: real estate decisions
-              shouldn't be fueled by fear, but grounded in facts and heart.
+              shouldn’t be fueled by fear, but grounded in facts and heart.
             </p>
-            <p class="paragraph">
-              That's why today, every strategy I design is driven by data — and
+            <p class="paragraph-humanity">
+              That’s why today, every strategy I design is driven by data — and
               delivered with humanity.
             </p>
-            <p class="paragraph">
-              Here's what powers every client success story:
-            </p>
-            <ul class="list-items">
-              <li class="list-item">Analytical Precision</li>
-              <li class="list-item">Local Market Mastery</li>
-              <li class="list-item">Total Availability</li>
-            </ul>
+
+            <div class="list-container">
+              <div>
+                <p class="paragraph-success-stories">
+                  Here’s what powers every client success story:
+                </p>
+                <ul style="padding: 0; margin: 0">
+                  <li class="list-item-success build-item-success">
+                    Analytical Precision
+                  </li>
+                  <li class="list-item-success build-item-success">
+                    Local Market Mastery
+                  </li>
+                  <li class="list-item-success build-item-success">
+                    Total Availability
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="video-player-container">
-            <!-- Replace with your actual YouTube embed code -->
-            <iframe
-              src="https://www.youtube.com"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <div class="success-video-wrapper">
+            <video
+              class="video"
+              src="videos/Sabah-Fadai-Video.mp4"
+              playsinline=""
+              disablepictureinpicture="true"
+              data-autoplay="true"
+              onmouseenter="this.setAttribute('controls','controls')"
+              onmouseleave="this.removeAttribute('controls')"
+              loop=""
+              data-speed="1"
+            ></video>
           </div>
         </div>
       </section>
 
       <section class="section-layout">
-        <div class="layout-container">
+        <div class="container layout-container">
           <!-- First Image Column -->
           <div class="image-column">
             <div class="image-wrapper">
-              <img
-                src="https://iss-cdn.myrealpage.com/4UrEfsNGRtQjkg60JQASnwZAqO8Zq3ADqFrypCmR7PE/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvcmVtYXgtcmVhbC1lc3RhdGUtYnJva2VyLmpwZz90PTE3Mzk1NTE0ODM2NjU?t=1739551483665"
-                alt="Property Image 1"
-              />
+              <img src="img/Sabah-Fadai-Photo.jpg" alt="Agent Image 1" />
             </div>
           </div>
 
           <!-- Second Image Column -->
           <div class="image-column">
             <div class="image-wrapper">
-              <img
-                src="https://iss-cdn.myrealpage.com/4UrEfsNGRtQjkg60JQASnwZAqO8Zq3ADqFrypCmR7PE/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvcmVtYXgtcmVhbC1lc3RhdGUtYnJva2VyLmpwZz90PTE3Mzk1NTE0ODM2NjU?t=1739551483665"
-                alt="Agent Image 2"
-              />
+              <img src="img/Sabah-Fadai-Photo.jpg" alt="Agent Image 2" />
             </div>
           </div>
 
@@ -193,33 +214,25 @@
       </section>
 
       <section class="awards-section">
-        <div class="awards-container">
-          <h2 class="awards-title">AWARDS</h2>
-          <img
-            src="https://placehold.co/120x80/cccccc/333333?text=TOP+5%0AUNDER+30"
-            alt="Top 5 Under 30 Award"
-            class="award-logo"
-          />
-          <img
-            src="https://placehold.co/120x80/cccccc/333333?text=TOP+100"
-            alt="Top 100 Award"
-            class="award-logo"
-          />
-          <img
-            src="https://placehold.co/120x80/cccccc/333333?text=REMAX%0A2022"
-            alt="REMAX 2022 Award"
-            class="award-logo"
-          />
-          <img
-            src="https://placehold.co/120x80/cccccc/333333?text=CHAIRMAN'S%0A2022"
-            alt="Chairman's 2022 Award"
-            class="award-logo"
-          />
+        <div class="container awards-container">
+          <div class="awards-title">AWARDS</div>
+          <div class="award-item">
+            <img src="img/Top-100.svg" alt="Top 100 Award" />
+          </div>
+          <div class="award-item">
+            <img
+              src="img/Hall-of-fame.svg"
+              alt="REMAX Hall of Fame 2023 Award"
+            />
+          </div>
+          <div class="award-item">
+            <img src="img/Chairman.svg" alt="Chairman's 2022 Award" />
+          </div>
         </div>
       </section>
 
       <section class="success-section">
-        <div class="success-container">
+        <div class="container success-container">
           <div class="success-text-content">
             <h2 class="heading-success">
               Success Is Built On Staying True To Your Roots
@@ -231,9 +244,9 @@
               RE/MAX Metropolis Realty 2024.
             </p>
             <p class="quote-success">"Consistency Wins. Integrity Lasts"</p>
-            <p class="paragraph-approach">This approach has helped me:</p>
             <div class="list-container">
               <div>
+                <h2 class="paragraph-approach">This approach has helped me:</h2>
                 <ul style="padding: 0; margin: 0">
                   <li class="list-item-success">Growth</li>
                   <li class="list-item-success">Stronger Connections</li>
@@ -241,9 +254,9 @@
               </div>
               <div>
                 <ul style="padding: 0; margin: 0">
-                  <li class="list-item-success">
+                  <h2 class="paragraph-approach">
                     Success isn't just measured by numbers — it's built on:
-                  </li>
+                  </h2>
                   <li class="list-item-success">Integrity</li>
                   <li class="list-item-success">Consistency</li>
                   <li class="list-item-success">Client-first focus</li>
@@ -252,10 +265,7 @@
             </div>
           </div>
           <div class="success-image-wrapper">
-            <img
-              src="https://iss-cdn.myrealpage.com/4UrEfsNGRtQjkg60JQASnwZAqO8Zq3ADqFrypCmR7PE/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvcmVtYXgtcmVhbC1lc3RhdGUtYnJva2VyLmpwZz90PTE3Mzk1NTE0ODM2NjU?t=1739551483665"
-              alt="Property Image 1"
-            />
+            <img src="img/Sabah-Fadai-Photo.jpg" alt="Sabah-image" />
           </div>
         </div>
         <div class="cta-button-container">
@@ -266,6 +276,7 @@
         </div>
       </section>
 
+      <!-- Testimonials Section -->
       <section class="testimonials-section">
         <div class="container">
           <div class="testimonials-header">
@@ -350,10 +361,10 @@
             </div>
           </div>
           <!-- Navigation Arrows for Testimonials -->
-          <div class="carousel-nav">
+          <!-- <div class="carousel-nav">
             <button id="prev-btn">&larr;</button>
             <button id="next-btn">&rarr;</button>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -362,20 +373,16 @@
           src="https://iss-cdn.myrealpage.com/vrWMKPAQHlP4w1FAIAJnXuSBHcx16_EqVGBrA8LulsM/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvdG9yb250by1yZWFsLWVzdGF0ZS5qcGc_dD0xNzM5NDc4NTcwNjM1?t=1739478570635"
           alt="city-center"
         />
-        <h1>Opportunities waiting for you</h1>
+        <div class="container">
+          <h1>Explore Handpicked Opportunities</h1>
+        </div>
       </section>
 
       <section class="listings-section">
-        <div class="listings-grid">
+        <div class="container listings-grid">
           <!-- Left: Listings Content -->
           <div class="listings-content">
-            <h2>Featured Listings</h2>
             <ul class="listings-list">
-              <li>
-                <a href="#"
-                  >Featured Listings <span class="arrow">&rarr;</span></a
-                >
-              </li>
               <li>
                 <a href="#"
                   >Yorkville Listings <span class="arrow">&rarr;</span></a
@@ -405,7 +412,7 @@
           <!-- Right: Listing Image -->
           <div class="listings-image-container">
             <img
-              src="image/Canada_street.png"
+              src="img/Canada_street.png"
               alt="Classic Building"
               onerror="this.onerror=null;"
               loading="lazy"
@@ -457,7 +464,6 @@
               <ul>
                 <li><a href="#">Featured Listings</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">ગુજરાતી</a></li>
                 <li><a href="#">Testimonials</a></li>
               </ul>
             </div>
@@ -470,7 +476,6 @@
               </ul>
             </div>
           </div>
-
           <!-- Right Section: Contact Info & Social Media -->
           <div class="section-right">
             <div class="contact-info">
@@ -480,10 +485,10 @@
               <p>Markham, ON L3R 5N4</p>
               <p style="margin-top: 0.5rem">
                 <a href="mailto:SABAH FADAIV408@gmail.com"
-                  >SABAH FADAIV408@gmail.com</a
+                  >SABAH FADAI@gmail.com</a
                 >
               </p>
-              <p>Direct: 519-992-6700</p>
+              <p>Direct: 778-549-2522</p>
             </div>
             <!-- <div class="remax-logo-container">
               <img
@@ -494,22 +499,33 @@
               <p>INDEPENDENTLY OWNED & OPERATED</p>
             </div> -->
             <div class="social-media-links">
-              <a href="#"><i class="fas fa-rss"></i><span>Blog</span></a>
               <a href="#"
-                ><i class="fab fa-facebook-f"></i><span>Facebook</span></a
+                ><i class="fas fa-rss"></i
+                ><span style="margin-left: 1rem">Blog</span></a
               >
               <a href="#"
-                ><i class="fab fa-instagram"></i><span>Instagram</span></a
-              >
-              <a href="#"><i class="fab fa-tiktok"></i><span>TikTok</span></a>
-              <a href="#"
-                ><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a
+                ><i class="fab fa-facebook-f"></i
+                ><span style="margin-left: 1rem">Facebook</span></a
               >
               <a href="#"
-                ><i class="fab fa-google"></i><span>Google Business</span></a
+                ><i class="fab fa-instagram"></i
+                ><span style="margin-left: 1rem">Instagram</span></a
               >
               <a href="#"
-                ><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a
+                ><i class="fab fa-tiktok"></i
+                ><span style="margin-left: 1rem">TikTok</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-linkedin-in"></i
+                ><span style="margin-left: 1rem">LinkedIn</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-google"></i
+                ><span style="margin-left: 1rem">Google Business</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-whatsapp"></i
+                ><span style="margin-left: 1rem">WhatsApp</span></a
               >
             </div>
           </div>
@@ -526,15 +542,13 @@
           </div> -->
           <div class="copyright-info">
             <p>
-              &copy; 2025 SABAH FADAI. All rights reserved. | Maintained by GHS
-              |
-              <a href="#">Privacy Policy</a> |
-              <a href="#">Real Estate Websites by myRealPage</a>
+              &copy; 2025 SABAH FADAI. All rights reserved. |
+              <a href="#">Privacy Policy</a>
             </p>
           </div>
         </div>
       </div>
     </footer>
   </body>
-  <script src="./js/script.js"></script>
+  <script src="script.js"></script>
 </html>

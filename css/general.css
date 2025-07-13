@@ -1,3 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+  /* Font families */
+  --font-primary: "DM Serif Text", serif;
+  --font-heading: "DM Serif Text", serif;
+  --font-Mukta: "Mukta", sans-serif;
+
+  /* Font sizes */
+  --fs-base: 1.6rem;
+  --fs-nav: 1.8rem;
+  --fs-hero-heading: 12rem;
+  --fs-hero-subheading: 10rem;
+  --fs-hero-paragraph: 1.7rem;
+
+  /* Colors */
+  --color-text: #555;
+  --color-heading: #fff;
+  --color-subheading: #fff;
+  --color-bg: #390943;
+  --color-accent: #ffd738;
+  --color-btn-primary: #390943;
+  --color-btn-secondary: #fff;
+  --color-cta: #e67e22;
+  --color-cta-hover: #cf711f;
+  --color-nav: #333;
+  --color-white: #fff;
+
+  /* Border radius */
+  --radius: 9px;
+
+  /* Spacing */
+  --spacing-section-padding: 4.8rem;
+  --spacing-btn-padding: 1.8rem 4.8rem;
+  --spacing-header-height: 9.6rem;
+  --spacing-hero-img-max: 650px;
+
+  /* Grid */
+  --grid-gap: 2rem;
+
+  --heading-line-height: 1.2;
+  --text-shade-background: #ededed;
+  --p-font-size: clamp(1rem, calc(1rem + ((1vw - 0.225rem) * 0.47)), 1.25rem);
+  --text-size1_5: clamp(
+    0.95rem,
+    calc(0.95rem + ((1vw - 0.225rem) * 0.57)),
+    1.25rem
+  );
+  --text-size1: clamp(0.9rem, calc(0.9rem + ((1vw - 0.225rem) * 0.19)), 1rem);
+  --text-size2: clamp(1rem, calc(1rem + ((1vw - 0.225rem) * 0.47)), 1.25rem);
+  --text-size3: clamp(1.2rem, calc(1.2rem + ((1vw - 0.225rem) * 0.57)), 1.5rem);
+  --text-size4: clamp(
+    1.4rem,
+    calc(1.4rem + ((1vw - 0.225rem) * 0.66)),
+    1.75rem
+  );
+  --text-size5: clamp(1.6rem, calc(1.6rem + ((1vw - 0.225rem) * 0.76)), 2rem);
+  --text-size6: clamp(1.8rem, calc(1.8rem + ((1vw - 0.225rem) * 1.33)), 2.5rem);
+  --text-size7: clamp(2rem, calc(2rem + ((1vw - 0.225rem) * 1.9)), 3rem);
+  --text-size8: clamp(2.2rem, calc(2.2rem + ((1vw - 0.225rem) * 2.47)), 3.5rem);
+  --text-size9: clamp(2.4rem, calc(2.4rem + ((1vw - 0.225rem) * 3.04)), 4rem);
+  --text-size10: clamp(
+    2.6rem,
+    calc(2.6rem + ((1vw - 0.225rem) * 3.61)),
+    4.5rem
+  );
+  --text-size11: clamp(2.8rem, calc(2.8rem + ((1vw - 0.225rem) * 4.19)), 5rem);
+  --text-size12: clamp(3rem, calc(3rem + ((1vw - 0.225rem) * 4.76)), 5.5rem);
+  --text-size13: clamp(3.2rem, calc(3.2rem + ((1vw - 0.225rem) * 5.33)), 6rem);
+  --text-size14: clamp(3.4rem, calc(3.4rem + ((1vw - 0.225rem) * 5.9)), 6.5rem);
+  --text-size15: clamp(3.6rem, calc(3.6rem + ((1vw - 0.225rem) * 6.47)), 7rem);
+  --text-small: clamp(0.9rem, calc(0.9rem + ((1vw - 0.225rem) * 0.19)), 1rem);
+  --text-normal: clamp(1rem, calc(1rem + ((1vw - 0.225rem) * 0.47)), 1.25rem);
+  --text-medium: clamp(
+    1.2rem,
+    calc(1.2rem + ((1vw - 0.225rem) * 0.57)),
+    1.5rem
+  );
+  --text-large: clamp(
+    1.4rem,
+    calc(1.4rem + ((1vw - 0.225rem) * 0.66)),
+    1.75rem
+  );
+  --text-xlarge: clamp(1.6rem, calc(1.6rem + ((1vw - 0.225rem) * 0.76)), 2rem);
+  --text-xxlarge: clamp(
+    1.8rem,
+    calc(1.8rem + ((1vw - 0.225rem) * 1.33)),
+    2.5rem
+  );
+  --text-xxxlarge: clamp(2rem, calc(2rem + ((1vw - 0.225rem) * 1.9)), 3rem);
+  --text-size1_5: clamp(0.95rem, calc(0.95rem + ((1vw - 0.225rem) * 0.57)), 1.25rem);
+}
+
+/* Reset & Base */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+/**************************/
+/* General Reusable Components */
+/**************************/
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/* Sticky Navigation */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  background-color: var(--color-bg);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .header-inner-content {
+  align-items: flex-start;
+}
+
 .stats-section {
   width: 100%;
   padding: 10rem 0 0 0;
@@ -72,7 +208,7 @@
   padding: 0 2em;
   color: #fff;
   bottom: 5%;
-  left: 4%;
+  left: 8.5%;
   font-family: var(--font-Mukta);
   text-align: left;
   text-transform: capitalize;
@@ -238,7 +374,7 @@
   background-color: var(--color-bg);
   color: #ffffff;
   padding: 2.5rem 5rem;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -340,12 +476,12 @@
   border-top-right-radius: 0.5rem;
 }
 
-.container {
+/* .container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-}
+} */
 
 .flex-wrap {
   display: flex;
@@ -577,12 +713,12 @@
   transform: scale(1.05, 1.05);
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
+} */
 
 @media (min-width: 1024px) {
   .section-left {

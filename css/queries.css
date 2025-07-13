@@ -92,6 +92,11 @@
   .google-reviews-button {
     margin-right: 1rem;
   }
+
+  .image-section h1 {
+    font-size: var(--text-size6);
+    left: 3%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -187,7 +192,7 @@
     gap: 1.2rem;
   }
   .sell-left-image-container img {
-    margin: auto -1rem;
+    margin: auto;
   }
 
   .evaluation-content {
@@ -377,16 +382,15 @@
     display: none;
   }
 
-  .sell-left-image-container img {
+  /* .sell-left-image-container img {
     margin: 0;
-    /* margin-left: -1rem; */
-  }
+  } */
 }
 
 @media (max-width: 450px) {
   .hero-img-box img {
     width: 350px;
-    margin-top: -3rem;
+    margin-top: 0;
   }
 
   .hero-text-box {
@@ -428,6 +432,12 @@
   .buyers-button {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .google-reviews-button {
+    font-size: 15px;
+    padding: 2rem 3rem;
+    text-align: center;
   }
 }
 
