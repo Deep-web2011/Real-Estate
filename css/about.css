@@ -149,7 +149,6 @@ img {
 }
 
 .section-layout {
-  margin-top: var(--spacing-xl);
   padding: var(--spacing-xl) var(--spacing-md);
   background-color: var(--color-white);
 }
