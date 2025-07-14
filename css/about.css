@@ -44,19 +44,6 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(149, 34, 34, 0.06);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  position: relative;
-}
-.header {
-  min-height: 70vh;
-  background-image: url("https://iss-cdn.myrealpage.com/nvqSZi_9uZ-v44vEOGbt26gO_tfibxkhCw4i5QcKoZc/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9ob3VzZS1mb3Itc2FsZS1pbi1vbnRhcmlvLmpwZz90PTE3MzkzMTM3MTU0NzM?t=1739313715473");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative; /* Ensure this is set for the pseudo-element positioning */
   padding-top: 2rem;
   padding-bottom: 2rem;

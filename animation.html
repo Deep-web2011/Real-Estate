@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/Sabah-favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <title>SABAH Fadai PREC - Century 21 Realtor</title>
+    <style>
+      /* CSS for the scroll animation */
+      .animated-text-section {
+        padding: 80px 20px; /* Add some padding for visibility */
+        text-align: center;
+        background-color: #f9f9f9; /* Light background for contrast */
+        overflow: hidden; /* Ensure text doesn't overflow during animation */
+        border-radius: 10px; /* Rounded corners */
+        margin: 20px auto; /* Center and add margin */
+        max-width: 1200px; /* Max width for content */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      }
+
+      .animated-text {
+        opacity: 0; /* Start hidden */
+        transform: translateY(20px) translateX(-30px); /* Start slightly below and to the left */
+        transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .animated-text.is-visible {
+        opacity: 1; /* Fade in */
+        transform: translateY(0) translateX(0); /* Move to final position */
+      }
+
+      .animated-paragraph {
+        opacity: 0;
+        transform: translateY(20px) translateX(-50px); /* Start slightly below and further to the left */
+        transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Slightly delayed transition */
+        font-size: 1.2rem;
+        color: #555;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .animated-paragraph.is-visible {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+      }
+
+      /* New styles for form and buttons section animation */
+      .animate-from-right {
+        opacity: 0;
+        transform: translateX(50px); /* Start 50px to the right */
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .animate-from-right.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .animate-from-bottom {
+        opacity: 0;
+        transform: translateY(50px); /* Start 50px below */
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .animate-from-bottom.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .animated-text {
+          font-size: 1.8rem;
+        }
+        .animated-paragraph {
+          font-size: 1rem;
+        }
+        .animated-text-section {
+          padding: 40px 15px;
+        }
+      }
+
+      /* Additional CSS provided by the user */
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+      /* Define CSS variables for colors and fonts */
+      :root {
+        --color-bg: #390943; /* Example color, adjust as needed */
+        --font-heading: "DM Serif Text", serif;
+        --font-Mukta: "Mukta", sans-serif;
+        --text-size5: 1.5rem;
+        --text-size14: 3rem;
+        --text-size15: 3.5rem;
+      }
+
+      /* General Styles */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%; /* 1rem = 10px */
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1;
+        font-weight: 400;
+        color: #555;
+        overflow-x: hidden;
+      }
+
+      /* Reusable Components */
+      .container {
+        max-width: 120rem;
+        padding: 0 3.2rem;
+        margin: 0 auto;
+      }
+
+      .grid {
+        display: grid;
+        column-gap: 6.4rem;
+        row-gap: 9.6rem;
+      }
+
+      .grid:not(:last-child) {
+        margin-bottom: 4.8rem;
+      }
+
+      .grid--2-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid--3-cols {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid--4-cols {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .grid--5-cols {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .grid--center-v {
+        align-items: center;
+      }
+
+      .heading-primary,
+      .heading-secondary,
+      .heading-tertiary {
+        font-weight: 700;
+        color: #333;
+        letter-spacing: -0.5px;
+      }
+
+      .heading-primary {
+        font-size: 5.2rem;
+        line-height: 1.05;
+        margin-bottom: 3.2rem;
+      }
+
+      .heading-secondary {
+        font-size: 4.4rem;
+        line-height: 1.2;
+        margin-bottom: 9.6rem;
+      }
+
+      .heading-tertiary {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 3.2rem;
+      }
+
+      .subheading {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #cf711f;
+        text-transform: uppercase;
+        margin-bottom: 1.6rem;
+        letter-spacing: 0.75px;
+      }
+
+      .btn:link,
+      .btn:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 1.6rem 3.2rem;
+        border-radius: 9px;
+        transition: all 0.3s;
+      }
+
+      .btn--full:link,
+      .btn--full:visited {
+        background-color: #e67e22;
+        color: #fff;
+      }
+
+      .btn--full:hover,
+      .btn--full:active {
+        background-color: #cf711f;
+      }
+
+      .btn--outline:link,
+      .btn--outline:visited {
+        background-color: #fff;
+        color: #555;
+      }
+
+      .btn--outline:hover,
+      .btn--outline:active {
+        background-color: #fdf2e9;
+        box-shadow: inset 0 0 0 3px #fff;
+      }
+
+      .btn--form {
+        background-color: #45260a;
+        color: #fdf2e9;
+        align-self: end;
+        padding: 1.2rem;
+      }
+
+      .btn--form:hover {
+        background-color: #fff;
+        color: #555;
+      }
+
+      .link:link,
+      .link:visited {
+        color: #e67e22;
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 2px;
+        transition: all 0.3s;
+      }
+
+      .link:hover,
+      .link:active {
+        color: #cf711f;
+        border-bottom: 1px solid transparent;
+      }
+
+      .list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+
+      .list-item {
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+      }
+
+      .list-icon {
+        width: 3rem;
+        height: 3rem;
+        color: #e67e22;
+      }
+
+      /* Helper/Settings */
+      .margin-right-sm {
+        margin-right: 1.6rem !important;
+      }
+
+      .margin-bottom-md {
+        margin-bottom: 4.8rem !important;
+      }
+
+      .center-text {
+        text-align: center;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      /* CSS provided by the user in the latest request */
+      .header {
+        background-color: #fff;
+      }
+
+      .header .menu a,
+      .header .menu i {
+        color: var(--color-bg);
+      }
+
+      .header .menu .contact-button {
+        background-color: var(--color-bg);
+        color: #fff;
+      }
+
+      .contact-section {
+        margin-top: 7rem;
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .contact-form-content {
+        text-align: left;
+        max-width: 600px;
+        justify-self: center;
+      }
+
+      .contact-heading {
+        font-size: var(--text-size15);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        color: var(--color-bg);
+        font-family: var(--font-heading);
+        font-weight: 300;
+      }
+
+      .contact-paragraph {
+        font-size: 17px;
+        margin-bottom: 2rem;
+        color: #5c5c5c;
+        font-family: var(--font-Mukta);
+        line-height: 1.3;
+      }
+
+      .contact-form .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-form label {
+        display: block;
+        font-size: 20px;
+        color: var(--color-bg);
+        margin-bottom: 0.5rem;
+        font-family: var(--font-Mukta);
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-bottom: 1px solid #390943;
+        font-size: 2rem;
+        color: #000;
+        background-color: transparent;
+        outline: none;
+        transition: border-color 0.3s ease;
+        text-transform: capitalize;
+      }
+
+      .contact-form input[type="text"]:focus,
+      .contact-form input[type="email"]:focus,
+      .contact-form textarea:focus {
+        border-color: green;
+      }
+
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 4rem;
+      }
+
+      .contact-button {
+        display: inline-block;
+        padding: 18px 48px;
+        border-radius: 9px;
+        background-color: #390943;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+        font-family: var(--font-Mukta);
+      }
+
+      .contact-button:hover {
+        transform: scale(1.05, 1.05);
+      }
+
+      .social-icons {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 1px solid #390943;
+        color: #390943;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.7s ease;
+      }
+
+      .social-icon:hover {
+        background-color: #390943;
+        color: #fff;
+        transform: scale(1.05, 1.05);
+      }
+
+      .contact-video-wrapper {
+        width: 100%;
+        aspect-ratio: 24 / 32;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        overflow: hidden;
+      }
+
+      .email-contact {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 1rem;
+      }
+      .email-contact strong {
+        color: #5c5c5c;
+        font-family: var(--font-Mukta);
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      .email-contact a {
+        color: #390943;
+        text-decoration: none;
+        font-weight: 410;
+        font-family: var(--font-Mukta);
+        font-size: 17px;
+      }
+
+      .contact-video-wrapper video {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .buttons-section {
+        margin-top: 10rem;
+        padding: 4rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        align-items: center;
+        color: var(--color-bg);
+        text-align: center;
+        justify-items: center;
+      }
+
+      .button-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease-in-out;
+        width: 45%;
+        max-width: 150px;
+      }
+
+      .button-item {
+        width: 65%;
+      }
+
+      .button-item:hover {
+        transform: scale(1.05, 1.05);
+      }
+
+      .button-item i {
+        font-size: var(--text-size14);
+        margin-bottom: 1rem;
+        color: var(--color-bg);
+      }
+
+      .button-item span {
+        font-size: var(--text-size5);
+        font-weight: 500;
+        font-family: var(--font-Mukta);
+      }
+
+      .map-section {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .map-section iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      @media (max-width: 1191px) {
+        .header-right .open-menu-btn .line {
+          background-color: #390943;
+        }
+
+        .header .menu a,
+        .header .menu i {
+          color: #fff;
+        }
+      }
+      @media (max-width: 1024px) {
+        .contact-container {
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+        }
+        .contact-form-content {
+          justify-self: center;
+        }
+        .social-icons {
+          justify-content: center;
+        }
+        .buttons-section {
+          justify-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .contact-section {
+          padding: 4rem 1rem;
+        }
+        .contact-heading {
+          font-size: 2.25rem;
+          margin-bottom: 1rem;
+        }
+        .contact-paragraph {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        .contact-button {
+          padding: 0.8rem 1.5rem;
+          font-size: 1rem;
+        }
+        .social-icons {
+          gap: 0.8rem;
+        }
+        .social-icon {
+          width: 2.2rem;
+          height: 2.2rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-heading {
+          font-size: 1.75rem;
+        }
+        .contact-paragraph {
+          font-size: 0.9rem;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+          font-size: 0.9rem;
+          padding: 0.6rem;
+        }
+        .social-icons {
+          gap: 0.6rem;
+        }
+        .social-icon {
+          width: 2rem;
+          height: 2rem;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner-content">
+        <a href="/index.html">
+          <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+        </a>
+
+        <nav class="menu">
+          <div class="head">
+            <a href="#">
+              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+            </a>
+
+            <button type="button" class="close-menu-btn"></button>
+          </div>
+
+          <ul>
+            <li class="dropdown">
+              <a href="">Listings</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">FEATURED LISTINGS</a></li>
+                <li><a href="#">Map Search</a></li>
+                <li class="dropdown">
+                  <a href="#">Communities</a>
+                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                  <ul class="sub-menu sub-menu-left">
+                    <li><a href="#">team1</a></li>
+                    <li><a href="#">team2</a></li>
+                    <li><a href="#">team3</a></li>
+                    <li><a href="#">team4</a></li>
+                    <li><a href="#">team5</a></li>
+                    <li><a href="#">team6</a></li>
+                    <li><a href="#">team7</a></li>
+                    <li><a href="#">team8</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="">About</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="/about.html">About SABAH</a></li>
+                <li><a href="/testimonials.html">Testimonials</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Sellers</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">Selling Resources</a></li>
+                <li><a href="#">Instant Home Evolution</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Buyers</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">Buying Resources</a></li>
+                <li><a href="#">Mortgage Calculator</a></li>
+                <li><a href="#">Neighbourhood Guide</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blogs</a></li>
+            <!-- New button added here -->
+            <li><a href="#" class="contact-button">778-549-2522</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <button class="open-menu-btn" aria-label="Open menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- New section for animated text -->
+      <section class="animated-text-section">
+        <h2 class="animated-text">Your Dream Home Awaits</h2>
+        <p class="animated-paragraph">
+          Discover a seamless real estate experience with personalized guidance
+          every step of the way. Whether you're buying, selling, or investing,
+          we're here to help you achieve your goals.
+        </p>
+      </section>
+      <!-- End of new section -->
+
+      <section class="contact-section">
+        <div class="container contact-container">
+          <div class="contact-form-content">
+            <h2 class="contact-heading">Get In Touch Today</h2>
+            <p class="contact-paragraph">
+              If you have a question that needs answering, I'd love to hear it.
+              Ask me anything real estate-related by contacting me directly.
+            </p>
+            <form class="contact-form animate-from-right">
+              <div class="form-group">
+                <label for="name">Name: *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+              <button type="submit" class="contact-button">
+                CALL SABAH TODAY
+              </button>
+            </form>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fas fa-rss"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+            </div>
+            <div class="email-contact">
+              <div class="email">
+                <strong>E : </strong>
+                <a href="Sabah.fadai@century21.ca">Sabah.fadai@century21.ca</a>
+              </div>
+              <div class="phone">
+                <strong>P : </strong>
+                <a href="tel: 778-549-2522">778-549-2522</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-video-wrapper">
+            <video
+              class="video"
+              src="videos/Sabah-Fadai-Video.mp4"
+              playsinline=""
+              disablepictureinpicture="true"
+              data-autoplay="true"
+              onmouseenter="this.setAttribute('controls','controls')"
+              onmouseleave="this.removeAttribute('controls')"
+              loop=""
+              data-speed="1"
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <section class="container buttons-section animate-from-bottom">
+        <a href="#" class="button-item">
+          <i class="fas fa-handshake"></i>
+          <span>Blog</span>
+        </a>
+        <a href="#" class="button-item">
+          <i class="fas fa-award"></i>
+          <span>Instant Home Evaluation</span>
+        </a>
+        <a href="#" class="button-item">
+          <i class="fas fa-calculator"></i>
+          <span>Mortgage Calculator</span>
+        </a>
+        <a href="#" class="button-item">
+          <i class="fas fa-home"></i>
+          <span>Featured Listings</span>
+        </a>
+      </section>
+
+      <section class="map-section">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184497.09403816698!2d-79.62312674390547!3d43.89679169601445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d50c76767781%3A0x280e72f854124976!2sMarkham%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=190%2045428%20luckakuck%20way%2C%20Chilliwack%2C%20British%20Columbia%20V2R%203S9"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="width: 100%; height: 100%; border: 0"
+        ></iframe>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="flex-wrap">
+            <!-- Left Section: Logo, Newsletter -->
+            <div class="section-left">
+              <div class="logo-title">
+                <h2>SABAH FADAI</h2>
+                <p>Realtor® CNE. M.ENG</p>
+              </div>
+              <p class="newsletter-text">
+                Get exclusive access to my properties directly to your inbox!
+              </p>
+              <div class="email-input-group">
+                <input
+                  type="email"
+                  placeholder="E-mail Address*"
+                  class="email-input"
+                />
+                <button class="subscribe-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Middle Section: Links -->
+            <div class="section-middle">
+              <div class="link-list">
+                <ul>
+                  <li><a href="#">Featured Listings</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                </ul>
+              </div>
+              <div class="link-list">
+                <ul>
+                  <li><a href="#">Seller's Guide</a></li>
+                  <li><a href="#">Buyer's Guide</a></li>
+                  <li><a href="#">Instant Home Evaluation</a></li>
+                  <li><a href="#">Blog & Resources</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Right Section: Contact Info & Social Media -->
+            <div class="section-right">
+              <div class="contact-info">
+                <p class="font-medium">
+                  RE/MAX METROPOLIS BROKERAGE, INDEPENDENTLY OWNED & OPERATED
+                </p>
+                <p>Markham, ON L3R 5N4</p>
+                <p style="margin-top: 0.5rem">
+                  <a href="mailto:SABAH FADAIV408@gmail.com"
+                    >SABAH FADAI@gmail.com</a
+                  >
+                </p>
+                <p>Direct: 778-549-2522</p>
+              </div>
+              <!-- <div class="remax-logo-container">
+              <img
+                src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
+                alt="RE/MAX Metropolis Brokerage Logo"
+                class="remax-logo"
+              />
+              <p>INDEPENDENTLY OWNED & OPERATED</p>
+            </div> -->
+              <div class="social-media-links">
+                <a href="#"
+                  ><i class="fas fa-rss"></i
+                  ><span style="margin-left: 1rem">Blog</span></a
+                >
+                <a href="#"
+                  ><i class="fab fa-facebook-f"></i
+                  ><span style="margin-left: 1rem">Facebook</span></a
+                >
+                <a href="#"
+                  ><i class="fab fa-instagram"></i
+                  ><span style="margin-left: 1rem">Instagram</span></a
+                >
+                <a href="#"
+                  ><i class="fab fa-tiktok"></i
+                  ><span style="margin-left: 1rem">TikTok</span></a
+                >
+                <a href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                  ><span style="margin-left: 1rem">LinkedIn</span></a
+                >
+                <a href="#"
+                  ><i class="fab fa-google"></i
+                  ><span style="margin-left: 1rem">Google Business</span></a
+                >
+                <a href="#"
+                  ><i class="fab fa-whatsapp"></i
+                  ><span style="margin-left: 1rem">WhatsApp</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="bottom-bar">
+            <!-- <div class="myrealpage-logo-container">
+            <img
+              src="https://placehold.co/100x20/000000/FFFFFF?text=my+RealPage"
+              alt="my RealPage logo"
+              class="myrealpage-logo"
+            />
+          </div> -->
+            <div class="copyright-info">
+              <p>
+                &copy; 2025 SABAH FADAI. All rights reserved. |
+                <a href="#">Privacy Policy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script>
+    // JavaScript for menu functionality (from your original script.js if it exists)
+    document.addEventListener('DOMContentLoaded', () => {
+      const openMenuBtn = document.querySelector('.open-menu-btn');
+      const closeMenuBtn = document.querySelector('.close-menu-btn');
+      const menu = document.querySelector('.menu');
+      const dropdowns = document.querySelectorAll('.dropdown');
+
+      if (openMenuBtn) {
+        openMenuBtn.addEventListener('click', () => {
+          menu.classList.add('open');
+        });
+      }
+
+      if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', () => {
+          menu.classList.remove('open');
+        });
+      }
+
+      dropdowns.forEach(dropdown => {
+        const dropdownIcon = dropdown.querySelector('.dropdown-icon');
+        if (dropdownIcon) {
+          dropdownIcon.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            dropdown.classList.toggle('active');
+          });
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !openMenuBtn.contains(e.target)) {
+          menu.classList.remove('open');
+        }
+      });
+    });
+
+
+    // JavaScript for scroll animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedText = document.querySelector('.animated-text');
+      const animatedParagraph = document.querySelector('.animated-paragraph');
+      const animatedTextSection = document.querySelector('.animated-text-section');
+
+      // New elements to animate
+      const contactForm = document.querySelector('.contact-form');
+      const buttonsSection = document.querySelector('.buttons-section');
+
+      // Function to handle intersection changes
+      const handleIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Stop observing once visible
+          }
+        });
+      };
+
+      // Create observers for each section
+      if (animatedTextSection) {
+        const textObserver = new IntersectionObserver(handleIntersection, {
+          threshold: 0.5 // Trigger when 50% of the section is visible
+        });
+        textObserver.observe(animatedTextSection);
+      }
+
+      if (contactForm) {
+        const formObserver = new IntersectionObserver(handleIntersection, {
+          threshold: 0.3 // Trigger when 30% of the form is visible
+        });
+        formObserver.observe(contactForm);
+      }
+
+      if (buttonsSection) {
+        const buttonsObserver = new IntersectionObserver(handleIntersection, {
+          threshold: 0.4 // Trigger when 40% of the buttons section is visible
+        });
+        buttonsObserver.observe(buttonsSection);
+      }
+    });
+  </script>
+</html>

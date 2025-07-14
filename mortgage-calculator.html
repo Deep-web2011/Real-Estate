@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/Sabah-favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/mortgage-calculator.css" />
+    <title>Toronoto mortgage-calculator | SABAH Fadai</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner-content">
+        <a href="/index.html">
+          <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+        </a>
+
+        <nav class="menu">
+          <div class="head">
+            <a href="#">
+              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+            </a>
+
+            <button type="button" class="close-menu-btn"></button>
+          </div>
+
+          <ul>
+            <li class="dropdown">
+              <a href="">Listings</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">FEATURED LISTINGS</a></li>
+                <li><a href="#">Map Search</a></li>
+                <li class="dropdown">
+                  <a href="#">Communities</a>
+                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                  <ul class="sub-menu sub-menu-left">
+                    <li><a href="#">team1</a></li>
+                    <li><a href="#">team2</a></li>
+                    <li><a href="#">team3</a></li>
+                    <li><a href="#">team4</a></li>
+                    <li><a href="#">team5</a></li>
+                    <li><a href="#">team6</a></li>
+                    <li><a href="#">team7</a></li>
+                    <li><a href="#">team8</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="">About</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="/about.html">About SABAH</a></li>
+                <li><a href="/testimonials.html">Testimonials</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Sellers</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">Selling Resources</a></li>
+                <li>
+                  <a href="/home-evaluation.html">Instant Home Evolution</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Buyers</a>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="#">Buying Resources</a></li>
+                <li>
+                  <a href="/mortgage-calculator.html">Mortgage Calculator</a>
+                </li>
+                <li><a href="#">Neighbourhood Guide</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blogs</a></li>
+            <!-- New button added here -->
+            <li><a href="#" class="contact-button">778-549-2522</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <button class="open-menu-btn" aria-label="Open menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </button>
+        </div>
+      </div>
+      <div class="container mortgage-calculator-intro">
+        <h3>Sabah-Fadai's Mortgage Calculator</h3>
+      </div>
+    </header>
+
+    <main>
+      <!-- Mortgage Calculator Section -->
+      <section class="mortgage-calculator-section">
+        <form id="mortgageForm">
+          <div class="mortgage-calculator-grid">
+            <div class="form-group">
+              <label for="purchaseAmount">Purchase Amount:</label>
+              <input
+                type="number"
+                id="purchaseAmount"
+                name="purchaseAmount"
+                value="300000"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="downPayment">Down Payment:</label>
+              <input
+                type="number"
+                id="downPayment"
+                name="downPayment"
+                value="60000"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="interestRate">Interest Rate:</label>
+              <input
+                type="number"
+                id="interestRate"
+                name="interestRate"
+                value="3.5"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="closingCostsDollar">Closing Costs ($):</label>
+              <input
+                type="number"
+                id="closingCostsDollar"
+                name="closingCostsDollar"
+                value="0"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="mortgageTerm">Mortgage Term (Years):</label>
+              <input
+                type="number"
+                id="mortgageTerm"
+                name="mortgageTerm"
+                value="25"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="closingCostsPercent">Closing Costs (%):</label>
+              <input
+                type="number"
+                id="closingCostsPercent"
+                name="closingCostsPercent"
+                value="0"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="paymentInterval">Payment Interval:</label>
+              <select id="paymentInterval" name="paymentInterval">
+                <option value="monthly">Monthly</option>
+                <option value="semi-monthly">Semi-Monthly</option>
+                <option value="bi-weekly">Bi-Weekly</option>
+                <option value="weekly">Weekly</option>
+              </select>
+            </div>
+          </div>
+          <div class="calculate-button-container">
+            <button type="button" class="calculate-button" id="calculateBtn">
+              Calculate
+            </button>
+          </div>
+        </form>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee" />
+
+        <!-- Results Display Area -->
+        <div class="results-container">
+          <div class="result-item">
+            <span class="result-label">Loan amount:</span>
+            <span class="result-value" id="displayLoanAmount">$240,000.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Payment:</span>
+            <span class="result-value" id="displayMonthlyPayment">$0.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Interest rate:</span>
+            <span class="result-value" id="displayInterestRate">3.50%</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total payments:</span>
+            <span class="result-value" id="displayTotalPayments">0</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Mortgage term:</span>
+            <span class="result-value" id="displayMortgageTerm">25 years</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total amount paid:</span>
+            <span class="result-value" id="displayTotalAmountPaid">$0.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total interest paid:</span>
+            <span class="result-value" id="displayTotalInterestPaid"
+              >$0.00</span
+            >
+          </div>
+        </div>
+
+        <!-- Amortization Chart -->
+        <div class="chart-container">
+          <canvas id="amortizationChart"></canvas>
+        </div>
+      </section>
+      <!-- End of Mortgage Calculator Section -->
+    </main>
+    <script>
+      let amortizationChart;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const purchaseAmountInput = document.getElementById("purchaseAmount");
+        const downPaymentInput = document.getElementById("downPayment");
+        const interestRateInput = document.getElementById("interestRate");
+        const mortgageTermInput = document.getElementById("mortgageTerm");
+        const paymentIntervalSelect =
+          document.getElementById("paymentInterval");
+        const calculateBtn = document.getElementById("calculateBtn");
+
+        const displayLoanAmount = document.getElementById("displayLoanAmount");
+        const displayMonthlyPayment = document.getElementById(
+          "displayMonthlyPayment"
+        );
+        const displayInterestRate = document.getElementById(
+          "displayInterestRate"
+        );
+        const displayTotalPayments = document.getElementById(
+          "displayTotalPayments"
+        );
+        const displayMortgageTerm = document.getElementById(
+          "displayMortgageTerm"
+        );
+        const displayTotalAmountPaid = document.getElementById(
+          "displayTotalAmountPaid"
+        );
+        const displayTotalInterestPaid = document.getElementById(
+          "displayTotalInterestPaid"
+        );
+
+        const ctx = document
+          .getElementById("amortizationChart")
+          .getContext("2d");
+
+        function calculateMortgage() {
+          const purchaseAmount = parseFloat(purchaseAmountInput.value);
+          const downPayment = parseFloat(downPaymentInput.value);
+          let annualInterestRate = parseFloat(interestRateInput.value) / 100;
+          const mortgageTermYears = parseFloat(mortgageTermInput.value);
+          const paymentInterval = paymentIntervalSelect.value;
+
+          if (
+            isNaN(purchaseAmount) ||
+            isNaN(downPayment) ||
+            isNaN(annualInterestRate) ||
+            isNaN(mortgageTermYears) ||
+            purchaseAmount <= 0
+          ) {
+            displayMonthlyPayment.textContent = "$0.00";
+            displayTotalPayments.textContent = "0";
+            displayTotalAmountPaid.textContent = "$0.00";
+            displayTotalInterestPaid.textContent = "$0.00";
+            updateChart([], [], [], []);
+            return;
+          }
+
+          const loanAmount = purchaseAmount - downPayment;
+
+          let paymentsPerYear;
+          switch (paymentInterval) {
+            case "monthly":
+              paymentsPerYear = 12;
+              break;
+            case "semi-monthly":
+              paymentsPerYear = 24; // 2 payments per month * 12 months
+              break;
+            case "bi-weekly":
+              paymentsPerYear = 26;
+              break;
+            case "weekly":
+              paymentsPerYear = 52;
+              break;
+            default:
+              paymentsPerYear = 12;
+          }
+
+          const periodicInterestRate = annualInterestRate / paymentsPerYear;
+          const numberOfPayments = mortgageTermYears * paymentsPerYear;
+
+          let periodicPayment;
+          if (periodicInterestRate === 0) {
+            periodicPayment = loanAmount / numberOfPayments;
+          } else {
+            periodicPayment =
+              (loanAmount *
+                (periodicInterestRate *
+                  Math.pow(1 + periodicInterestRate, numberOfPayments))) /
+              (Math.pow(1 + periodicInterestRate, numberOfPayments) - 1);
+          }
+
+          const totalAmountPaid = periodicPayment * numberOfPayments;
+          const totalInterestPaid = totalAmountPaid - loanAmount;
+
+          displayLoanAmount.textContent = `$${loanAmount.toFixed(2)}`;
+          displayMonthlyPayment.textContent = `$${periodicPayment.toFixed(2)}`;
+          displayInterestRate.textContent = `${(
+            annualInterestRate * 100
+          ).toFixed(2)}%`;
+          displayTotalPayments.textContent = Math.round(numberOfPayments);
+          displayMortgageTerm.textContent = `${mortgageTermYears} years`;
+          displayTotalAmountPaid.textContent = `$${totalAmountPaid.toFixed(2)}`;
+          displayTotalInterestPaid.textContent = `$${totalInterestPaid.toFixed(
+            2
+          )}`;
+
+          const amortizationSchedule = [];
+          let remainingBalance = loanAmount;
+          let totalPrincipalPaidForChart = 0;
+          let cumulativeInterest = 0;
+
+          for (let i = 0; i <= numberOfPayments; i++) {
+            const currentBalance = remainingBalance;
+            const interestPayment = currentBalance * periodicInterestRate;
+            let principalPayment = periodicPayment - interestPayment;
+
+            if (i === numberOfPayments) {
+              principalPayment = currentBalance;
+            }
+            if (principalPayment < 0) principalPayment = 0;
+
+            remainingBalance -= principalPayment;
+            totalPrincipalPaidForChart += principalPayment;
+            cumulativeInterest += interestPayment;
+
+            amortizationSchedule.push({
+              period: i,
+              balance: remainingBalance,
+              interestPaid: interestPayment,
+              principalPaid: principalPayment,
+              equity: downPayment + totalPrincipalPaidForChart,
+              cumulativeInterest: cumulativeInterest,
+            });
+          }
+
+          const chartLabels = [];
+          const chartDebtData = [];
+          const chartInterestData = [];
+          const chartEquityData = [];
+
+          const intervalYears = 2.5;
+          const totalYears = mortgageTermYears;
+
+          for (let year = 0; year <= totalYears; year += intervalYears) {
+            const targetPaymentIndex = Math.round(year * paymentsPerYear);
+            const dataPoint =
+              amortizationSchedule[
+                Math.min(targetPaymentIndex, numberOfPayments)
+              ];
+
+            if (dataPoint) {
+              chartLabels.push(year.toFixed(1));
+              chartDebtData.push(dataPoint.balance);
+              chartInterestData.push(dataPoint.cumulativeInterest);
+              chartEquityData.push(dataPoint.equity);
+            }
+          }
+
+          updateChart(
+            chartLabels,
+            chartDebtData,
+            chartInterestData,
+            chartEquityData
+          );
+        }
+
+        function updateChart(labels, debtData, interestData, equityData) {
+          if (amortizationChart) {
+            amortizationChart.destroy();
+          }
+
+          amortizationChart = new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  label: "Debt",
+                  data: debtData,
+                  borderColor: "red",
+                  backgroundColor: "rgba(255, 0, 0, 0.1)",
+                  fill: false,
+                  pointRadius: 3,
+                  pointBackgroundColor: "red",
+                  pointBorderColor: "red",
+                  tension: 0.1,
+                },
+                {
+                  label: "Interest",
+                  data: interestData,
+                  borderColor: "orange",
+                  backgroundColor: "rgba(255, 165, 0, 0.1)",
+                  fill: false,
+                  pointRadius: 3,
+                  pointBackgroundColor: "orange",
+                  pointBorderColor: "orange",
+                  tension: 0.1,
+                },
+                {
+                  label: "Equity",
+                  data: equityData,
+                  borderColor: "green",
+                  backgroundColor: "rgba(0, 128, 0, 0.1)",
+                  fill: false,
+                  pointRadius: 3,
+                  pointBackgroundColor: "green",
+                  pointBorderColor: "green",
+                  tension: 0.1,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: "Years",
+                    font: {
+                      size: 14,
+                      family: "Mukta",
+                    },
+                    color: "#555",
+                  },
+                  ticks: {
+                    font: {
+                      family: "Mukta",
+                    },
+                    color: "#555",
+                  },
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: "Amount ($)",
+                    font: {
+                      size: 14,
+                      family: "Mukta",
+                    },
+                    color: "#555",
+                  },
+                  ticks: {
+                    callback: function (value) {
+                      return "$" + value.toLocaleString();
+                    },
+                    font: {
+                      family: "Mukta",
+                    },
+                    color: "#555",
+                  },
+                  min: 0,
+                },
+              },
+              plugins: {
+                legend: {
+                  position: "top",
+                  labels: {
+                    font: {
+                      size: 14,
+                      family: "Mukta",
+                    },
+                    color: "#333",
+                    usePointStyle: true,
+                    boxWidth: 10,
+                  },
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      let label = context.dataset.label || "";
+                      if (label) {
+                        label += ": ";
+                      }
+                      if (context.parsed.y !== null) {
+                        label += new Intl.NumberFormat("en-US", {
+                          style: "currency",
+                          currency: "USD",
+                        }).format(context.parsed.y);
+                      }
+                      return label;
+                    },
+                  },
+                },
+              },
+            },
+          });
+        }
+
+        calculateMortgage();
+
+        purchaseAmountInput.addEventListener("input", calculateMortgage);
+        downPaymentInput.addEventListener("input", calculateMortgage);
+        interestRateInput.addEventListener("input", calculateMortgage);
+        mortgageTermInput.addEventListener("input", calculateMortgage);
+        paymentIntervalSelect.addEventListener("change", calculateMortgage);
+        calculateBtn.addEventListener("click", calculateMortgage);
+      });
+    </script>
+  </body>
+</html>

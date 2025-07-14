@@ -10,7 +10,7 @@
 }
 
 .header .menu .contact-button {
-  background-color: var(--color-btn-primary);
+  background-color: var(--color-bg);
   color: #fff;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .button-item {
-  width: 20%;
+  width: 65%;
 }
 
 .button-item:hover {

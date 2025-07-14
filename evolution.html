@@ -1,313 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find the Right Home</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Calculator</title>
+    <!-- Chart.js for drawing the graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        :root {
-            --text-size13: 4rem; /* Adjusted for responsive heading */
-            --color-btn-primary: #1d4ed8; /* Blue-700 */
-            --text-size5: 1.5rem; /* Adjusted for responsive sub-heading */
-        }
+      /* Mortgage Calculator specific styles */
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align to top to allow scrolling */
+        min-height: 100vh;
+        margin: 0;
+        padding-top: 50px; /* Add some space from the top */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
 
-        body {
-            font-family: "Inter", sans-serif;
-            background-color: #f3f4f6;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            margin: 0;
-            box-sizing: border-box;
-        }
+      .mortgage-calculator-section {
+        padding: 40px;
+        background-color: #ffffff;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 900px; /* Reverted to 900px to give more space for inputs */
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
 
-        .sell-section {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-            margin-top: 2rem;
-            width: 100%;
-            max-width: 1024px;
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 1.5rem;
-        }
+      .mortgage-calculator-section h2 {
+        font-size: 2.8rem;
+        color: var(--color-bg);
+        margin-bottom: 30px;
+        font-family: var(--font-heading);
+      }
 
-        .sell-grid {
-            display: flex;
-            flex-direction: column; /* Stack columns on mobile */
-            gap: 2rem;
-            align-items: center;
-        }
+      /* Grid layout for input fields */
+      .mortgage-calculator-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px 40px; /* Row gap, Column gap */
+        padding: 0 20px;
+        align-items: center; /* Vertically align items in the grid */
+      }
 
-        .sell-left-content {
-            padding: 1rem;
-            width: 100%;
-            order: 2; /* Change order for mobile to put image/button below text */
-        }
+      .mortgage-calculator-grid .form-group {
+        display: flex; /* Use flexbox for label and input on one line */
+        align-items: center;
+        text-align: left;
+      }
 
-        .sell-right-content {
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            width: 100%;
-            order: 1; /* Change order for mobile to put benefits above text */
-        }
+      .mortgage-calculator-grid label {
+        font-size: 1.8rem;
+        color: #555; /* Adjusted color for labels */
+        white-space: nowrap; /* Prevent label from wrapping */
+        font-family: var(--font-Mukta);
+        flex-shrink: 0; /* Prevent label from shrinking */
+        width: 130px; /* Reduced fixed width for labels to align them */
+        text-align: right; /* Align label text to the right */
+        padding-right: 15px; /* Space between label text and input */
+      }
 
-        .sell-left-content h2.home {
-            font-size: var(--text-size13);
-            margin-bottom: 1.2rem;
-            color: var(--color-btn-primary);
-            font-family: "DM Serif Text", serif;
-            font-weight: 300;
-            line-height: 1.3;
-        }
+      .mortgage-calculator-grid input[type="number"],
+      .mortgage-calculator-grid input[type="text"],
+      .mortgage-calculator-grid select { /* Style for select dropdown */
+        flex-grow: 1; /* Allow input/select to take available space */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        font-family: var(--font-Mukta);
+        max-width: 150px; /* Reduced max-width for inputs */
+      }
 
-        .sell-left-content p.sell-description,
-        .sell-left-content p.sell-text {
-            font-size: 1.7rem;
-            color: #5c5c5c;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            font-family: "Mukta", sans-serif;
-            line-height: 1.5;
-        }
+      .mortgage-calculator-grid input[type="number"]:focus,
+      .mortgage-calculator-grid input[type="text"]:focus,
+      .mortgage-calculator-grid select:focus {
+        border-color: var(--color-bg);
+        outline: none;
+      }
 
-        .sell-button {
-            display: inline-block;
-            padding: 18px 48px;
-            background-color: var(--color-btn-primary);
-            font-size: 1.6rem;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-align: center;
-            font-family: "Mukta", sans-serif;
-            color: #fffdf9;
-            margin-bottom: 2rem;
-            width: calc(100% - 2rem); /* Full width button with padding */
-            margin-left: 1rem;
-            margin-right: 1rem;
-            box-sizing: border-box;
-        }
+      .calculate-button-container {
+        text-align: right; /* Align button to the right */
+        margin-top: 30px;
+        padding-right: 20px; /* Match padding of grid */
+      }
 
-        .sell-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+      .calculate-button {
+        background-color: var(--color-bg);
+        color: #fff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 9px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        font-family: var(--font-Mukta);
+        width: auto; /* Allow button to size based on content */
+        max-width: 180px; /* Reduced max-width for the button */
+      }
 
-        .sell-left-image-container {
-            padding: 1rem;
-            text-align: center;
-            margin-top: 2rem;
-            width: 100%;
-        }
+      .calculate-button:hover {
+        transform: scale(1.05);
+      }
 
-        .sell-left-image-container img {
-            max-width: 100%;
-            border-radius: 2rem;
-            display: block;
-            margin: auto;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-                        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            object-fit: cover;
-        }
+      /* Results display styles */
+      .results-container {
+        margin-top: 40px;
+        padding: 20px;
+        border-top: 1px solid #eee;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for results */
+        gap: 10px 40px; /* Row gap, Column gap */
+        text-align: left;
+      }
 
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem;
-        }
+      .result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+      }
 
-        .benefit-icon {
-            flex-shrink: 0;
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 9999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin-right: 1rem;
-            font-size: 2rem; /* For emoji icons */
-            color: white; /* For emoji icons */
-        }
+      .result-label {
+        font-size: 1.6rem;
+        color: #555;
+        font-family: var(--font-Mukta);
+      }
 
-        /* Specific background colors for each icon container */
-        .benefit-item:nth-child(1) .benefit-icon {
-            background-color: #3b82f6; /* Blue-500 */
-        }
-        .benefit-item:nth-child(2) .benefit-icon {
-            background-color: #22c55e; /* Green-500 */
-        }
-        .benefit-item:nth-child(3) .benefit-icon {
-            background-color: #a855f7; /* Purple-500 */
-        }
+      .result-value {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--color-bg);
+        font-family: var(--font-Mukta);
+      }
 
-        .benefit-text h3 {
-            font-size: var(--text-size5);
-            color: #390943;
-            margin-bottom: 0.5rem;
-            font-family: "DM Serif Text", serif;
-            font-weight: 300;
-        }
+      /* Chart styles */
+      .chart-container {
+        margin-top: 40px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        height: 400px; /* Increased height for the chart container */
+      }
 
-        .benefit-text p {
-            font-size: 17px;
-            color: #5c5c5c;
-            margin-top: 0.5rem;
-            line-height: 20px;
-            font-family: "Mukta", sans-serif;
-        }
+      /* General CSS variables and reset */
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
 
-        /* Responsive adjustments for medium screens and up */
-        @media (min-width: 768px) {
-            .sell-grid {
-                flex-direction: row; /* Side-by-side columns on larger screens */
-                justify-content: space-between;
-                gap: 4rem;
-            }
+      :root {
+        --color-bg: #390943;
+        --font-heading: "DM Serif Text", serif;
+        --font-Mukta: "Mukta", sans-serif;
+        --text-size5: 1.5rem;
+        --text-size14: 3rem;
+        --text-size15: 3.5rem;
+      }
 
-            .sell-left-content {
-                width: 50%;
-                padding-right: 2rem;
-                order: 2; /* Move to the right on desktop */
-            }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-            .sell-right-content {
-                width: 45%;
-                padding-left: 2rem;
-                order: 1; /* Move to the left on desktop */
-            }
-
-            .sell-left-image-container img {
-                margin: auto -1.5rem;
-            }
-
-            .sell-left-content h2.home {
-                font-size: 4.8rem;
-                text-align: left; /* Align text left on desktop */
-            }
-
-            .sell-left-content p.sell-description,
-            .sell-left-content p.sell-text {
-                text-align: left; /* Align text left on desktop */
-            }
-
-            .sell-button {
-                width: auto; /* Auto width for desktop button */
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .benefit-text h3 {
-                font-size: 1.8rem;
-            }
-        }
-
-        /* Responsive adjustments for small screens */
-        @media (max-width: 767px) {
-            .sell-section {
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                margin-top: 1rem;
-            }
-
-            .sell-left-content h2.home {
-                font-size: 2.8rem;
-                text-align: center;
-            }
-
-            .sell-left-content p.sell-description,
-            .sell-left-content p.sell-text {
-                font-size: 1.2rem;
-                text-align: center;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-
-            .sell-left-image-container img {
-                margin: auto;
-            }
-
-            .benefit-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .benefit-icon {
-                margin-right: 0;
-                margin-bottom: 0.5rem;
-            }
-
-            .benefit-text h3 {
-                font-size: 1.25rem;
-            }
-
-            .benefit-text p {
-                font-size: 0.95rem;
-            }
-        }
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
     </style>
-</head>
-<body>
-    <section class="sell-section">
-        <div class="container sell-grid">
-            <div class="sell-right-content">
-                <div class="benefit-item">
-                    <div class="benefit-icon">📍</div>
-                    <div class="benefit-text">
-                        <h3>Tailored Guidance for First-Time Buyers</h3>
-                        <p>Clear steps, smart advice, no confusion.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-icon">🏆</div>
-                    <div class="benefit-text">
-                        <h3>Expertise in Investments and New Construction</h3>
-                        <p>Smart identification aligned with goals and budgets</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-icon">⚙️</div>
-                    <div class="benefit-text">
-                        <h3>Multilingual Support for Seamless Communication</h3>
-                        <p>
-                            Fluent in English, Hindi, and Gujarati — ensuring smooth
-                            communication and cultural understanding.
-                        </p>
-                    </div>
-                </div>
+  </head>
+  <body>
+    <main>
+      <!-- Mortgage Calculator Section -->
+      <section class="mortgage-calculator-section">
+        <h2>Mortgage Calculator</h2>
+        <form id="mortgageForm">
+          <div class="mortgage-calculator-grid">
+            <div class="form-group">
+              <label for="purchaseAmount">Purchase Amount:</label>
+              <input type="number" id="purchaseAmount" name="purchaseAmount" value="300000" required />
             </div>
-            <div class="sell-left-content">
-                <h2 class="home">Find the Right Home. Build the Right Future.</h2>
-                <p class="sell-description">
-                    Whether it’s your first home, your next move, or your next
-                    investment — you deserve more than listings.
-                </p>
-                <div>
-                    <p class="sell-text">
-                        You deserve a guide who listens, tailors, and empowers.
-                    </p>
-                </div>
-                <a href="#" class="sell-button">GET MY BUYER'S GUIDE</a>
-
-                <div class="sell-left-image-container">
-                    <img
-                        src="https://iss-cdn.myrealpage.com/5s1OgkFUJBSZxzj534wdg9StNgl8iqh09WIGKyTPKRc/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5myrealpagewebsite.com/_media/Images/minimalist-modern-living-room.jpg?t=1739478825147"
-                        alt="Modern interior with dining table"
-                    />
-                </div>
+            <div class="form-group">
+              <label for="downPayment">Down Payment:</label>
+              <input type="number" id="downPayment" name="downPayment" value="60000" required />
             </div>
+            <div class="form-group">
+              <label for="interestRate">Interest Rate:</label>
+              <input type="number" id="interestRate" name="interestRate" value="3.5" step="0.01" required />
+            </div>
+            <div class="form-group">
+              <label for="closingCostsDollar">Closing Costs ($):</label>
+              <input type="number" id="closingCostsDollar" name="closingCostsDollar" value="0" required />
+            </div>
+            <div class="form-group">
+              <label for="mortgageTerm">Mortgage Term (Years):</label>
+              <input type="number" id="mortgageTerm" name="mortgageTerm" value="25" required />
+            </div>
+            <div class="form-group">
+              <label for="closingCostsPercent">Closing Costs (%):</label>
+              <input type="number" id="closingCostsPercent" name="closingCostsPercent" value="0" step="0.01" required />
+            </div>
+            <div class="form-group">
+              <label for="paymentInterval">Payment Interval:</label>
+              <select id="paymentInterval" name="paymentInterval">
+                <option value="monthly">Monthly</option>
+                <option value="bi-weekly">Bi-Weekly</option>
+                <option value="weekly">Weekly</option>
+              </select>
+            </div>
+          </div>
+          <div class="calculate-button-container">
+            <button type="button" class="calculate-button" id="calculateBtn">Calculate</button>
+          </div>
+        </form>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
+
+        <!-- Results Display Area -->
+        <div class="results-container">
+          <div class="result-item">
+            <span class="result-label">Loan amount:</span>
+            <span class="result-value" id="displayLoanAmount">$240,000.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Payment:</span>
+            <span class="result-value" id="displayMonthlyPayment">$0.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Interest rate:</span>
+            <span class="result-value" id="displayInterestRate">3.50%</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total payments:</span>
+            <span class="result-value" id="displayTotalPayments">0</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Mortgage term:</span>
+            <span class="result-value" id="displayMortgageTerm">25 years</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total amount paid:</span>
+            <span class="result-value" id="displayTotalAmountPaid">$0.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total interest paid:</span>
+            <span class="result-value" id="displayTotalInterestPaid">$0.00</span>
+          </div>
         </div>
-    </section>
-</body>
+
+        <!-- Amortization Chart -->
+        <div class="chart-container">
+          <canvas id="amortizationChart"></canvas>
+        </div>
+      </section>
+      <!-- End of Mortgage Calculator Section -->
+    </main>
+    <script>
+      let amortizationChart; // Declare chart variable globally
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const purchaseAmountInput = document.getElementById('purchaseAmount');
+        const downPaymentInput = document.getElementById('downPayment');
+        const interestRateInput = document.getElementById('interestRate');
+        const mortgageTermInput = document.getElementById('mortgageTerm');
+        const paymentIntervalSelect = document.getElementById('paymentInterval');
+        const calculateBtn = document.getElementById('calculateBtn');
+
+        const displayLoanAmount = document.getElementById('displayLoanAmount');
+        const displayMonthlyPayment = document.getElementById('displayMonthlyPayment');
+        const displayInterestRate = document.getElementById('displayInterestRate');
+        const displayTotalPayments = document.getElementById('displayTotalPayments');
+        const displayMortgageTerm = document.getElementById('displayMortgageTerm');
+        const displayTotalAmountPaid = document.getElementById('displayTotalAmountPaid');
+        const displayTotalInterestPaid = document.getElementById('displayTotalInterestPaid');
+
+        const ctx = document.getElementById('amortizationChart').getContext('2d');
+
+        // Function to calculate mortgage details
+        function calculateMortgage() {
+          const purchaseAmount = parseFloat(purchaseAmountInput.value);
+          const downPayment = parseFloat(downPaymentInput.value);
+          let annualInterestRate = parseFloat(interestRateInput.value) / 100;
+          const mortgageTermYears = parseFloat(mortgageTermInput.value);
+          const paymentInterval = paymentIntervalSelect.value;
+
+          if (isNaN(purchaseAmount) || isNaN(downPayment) || isNaN(annualInterestRate) || isNaN(mortgageTermYears) || purchaseAmount <= 0) {
+            displayMonthlyPayment.textContent = '$0.00';
+            displayTotalPayments.textContent = '0';
+            displayTotalAmountPaid.textContent = '$0.00';
+            displayTotalInterestPaid.textContent = '$0.00';
+            updateChart([], [], [], []);
+            return;
+          }
+
+          const loanAmount = purchaseAmount - downPayment;
+
+          let paymentsPerYear;
+          switch (paymentInterval) {
+            case 'monthly':
+              paymentsPerYear = 12;
+              break;
+            case 'bi-weekly':
+              paymentsPerYear = 26;
+              break;
+            case 'weekly':
+              paymentsPerYear = 52;
+              break;
+            default:
+              paymentsPerYear = 12;
+          }
+
+          const periodicInterestRate = annualInterestRate / paymentsPerYear;
+          const numberOfPayments = mortgageTermYears * paymentsPerYear;
+
+          let periodicPayment;
+          if (periodicInterestRate === 0) {
+            periodicPayment = loanAmount / numberOfPayments;
+          } else {
+            periodicPayment = loanAmount * (periodicInterestRate * Math.pow(1 + periodicInterestRate, numberOfPayments)) / (Math.pow(1 + periodicInterestRate, numberOfPayments) - 1);
+          }
+
+          const totalAmountPaid = periodicPayment * numberOfPayments;
+          const totalInterestPaid = totalAmountPaid - loanAmount;
+
+          // Update display elements
+          displayLoanAmount.textContent = `$${loanAmount.toFixed(2)}`;
+          displayMonthlyPayment.textContent = `$${periodicPayment.toFixed(2)}`;
+          displayInterestRate.textContent = `${(annualInterestRate * 100).toFixed(2)}%`;
+          displayTotalPayments.textContent = Math.round(numberOfPayments);
+          displayMortgageTerm.textContent = `${mortgageTermYears} years`;
+          displayTotalAmountPaid.textContent = `$${totalAmountPaid.toFixed(2)}`;
+          displayTotalInterestPaid.textContent = `$${totalInterestPaid.toFixed(2)}`;
+
+          // Generate amortization schedule for the chart
+          const amortizationSchedule = [];
+          let remainingBalance = loanAmount;
+          let totalPrincipalPaidForChart = 0;
+          let cumulativeInterest = 0; // Initialize cumulative interest for chart
+
+          for (let i = 0; i <= numberOfPayments; i++) {
+            const currentBalance = remainingBalance;
+            const interestPayment = currentBalance * periodicInterestRate;
+            let principalPayment = periodicPayment - interestPayment;
+
+            if (i === numberOfPayments) {
+                principalPayment = currentBalance; // Ensure last payment clears balance
+            }
+            if (principalPayment < 0) principalPayment = 0; // Prevent negative principal payment
+
+            remainingBalance -= principalPayment;
+            totalPrincipalPaidForChart += principalPayment;
+            cumulativeInterest += interestPayment; // Accumulate interest
+
+            amortizationSchedule.push({
+              period: i,
+              balance: remainingBalance,
+              interestPaid: interestPayment,
+              principalPaid: principalPayment,
+              equity: downPayment + totalPrincipalPaidForChart,
+              cumulativeInterest: cumulativeInterest // Store cumulative interest
+            });
+          }
+
+          // Prepare data for Chart.js to match the image's x-axis (years)
+          const chartLabels = [];
+          const chartDebtData = [];
+          const chartInterestData = [];
+          const chartEquityData = [];
+
+          const intervalYears = 2.5; // Interval for x-axis labels as per image
+          const totalYears = mortgageTermYears;
+
+          for (let year = 0; year <= totalYears; year += intervalYears) {
+            const targetPaymentIndex = Math.round(year * paymentsPerYear);
+            const dataPoint = amortizationSchedule[Math.min(targetPaymentIndex, numberOfPayments)];
+
+            if (dataPoint) {
+                chartLabels.push(year.toFixed(1)); // Format year to one decimal place
+                chartDebtData.push(dataPoint.balance);
+                chartInterestData.push(dataPoint.cumulativeInterest); // Use cumulative interest
+                chartEquityData.push(dataPoint.equity);
+            }
+          }
+
+          updateChart(chartLabels, chartDebtData, chartInterestData, chartEquityData);
+        }
+
+        // Function to update or create the Chart.js graph
+        function updateChart(labels, debtData, interestData, equityData) {
+          if (amortizationChart) {
+            amortizationChart.destroy();
+          }
+
+          amortizationChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  label: 'Debt',
+                  data: debtData,
+                  borderColor: 'red',
+                  backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                  fill: false,
+                  pointRadius: 3, /* Increased point radius */
+                  pointBackgroundColor: 'red', /* Added point background color */
+                  pointBorderColor: 'red', /* Added point border color */
+                  tension: 0.1
+                },
+                {
+                  label: 'Interest',
+                  data: interestData,
+                  borderColor: 'orange',
+                  backgroundColor: 'rgba(255, 165, 0, 0.1)',
+                  fill: false,
+                  pointRadius: 3, /* Increased point radius */
+                  pointBackgroundColor: 'orange', /* Added point background color */
+                  pointBorderColor: 'orange', /* Added point border color */
+                  tension: 0.1
+                },
+                {
+                  label: 'Equity',
+                  data: equityData,
+                  borderColor: 'green',
+                  backgroundColor: 'rgba(0, 128, 0, 0.1)',
+                  fill: false,
+                  pointRadius: 3, /* Increased point radius */
+                  pointBackgroundColor: 'green', /* Added point background color */
+                  pointBorderColor: 'green', /* Added point border color */
+                  tension: 0.1
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Years', /* Changed to Years */
+                    font: {
+                      size: 14,
+                      family: 'Mukta',
+                    },
+                    color: '#555'
+                  },
+                  ticks: {
+                    font: {
+                      family: 'Mukta',
+                    },
+                    color: '#555'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Amount ($)',
+                    font: {
+                      size: 14,
+                      family: 'Mukta',
+                    },
+                    color: '#555'
+                  },
+                  ticks: {
+                    callback: function(value) {
+                      return '$' + value.toLocaleString();
+                    },
+                    font: {
+                      family: 'Mukta',
+                    },
+                    color: '#555'
+                  },
+                  min: 0, /* Ensure y-axis starts at 0 */
+                  // The max value will be dynamically determined by the data,
+                  // but we ensure it's at least the loan amount or total amount paid
+                  // to give it enough vertical space.
+                }
+              },
+              plugins: {
+                legend: {
+                  position: 'left', /* Moved legend to left as per image */
+                  labels: {
+                    font: {
+                      size: 14,
+                      family: 'Mukta',
+                    },
+                    color: '#333',
+                    usePointStyle: true, /* Use point style for legend items */
+                    boxWidth: 10 /* Adjust box width for legend */
+                  }
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function(context) {
+                      let label = context.dataset.label || '';
+                      if (label) {
+                        label += ': ';
+                      }
+                      if (context.parsed.y !== null) {
+                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                      }
+                      return label;
+                    }
+                  }
+                }
+              }
+            }
+          });
+        }
+
+        // Initial calculation when the page loads
+        calculateMortgage();
+
+        // Event listeners for input changes and button click
+        purchaseAmountInput.addEventListener('input', calculateMortgage);
+        downPaymentInput.addEventListener('input', calculateMortgage);
+        interestRateInput.addEventListener('input', calculateMortgage);
+        mortgageTermInput.addEventListener('input', calculateMortgage);
+        paymentIntervalSelect.addEventListener('change', calculateMortgage);
+        calculateBtn.addEventListener('click', calculateMortgage);
+      });
+    </script>
+  </body>
 </html>
