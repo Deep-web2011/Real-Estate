@@ -52,6 +52,9 @@
   font-family: "Mukta", sans-serif;
 }
 
+/**************************/
+/* Hero Button Section */
+/**************************/
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +91,9 @@
   text-decoration: none;
 }
 
-/*/////////////Social columns/////////////////*/
+/**************************/
+/* Social Columns */
+/**************************/
 
 .hero-icons-container {
   display: flex;
@@ -141,7 +146,9 @@
   margin-top: 5rem;
 }
 
-/*/////////////////////every-move-section/////////////////////////// */
+/**************************/
+/* every-move-section */
+/**************************/
 .every-move-section {
   width: 100%;
   padding: 15rem 0 0 0;
@@ -177,6 +184,9 @@
   color: #5c5c5c;
 }
 
+/**************************/
+/* buttons */
+/**************************/
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -210,7 +220,10 @@
   transform: scale(1.05);
 }
 
-/* UPDATED IMAGE CARD STYLES FOR FIXED SIZE */
+/**************************/
+/* image-card-section */
+/**************************/
+
 .image-card {
   overflow: hidden;
   padding: 1.5rem;
@@ -246,9 +259,9 @@
   grid-column: 3 / 4;
 }
 
-/* ============================== */
+/**********************************/
 /* Community Section */
-/* ============================== */
+/*********************************/
 .communities {
   background-color: var(--color-bg);
   color: #fff;
@@ -291,9 +304,9 @@
   font-weight: 200;
 }
 
-/* ============================== */
-/* Sell Section */
-/* ============================== */
+/**************************/
+/* sell-section */
+/**************************/
 .sell-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -444,10 +457,9 @@
   padding: 0 1.2rem;
   margin: auto;
 }
-
-/* ============================== */
-/* .home-evaluation Section */
-/* ============================== */
+/**************************/
+/* home-evaluation-section-section */
+/**************************/
 .home-evaluation-section {
   position: relative;
   width: 100%;
@@ -541,7 +553,10 @@
   padding: 0;
 }
 
-/*////////////////////////// Blog Section Styles //////////////////*/
+/**************************/
+/* blog-section */
+/**************************/
+
 .blog-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -643,7 +658,9 @@
   background-color: var(--color-bg);
 }
 
-/*//////////////// Your Move Starts Here Section ////////////////*/
+/**************************/
+/* your-move-section */
+/**************************/
 .your-move-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -693,6 +710,10 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
+
+/**************************/
+/* form-group-section */
+/**************************/
 
 .form-group {
   display: flex;
