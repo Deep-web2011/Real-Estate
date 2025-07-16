@@ -30,7 +30,7 @@
   left: 8%;
   bottom: 18%;
   font-family: var(--font-heading);
-  z-index: 9999;
+  z-index: 1;
 }
 
 .home-evaluation-intro h1 {
@@ -231,12 +231,6 @@
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 0 20px;
-  }
-  .header .menu ul {
-    display: none;
-  }
   .contact-form-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -250,6 +244,19 @@
     width: 100%;
     justify-content: center;
   }
+
+  .home-evaluation-heading {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
 }
 
 @media (max-width: 320px) {
@@ -258,5 +265,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+}
+
+
+@media (max-width: 30em) {
+  .header .home-evaluation-intro {
+    bottom: 8%;
+  }
+  .home-evaluation-intro h1 {
+    line-height: 1;
   }
 }

@@ -30,7 +30,7 @@
   left: 8%;
   bottom: 18%;
   font-family: var(--font-heading);
-  z-index: 9999;
+  z-index: 1;
 }
 
 .mortgage-calculator-intro h3 {
@@ -209,5 +209,11 @@
   .calculate-button {
     max-width: 100%;
     width: 100%;
+  }
+}
+
+@media (max-width: 25em) {
+  .header .mortgage-calculator-intro {
+    bottom: 10%;
   }
 }

@@ -283,6 +283,12 @@
   }
 }
 
+@media(max-width: 750px){
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 480px) {
   .contact-heading {
     font-size: 1.75rem;
@@ -303,5 +309,24 @@
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
+  }
+
+  .buttons-section {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -2rem;
+  }
+
+  .contact-section {
+    margin-top: 1rem;
+  }
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+  }
+
+  .social-icons a:last-child {
+    grid-column: 1 / -1;
   }
 }

@@ -393,7 +393,7 @@ body.menu-active {
   }
 
   .header .menu .contact-button {
-    display: block;
+    display: none;
     width: auto;
     margin-left: 0;
     padding: 1.5rem 2rem;
@@ -406,4 +406,16 @@ body.menu-active {
   .header .menu .contact-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding-left: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+ .header {
+  padding-left: 3rem;
+ }
 }
