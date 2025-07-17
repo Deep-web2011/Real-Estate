@@ -1,12 +1,3 @@
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
-
-///////////////////////////////////////////////////////////
-// Set current year
-
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 
@@ -577,4 +568,46 @@ document.addEventListener("DOMContentLoaded", () => {
   mortgageTermInput.addEventListener("input", calculateMortgage);
   paymentIntervalSelect.addEventListener("change", calculateMortgage);
   calculateBtn.addEventListener("click", calculateMortgage);
+});
+
+// JavaScript to trigger the animation when the element is visible in the viewport
+
+// JavaScript to trigger the animation when the element is visible in the viewport
+document.addEventListener('DOMContentLoaded', function() {
+  const buttonsSection = document.querySelector('.buttons-section');
+  const statsSection = document.querySelector('.stats-section'); // Assuming .stats-section will have .animate-stats-bottom
+
+  const observerOptions = {
+    threshold: 0.5
+  }
+
+  // Observer for .buttons-section
+  const buttonsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  if (buttonsSection) {
+    buttonsObserver.observe(buttonsSection);
+  }
+
+  
+  const statsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+
+  const elementsToAnimateStats = document.querySelectorAll('.animate-stats-bottom');
+  elementsToAnimateStats.forEach(element => {
+    statsObserver.observe(element);
+  });
 });

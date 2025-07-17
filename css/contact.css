@@ -173,6 +173,17 @@
   object-fit: cover;
 }
 
+.animate-from-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-from-bottom.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .buttons-section {
   margin-top: 10rem;
   padding: 4rem 1rem;
@@ -283,7 +294,7 @@
   }
 }
 
-@media(max-width: 750px){
+@media (max-width: 750px) {
   .contact-container {
     grid-template-columns: 1fr;
   }
@@ -322,7 +333,7 @@
 
   .social-icons {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
 
