@@ -366,14 +366,14 @@ img {
 
 .success-image-wrapper {
   width: 100%;
-  position: relative;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   overflow: hidden;
 }
 
 .success-image-wrapper img {
-  max-width: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 20px;
 }
 
