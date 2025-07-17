@@ -536,6 +536,11 @@ Tablet-style
     font-size: 15px;
     padding: 18px 36px;
   }
+   .image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 26em) {
@@ -543,9 +548,4 @@ Tablet-style
     bottom: 10%;
   }
 
-  .image-wrapper img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
 }
