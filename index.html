@@ -69,7 +69,9 @@
               <i class="fa-solid fa-chevron-down dropdown-icon"></i>
               <ul class="sub-menu">
                 <li><a href="#">Selling Resources</a></li>
-                <li><a href="/home-evaluation.html">Instant Home Evolution</a></li>
+                <li>
+                  <a href="/home-evaluation.html">Instant Home Evolution</a>
+                </li>
               </ul>
             </li>
 
@@ -78,7 +80,9 @@
               <i class="fa-solid fa-chevron-down dropdown-icon"></i>
               <ul class="sub-menu">
                 <li><a href="#">Buying Resources</a></li>
-                <li><a href="/mortgage-calculator.html">Mortgage Calculator</a></li>
+                <li>
+                  <a href="/mortgage-calculator.html">Mortgage Calculator</a>
+                </li>
                 <li><a href="#">Neighbourhood Guide</a></li>
               </ul>
             </li>
@@ -112,7 +116,9 @@
               <a href="#how" class="btn btn-hero btn-hero-secondary"
                 >INSTANT HOME EVALUATION
               </a>
-              <a href="#" class="btn btn-hero btn-hero-primary hero-secondary-btn-hide"
+              <a
+                href="#"
+                class="btn btn-hero btn-hero-primary hero-secondary-btn-hide"
                 >FIND YOUR DREAM HOME</a
               >
             </div>
@@ -347,16 +353,30 @@
           </div>
           <div class="image-card grid-image-1">
             <video
+              id="sabahVideo"
               class="video"
-              src="videos/Sabah-Fadai-Video.mp4"
               playsinline=""
               disablepictureinpicture="true"
               data-autoplay="true"
               onmouseenter="this.setAttribute('controls','controls')"
               onmouseleave="this.removeAttribute('controls')"
               loop=""
+              autoplay
+              muted
+              preload="auto"
               data-speed="1"
-            ></video>
+              poster="https://placehold.co/640x360/000000/FFFFFF?text=Video+Loading"
+            >
+              <!-- Provide multiple source tags for wider browser compatibility -->
+              <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
+              <!-- Example for other formats (uncomment and provide actual paths if available) -->
+              <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
+              <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+            <button id="playButton" class="play-button" style="display: none">
+              ▶
+            </button>
           </div>
           <div class="image-card grid-image-2">
             <img src="img/Sabah-Fadai-Photo.jpg" alt="SABAH-image" />
