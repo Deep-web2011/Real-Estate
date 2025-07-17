@@ -169,16 +169,30 @@
           </div>
           <div class="success-video-wrapper">
             <video
+              id="sabahVideo"
               class="video"
-              src="videos/Sabah-Fadai-Video.mp4"
               playsinline=""
               disablepictureinpicture="true"
               data-autoplay="true"
               onmouseenter="this.setAttribute('controls','controls')"
               onmouseleave="this.removeAttribute('controls')"
               loop=""
+              autoplay
+              muted
+              preload="auto"
               data-speed="1"
-            ></video>
+              poster="https://placehold.co/640x360/000000/FFFFFF?text=Video+Loading"
+            >
+              <!-- Provide multiple source tags for wider browser compatibility -->
+              <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
+              <!-- Example for other formats (uncomment and provide actual paths if available) -->
+              <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
+              <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+            <button id="playButton" class="play-button" style="display: none">
+              ▶
+            </button>
           </div>
         </div>
       </section>
@@ -381,7 +395,7 @@
 
       <section class="image-section">
         <img
-          src="https://iss-cdn.myrealpage.com/vrWMKPAQHlP4w1FAIAJnXuSBHcx16_EqVGBrA8LulsM/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvdG9yb250by1yZWFsLWVzdGF0ZS5qcGc_dD0xNzM5NDc4NTcwNjM1?t=1739478570635"
+          src="https://iss-cdn.myrealpage.com/vrWMKPAQHlP4w1FAIAJnXuSBHcx16_EqVGBrA8LulsM/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5myrealpagewebsite.com/_media/quick-uploads/toronto-real-estate.jpg?t=1739478570635"
           alt="city-center"
         />
         <div class="container">
