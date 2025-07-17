@@ -219,7 +219,7 @@ img {
 
 .image-wrapper img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
