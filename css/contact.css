@@ -22,7 +22,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
 }
 
 .contact-form-content {
@@ -136,12 +135,23 @@
 }
 
 .contact-video-wrapper {
+  position: relative;
   width: 100%;
-  aspect-ratio: 24 / 32;
+  padding-bottom: 100%;
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
   overflow: hidden;
+}
+
+.contact-video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
 }
 
 .email-contact {
@@ -166,12 +176,7 @@
   font-size: 17px;
 }
 
-.contact-video-wrapper video {
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .animate-from-bottom {
   opacity: 0;
