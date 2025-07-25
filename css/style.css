@@ -965,6 +965,9 @@ Large Tablet Breakpoint (e.g., 1024px):
     display: none;
   }
 
+  .sell-button {
+    width: 100%;
+  }
   .hero-icons-container {
     display: grid;
     grid-template-columns: 1fr;
