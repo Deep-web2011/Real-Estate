@@ -106,7 +106,7 @@
 .contact-form-grid input[type="text"],
 .contact-form-grid input[type="email"] {
   width: 100%;
-  padding: 10px;
+  padding: 1rem 0;
   border: none;
   border-bottom: 1px solid #390943;
   font-size: 1.6rem;
@@ -231,6 +231,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
   .contact-form-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -247,6 +251,11 @@
 
   .home-evaluation-heading {
     margin-top: 5rem;
+    padding: 0 2.5rem;
+  }
+
+  .contact-section {
+    padding: 0 2.5rem;
   }
 }
 
@@ -257,6 +266,16 @@
     justify-items: center;
   }
 
+  .contact-section {
+    margin-top: 4rem;
+  }
+
+  .header .home-evaluation-intro {
+    bottom: 8%;
+  }
+  .home-evaluation-intro h1 {
+    line-height: 1;
+  }
 }
 
 @media (max-width: 320px) {
@@ -266,14 +285,9 @@
     justify-content: center;
     flex-direction: column;
   }
-}
 
-
-@media (max-width: 30em) {
-  .header .home-evaluation-intro {
-    bottom: 8%;
-  }
-  .home-evaluation-intro h1 {
-    line-height: 1;
+  .home-evaluation-heading,
+  .contact-section {
+    padding: 0 1.5rem;
   }
 }

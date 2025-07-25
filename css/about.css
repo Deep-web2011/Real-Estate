@@ -487,6 +487,19 @@ Tablet-style
     margin-left: 0;
     max-width: 100%;
   }
+
+  .section-layout,
+  .build-section,
+  .success-section {
+    padding: 3rem 0;
+  }
+  .container {
+    padding: 0 2.5rem;
+  }
+
+  .listings-grid {
+    padding: 0;
+  }
 }
 
 @media (max-width: 40em) {
@@ -525,8 +538,8 @@ Tablet-style
   }
 
   .testimonials-section {
-    margin-top: 0 !important;
-    padding-top: 1rem !important;
+   
+    padding-top: 2rem !important;
   }
 
   .image-column:first-child,
@@ -545,10 +558,31 @@ Tablet-style
     height: auto;
     object-fit: contain;
   }
+  .section-layout,
+  .build-section,
+  .success-section {
+    padding: 3rem 0;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+
+  .listings-grid {
+    padding: 0 !important;
+  }
 }
 
 @media (max-width: 26em) {
   .header .about-intro {
     bottom: 10%;
   }
+  .container {
+    padding: 0 1.75rem;
+  }
+
+  .cta-button {
+    width: 90%;
+  }
+
+  
 }

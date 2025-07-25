@@ -775,6 +775,11 @@ FOOTER
 }
 
 @media (max-width: 52em) {
+  .testimonial-container,
+  .footer-container {
+    padding: 0 2.5rem;
+  }
+
   .listings-grid {
     align-items: center;
   }
@@ -787,6 +792,14 @@ FOOTER
 }
 
 @media (max-width: 48em) {
+  .listings-section {
+    padding: 2rem 2.5rem;
+  }
+
+  .listings-grid {
+    padding: 0;
+  }
+
   .bottom-bar {
     flex-direction: column;
   }
@@ -807,6 +820,31 @@ FOOTER
 
   .testimonials-grid {
     grid-auto-columns: 100%;
+  }
+}
+
+@media (max-width: 35em) {
+  .footer .section-right {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .testimonial-container,
+  .image-section h1,
+  .footer-container {
+    padding: 0 1.5rem;
+  }
+
+  .image-section h1 {
+    left: 0;
+  }
+  .listings-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .google-reviews-button {
+    font-size: 1.5rem;
   }
 }
 

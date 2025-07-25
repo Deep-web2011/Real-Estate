@@ -176,7 +176,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 48px;
+  padding: 18px 40px;
   background-color: #390943;
   color: #ffffff;
   font-size: 1rem;
@@ -220,10 +220,13 @@
     margin-top: 2rem;
   }
 
+  .three-column-container {
+    padding: 0 1.5rem;
+  }
   .testimonial-ratings-container {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 3.2rem !important;
+    padding: 0 1.5rem;
   }
   .testimonial-card {
     padding: 2rem;
@@ -244,7 +247,6 @@
   }
   .testimonial-button {
     width: 100%;
-    max-width: 300px;
   }
 }
 
@@ -288,8 +290,20 @@
     font-size: 0.9rem;
   }
 
+  .button-container {
+    padding: 0 1.25rem;
+  }
   .testimonial-button {
     font-size: 14px;
+    line-height: 1.15;
+  }
+
+  .three-column-section {
+    padding: 3rem 0;
+  }
+  .three-column-container,
+  .testimonial-ratings-container {
+    padding: 0 1.25rem;
   }
 }
 

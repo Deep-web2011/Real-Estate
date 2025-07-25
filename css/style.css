@@ -131,6 +131,7 @@
 .hero-img-box img {
   max-height: 700px;
   max-width: 700px;
+  margin-left: 3rem;
 }
 .awards-section {
   display: flex;
@@ -839,7 +840,7 @@
 /********************************
 Mac-book style
 *********************************/
-@media(max-width: 80em){
+@media (max-width: 80em) {
   .evaluation-content {
     left: -4%;
   }
@@ -974,6 +975,7 @@ Large Tablet Breakpoint (e.g., 1024px):
 
   .hero-img-box img {
     margin-top: -2rem;
+    margin-left: 0;
   }
 
   .hero-heading {
@@ -1066,6 +1068,13 @@ Large Tablet Breakpoint (e.g., 1024px):
 }
 
 @media (max-width: 48em) {
+  .every-move-content,
+  .communities-grid,
+  .sell-grid,
+  .blog-container,
+  .your-move-grid {
+    padding: 0 2.5rem !important;
+  }
   .your-move-section {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -1163,19 +1172,50 @@ Large Tablet Breakpoint (e.g., 1024px):
   }
 }
 
+@media (max-width: 30em) {
+  .every-move-content,
+  .communities-grid,
+  .sell-grid,
+  .blog-container,
+  .your-move-grid {
+    padding: 0 1.5rem !important;
+  }
+}
 
-@media(max-width: 25em){
+@media (max-width: 25em) {
   .hero-text-box {
     margin: 1rem 2rem;
   }
 }
 
-@media(max-width: 22em){
+@media (max-width: 24rem) {
+  .buttons .btn-hero-secondary {
+    font-size: 15px;
+  }
+
+  .award-item svg {
+    width: 60px;
+  }
+
+  .sell-button {
+    font-size: 1.5rem;
+  }
+  .evaluation-content {
+    margin-left: 0;
+    padding: 2rem 0;
+  }
+
+  .evaluation-button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 22em) {
   .hero-text-box {
     margin: 1rem 0;
   }
 
-  .hero-paragraph{
+  .hero-paragraph {
     font-size: 15px !important;
   }
 
@@ -1183,5 +1223,3 @@ Large Tablet Breakpoint (e.g., 1024px):
     align-items: center;
   }
 }
-
-

@@ -176,8 +176,6 @@
   font-size: 17px;
 }
 
-
-
 .animate-from-bottom {
   opacity: 0;
   transform: translateY(20px);
@@ -274,8 +272,12 @@
 }
 
 @media (max-width: 768px) {
+  .contact-container {
+    padding: 0;
+  }
+
   .contact-section {
-    padding: 4rem 1rem;
+    padding: 4rem 2.5rem;
   }
   .contact-heading {
     font-size: 3rem;
@@ -285,10 +287,7 @@
     font-size: 1rem;
     margin-bottom: 1.5rem;
   }
-  .contact-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
+
   .social-icons {
     gap: 0.8rem;
   }
@@ -343,5 +342,11 @@
 
   .social-icons a:last-child {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 25em) {
+  .contact-section {
+    padding: 4rem 1.5rem;
   }
 }
