@@ -103,7 +103,7 @@ body.menu-active {
     user-select: none;
     position: static;
     color: hsl(0, 0%, 100%);
-    margin-left: 0.2rem;
+    margin-left: 0.6rem;
 }
 
 .header .menu .sub-menu {
