@@ -101,6 +101,7 @@
   align-items: center;
   padding: 0 6rem;
 }
+
 .social-icons-columns .social-icons {
   display: flex;
   flex-direction: column;
@@ -133,14 +134,39 @@
   max-width: 700px;
   margin-left: 3rem;
 }
+
 .awards-section {
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
 }
 
 .award-item {
   display: flex;
   gap: 5rem;
+  align-items: center;
+  position: relative;
+  animation-name: rightToLeft;
+  animation-duration: 4.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(-160px);
+  }
+}
+
+.awards-container {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -479,6 +505,7 @@
   padding: 0 1.2rem;
   margin: auto;
 }
+
 /**************************/
 /* home-evaluation-section-section */
 /**************************/
@@ -702,6 +729,7 @@
 .message-grid {
   grid-column: 1 / 3;
 }
+
 .your-move-image img {
   width: 100%;
   height: auto;
@@ -917,6 +945,7 @@ Mac-book style
     margin-top: 2rem;
     margin-bottom: 1.4rem;
   }
+
   .awards-section {
     justify-content: center;
     margin-bottom: 2rem;
@@ -968,6 +997,7 @@ Large Tablet Breakpoint (e.g., 1024px):
   .sell-button {
     width: 100%;
   }
+
   .hero-icons-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1048,6 +1078,7 @@ Large Tablet Breakpoint (e.g., 1024px):
   .benefit-item {
     gap: 1rem;
   }
+
   .benefit-text h1 {
     font-size: var(--text-size5);
   }
@@ -1060,6 +1091,7 @@ Large Tablet Breakpoint (e.g., 1024px):
   .sell-padding-left {
     padding: 1rem 0;
   }
+
   .sell-padding,
   .right-margin {
     padding: 0;
@@ -1078,6 +1110,7 @@ Large Tablet Breakpoint (e.g., 1024px):
   .your-move-grid {
     padding: 0 2.5rem !important;
   }
+
   .your-move-section {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -1119,6 +1152,7 @@ Large Tablet Breakpoint (e.g., 1024px):
   .hero-secondary-btn-hide {
     display: none;
   }
+
   .grid-image-1,
   .grid-image-2 {
     grid-column: 1 / -1;
@@ -1203,6 +1237,7 @@ Large Tablet Breakpoint (e.g., 1024px):
   .sell-button {
     font-size: 1.5rem;
   }
+
   .evaluation-content {
     margin-left: 0;
     padding: 2rem 0;
