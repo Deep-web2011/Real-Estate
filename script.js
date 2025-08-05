@@ -74,137 +74,85 @@ function checkFlexGap() {
 checkFlexGap();
 
 /////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", function () {
-  const openMenuBtn = document.querySelector(".open-menu-btn");
-  const closeMenuBtn = document.querySelector(".close-menu-btn");
-  const menu = document.querySelector(".menu");
-  const body = document.body;
-  const html = document.documentElement;
+const openMenuBtn = document.getElementById('openMenuBtn');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+const mainMenu = document.getElementById('mainMenu');
+const body = document.body;
 
-  openMenuBtn.addEventListener("click", () => {
-    menu.classList.add("active");
-    body.classList.add("menu-active");
-    html.classList.add("menu-active");
-    openMenuBtn.classList.add("active");
-  });
+const dropdowns = document.querySelectorAll('.header .menu .dropdown');
 
-  closeMenuBtn.addEventListener("click", () => {
-    menu.classList.remove("active");
-    body.classList.remove("menu-active");
-    html.classList.remove("menu-active");
-    openMenuBtn.classList.remove("active");
-  });
+function toggleMainMenu() {
+    mainMenu.classList.toggle('active');
+    openMenuBtn.classList.toggle('active');
+    body.classList.toggle('menu-active');
+    document.documentElement.classList.toggle('menu-active');
+}
 
-  // Handle dropdowns for mobile
-  const dropdowns = document.querySelectorAll(".menu .dropdown > a");
-  dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", function (e) {
-      // Only prevent default and handle dropdown if on mobile breakpoint
-      if (window.innerWidth <= 1191) {
-        e.preventDefault();
-        const parentLi = this.parentElement;
-        const subMenu = parentLi.querySelector(".sub-menu");
-        const dropdownIcon = this.querySelector(".dropdown-icon");
+openMenuBtn.addEventListener('click', toggleMainMenu);
+closeMenuBtn.addEventListener('click', toggleMainMenu);
 
+function closeAllDropdowns() {
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+        const subMenu = dropdown.querySelector('.sub-menu');
         if (subMenu) {
-          // Close other open sub-menus at the same level
-          parentLi.parentElement
-            .querySelectorAll(".sub-menu.active")
-            .forEach((openSubMenu) => {
-              if (openSubMenu !== subMenu) {
-                openSubMenu.classList.remove("active");
-                openSubMenu.style.maxHeight = "0";
-                const siblingDropdownIcon =
-                  openSubMenu.parentElement.querySelector(".dropdown-icon");
-                if (siblingDropdownIcon) {
-                  siblingDropdownIcon.style.transform = "rotate(0deg)";
-                }
-              }
-            });
-
-          // Toggle current sub-menu
-          subMenu.classList.toggle("active");
-          if (subMenu.classList.contains("active")) {
-            subMenu.style.maxHeight = subMenu.scrollHeight + "px";
-            if (dropdownIcon) {
-              dropdownIcon.style.transform = "rotate(90deg)";
-            }
-          } else {
-            subMenu.style.maxHeight = "0";
-            if (dropdownIcon) {
-              dropdownIcon.style.transform = "rotate(0deg)";
-            }
-          }
+            subMenu.classList.remove('active');
         }
-      }
-    });
-  });
-
-  // Handle nested dropdowns for mobile
-  const nestedDropdowns = document.querySelectorAll(
-    ".menu .sub-menu .dropdown > a"
-  );
-  nestedDropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", function (e) {
-      if (window.innerWidth <= 1191) {
-        // Updated breakpoint
-        e.preventDefault();
-        const parentLi = this.parentElement;
-        const subMenu = parentLi.querySelector(".sub-menu-left");
-        const dropdownIcon = this.querySelector(".dropdown-icon");
-
-        if (subMenu) {
-          // Close other open nested sub-menus at the same level
-          parentLi.parentElement
-            .querySelectorAll(".sub-menu-left.active")
-            .forEach((openSubMenu) => {
-              if (openSubMenu !== subMenu) {
-                openSubMenu.classList.remove("active");
-                openSubMenu.style.maxHeight = "0";
-                const siblingDropdownIcon =
-                  openSubMenu.parentElement.querySelector(".dropdown-icon");
-                if (siblingDropdownIcon) {
-                  siblingDropdownIcon.style.transform = "rotate(0deg)";
-                }
-              }
-            });
-
-          // Toggle current nested sub-menu
-          subMenu.classList.toggle("active");
-          if (subMenu.classList.contains("active")) {
-            subMenu.style.maxHeight = subMenu.scrollHeight + "px";
-            if (dropdownIcon) {
-              dropdownIcon.style.transform = "rotate(90deg)";
-            }
-          } else {
-            subMenu.style.maxHeight = "0";
-            if (dropdownIcon) {
-              dropdownIcon.style.transform = "rotate(0deg)";
-            }
-          }
+        const dropdownIcon = dropdown.querySelector('.dropdown-icon');
+        if (dropdownIcon) {
+            dropdownIcon.style.transform = 'rotate(0deg)';
         }
-      }
     });
-  });
+}
 
-  // Close menu and reset states when window is resized to desktop size
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1191) {
-      // Updated breakpoint
-      menu.classList.remove("active");
-      body.classList.remove("menu-active");
-      html.classList.remove("menu-active");
-      openMenuBtn.classList.remove("active");
-      // Reset mobile dropdown states
-      document.querySelectorAll(".sub-menu.active").forEach((subMenu) => {
-        subMenu.classList.remove("active");
-        subMenu.style.maxHeight = "auto"; // Allow content to flow naturally on desktop
-      });
-      document.querySelectorAll(".dropdown-icon").forEach((icon) => {
-        icon.style.transform = "rotate(0deg)";
-      });
+dropdowns.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('a');
+    const subMenu = dropdown.querySelector('.sub-menu');
+    const dropdownIcon = dropdownLink.querySelector('.dropdown-icon');
+
+    if (subMenu) {
+        dropdownLink.addEventListener('click', (event) => {
+            if (window.innerWidth <= 1191) {
+                event.preventDefault();
+
+                const isActive = dropdown.classList.contains('active');
+
+                const parentUl = dropdown.closest('ul');
+                if (parentUl) {
+                    Array.from(parentUl.children).forEach(siblingLi => {
+                        if (siblingLi !== dropdown && siblingLi.classList.contains('dropdown') && siblingLi.classList.contains('active')) {
+                            siblingLi.classList.remove('active');
+                            const siblingSubMenu = siblingLi.querySelector('.sub-menu');
+                            if (siblingSubMenu) {
+                                siblingSubMenu.classList.remove('active');
+                            }
+                            const siblingIcon = siblingLi.querySelector('.dropdown-icon');
+                            if (siblingIcon) {
+                                siblingIcon.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+                }
+
+                dropdown.classList.toggle('active', !isActive);
+                subMenu.classList.toggle('active', !isActive);
+                if (dropdownIcon) {
+                    dropdownIcon.style.transform = !isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            }
+        });
     }
-  });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1191) {
+        mainMenu.classList.remove('active');
+        openMenuBtn.classList.remove('active');
+        body.classList.remove('menu-active');
+        document.documentElement.classList.remove('menu-active');
+
+        closeAllDropdowns();
+    }
 });
 
 // Testimonial carousel functionality with auto-scroll
