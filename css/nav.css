@@ -87,8 +87,7 @@ body.menu-active {
     width: auto;
 }
 
-.header .menu>ul>li:not(.dropdown)>a {
-    padding: 1.5rem 2rem;
+.header .menu>ul>li:not(.dropdown)>a {   
     font-size: 1.6rem;
     font-family: var(--font-Mukta);
 }
@@ -203,6 +202,10 @@ body.menu-active {
     opacity: 1;
     transform: scale(1);
     visibility: visible;
+}
+
+.header .menu>ul>li:not(.dropdown)>a {
+    padding: 1.5rem 2rem 
 }
 
 .header-right {
