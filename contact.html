@@ -15,31 +15,45 @@
     <title>SABAH Fadai PREC - Century 21 Realtor</title>
   </head>
   <body>
-    <header class="header">
+  <header class="header">
       <div class="header-inner-content">
         <a href="/index.html">
-          <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+          <img
+            class="logo"
+            alt="Sabah logo"
+            src="img/Sabah-Logo-fotor-bg-remover.png"
+          />
         </a>
 
-        <nav class="menu">
+        <nav class="menu" id="mainMenu">
           <div class="head">
             <a href="#">
               <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
             </a>
-
-            <button type="button" class="close-menu-btn"></button>
+            <button
+              type="button"
+              class="close-menu-btn"
+              id="closeMenuBtn"
+            ></button>
           </div>
 
           <ul>
             <li class="dropdown">
-              <a href="">Listings</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="/index.html"
+                ><span>Listings</span
+                ><i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">FEATURED LISTINGS</a></li>
                 <li><a href="#">Map Search</a></li>
                 <li class="dropdown">
-                  <a href="#">Communities</a>
-                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                  <!-- CHANGE: Icon moved inside <a> tag -->
+                  <a href="#"
+                    >Communities<i
+                      class="fa-solid fa-chevron-down dropdown-icon"
+                    ></i
+                  ></a>
                   <ul class="sub-menu sub-menu-left">
                     <li><a href="#">team1</a></li>
                     <li><a href="#">team2</a></li>
@@ -54,8 +68,10 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="">About</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >About<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="/about.html">About SABAH</a></li>
                 <li><a href="/testimonials.html">Testimonials</a></li>
@@ -64,8 +80,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">Sellers</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >Sellers<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">Selling Resources</a></li>
                 <li>
@@ -75,8 +93,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">Buyers</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >Buyers<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">Buying Resources</a></li>
                 <li>
@@ -85,14 +105,16 @@
                 <li><a href="#">Neighbourhood Guide</a></li>
               </ul>
             </li>
-            <li><a href="#">Blogs</a></li>
-            <!-- New button added here -->
+            <li>
+              <a href="#"><span>Blogs</span></a>
+              <!-- No icon for Blogs -->
+            </li>
             <li><a href="#" class="contact-button">778-549-2522</a></li>
           </ul>
         </nav>
 
         <div class="header-right">
-          <button class="open-menu-btn" aria-label="Open menu">
+          <button class="open-menu-btn" aria-label="Open menu" id="openMenuBtn">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
             <span class="line line-3"></span>
@@ -102,7 +124,7 @@
     </header>
 
     <main>
-      <section class="contact-section">
+      <section class="contact-section reveal">
         <div class="container contact-container">
           <div class="contact-form-content">
             <h2 class="contact-heading">Get In Touch Today</h2>
@@ -181,7 +203,7 @@
         </div>
       </section>
 
-      <section class="container buttons-section animate-from-bottom">
+      <section class="container buttons-section animate-from-bottom reveal">
         <a href="#" class="button-item">
           <i class="fas fa-handshake"></i>
           <span>Blog</span>
@@ -200,7 +222,7 @@
         </a>
       </section>
 
-      <section class="map-section">
+      <section class="map-section reveal">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184497.09403816698!2d-79.62312674390547!3d43.89679169601445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d50c76767781%3A0x280e72f854124976!2sMarkham%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=190%2045428%20luckakuck%20way%2C%20Chilliwack%2C%20British%20Columbia%20V2R%203S9"
           allowfullscreen=""
