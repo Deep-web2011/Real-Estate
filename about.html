@@ -24,25 +24,35 @@
           />
         </a>
 
-        <nav class="menu">
+        <nav class="menu" id="mainMenu">
           <div class="head">
             <a href="#">
               <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
             </a>
-
-            <button type="button" class="close-menu-btn"></button>
+            <button
+              type="button"
+              class="close-menu-btn"
+              id="closeMenuBtn"
+            ></button>
           </div>
 
           <ul>
             <li class="dropdown">
-              <a href="">Listings</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="/index.html"
+                ><span>Listings</span
+                ><i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">FEATURED LISTINGS</a></li>
                 <li><a href="#">Map Search</a></li>
                 <li class="dropdown">
-                  <a href="#">Communities</a>
-                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                  <!-- CHANGE: Icon moved inside <a> tag -->
+                  <a href="#"
+                    >Communities<i
+                      class="fa-solid fa-chevron-down dropdown-icon"
+                    ></i
+                  ></a>
                   <ul class="sub-menu sub-menu-left">
                     <li><a href="#">team1</a></li>
                     <li><a href="#">team2</a></li>
@@ -57,8 +67,10 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="">About</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >About<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="/about.html">About SABAH</a></li>
                 <li><a href="/testimonials.html">Testimonials</a></li>
@@ -67,8 +79,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">Sellers</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >Sellers<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">Selling Resources</a></li>
                 <li>
@@ -78,8 +92,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">Buyers</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >Buyers<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">Buying Resources</a></li>
                 <li>
@@ -88,23 +104,21 @@
                 <li><a href="#">Neighbourhood Guide</a></li>
               </ul>
             </li>
-            <li><a href="#">Blogs</a></li>
-            <!-- New button added here -->
+            <li>
+              <a href="#"><span>Blogs</span></a>
+              <!-- No icon for Blogs -->
+            </li>
             <li><a href="#" class="contact-button">778-549-2522</a></li>
           </ul>
         </nav>
 
         <div class="header-right">
-          <button class="open-menu-btn" aria-label="Open menu">
+          <button class="open-menu-btn" aria-label="Open menu" id="openMenuBtn">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
             <span class="line line-3"></span>
           </button>
         </div>
-      </div>
-      <div class="container about-intro">
-        <h3>ENGINEERING PRECISION. REAL ESTATE PASSION.</h3>
-        <h2>Meet Sabah</h2>
       </div>
     </header>
 
@@ -129,6 +143,7 @@
         </div>
       </section>
 
+      <!--From Solving Problems to Building Dreams-->
       <section class="build-section">
         <div class="container build-container">
           <div class="build-text-content">
@@ -197,7 +212,8 @@
         </div>
       </section>
 
-      <section class="section-layout">
+      <!--Committed To Your Success section-->
+      <section class="section-layout reveal">
         <div class="container layout-container">
           <!-- First Image Column -->
           <div class="image-column">
@@ -234,8 +250,9 @@
         </div>
       </section>
 
+      <!--Awards section-->
       <section class="awards-section">
-        <div class="container awards-container">
+        <div class="container awards-container reveal">
           <div class="awards-title">AWARDS</div>
           <div class="award-item">
             <img class="award" src="img/Top-100.svg" alt="Top 100 Award" />
@@ -256,7 +273,8 @@
         </div>
       </section>
 
-      <section class="success-section">
+      <!--Success Is Built On Staying True To Your Roots-->
+      <section class="success-section reveal">
         <div class="container success-container">
           <div class="success-text-content">
             <h2 class="heading-success">
@@ -304,7 +322,7 @@
       <!-- Testimonials Section -->
       <section class="testimonials-section">
         <div class="testimonial-container">
-          <div class="testimonials-header">
+          <div class="testimonials-header reveal">
             <h2>Stories You Can Trust</h2>
             <a href="#" class="google-reviews-button">
               <span class="star-icon">&#9733;</span>
@@ -399,7 +417,7 @@
           alt="city-center"
         />
         <div class="container">
-          <h1>Explore Handpicked Opportunities</h1>
+          <h1 class="reveal">Explore Handpicked Opportunities</h1>
         </div>
       </section>
 
