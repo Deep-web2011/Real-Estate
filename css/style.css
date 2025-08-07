@@ -177,6 +177,18 @@
 /**************************/
 /* every-move-section */
 /**************************/
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .every-move-section {
   width: 100%;
   padding: 15rem 0 0 0;
