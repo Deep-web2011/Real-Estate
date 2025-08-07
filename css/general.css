@@ -864,7 +864,7 @@ FOOTER
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 48em) and (max-width: 64em) {
   .stats-container {
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: auto auto;
@@ -901,7 +901,7 @@ FOOTER
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 47em) {
   .stats-container {
     grid-template-columns: 1fr;
     gap: 4rem;
