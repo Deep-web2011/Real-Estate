@@ -53,6 +53,11 @@
 // );
 // obs.observe(sectionHeroEl);
 
+
+if (targetNode instanceof Node) {
+  observer.observe(targetNode, config);
+}
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
