@@ -559,3 +559,21 @@ document.addEventListener('DOMContentLoaded', function() {
     statsObserver.observe(element);
   });
 });
+
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Optional: only animate once
+        }
+    });
+}, {
+    root: null,              
+    rootMargin: "0px 0px -20% 0px", 
+    threshold: 0.1         
+});
+
+revealElements.forEach((el) => observer.observe(el));
