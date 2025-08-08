@@ -1,26 +1,29 @@
 ///////////////////////////////////////////////////////////
 // Sticky navigation
-const sectionHeroEl = document.querySelector(".section-hero");
+document.addEventListener("DOMContentLoaded", () => {
+  const sectionHeroEl = document.querySelector(".section-hero");
 
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
+  if (!sectionHeroEl) return; // Prevent error if element is missing
 
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
+  const obs = new IntersectionObserver(
+    function (entries) {
+      const ent = entries[0];
+
+      if (ent.isIntersecting === false) {
+        document.body.classList.add("sticky");
+      } else {
+        document.body.classList.remove("sticky");
+      }
+    },
+    {
+      root: null,
+      threshold: 0,
+      rootMargin: "-80px",
     }
+  );
 
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
- obs.observe(sectionHeroEl);
+  obs.observe(sectionHeroEl);
+});
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
@@ -46,7 +49,6 @@ checkFlexGap();
 const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 const mainMenu = document.getElementById("mainMenu");
-
 
 const dropdowns = document.querySelectorAll(".header .menu .dropdown");
 
@@ -116,7 +118,7 @@ dropdowns.forEach((dropdown) => {
       }
     });
   }
-}); 
+});
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1191) {
@@ -192,7 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoPlay();
 });
 
-
 //////////!SECTION -------------   Animations ////////////////////
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -213,5 +214,3 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealElements.forEach((el) => revealObserver.observe(el));
-
-
