@@ -19,28 +19,42 @@
     <header class="header">
       <div class="header-inner-content">
         <a href="/index.html">
-          <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+          <img
+            class="logo"
+            alt="Sabah logo"
+            src="img/Sabah-Logo-fotor-bg-remover.png"
+          />
         </a>
 
-        <nav class="menu">
+        <nav class="menu" id="mainMenu">
           <div class="head">
             <a href="#">
               <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
             </a>
-
-            <button type="button" class="close-menu-btn"></button>
+            <button
+              type="button"
+              class="close-menu-btn"
+              id="closeMenuBtn"
+            ></button>
           </div>
 
           <ul>
             <li class="dropdown">
-              <a href="">Listings</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="/index.html"
+                ><span>Listings</span
+                ><i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">FEATURED LISTINGS</a></li>
                 <li><a href="#">Map Search</a></li>
                 <li class="dropdown">
-                  <a href="#">Communities</a>
-                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                  <!-- CHANGE: Icon moved inside <a> tag -->
+                  <a href="#"
+                    >Communities<i
+                      class="fa-solid fa-chevron-down dropdown-icon"
+                    ></i
+                  ></a>
                   <ul class="sub-menu sub-menu-left">
                     <li><a href="#">team1</a></li>
                     <li><a href="#">team2</a></li>
@@ -55,8 +69,10 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="">About</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >About<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="/about.html">About SABAH</a></li>
                 <li><a href="/testimonials.html">Testimonials</a></li>
@@ -65,8 +81,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">Sellers</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >Sellers<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">Selling Resources</a></li>
                 <li>
@@ -76,8 +94,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">Buyers</a>
-              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <!-- CHANGE: Icon moved inside <a> tag -->
+              <a href="#"
+                >Buyers<i class="fa-solid fa-chevron-down dropdown-icon"></i
+              ></a>
               <ul class="sub-menu">
                 <li><a href="#">Buying Resources</a></li>
                 <li>
@@ -86,21 +106,23 @@
                 <li><a href="#">Neighbourhood Guide</a></li>
               </ul>
             </li>
-            <li><a href="#">Blogs</a></li>
-            <!-- New button added here -->
+            <li>
+              <a href="#"><span>Blogs</span></a>
+              <!-- No icon for Blogs -->
+            </li>
             <li><a href="#" class="contact-button">778-549-2522</a></li>
           </ul>
         </nav>
 
         <div class="header-right">
-          <button class="open-menu-btn" aria-label="Open menu">
+          <button class="open-menu-btn" aria-label="Open menu" id="openMenuBtn">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
             <span class="line line-3"></span>
           </button>
         </div>
       </div>
-      <div class="container mortgage-calculator-intro">
+      <div class="container mortgage-calculator-intro reveal">
         <h3>Sabah-Fadai's Mortgage Calculator</h3>
       </div>
     </header>
@@ -189,10 +211,10 @@
           </div>
         </form>
 
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee" />
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #390943" />
 
         <!-- Results Display Area -->
-        <div class="results-container">
+        <div class="results-container reveal">
           <div class="result-item">
             <span class="result-label">Loan amount:</span>
             <span class="result-value" id="displayLoanAmount">$240,000.00</span>
@@ -226,7 +248,7 @@
         </div>
 
         <!-- Amortization Chart -->
-        <div class="chart-container">
+        <div class="chart-container reveal">
           <canvas id="amortizationChart"></canvas>
         </div>
       </section>
@@ -234,4 +256,5 @@
     </main>
   </body>
   <script src="script.js"></script>
+  <script src="chart.js"></script>
 </html>
