@@ -139,7 +139,7 @@ body {
 }
 
 .sticky .header-inner-content {
-  align-items: flex-start;
+  padding: 0;
 }
 
 .stats-section {
