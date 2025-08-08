@@ -40,7 +40,6 @@ checkFlexGap();
 const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 const mainMenu = document.getElementById("mainMenu");
-const body = document.body;
 
 const dropdowns = document.querySelectorAll(".header .menu .dropdown");
 
