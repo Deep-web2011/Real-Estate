@@ -4,7 +4,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* Ensure this is set for the pseudo-element positioning */
+  position: relative;
+  /* Ensure this is set for the pseudo-element positioning */
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -25,6 +26,7 @@
   position: relative;
   z-index: 2;
 }
+
 .header .home-evaluation-intro {
   position: absolute;
   left: 8%;
@@ -218,7 +220,7 @@
 }
 
 .accordion-header a:hover {
-  transform: scale(1.05, 1.05);
+  transform: translateX(20px);
 }
 
 .accordion-header i {
@@ -230,7 +232,7 @@
   margin-top: 7rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .container {
     padding: 0;
   }
@@ -239,11 +241,13 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .submit-button-container,
   .social-icons-container {
     text-align: center;
     justify-content: center;
   }
+
   .submit-button {
     width: 100%;
     justify-content: center;
@@ -259,7 +263,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   .social-icons-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -273,12 +277,13 @@
   .header .home-evaluation-intro {
     bottom: 8%;
   }
+
   .home-evaluation-intro h1 {
     line-height: 1;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20em) {
   .contact-section {
     display: flex;
     align-items: center;
