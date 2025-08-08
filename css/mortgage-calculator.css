@@ -73,7 +73,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
-  padding: 0 20px;
   align-items: center;
 }
 
@@ -145,7 +144,7 @@
 .results-container {
   margin-top: 40px;
   padding: 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #390943;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 40px;
@@ -181,7 +180,7 @@
   height: 400px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 53.125em) {
   .mortgage-calculator-grid,
   .results-container {
     grid-template-columns: 1fr;
