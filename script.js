@@ -1,20 +1,26 @@
 ///////////////////////////////////////////////////////////
 // Sticky navigation
+const sectionHeroEl = document.querySelector(".section-hero");
 
-const sectionHeroEl = document.querySelector('.section-hero')
-const stickyObserver = new IntersectionObserver(
-  ([entry]) => {
-    document.body.classList.toggle('sticky', !entry.isIntersecting)
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
   },
   {
     root: null,
     threshold: 0,
-    rootMargin: '-80px'
+    rootMargin: "-80px",
   }
-)
-
-if (sectionHeroEl) stickyObserver.observe(sectionHeroEl)
-
+);
+ obs.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
@@ -41,12 +47,12 @@ const openMenuBtn = document.getElementById("openMenuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 const mainMenu = document.getElementById("mainMenu");
 
+
 const dropdowns = document.querySelectorAll(".header .menu .dropdown");
 
 function toggleMainMenu() {
   mainMenu.classList.toggle("active");
   openMenuBtn.classList.toggle("active");
-  body.classList.toggle("menu-active");
   document.documentElement.classList.toggle("menu-active");
 }
 
@@ -116,7 +122,6 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 1191) {
     mainMenu.classList.remove("active");
     openMenuBtn.classList.remove("active");
-    body.classList.remove("menu-active");
     document.documentElement.classList.remove("menu-active");
 
     closeAllDropdowns();
