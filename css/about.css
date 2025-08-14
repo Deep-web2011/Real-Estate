@@ -109,7 +109,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-lg);
   justify-items: start;
-  align-items: center;
+/*   align-items: center; */
 }
 
 .build-text-content {
