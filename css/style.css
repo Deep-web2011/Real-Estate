@@ -126,13 +126,13 @@
 
 .hero-img-box {
   margin-top: 13rem;
-  margin-left: -5rem;
+  margin-left: -10rem;
 }
 
 .hero-img-box img {
   max-height: 700px;
   max-width: 700px;
-  
+  margin-left: -4rem;
 }
 
 .awards-section {
