@@ -3,15 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sabah-Fadai Real-Estate Home-page" />
     <link rel="icon" href="img/Sabah-favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="css/testimonials.css" />
-    <title>SABAH Fadai PREC - Century 21 Realtor</title>
+    <link rel="stylesheet" href="css/general.css" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="img/jpg/house-for-sale-in-ontario.jpg"
+      fetchpriority="high"
+    />
+    <title>
+      Sabah Fadai PREC | Century 21 Realtor in Canada | Testimonials
+    </title>
   </head>
   <body>
     <header class="header">
@@ -20,14 +41,14 @@
           <img
             class="logo"
             alt="Sabah logo"
-            src="img/Sabah-Logo-fotor-bg-remover.png"
+            src="img/jpg/sabah-logo-bg-remover.png"
           />
         </a>
 
         <nav class="menu" id="mainMenu">
           <div class="head">
-            <a href="#">
-              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+            <a href="/index.html">
+              <img class="logo" alt="Sabah logo" src="img/jpg/sabah-logo.jpg" />
             </a>
             <button
               type="button"
@@ -97,7 +118,6 @@
                 >Buyers<i class="fa-solid fa-chevron-down dropdown-icon"></i
               ></a>
               <ul class="sub-menu">
-               
                 <li>
                   <a href="/mortgage-calculator.html">Mortgage Calculator</a>
                 </li>
@@ -125,6 +145,7 @@
         <h2>What My Clients Say</h2>
       </div>
     </header>
+
     <main>
       <section class="three-column-section">
         <div class="container three-column-container">
@@ -143,13 +164,9 @@
                 muted
                 preload="auto"
                 data-speed="1"
-                poster="videos/Sabah-Fadai-Video.mp4"
+                poster="videos/sabah-fadai-video.mp4"
               >
-                <!-- Provide multiple source tags for wider browser compatibility -->
-                <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
-                <!-- Example for other formats (uncomment and provide actual paths if available) -->
-                <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
-                <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
+                <source src="videos/sabah-fadai-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <button id="playButton" class="play-button" style="display: none">
@@ -172,13 +189,9 @@
                 muted
                 preload="auto"
                 data-speed="1"
-                poster="videos/Sabah-Fadai-Video.mp4"
+                poster="videos/sabah-fadai-video.mp4"
               >
-                <!-- Provide multiple source tags for wider browser compatibility -->
-                <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
-                <!-- Example for other formats (uncomment and provide actual paths if available) -->
-                <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
-                <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
+                <source src="videos/sabah-fadai-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <button id="playButton" class="play-button" style="display: none">
@@ -201,13 +214,10 @@
                 muted
                 preload="auto"
                 data-speed="1"
-                poster="videos/Sabah-Fadai-Video.mp4"
+                poster="videos/sabah-fadai-video.mp4"
               >
-                <!-- Provide multiple source tags for wider browser compatibility -->
-                <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
-                <!-- Example for other formats (uncomment and provide actual paths if available) -->
-                <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
-                <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
+                <source src="videos/sabah-fadai-video.mp4" type="video/mp4" />
+
                 Your browser does not support the video tag.
               </video>
               <button id="playButton" class="play-button" style="display: none">
@@ -218,9 +228,10 @@
         </div>
       </section>
 
-      <section class="testimonial-ratings-section">
-        <div class="container testimonial-ratings-container">
-          <div class="testimonial-card">
+      <section class="testimonial-page-section">
+        <div class="container testimonial-page-container">
+            <!-- page-card 1 -->
+          <div class="testimonial-page-card">
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -228,11 +239,11 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h3 class="testimonial-heading">
+            <h3 class="testimonial-page-heading">
               Even After Closing, He Is In Touch With Us If We Need Any Help
               With Any Renovation And Other Stuff.
             </h3>
-            <p class="testimonial-text">
+            <p class="testimonial-page-text">
               Being a first time home buyer in Hamilton area, when the market is
               peak, Rutul guide us with all the question and also help us what
               to look for as a FTHB and help us to understand with mortgage too.
@@ -244,7 +255,9 @@
             </p>
             <p class="testimonial-author">- Kaushik Gabani</p>
           </div>
-          <div class="testimonial-card">
+          
+          <!-- page-card 2 -->
+          <div class="testimonial-page-card">
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -252,10 +265,10 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h3 class="testimonial-heading">
+            <h3 class="testimonial-page-heading">
               He Helped Us Find The Right House For The Right Price.
             </h3>
-            <p class="testimonial-text">
+            <p class="testimonial-page-text">
               We were fortunate to have found Rutul as our realtor. He helped us
               find the right house for the right price. He was always on our
               side working to make our house purchase as simple and successful
@@ -267,8 +280,11 @@
             <p class="testimonial-author">- Krishna Patel</p>
           </div>
         </div>
-        <div class="container testimonial-ratings-container">
-          <div class="testimonial-card">
+
+
+        <div class="container testimonial-page-container">
+            <!-- page-card-3 -->
+          <div class="testimonial-page-card">
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -276,11 +292,11 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h3 class="testimonial-heading">
+            <h3 class="testimonial-page-heading">
               Even After Closing, He Is In Touch With Us If We Need Any Help
               With Any Renovation And Other Stuff.
             </h3>
-            <p class="testimonial-text">
+            <p class="testimonial-page-text">
               Being a first time home buyer in Hamilton area, when the market is
               peak, Rutul guide us with all the question and also help us what
               to look for as a FTHB and help us to understand with mortgage too.
@@ -292,7 +308,8 @@
             </p>
             <p class="testimonial-author">- Kaushik Gabani</p>
           </div>
-          <div class="testimonial-card">
+          <!-- crad-4 -->
+          <div class="testimonial-page-card">
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -300,10 +317,10 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h3 class="testimonial-heading">
+            <h3 class="testimonial-page-heading">
               He Helped Us Find The Right House For The Right Price.
             </h3>
-            <p class="testimonial-text">
+            <p class="testimonial-page-text">
               We were fortunate to have found Rutul as our realtor. He helped us
               find the right house for the right price. He was always on our
               side working to make our house purchase as simple and successful
@@ -323,9 +340,11 @@
           >
         </div>
       </section>
+     
     </main>
 
-     <footer class="footer">
+    <!--Footer section-->
+    <footer class="footer">
       <div class="container">
         <div class="flex-wrap">
           <!-- Left Section: Logo, Newsletter -->
@@ -344,6 +363,7 @@
                 class="email-input"
               />
               <button class="subscribe-button">
+                <span class="sr-only">Subscribe</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -372,8 +392,8 @@
             </div>
             <div class="link-list">
               <ul>
-                <li><a href="#">Seller's Guide</a></li>
-                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">Seller&apos;s Guide</a></li>
+                <li><a href="#">Buyer&apos;s Guide</a></li>
                 <li><a href="#">Instant Home Evaluation</a></li>
                 <li><a href="#">Blog & Resources</a></li>
               </ul>
@@ -394,13 +414,13 @@
               <p>Direct:+1 (778) 549-2522</p>
             </div>
             <!-- <div class="remax-logo-container">
-              <img
-                src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
-                alt="RE/MAX Metropolis Brokerage Logo"
-                class="remax-logo"
-              />
-              <p>INDEPENDENTLY OWNED & OPERATED</p>
-            </div> -->
+                <img
+                  src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
+                  alt="RE/MAX Metropolis Brokerage Logo"
+                  class="remax-logo"
+                />
+                <p>INDEPENDENTLY OWNED & OPERATED</p>
+              </div> -->
             <div class="social-media-links">
               <a href="#"
                 ><i class="fab fa-facebook-f"></i
@@ -421,13 +441,6 @@
 
         <!-- Bottom Bar -->
         <div class="bottom-bar">
-          <!-- <div class="myrealpage-logo-container">
-            <img
-              src="https://placehold.co/100x20/000000/FFFFFF?text=my+RealPage"
-              alt="my RealPage logo"
-              class="myrealpage-logo"
-            />
-          </div> -->
           <div class="copyright-info">
             <p>
               &copy; 2025 SABAH FADAI. All rights reserved. |
