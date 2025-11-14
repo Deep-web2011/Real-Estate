@@ -3,15 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sabah-Fadai Real-Estate Home-page" />
+    <meta name="description" content="Sabah-Fadai Real-Estate about-page" />
     <link rel="icon" href="img/Sabah-favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+
     <title>SABAH Fadai PREC - Century 21 Realtor</title>
   </head>
 
@@ -22,25 +34,30 @@
           <img
             class="logo"
             alt="Sabah logo"
-            src="img/Sabah-Logo-fotor-bg-remover.png"
+            src="img/jpg/sabah-logo-bg-remover.png"
+            width="100"
+            height="100"
           />
         </a>
 
         <nav class="menu" id="mainMenu">
           <div class="head">
             <a>
-              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+              <img
+                class="logo"
+                alt="Sabah logo"
+                src="img/jpg/sabah-logo.jpg"
+                width="100"
+                height="100"
+              />
             </a>
-            <button
-              type="button"
-              class="close-menu-btn"
-              id="closeMenuBtn"
-            ></button>
+            <button type="button" class="close-menu-btn" id="closeMenuBtn">
+              <span class="sr-only">close</span>
+            </button>
           </div>
 
           <ul>
             <li class="dropdown">
-              <!-- CHANGE: Icon moved inside <a> tag -->
               <a href="/index.html"
                 ><span>Listings</span
                 ><i class="fa-solid fa-chevron-down dropdown-icon"></i
@@ -49,7 +66,6 @@
                 <li><a href="#">FEATURED LISTINGS</a></li>
                 <li><a href="#">Map Search</a></li>
                 <li class="dropdown">
-                  <!-- CHANGE: Icon moved inside <a> tag -->
                   <a href="#"
                     >Communities<i
                       class="fa-solid fa-chevron-down dropdown-icon"
@@ -69,7 +85,6 @@
               </ul>
             </li>
             <li class="dropdown">
-              <!-- CHANGE: Icon moved inside <a> tag -->
               <a href="#"
                 >About<i class="fa-solid fa-chevron-down dropdown-icon"></i
               ></a>
@@ -81,7 +96,6 @@
             </li>
 
             <li class="dropdown">
-              <!-- CHANGE: Icon moved inside <a> tag -->
               <a href="#"
                 >Sellers<i class="fa-solid fa-chevron-down dropdown-icon"></i
               ></a>
@@ -94,7 +108,6 @@
             </li>
 
             <li class="dropdown">
-              <!-- CHANGE: Icon moved inside <a> tag -->
               <a href="#"
                 >Buyers<i class="fa-solid fa-chevron-down dropdown-icon"></i
               ></a>
@@ -105,10 +118,7 @@
                 <li><a href="#">Neighbourhood Guide</a></li>
               </ul>
             </li>
-            <li>
-              <!-- <a href="#"><span>Blogs</span></a> -->
-              <!-- No icon for Blogs -->
-            </li>
+            <li></li>
             <li><a href="#" class="contact-button">+1 (778) 549-2522</a></li>
           </ul>
         </nav>
@@ -127,18 +137,24 @@
       <!-- Hero content here -->
       <section class="section-hero">
         <div class="hero-content">
-          <div class="hero-text-box">
+          <div class="hero-text-box container">
             <h2 class="hero-heading">Where Champions Make</h2>
-
-            <h5 class="hero-subheading">Real Estate wins</h5>
+            <h3 class="hero-subheading">Real Estate wins</h3>
             <div class="hero-paragraph">
               <p>
-                I&apos;m Sabah Fadai, a former professional fighter turned
-                full-time Realtor® in the Fraser Valley.
+                I'm Sabah Fadai, a former professional fighter turned full-time
+                Realtor® in the Fraser Valley.<br />
+                In the ring, every move mattered; it&apos;s the same in real
+                estate.<br />
+                I bring the same discipline, timing, and strategy from the ring
+                to every deal.<br />
+                <strong
+                  >#1 Realtor® in Canada — Top 30 under 30 (RE/MAX 2024)</strong
+                >
               </p>
             </div>
             <div class="buttons hero-buttons">
-              <a href="#how" class="btn btn-hero btn-hero-secondary"
+              <a href="#" class="btn btn-hero btn-hero-secondary"
                 >INSTANT HOME EVALUATION
               </a>
               <a
@@ -150,45 +166,55 @@
           </div>
         </div>
 
-        <div class="hero-icons-container">
+        <div class="hero-icons-container container">
           <div class="social-icons-columns">
-            <div class="social-icons">
-              <!-- <a href="https://www.google.com" target="_blank" class="icon-link"
-                ><i class="fab fa-google"></i
-              ></a> -->
-
-              <!-- <a href="https://www.google.com" target="_blank" class="icon-link"
-                ><i class="fa-solid fa-rss"></i>
-              </a> -->
+            <div class="social-icons container">
               <a
                 href="https://www.instagram.com/in/YOUR_PROFILE"
                 target="_blank"
-                class="icon-link"
-                ><i class="fab fa-instagram"></i
-              ></a>
+                rel="noopener"
+                class="instagram-link"
+                aria-label="Visit our Instagram page"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+
               <a
                 href="https://wa.me/YOUR_PHONE_NUMBER"
                 target="_blank"
-                class="icon-link"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
+                rel="noopener"
+                class="whatsapp-link"
+                aria-label="Chat with us on WhatsApp"
+              >
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </a>
+
               <a
                 href="https://www.facebook.com/YOUR_PROFILE"
                 target="_blank"
-                class="icon-link"
-                ><i class="fab fa-facebook"></i
-              ></a>
+                rel="noopener"
+                class="facebook-link"
+                aria-label="Visit our Facebook page"
+              >
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
 
           <div class="hero-img-box">
-            <img
-              src="img/Sabah-Fadai.png"
-              alt="Photo of top Canadian Realtor® SABAH FADAI"
-              class="hero-img"
-              fetchpriority="high"
-              style="transform: translate(0)"
-            />
+            <picture>
+              <source srcset="img/avif/sabah-fadai.avif" type="image/avif" />
+              <source srcset="img/webp/sabah-fadai.webp" type="image/webp" />
+              <img
+                src="img/jpg/sabahfadai.jpg"
+                alt="Photo of top Canadian Realtor® SABAH FADAI"
+                class="hero-img"
+                width="700"
+                height="541"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -227,10 +253,9 @@
             <p>That&apos;s how champions rise.</p>
             <div class="every-move-buttons">
               <a href="#" class="btn primary-btn">MY STORY &rarr;</a>
-              <!-- <a href="#" class="btn secondary-btn">ગુજરાતી માં વાંચો &rarr;</a> -->
             </div>
           </div>
-          <div class="image-card grid-image-1">
+          <div class="video-card grid-video">
             <video
               id="sabahVideo"
               class="video"
@@ -244,35 +269,55 @@
               muted
               preload="auto"
               data-speed="1"
-              poster="videos/Sabah-Fadai-Video.mp4"
+              poster="videos/sabah-fadai-video.mp4"
             >
-              <!-- Provide multiple source tags for wider browser compatibility -->
-              <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
-              <!-- Example for other formats (uncomment and provide actual paths if available) -->
-              <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
+              <source src="videos/sabah-fadai-video.mp4" type="video/mp4" />
+              <!-- <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
               <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
-              Your browser does not support the video tag.
+              Your browser does not support the video tag. -->
+              <!-- <track
+                src="captions/sabah-video-captions.vtt"
+                kind="captions"
+                srclang="en"
+                label="English"
+                default
+              /> -->
             </video>
-            <button id="playButton" class="play-button" style="display: none">
-              ▶
-            </button>
+            <button id="playButton" class="play-button">▶</button>
           </div>
-          <div class="image-card grid-image-2">
-            <img src="img/Sabah-Fadai-Photo.jpg" alt="SABAH-image" />
+          <div class="image-card grid-image">
+            <picture>
+              <source
+                srcset="img/avif/sabah-fadai-photo.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="img/webp/sabah-fadai-photo.webp"
+                type="image/webp"
+              />
+              <img
+                src="img/jpg/sabah-fadai-photo.jpg"
+                alt="Sabah Fadai portrait"
+                width="440"
+                height="550"
+                decoding="async"
+                sizes="(max-width: 600px) 100vw, 440px"
+              />
+            </picture>
           </div>
         </div>
       </section>
 
       <!--Community Section-->
       <section class="communities">
-        <div class="container communities-grid reveal">
+        <div class="container communities-grid">
           <!-- Left Content Block -->
           <div class="communities-content-left">
-            <h3>Trusted advice. <br />Proven results.</h3>
+            <h3 class="reveal">Trusted advice. <br />Proven results.</h3>
           </div>
 
           <!-- Right Content Block -->
-          <div class="communities-content-right">
+          <div class="communities-content-right reveal">
             <p>
               Every home tells a story of growth, security, and new beginnings.
               For me, real estate isn&apos;t just about buying or selling;
@@ -283,24 +328,37 @@
               When people put down roots, communities thrive. That&apos;s why I
               focus on more than transactions; I focus on building legacies.
             </p>
-            <!-- <p>
+            <p>
               <b>
                 Real success is measured in the lives changed and neighbourhoods
                 strengthened along the way.
               </b>
-            </p> -->
+            </p>
           </div>
         </div>
       </section>
 
-      <!--Image Section-->
+      <!--Toranto Image Section-->
       <section class="image-section">
-        <img
-          src="https://iss-cdn.myrealpage.com/vrWMKPAQHlP4w1FAIAJnXuSBHcx16_EqVGBrA8LulsM/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvdG9yb250by1yZWFsLWVzdGF0ZS5qcGc_dD0xNzM5NDc4NTcwNjM1?t=1739478570635"
-          alt="city-center"
-        />
-        <h1 class="reveal">Opportunities waiting for you</h1>
-      </section>
+        <picture>
+          <source
+            srcset="img/avif/toronto-real-estate.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="img/webp/toronto-real-estate.webp"
+            type="image/webp"
+          />
+          <img
+            src="img/jpg/toronto-real-estate.jpg"
+            alt="Toronto real estate skyline"
+            width="700"
+            height="541"
+            decoding="async"
+          />
+        </picture>    
+          <h1 class="reveal">Opportunities waiting for you</h1>
+        </section>
 
       <!--Listing sections-->
       <section class="listings-section">
@@ -344,57 +402,65 @@
 
           <!-- Right: Listing Image -->
           <div class="listings-image-container">
-            <img
-              src="img/Canada_street.png"
-              alt="Classic Building"
-              onerror="this.onerror=null;"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="img/avif/canada-street.avif" type="image/avif" />
+              <source srcset="img/webp/canada-street.webp" type="image/webp" />
+              <img
+                src="img/jpg/canada-street.jpg"
+                alt="Classic Building"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
 
-      <!--Sell Section-->
+      <!--Sell Sections-->
       <section class="sell-section">
         <div class="container sell-grid">
-          <div class="sell-left-content sell-padding-left">
-            <h2>What I Do for You</h2>
-            <p>I don't just list homes. I position them to win.</p>
-            <a href="#" class="sell-button">UNLOCK MY SELLER'S PLAYBOOK</a>
+          <div class="sell-info">
+            <h2 class="sell-heading">What I Do for You</h2>
+            <p class="sell-para">
+              I don&apos;t just list homes. I position them to win.
+            </p>
+            <a href="#" class="sell-button">UNLOCK MY SELLER&apos;s PLAYBOOK</a>
 
-            <div class="sell-left-image-container">
+            <div class="sell-home-image">
               <img
-                src="https://iss-cdn.myrealpage.com/NZLPoqvQOs3pgRZ7KJvotf_md7gC5X5anaGZo8ENwcw/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9taW5pbWFsaXN0LWhvbWUtaW50ZXJpb3ItZGVzaWduLXByb3BlcnR5LmpwZz90PTE3Mzk0Nzg2MjIxOTk?t=1739478622199"
-                alt="Modern interior with dining table"
+                src="img/jpg/modern-dining-table.jpg"
+                alt="Sell Home Illustration"
               />
             </div>
           </div>
 
-          <div class="sell-right-content up-down-padding">
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <svg
-                  class="benefit-image"
-                  width="67"
-                  height="68"
-                  viewBox="0 0 67 68"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    d="M42.7736 44.755C39.5656 49.1072 36.5535 52.5566 35.8592 53.3398L33.5119 56.0156L31.1384 53.3411C30.4439 52.558 27.4283 49.1105 24.2179 44.7576C17.911 45.9527 14 48.3095 14 51.0946C14 55.7452 24.0466 58.2546 33.5 58.2546C42.9534 58.2546 53 55.7455 53 51.0946C53 48.2993 49.0903 45.9467 42.7737 44.7546L42.7736 44.755Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M33.5046 52.2546L34.2324 51.3468C34.8165 50.6263 48.5 33.6331 48.5 25.5013C48.5 17.0933 41.778 10.2546 33.5046 10.2546C25.2315 10.2546 18.5 17.0937 18.5 25.5013C18.5 33.6327 32.1834 50.6262 32.7672 51.3463L33.5046 52.2546ZM22.9714 25.9555C22.9714 19.9652 27.6922 15.1001 33.5046 15.1001C39.3075 15.1001 44.0378 19.9652 44.0378 25.9555C44.0378 31.9358 39.3075 36.8108 33.5046 36.8108C27.6922 36.8107 22.9714 31.9358 22.9714 25.9555Z"
-                    fill="#390943"
-                  ></path>
-                </svg>
+          <div class="property-content">
+            <div class="property-flex">
+              <div class="sell-image">
+                <div class="sell-location">
+                  <svg
+                    class="benefit-image"
+                    width="67"
+                    height="68"
+                    viewBox="0 0 67 68"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M42.7736 44.755C39.5656 49.1072 36.5535 52.5566 35.8592 53.3398L33.5119 56.0156L31.1384 53.3411C30.4439 52.558 27.4283 49.1105 24.2179 44.7576C17.911 45.9527 14 48.3095 14 51.0946C14 55.7452 24.0466 58.2546 33.5 58.2546C42.9534 58.2546 53 55.7455 53 51.0946C53 48.2993 49.0903 45.9467 42.7737 44.7546Z"
+                      fill="#390943"
+                    />
+                    <path
+                      d="M33.5046 52.2546L34.2324 51.3468C34.8165 50.6263 48.5 33.6331 48.5 25.5013C48.5 17.0933 41.778 10.2546 33.5046 10.2546C25.2315 10.2546 18.5 17.0937 18.5 25.5013C18.5 33.6327 32.1834 50.6262 32.7672 51.3463L33.5046 52.2546ZM22.9714 25.9555C22.9714 19.9652 27.6922 15.1001 33.5046 15.1001C39.3075 15.1001 44.0378 19.9652 44.0378 25.9555C44.0378 31.9358 39.3075 36.8108 33.5046 36.8108C27.6922 36.8107 22.9714 31.9358 22.9714 25.9555Z"
+                      fill="#390943"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div class="benefit-text">
-                <h1>Strategic Exposure</h1>
-                <p>
+
+              <div class="property-text">
+                <h1 class="property-heading">Strategic Exposure</h1>
+                <p class="property-para">
                   Your property deserves to be seen by the right buyers — not
                   just more buyers. I combine data, targeted marketing, and
                   presentation that makes your home stand out at the perfect
@@ -403,186 +469,189 @@
               </div>
             </div>
 
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <svg
-                  class="benefit-image"
-                  width="67"
-                  height="63"
-                  viewBox="0 0 67 63"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    d="M16.1959 9.4073C18.0612 8.54048 18.9675 6.08491 18.2213 3.92077L17.0731 0.596436L16.1487 1.02459C14.2833 1.88947 13.3771 4.34504 14.1232 6.51112L15.2752 9.83782L16.1959 9.4073Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M11.2497 13.8859C12.8162 12.7238 13.1766 10.4716 12.0524 8.85733L10.3178 6.37256L9.54333 6.94377C7.97683 8.10591 7.61643 10.3581 8.74064 11.9723L10.4716 14.4588L11.2497 13.8859Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M5.16763 12.1482L4.4428 12.9216C2.97878 14.4908 3.18295 16.8427 4.89805 18.1769L7.53796 20.2344L8.26088 19.4593C9.72907 17.8922 9.52489 15.5382 7.80563 14.2057L5.16763 12.1482Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M1.55298 20.0815C0.626465 22.1099 1.37308 24.5778 3.22365 25.5993L6.074 27.1653L6.53167 26.1625C7.46164 24.1341 6.71158 21.6662 4.861 20.6428L2.0162 19.0791L1.55298 20.0815Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M0.0852227 28.2823C-0.331276 30.5406 0.819025 32.7909 2.65858 33.3075L5.48443 34.0966L5.69081 32.9798C6.10731 30.7191 4.95353 28.4712 3.11745 27.9546L0.291602 27.1655L0.0852227 28.2823Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M8.08619 39.8156L8.06767 38.821C8.02891 36.8138 6.33851 35.2176 4.29671 35.2523L1.15515 35.3085L1.17366 36.3031C1.21069 38.3103 2.89905 39.9065 4.94085 39.8718L8.08619 39.8156Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M7.70707 46.6795L10.3965 45.8759L10.1655 44.9088C9.70172 42.9509 7.90523 41.7857 6.15487 42.307L3.46545 43.1089L3.69644 44.0777C4.15869 46.0373 5.95337 47.1987 7.70707 46.6795Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M15.0172 50.6786L14.5429 49.8202C13.5818 48.0837 11.3788 47.4496 9.62822 48.4009L6.93103 49.8613L7.40904 50.7198C8.37011 52.4543 10.5695 53.0887 12.3237 52.137L15.0172 50.6786Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M20.1216 53.6765C18.7609 52.2972 16.4576 52.2055 14.9808 53.4745L12.7068 55.4221L13.3782 56.1042C14.7388 57.4835 17.0421 57.5718 18.519 56.3062L20.793 54.3567L20.1216 53.6765Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M21.459 57.4488L19.6379 59.6701L20.5213 60.1422C22.3075 61.1006 24.7149 60.7055 25.901 59.2622L27.7241 57.041L26.8408 56.5672C25.0546 55.6102 22.6472 56.0055 21.459 57.4488Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M22.1464 11.5035C20.7774 10.6478 18.8432 10.8928 17.8296 12.0538L17.3276 12.6286L19.436 13.9478C20.8085 14.8035 22.7431 14.56 23.7567 13.3993L24.2587 12.823L22.1464 11.5035Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M19.6378 15.559L17.5746 14.6691C16.2373 14.0895 14.6964 14.7474 14.1379 16.1385L13.8619 16.8254L15.9221 17.7134C17.2625 18.293 18.8003 17.6351 19.3588 16.2459L19.6378 15.559Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M17.1862 20.2139L17.3275 19.4677L14.447 19.1118C12.5761 18.8797 10.8271 19.9096 10.5378 21.4119L10.3965 22.1562L13.2749 22.5123C15.1435 22.7428 16.8988 21.7145 17.1861 20.2138L17.1862 20.2139Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M9.2545 26.5041L9.33348 27.1652L12.0669 26.9837C13.8479 26.8658 15.162 25.6903 15.0044 24.3591L14.9254 23.6997L12.1878 23.8812C10.4087 23.9975 9.09463 25.173 9.2545 26.5042V26.5041Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M9.39725 32.2796L9.64803 32.941L11.9382 32.2363C13.4256 31.7783 14.2175 30.3223 13.7071 28.9835L13.4527 28.3203L11.1661 29.025C9.6767 29.4847 8.88485 30.9407 9.39725 32.2796Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M11.3539 38.7173L13.5851 37.4359C15.0337 36.6006 15.4534 34.8746 14.5203 33.5813L14.0598 32.9414L11.8286 34.2212C10.38 35.0565 9.96029 36.7824 10.8933 38.0793L11.3539 38.7173Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M14.0008 44.493L15.4802 42.5681C16.4416 41.3128 16.3955 39.3369 15.3787 38.1517L14.8783 37.562L13.3989 39.4891C12.4375 40.7444 12.4836 42.7186 13.5004 43.9055L14.0008 44.493Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M17.5312 47.5383L18.1662 47.9584L19.2886 45.6667C20.0189 44.1764 19.5666 42.2893 18.2766 41.4435L17.6416 41.0273L16.5192 43.3169C15.7922 44.8056 16.2446 46.6963 17.5312 47.5382V47.5383Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M22.3176 51.1854L23.2804 51.424L24.1217 48.7576C24.6671 47.023 23.535 45.2249 21.5841 44.7334L20.6214 44.4929L19.7754 47.1634C19.2278 48.8962 20.3649 50.7003 22.3176 51.1854Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M28.7795 53.7346L28.8773 51.141C28.9435 49.4513 27.3656 48.043 25.3555 47.9874L24.3585 47.9587L24.2607 50.5541C24.1945 52.2417 25.7725 53.6542 27.7825 53.7077L28.7795 53.7346Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M51.7273 9.83782L52.8751 6.51112C53.6248 4.34892 52.7151 1.89335 50.8504 1.02459L49.93 0.596436L48.7784 3.9228C48.0325 6.08305 48.9385 8.5382 50.8032 9.40932L51.7273 9.83782Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M57.4544 6.94377L56.6802 6.37256L54.9499 8.85732C53.8226 10.4715 54.1825 12.7237 55.7523 13.8859L56.5264 14.4588L58.2567 11.9723C59.3837 10.3564 59.0254 8.10417 57.4544 6.94377Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M61.836 12.1482L59.1924 14.2057C57.4749 15.542 57.2723 17.8939 58.7365 19.4593L59.4604 20.2344L62.0999 18.1769C63.8174 16.8389 64.02 14.4887 62.5599 12.9216L61.836 12.1482Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M60.469 26.1626L60.9268 27.1653L63.7738 25.5994C65.6268 24.5803 66.3753 22.1143 65.4448 20.0818L64.9908 19.0791L62.14 20.6428C60.2852 21.6645 59.5388 24.1345 60.469 26.1625L60.469 26.1626Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M66.6502 27.1655L63.2591 27.9546C61.0517 28.4669 59.6713 30.7148 60.1711 32.9798L60.4188 34.0966L63.8098 33.3075C66.0131 32.7952 67.3976 30.5453 66.8978 28.2823L66.6502 27.1655Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M58.9322 38.821L58.9137 39.8155L62.0553 39.8718C64.0991 39.9082 65.7871 38.31 65.8262 36.3031L65.8447 35.3086L62.7032 35.2524C60.6576 35.214 58.9692 36.8121 58.9322 38.821Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M56.8343 44.909L56.6034 45.8761L59.2949 46.6798C61.041 47.199 62.8367 46.0338 63.3035 44.0778L63.5344 43.109L60.843 42.307C59.0968 41.7857 57.3012 42.9509 56.8343 44.909Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M52.4608 49.8187L51.9828 50.6765L54.68 52.1372C56.4305 53.0878 58.6336 52.4559 59.5947 50.7212L60.069 49.8635L57.3755 48.4027C55.6233 47.4483 53.4239 48.0838 52.4608 49.8187Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M46.8814 53.6782L46.2069 54.3582L48.4835 56.3071C49.9618 57.5722 52.2619 57.4824 53.6186 56.1052L54.2931 55.4233L52.0202 53.4762C50.5399 52.2042 48.238 52.2975 46.8814 53.6782Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M40.1592 56.5681L39.276 57.0418L41.0966 59.2625C42.2824 60.7054 44.6972 61.1007 46.479 60.1422L47.3622 59.6702L45.5394 57.4495C44.3557 56.0052 41.9449 55.6099 40.1591 56.568L40.1592 56.5681Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M44.8498 11.5035L42.7415 12.8228L43.2434 13.3992C44.257 14.5601 46.1877 14.8035 47.5602 13.9477L49.6725 12.6284L49.1705 12.0536C48.1552 10.8928 46.2206 10.6478 44.8498 11.5035Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M49.4222 14.6683L47.3621 15.5584L47.638 16.2454C48.1965 17.6351 49.7359 18.2931 51.0747 17.7134L53.1379 16.8252L52.8587 16.1381C52.3004 14.7469 50.7644 14.0905 49.4222 14.6683Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M52.5487 19.1113L49.6724 19.4672L49.8137 20.2135C50.103 21.7142 51.8517 22.744 53.7271 22.512L56.6034 22.1561L56.4621 21.4118C56.1751 19.9089 54.424 18.8809 52.5487 19.1114V19.1113Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M54.8092 23.8812L52.0705 23.6997L51.9956 24.3591C51.8381 25.6903 53.1477 26.8658 54.9282 26.9837L57.6668 27.1652L57.7458 26.5041C57.9037 25.1745 56.5899 23.9992 54.8091 23.8812L54.8092 23.8812Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M57.6052 32.2796C58.1127 30.9408 57.3203 29.4848 55.832 29.025L53.5441 28.3203L53.2931 28.9835C52.7821 30.3223 53.5744 31.7784 55.0631 32.2363L57.351 32.941L57.6052 32.2796Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M56.1073 38.0793C57.0379 36.7821 56.6224 35.0581 55.1708 34.2212L52.941 32.9414L52.4807 33.5813C51.5461 34.875 51.9656 36.601 53.4172 37.4359L55.643 38.7173L56.1073 38.0793Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M53.2368 43.9055C54.5924 42.7243 54.6494 40.7444 53.3719 39.4891L51.3987 37.562L50.7283 38.1517C49.3727 39.3329 49.3157 41.3128 50.5955 42.5681L52.5606 44.493L53.2368 43.9055Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M49.3581 41.0273L48.7205 41.4474C47.4352 42.2912 46.9814 44.1805 47.7095 45.6687L48.8308 47.9584L49.4684 47.5404C50.7572 46.6945 51.2075 44.8073 50.4795 43.3191L49.3581 41.0273Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M45.4197 44.7333C43.4677 45.2205 42.3316 47.0199 42.8789 48.7562L43.7244 51.424L44.6866 51.1813C46.6385 50.6983 47.7747 48.897 47.2227 47.1607L46.3819 44.4929L45.4197 44.7333Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M42.7396 50.5541L42.6372 47.9587L41.6457 47.9874C39.6328 48.043 38.0613 49.4552 38.1223 51.141L38.2247 53.7346L39.2162 53.7077C41.2291 53.6543 42.801 52.2417 42.7396 50.5541Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M35.8343 57.0745C36.0284 57.0382 36.213 56.9906 36.411 56.968C50.9678 55.3349 61.5081 41.9252 59.9085 27.0742C58.8804 17.5529 52.9184 9.21036 44.3455 5.30213C43.8714 5.08323 43.3247 5.30213 43.1139 5.78187C42.9031 6.2616 43.1139 6.8249 43.5842 7.03817C51.5538 10.6699 57.0982 18.4263 58.0537 27.2821C59.541 41.09 49.74 53.5578 36.2073 55.0768C35.2666 55.1832 34.3616 55.4176 33.5091 55.7602C32.6524 55.4158 31.7495 55.1815 30.8088 55.0768C22.1316 54.1021 14.5233 48.4509 10.9628 40.3172C8.27018 34.1728 8.08357 27.3316 10.4386 21.0448C12.7974 14.7594 17.4066 9.78527 23.4316 7.04273C23.9019 6.82948 24.1127 6.26619 23.9019 5.78643C23.6888 5.3064 23.1383 5.08929 22.668 5.3064C16.1911 8.25855 11.2275 13.6056 8.69493 20.3668C6.1623 27.1279 6.36234 34.4906 9.26028 41.0972C13.0912 49.8418 21.2703 55.9238 30.6043 56.9723C30.7985 56.9952 30.9831 57.0428 31.179 57.077C29.6302 58.2268 28.3875 59.7951 27.6335 61.6644C27.4393 62.1515 27.667 62.7095 28.1429 62.9073C28.2604 62.9531 28.3799 62.9757 28.4957 62.9757C28.8634 62.9757 29.2103 62.755 29.3596 62.3874C30.1696 60.3753 31.6625 58.7954 33.5116 57.8571C35.3535 58.7954 36.8557 60.3753 37.6636 62.3874C37.8129 62.7529 38.1598 62.9757 38.5275 62.9757C38.645 62.9757 38.7646 62.9528 38.8803 62.9052C39.3579 62.7071 39.5839 62.1515 39.3841 61.664C38.6249 59.7894 37.3819 58.2229 35.8331 57.0751L35.8343 57.0745Z"
-                    fill="#390943"
-                  ></path>
-                </svg>
+            <div class="property-expert-flex">
+              <div class="property-expert-icon">
+                <div class="property-expert-expert">
+                  <svg
+                    class="benefit-image"
+                    width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M16.1959 9.4073C18.0612 8.54048 18.9675 6.08491 18.2213 3.92077L17.0731 0.596436L16.1487 1.02459C14.2833 1.88947 13.3771 4.34504 14.1232 6.51112L15.2752 9.83782L16.1959 9.4073Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M11.2497 13.8859C12.8162 12.7238 13.1766 10.4716 12.0524 8.85733L10.3178 6.37256L9.54333 6.94377C7.97683 8.10591 7.61643 10.3581 8.74064 11.9723L10.4716 14.4588L11.2497 13.8859Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M5.16763 12.1482L4.4428 12.9216C2.97878 14.4908 3.18295 16.8427 4.89805 18.1769L7.53796 20.2344L8.26088 19.4593C9.72907 17.8922 9.52489 15.5382 7.80563 14.2057L5.16763 12.1482Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M1.55298 20.0815C0.626465 22.1099 1.37308 24.5778 3.22365 25.5993L6.074 27.1653L6.53167 26.1625C7.46164 24.1341 6.71158 21.6662 4.861 20.6428L2.0162 19.0791L1.55298 20.0815Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M0.0852227 28.2823C-0.331276 30.5406 0.819025 32.7909 2.65858 33.3075L5.48443 34.0966L5.69081 32.9798C6.10731 30.7191 4.95353 28.4712 3.11745 27.9546L0.291602 27.1655L0.0852227 28.2823Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M8.08619 39.8156L8.06767 38.821C8.02891 36.8138 6.33851 35.2176 4.29671 35.2523L1.15515 35.3085L1.17366 36.3031C1.21069 38.3103 2.89905 39.9065 4.94085 39.8718L8.08619 39.8156Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M7.70707 46.6795L10.3965 45.8759L10.1655 44.9088C9.70172 42.9509 7.90523 41.7857 6.15487 42.307L3.46545 43.1089L3.69644 44.0777C4.15869 46.0373 5.95337 47.1987 7.70707 46.6795Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M15.0172 50.6786L14.5429 49.8202C13.5818 48.0837 11.3788 47.4496 9.62822 48.4009L6.93103 49.8613L7.40904 50.7198C8.37011 52.4543 10.5695 53.0887 12.3237 52.137L15.0172 50.6786Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M20.1216 53.6765C18.7609 52.2972 16.4576 52.2055 14.9808 53.4745L12.7068 55.4221L13.3782 56.1042C14.7388 57.4835 17.0421 57.5718 18.519 56.3062L20.793 54.3567L20.1216 53.6765Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M21.459 57.4488L19.6379 59.6701L20.5213 60.1422C22.3075 61.1006 24.7149 60.7055 25.901 59.2622L27.7241 57.041L26.8408 56.5672C25.0546 55.6102 22.6472 56.0055 21.459 57.4488Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M22.1464 11.5035C20.7774 10.6478 18.8432 10.8928 17.8296 12.0538L17.3276 12.6286L19.436 13.9478C20.8085 14.8035 22.7431 14.56 23.7567 13.3993L24.2587 12.823L22.1464 11.5035Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M19.6378 15.559L17.5746 14.6691C16.2373 14.0895 14.6964 14.7474 14.1379 16.1385L13.8619 16.8254L15.9221 17.7134C17.2625 18.293 18.8003 17.6351 19.3588 16.2459L19.6378 15.559Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M17.1862 20.2139L17.3275 19.4677L14.447 19.1118C12.5761 18.8797 10.8271 19.9096 10.5378 21.4119L10.3965 22.1562L13.2749 22.5123C15.1435 22.7428 16.8988 21.7145 17.1861 20.2138L17.1862 20.2139Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M9.2545 26.5041L9.33348 27.1652L12.0669 26.9837C13.8479 26.8658 15.162 25.6903 15.0044 24.3591L14.9254 23.6997L12.1878 23.8812C10.4087 23.9975 9.09463 25.173 9.2545 26.5042V26.5041Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M9.39725 32.2796L9.64803 32.941L11.9382 32.2363C13.4256 31.7783 14.2175 30.3223 13.7071 28.9835L13.4527 28.3203L11.1661 29.025C9.6767 29.4847 8.88485 30.9407 9.39725 32.2796Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M11.3539 38.7173L13.5851 37.4359C15.0337 36.6006 15.4534 34.8746 14.5203 33.5813L14.0598 32.9414L11.8286 34.2212C10.38 35.0565 9.96029 36.7824 10.8933 38.0793L11.3539 38.7173Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M14.0008 44.493L15.4802 42.5681C16.4416 41.3128 16.3955 39.3369 15.3787 38.1517L14.8783 37.562L13.3989 39.4891C12.4375 40.7444 12.4836 42.7186 13.5004 43.9055L14.0008 44.493Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M17.5312 47.5383L18.1662 47.9584L19.2886 45.6667C20.0189 44.1764 19.5666 42.2893 18.2766 41.4435L17.6416 41.0273L16.5192 43.3169C15.7922 44.8056 16.2446 46.6963 17.5312 47.5382V47.5383Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M22.3176 51.1854L23.2804 51.424L24.1217 48.7576C24.6671 47.023 23.535 45.2249 21.5841 44.7334L20.6214 44.4929L19.7754 47.1634C19.2278 48.8962 20.3649 50.7003 22.3176 51.1854Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M28.7795 53.7346L28.8773 51.141C28.9435 49.4513 27.3656 48.043 25.3555 47.9874L24.3585 47.9587L24.2607 50.5541C24.1945 52.2417 25.7725 53.6542 27.7825 53.7077L28.7795 53.7346Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M51.7273 9.83782L52.8751 6.51112C53.6248 4.34892 52.7151 1.89335 50.8504 1.02459L49.93 0.596436L48.7784 3.9228C48.0325 6.08305 48.9385 8.5382 50.8032 9.40932L51.7273 9.83782Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M57.4544 6.94377L56.6802 6.37256L54.9499 8.85732C53.8226 10.4715 54.1825 12.7237 55.7523 13.8859L56.5264 14.4588L58.2567 11.9723C59.3837 10.3564 59.0254 8.10417 57.4544 6.94377Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M61.836 12.1482L59.1924 14.2057C57.4749 15.542 57.2723 17.8939 58.7365 19.4593L59.4604 20.2344L62.0999 18.1769C63.8174 16.8389 64.02 14.4887 62.5599 12.9216L61.836 12.1482Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M60.469 26.1626L60.9268 27.1653L63.7738 25.5994C65.6268 24.5803 66.3753 22.1143 65.4448 20.0818L64.9908 19.0791L62.14 20.6428C60.2852 21.6645 59.5388 24.1345 60.469 26.1625L60.469 26.1626Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M66.6502 27.1655L63.2591 27.9546C61.0517 28.4669 59.6713 30.7148 60.1711 32.9798L60.4188 34.0966L63.8098 33.3075C66.0131 32.7952 67.3976 30.5453 66.8978 28.2823L66.6502 27.1655Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M58.9322 38.821L58.9137 39.8155L62.0553 39.8718C64.0991 39.9082 65.7871 38.31 65.8262 36.3031L65.8447 35.3086L62.7032 35.2524C60.6576 35.214 58.9692 36.8121 58.9322 38.821Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M56.8343 44.909L56.6034 45.8761L59.2949 46.6798C61.041 47.199 62.8367 46.0338 63.3035 44.0778L63.5344 43.109L60.843 42.307C59.0968 41.7857 57.3012 42.9509 56.8343 44.909Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M52.4608 49.8187L51.9828 50.6765L54.68 52.1372C56.4305 53.0878 58.6336 52.4559 59.5947 50.7212L60.069 49.8635L57.3755 48.4027C55.6233 47.4483 53.4239 48.0838 52.4608 49.8187Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M46.8814 53.6782L46.2069 54.3582L48.4835 56.3071C49.9618 57.5722 52.2619 57.4824 53.6186 56.1052L54.2931 55.4233L52.0202 53.4762C50.5399 52.2042 48.238 52.2975 46.8814 53.6782Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M40.1592 56.5681L39.276 57.0418L41.0966 59.2625C42.2824 60.7054 44.6972 61.1007 46.479 60.1422L47.3622 59.6702L45.5394 57.4495C44.3557 56.0052 41.9449 55.6099 40.1591 56.568L40.1592 56.5681Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M44.8498 11.5035L42.7415 12.8228L43.2434 13.3992C44.257 14.5601 46.1877 14.8035 47.5602 13.9477L49.6725 12.6284L49.1705 12.0536C48.1552 10.8928 46.2206 10.6478 44.8498 11.5035Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M49.4222 14.6683L47.3621 15.5584L47.638 16.2454C48.1965 17.6351 49.7359 18.2931 51.0747 17.7134L53.1379 16.8252L52.8587 16.1381C52.3004 14.7469 50.7644 14.0905 49.4222 14.6683Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M52.5487 19.1113L49.6724 19.4672L49.8137 20.2135C50.103 21.7142 51.8517 22.744 53.7271 22.512L56.6034 22.1561L56.4621 21.4118C56.1751 19.9089 54.424 18.8809 52.5487 19.1114V19.1113Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M54.8092 23.8812L52.0705 23.6997L51.9956 24.3591C51.8381 25.6903 53.1477 26.8658 54.9282 26.9837L57.6668 27.1652L57.7458 26.5041C57.9037 25.1745 56.5899 23.9992 54.8091 23.8812L54.8092 23.8812Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M57.6052 32.2796C58.1127 30.9408 57.3203 29.4848 55.832 29.025L53.5441 28.3203L53.2931 28.9835C52.7821 30.3223 53.5744 31.7784 55.0631 32.2363L57.351 32.941L57.6052 32.2796Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M56.1073 38.0793C57.0379 36.7821 56.6224 35.0581 55.1708 34.2212L52.941 32.9414L52.4807 33.5813C51.5461 34.875 51.9656 36.601 53.4172 37.4359L55.643 38.7173L56.1073 38.0793Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M53.2368 43.9055C54.5924 42.7243 54.6494 40.7444 53.3719 39.4891L51.3987 37.562L50.7283 38.1517C49.3727 39.3329 49.3157 41.3128 50.5955 42.5681L52.5606 44.493L53.2368 43.9055Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M49.3581 41.0273L48.7205 41.4474C47.4352 42.2912 46.9814 44.1805 47.7095 45.6687L48.8308 47.9584L49.4684 47.5404C50.7572 46.6945 51.2075 44.8073 50.4795 43.3191L49.3581 41.0273Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M45.4197 44.7333C43.4677 45.2205 42.3316 47.0199 42.8789 48.7562L43.7244 51.424L44.6866 51.1813C46.6385 50.6983 47.7747 48.897 47.2227 47.1607L46.3819 44.4929L45.4197 44.7333Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M42.7396 50.5541L42.6372 47.9587L41.6457 47.9874C39.6328 48.043 38.0613 49.4552 38.1223 51.141L38.2247 53.7346L39.2162 53.7077C41.2291 53.6543 42.801 52.2417 42.7396 50.5541Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M35.8343 57.0745C36.0284 57.0382 36.213 56.9906 36.411 56.968C50.9678 55.3349 61.5081 41.9252 59.9085 27.0742C58.8804 17.5529 52.9184 9.21036 44.3455 5.30213C43.8714 5.08323 43.3247 5.30213 43.1139 5.78187C42.9031 6.2616 43.1139 6.8249 43.5842 7.03817C51.5538 10.6699 57.0982 18.4263 58.0537 27.2821C59.541 41.09 49.74 53.5578 36.2073 55.0768C35.2666 55.1832 34.3616 55.4176 33.5091 55.7602C32.6524 55.4158 31.7495 55.1815 30.8088 55.0768C22.1316 54.1021 14.5233 48.4509 10.9628 40.3172C8.27018 34.1728 8.08357 27.3316 10.4386 21.0448C12.7974 14.7594 17.4066 9.78527 23.4316 7.04273C23.9019 6.82948 24.1127 6.26619 23.9019 5.78643C23.6888 5.3064 23.1383 5.08929 22.668 5.3064C16.1911 8.25855 11.2275 13.6056 8.69493 20.3668C6.1623 27.1279 6.36234 34.4906 9.26028 41.0972C13.0912 49.8418 21.2703 55.9238 30.6043 56.9723C30.7985 56.9952 30.9831 57.0428 31.179 57.077C29.6302 58.2268 28.3875 59.7951 27.6335 61.6644C27.4393 62.1515 27.667 62.7095 28.1429 62.9073C28.2604 62.9531 28.3799 62.9757 28.4957 62.9757C28.8634 62.9757 29.2103 62.755 29.3596 62.3874C30.1696 60.3753 31.6625 58.7954 33.5116 57.8571C35.3535 58.7954 36.8557 60.3753 37.6636 62.3874C37.8129 62.7529 38.1598 62.9757 38.5275 62.9757C38.645 62.9757 38.7646 62.9528 38.8803 62.9052C39.3579 62.7071 39.5839 62.1515 39.3841 61.664C38.6249 59.7894 37.3819 58.2229 35.8331 57.0751L35.8343 57.0745Z"
+                      fill="#390943"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-              <div class="benefit-text">
-                <h1>Expert Negotiation</h1>
-                <p>
+
+              <div class="expert-negotiation-text">
+                <h1 class="expert-heading">Expert Negotiation</h1>
+                <p class="expert-para">
                   Every offer is a chance to win. With certified negotiation
                   training and years of deal experience, I protect your value
                   and push for results that match what your home is truly worth.
@@ -590,10 +659,10 @@
               </div>
             </div>
 
-            <div class="benefit-item">
-              <div class="benefit-icon">
+            <div class="support-flex">
+              <div class="support-icon">
                 <svg
-                  class="benefit-image"
+                  class="support-image"
                   width="67"
                   height="68"
                   viewBox="0 0 67 68"
@@ -615,7 +684,8 @@
                   ></path>
                 </svg>
               </div>
-              <div class="benefit-text">
+
+              <div class="support-text">
                 <h1>Hands-On Support</h1>
                 <p>
                   From the first meeting to the final signature, I&apos;m in
@@ -628,247 +698,267 @@
         </div>
       </section>
 
+      <!--Home Evaluation Section-->
       <section class="home-evaluation-section">
-        <img src="img/Classic_Home.png" alt="Modern home interior" />
-        <div class="overlay"></div>
-        <div class="evaluation-content reveal">
-          <h6 class="container">Your Home's True Value</h6>
-          <h3 class="container">Quick Strike Home Evaluation</h3>
-          <p class="container">
-            Know your home&apos;s worth without any guesswork. <br />
+        <div class="evaluation-bg ">
+          <picture>
+            <source srcset="img/avif/classic-home.avif" type="image/avif" />
+            <source srcset="img/webp/classic-home.webp" type="image/webp" />
+            <img
+              src="img/jpg/classic-home.jpg"
+              alt="Classic Home"
+              class="evaluation-img"
+              decoding="async"
+            />
+          </picture>
+        </div>
+
+        <div class="evaluation-content container reveal">
+          <h1>Your Home&apos;s True Value</h1>
+          <h2>Quick Strike Home Evaluation</h2>
+          <p>
+            Know your home&apos;s worth without any guesswork.<br />
             I deliver sharp, data-driven insights that are rooted in the market,
-            your neighbourhood, and your property&apos;s unique strengths.
-            <br />
+            your neighbourhood, and your property&apos;s unique strengths.<br />
             Like a fighter reading the ring, I help you make smart moves with
-            confidence. <br />
+            confidence.<br />
             Let&apos;s get your property the value it deserves!
           </p>
-          <div class="container">
-            <a href="#" class="evaluation-button">GET YOUR EVALUATION</a>
-          </div>
+          <a href="#" class="evaluation-button">GET YOUR EVALUATION</a>
         </div>
       </section>
 
-      <section class="sell-section">
-        <div class="container sell-grid">
-          <div class="sell-right-content upper-margin sell-padding">
-            <div class="benefit-item sell-benefit-padding">
-              <div class="benefit-icon sell-benefit-padding-top-bottom">
-                <svg
-                  class="benefit-image"
-                  width="57"
-                  height="33"
-                  viewBox="0 0 57 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M5.41669 18.9745C5.2839 19.2194 4.97939 19.3133 4.7321 19.1828L0.258287 16.8085C0.0155917 16.6735 -0.0759906 16.3689 0.0499387 16.1217L8.14533 0.89608L8.14304 0.89837C8.20715 0.779313 8.31475 0.690021 8.44297 0.651098C8.49334 0.63736 8.54371 0.628202 8.59408 0.628202C8.67651 0.628202 8.75664 0.648809 8.82991 0.687734L13.3014 3.06658C13.4205 3.12839 13.5075 3.23601 13.5487 3.36422C13.5876 3.49473 13.5739 3.6321 13.5098 3.75116L5.41669 18.9745ZM43.8236 22.9972C44.0411 22.7362 44.0045 22.15 43.7298 21.3693C43.1322 20.8129 41.3509 19.4987 36.4212 16.4009L36.4052 16.3895C34.1912 14.915 32.5885 14.2716 31.5076 14.4205C30.6445 14.5418 30.1248 15.1783 29.4654 15.9843L29.4631 15.9865C28.8724 16.8108 28.11 17.4954 27.2285 17.9968C25.1473 18.9698 22.6677 18.3242 21.3237 16.4582C20.8109 15.6339 20.7697 14.6013 21.2138 13.7382C21.9877 11.9042 24.2017 9.91691 26.4616 8.40587C23.7691 7.16265 21.269 7.02525 18.8576 7.98001C16.8428 8.77676 15.0318 7.97315 13.4521 6.97031L7.63182 17.9216C9.20244 18.739 11.5813 20.5592 14.4778 22.7755C20.0367 27.0318 28.4442 33.4674 31.4847 32.0827C32.1235 31.7919 32.5196 31.0776 32.6684 29.958L29.9003 28.7399C29.7195 28.6643 29.5752 28.5178 29.502 28.3346C29.4287 28.1538 29.4333 27.9477 29.5111 27.7691C29.5913 27.5883 29.7401 27.4486 29.9232 27.3776C30.1087 27.3089 30.3125 27.3181 30.491 27.4005L33.7033 28.8155C34.3719 29.0215 35.2511 29.1887 35.7387 28.8407V28.8429C36.0776 28.511 36.2699 28.0576 36.2722 27.5837L31.2467 24.5065C31.0795 24.4058 30.9582 24.2432 30.9101 24.0532C30.8643 23.8632 30.8941 23.664 30.9971 23.4968C31.1001 23.3297 31.2627 23.2106 31.455 23.1648C31.645 23.1213 31.8442 23.1557 32.0091 23.2587L37.2681 26.4778C38.5159 26.6014 39.4066 26.432 39.8461 25.9787V25.981C40.2148 25.5093 40.3636 24.9026 40.2537 24.3165L33.6647 20.2044C33.351 19.98 33.2663 19.5496 33.47 19.2222C33.6761 18.8948 34.102 18.7826 34.4408 18.9681L41.2111 23.19C43.1343 23.5335 43.6769 23.174 43.8234 23L43.8236 22.9972ZM44.4738 20.0826C42.1431 18.3128 39.7162 16.6711 37.2049 15.1694C34.6475 13.4682 32.7723 12.7722 31.3026 12.976C29.8739 13.1752 29.052 14.178 28.3284 15.0641C27.8659 15.7257 27.2661 16.2821 26.5701 16.6919C25.1506 17.3421 23.47 16.9094 22.5404 15.6548C22.458 15.5288 22.2062 15.1465 22.5588 14.3085C23.7264 11.5359 29.5576 7.84063 31.6916 7.42839C32.96 7.24751 34.2513 7.27499 35.5128 7.51081C37.72 7.79701 40.2064 8.11984 43.5037 6.56295L49.3767 17.6124L44.4723 20.0828L44.4738 20.0826ZM56.7366 16.4742L52.2697 18.8531C52.0224 18.9836 51.7179 18.8897 51.5851 18.6424L43.4897 3.41877C43.3592 3.17149 43.4531 2.86468 43.7003 2.73192L48.1718 0.355374H48.1695C48.2428 0.318741 48.3229 0.298133 48.4031 0.298133C48.5931 0.295844 48.7671 0.398874 48.8587 0.566013L56.9502 15.7897C57.0761 16.037 56.9845 16.3415 56.7395 16.4743L56.7366 16.4742Z"
-                    fill="#390943"
-                  ></path>
-                </svg>
+      <!--Find home Sections-->
+      <section class="find-home-section">
+        <div class="container find-home-grid">
+          <div class="find-home-content">
+            <div class="find-home-flex">
+              <div class="buyers-trust">
+                <div class="buyers-trust-icon">
+                  <svg
+                    class="benefit-image"
+                    width="57"
+                    height="33"
+                    viewBox="0 0 57 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.41669 18.9745C5.2839 19.2194 4.97939 19.3133 4.7321 19.1828L0.258287 16.8085C0.0155917 16.6735 -0.0759906 16.3689 0.0499387 16.1217L8.14533 0.89608L8.14304 0.89837C8.20715 0.779313 8.31475 0.690021 8.44297 0.651098C8.49334 0.63736 8.54371 0.628202 8.59408 0.628202C8.67651 0.628202 8.75664 0.648809 8.82991 0.687734L13.3014 3.06658C13.4205 3.12839 13.5075 3.23601 13.5487 3.36422C13.5876 3.49473 13.5739 3.6321 13.5098 3.75116L5.41669 18.9745ZM43.8236 22.9972C44.0411 22.7362 44.0045 22.15 43.7298 21.3693C43.1322 20.8129 41.3509 19.4987 36.4212 16.4009L36.4052 16.3895C34.1912 14.915 32.5885 14.2716 31.5076 14.4205C30.6445 14.5418 30.1248 15.1783 29.4654 15.9843L29.4631 15.9865C28.8724 16.8108 28.11 17.4954 27.2285 17.9968C25.1473 18.9698 22.6677 18.3242 21.3237 16.4582C20.8109 15.6339 20.7697 14.6013 21.2138 13.7382C21.9877 11.9042 24.2017 9.91691 26.4616 8.40587C23.7691 7.16265 21.269 7.02525 18.8576 7.98001C16.8428 8.77676 15.0318 7.97315 13.4521 6.97031L7.63182 17.9216C9.20244 18.739 11.5813 20.5592 14.4778 22.7755C20.0367 27.0318 28.4442 33.4674 31.4847 32.0827C32.1235 31.7919 32.5196 31.0776 32.6684 29.958L29.9003 28.7399C29.7195 28.6643 29.5752 28.5178 29.502 28.3346C29.4287 28.1538 29.4333 27.9477 29.5111 27.7691C29.5913 27.5883 29.7401 27.4486 29.9232 27.3776C30.1087 27.3089 30.3125 27.3181 30.491 27.4005L33.7033 28.8155C34.3719 29.0215 35.2511 29.1887 35.7387 28.8407V28.8429C36.0776 28.511 36.2699 28.0576 36.2722 27.5837L31.2467 24.5065C31.0795 24.4058 30.9582 24.2432 30.9101 24.0532C30.8643 23.8632 30.8941 23.664 30.9971 23.4968C31.1001 23.3297 31.2627 23.2106 31.455 23.1648C31.645 23.1213 31.8442 23.1557 32.0091 23.2587L37.2681 26.4778C38.5159 26.6014 39.4066 26.432 39.8461 25.9787V25.981C40.2148 25.5093 40.3636 24.9026 40.2537 24.3165L33.6647 20.2044C33.351 19.98 33.2663 19.5496 33.47 19.2222C33.6761 18.8948 34.102 18.7826 34.4408 18.9681L41.2111 23.19C43.1343 23.5335 43.6769 23.174 43.8234 23L43.8236 22.9972ZM44.4738 20.0826C42.1431 18.3128 39.7162 16.6711 37.2049 15.1694C34.6475 13.4682 32.7723 12.7722 31.3026 12.976C29.8739 13.1752 29.052 14.178 28.3284 15.0641C27.8659 15.7257 27.2661 16.2821 26.5701 16.6919C25.1506 17.3421 23.47 16.9094 22.5404 15.6548C22.458 15.5288 22.2062 15.1465 22.5588 14.3085C23.7264 11.5359 29.5576 7.84063 31.6916 7.42839C32.96 7.24751 34.2513 7.27499 35.5128 7.51081C37.72 7.79701 40.2064 8.11984 43.5037 6.56295L49.3767 17.6124L44.4723 20.0828L44.4738 20.0826ZM56.7366 16.4742L52.2697 18.8531C52.0224 18.9836 51.7179 18.8897 51.5851 18.6424L43.4897 3.41877C43.3592 3.17149 43.4531 2.86468 43.7003 2.73192L48.1718 0.355374H48.1695C48.2428 0.318741 48.3229 0.298133 48.4031 0.298133C48.5931 0.295844 48.7671 0.398874 48.8587 0.566013L56.9502 15.7897C57.0761 16.037 56.9845 16.3415 56.7395 16.4743L56.7366 16.4742Z"
+                      fill="#390943"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-              <div class="benefit-text">
-                <h1>
-                  Get My Buyer&apos;s Guide Personal Guidance for New Buyers
+
+              <div class="buyers-text">
+                <h1 class="buyers">
+                  Get My Buyer&apos; Guide Personal Guidance for New Buyers
                 </h1>
-                <p>Clear steps, smart advice, no confusion.</p>
+                <p class="buyers-para">
+                  Clear steps, smart advice, no confusion.
+                </p>
               </div>
             </div>
 
-            <div class="benefit-item sell-benefit-padding-top-bottom">
-              <div class="benefit-icon">
-                <svg
-                  class="benefit-image"
-                  width="67"
-                  height="63"
-                  viewBox="0 0 67 63"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    d="M16.1959 9.4073C18.0612 8.54048 18.9675 6.08491 18.2213 3.92077L17.0731 0.596436L16.1487 1.02459C14.2833 1.88947 13.3771 4.34504 14.1232 6.51112L15.2752 9.83782L16.1959 9.4073Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M11.2497 13.8859C12.8162 12.7238 13.1766 10.4716 12.0524 8.85733L10.3178 6.37256L9.54333 6.94377C7.97683 8.10591 7.61643 10.3581 8.74064 11.9723L10.4716 14.4588L11.2497 13.8859Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M5.16763 12.1482L4.4428 12.9216C2.97878 14.4908 3.18295 16.8427 4.89805 18.1769L7.53796 20.2344L8.26088 19.4593C9.72907 17.8922 9.52489 15.5382 7.80563 14.2057L5.16763 12.1482Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M1.55298 20.0815C0.626465 22.1099 1.37308 24.5778 3.22365 25.5993L6.074 27.1653L6.53167 26.1625C7.46164 24.1341 6.71158 21.6662 4.861 20.6428L2.0162 19.0791L1.55298 20.0815Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M0.0852227 28.2823C-0.331276 30.5406 0.819025 32.7909 2.65858 33.3075L5.48443 34.0966L5.69081 32.9798C6.10731 30.7191 4.95353 28.4712 3.11745 27.9546L0.291602 27.1655L0.0852227 28.2823Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M8.08619 39.8156L8.06767 38.821C8.02891 36.8138 6.33851 35.2176 4.29671 35.2523L1.15515 35.3085L1.17366 36.3031C1.21069 38.3103 2.89905 39.9065 4.94085 39.8718L8.08619 39.8156Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M7.70707 46.6795L10.3965 45.8759L10.1655 44.9088C9.70172 42.9509 7.90523 41.7857 6.15487 42.307L3.46545 43.1089L3.69644 44.0777C4.15869 46.0373 5.95337 47.1987 7.70707 46.6795Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M15.0172 50.6786L14.5429 49.8202C13.5818 48.0837 11.3788 47.4496 9.62822 48.4009L6.93103 49.8613L7.40904 50.7198C8.37011 52.4543 10.5695 53.0887 12.3237 52.137L15.0172 50.6786Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M20.1216 53.6765C18.7609 52.2972 16.4576 52.2055 14.9808 53.4745L12.7068 55.4221L13.3782 56.1042C14.7388 57.4835 17.0421 57.5718 18.519 56.3062L20.793 54.3567L20.1216 53.6765Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M21.459 57.4488L19.6379 59.6701L20.5213 60.1422C22.3075 61.1006 24.7149 60.7055 25.901 59.2622L27.7241 57.041L26.8408 56.5672C25.0546 55.6102 22.6472 56.0055 21.459 57.4488Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M22.1464 11.5035C20.7774 10.6478 18.8432 10.8928 17.8296 12.0538L17.3276 12.6286L19.436 13.9478C20.8085 14.8035 22.7431 14.56 23.7567 13.3993L24.2587 12.823L22.1464 11.5035Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M19.6378 15.559L17.5746 14.6691C16.2373 14.0895 14.6964 14.7474 14.1379 16.1385L13.8619 16.8254L15.9221 17.7134C17.2625 18.293 18.8003 17.6351 19.3588 16.2459L19.6378 15.559Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M17.1862 20.2139L17.3275 19.4677L14.447 19.1118C12.5761 18.8797 10.8271 19.9096 10.5378 21.4119L10.3965 22.1562L13.2749 22.5123C15.1435 22.7428 16.8988 21.7145 17.1861 20.2138L17.1862 20.2139Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M9.2545 26.5041L9.33348 27.1652L12.0669 26.9837C13.8479 26.8658 15.162 25.6903 15.0044 24.3591L14.9254 23.6997L12.1878 23.8812C10.4087 23.9975 9.09463 25.173 9.2545 26.5042V26.5041Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M9.39725 32.2796L9.64803 32.941L11.9382 32.2363C13.4256 31.7783 14.2175 30.3223 13.7071 28.9835L13.4527 28.3203L11.1661 29.025C9.6767 29.4847 8.88485 30.9407 9.39725 32.2796Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M11.3539 38.7173L13.5851 37.4359C15.0337 36.6006 15.4534 34.8746 14.5203 33.5813L14.0598 32.9414L11.8286 34.2212C10.38 35.0565 9.96029 36.7824 10.8933 38.0793L11.3539 38.7173Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M14.0008 44.493L15.4802 42.5681C16.4416 41.3128 16.3955 39.3369 15.3787 38.1517L14.8783 37.562L13.3989 39.4891C12.4375 40.7444 12.4836 42.7186 13.5004 43.9055L14.0008 44.493Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M17.5312 47.5383L18.1662 47.9584L19.2886 45.6667C20.0189 44.1764 19.5666 42.2893 18.2766 41.4435L17.6416 41.0273L16.5192 43.3169C15.7922 44.8056 16.2446 46.6963 17.5312 47.5382V47.5383Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M22.3176 51.1854L23.2804 51.424L24.1217 48.7576C24.6671 47.023 23.535 45.2249 21.5841 44.7334L20.6214 44.4929L19.7754 47.1634C19.2278 48.8962 20.3649 50.7003 22.3176 51.1854Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M28.7795 53.7346L28.8773 51.141C28.9435 49.4513 27.3656 48.043 25.3555 47.9874L24.3585 47.9587L24.2607 50.5541C24.1945 52.2417 25.7725 53.6542 27.7825 53.7077L28.7795 53.7346Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M51.7273 9.83782L52.8751 6.51112C53.6248 4.34892 52.7151 1.89335 50.8504 1.02459L49.93 0.596436L48.7784 3.9228C48.0325 6.08305 48.9385 8.5382 50.8032 9.40932L51.7273 9.83782Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M57.4544 6.94377L56.6802 6.37256L54.9499 8.85732C53.8226 10.4715 54.1825 12.7237 55.7523 13.8859L56.5264 14.4588L58.2567 11.9723C59.3837 10.3564 59.0254 8.10417 57.4544 6.94377Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M61.836 12.1482L59.1924 14.2057C57.4749 15.542 57.2723 17.8939 58.7365 19.4593L59.4604 20.2344L62.0999 18.1769C63.8174 16.8389 64.02 14.4887 62.5599 12.9216L61.836 12.1482Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M60.469 26.1626L60.9268 27.1653L63.7738 25.5994C65.6268 24.5803 66.3753 22.1143 65.4448 20.0818L64.9908 19.0791L62.14 20.6428C60.2852 21.6645 59.5388 24.1345 60.469 26.1625L60.469 26.1626Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M66.6502 27.1655L63.2591 27.9546C61.0517 28.4669 59.6713 30.7148 60.1711 32.9798L60.4188 34.0966L63.8098 33.3075C66.0131 32.7952 67.3976 30.5453 66.8978 28.2823L66.6502 27.1655Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M58.9322 38.821L58.9137 39.8155L62.0553 39.8718C64.0991 39.9082 65.7871 38.31 65.8262 36.3031L65.8447 35.3086L62.7032 35.2524C60.6576 35.214 58.9692 36.8121 58.9322 38.821Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M56.8343 44.909L56.6034 45.8761L59.2949 46.6798C61.041 47.199 62.8367 46.0338 63.3035 44.0778L63.5344 43.109L60.843 42.307C59.0968 41.7857 57.3012 42.9509 56.8343 44.909Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M52.4608 49.8187L51.9828 50.6765L54.68 52.1372C56.4305 53.0878 58.6336 52.4559 59.5947 50.7212L60.069 49.8635L57.3755 48.4027C55.6233 47.4483 53.4239 48.0838 52.4608 49.8187Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M46.8814 53.6782L46.2069 54.3582L48.4835 56.3071C49.9618 57.5722 52.2619 57.4824 53.6186 56.1052L54.2931 55.4233L52.0202 53.4762C50.5399 52.2042 48.238 52.2975 46.8814 53.6782Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M40.1592 56.5681L39.276 57.0418L41.0966 59.2625C42.2824 60.7054 44.6972 61.1007 46.479 60.1422L47.3622 59.6702L45.5394 57.4495C44.3557 56.0052 41.9449 55.6099 40.1591 56.568L40.1592 56.5681Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M44.8498 11.5035L42.7415 12.8228L43.2434 13.3992C44.257 14.5601 46.1877 14.8035 47.5602 13.9477L49.6725 12.6284L49.1705 12.0536C48.1552 10.8928 46.2206 10.6478 44.8498 11.5035Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M49.4222 14.6683L47.3621 15.5584L47.638 16.2454C48.1965 17.6351 49.7359 18.2931 51.0747 17.7134L53.1379 16.8252L52.8587 16.1381C52.3004 14.7469 50.7644 14.0905 49.4222 14.6683Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M52.5487 19.1113L49.6724 19.4672L49.8137 20.2135C50.103 21.7142 51.8517 22.744 53.7271 22.512L56.6034 22.1561L56.4621 21.4118C56.1751 19.9089 54.424 18.8809 52.5487 19.1114V19.1113Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M54.8092 23.8812L52.0705 23.6997L51.9956 24.3591C51.8381 25.6903 53.1477 26.8658 54.9282 26.9837L57.6668 27.1652L57.7458 26.5041C57.9037 25.1745 56.5899 23.9992 54.8091 23.8812L54.8092 23.8812Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M57.6052 32.2796C58.1127 30.9408 57.3203 29.4848 55.832 29.025L53.5441 28.3203L53.2931 28.9835C52.7821 30.3223 53.5744 31.7784 55.0631 32.2363L57.351 32.941L57.6052 32.2796Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M56.1073 38.0793C57.0379 36.7821 56.6224 35.0581 55.1708 34.2212L52.941 32.9414L52.4807 33.5813C51.5461 34.875 51.9656 36.601 53.4172 37.4359L55.643 38.7173L56.1073 38.0793Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M53.2368 43.9055C54.5924 42.7243 54.6494 40.7444 53.3719 39.4891L51.3987 37.562L50.7283 38.1517C49.3727 39.3329 49.3157 41.3128 50.5955 42.5681L52.5606 44.493L53.2368 43.9055Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M49.3581 41.0273L48.7205 41.4474C47.4352 42.2912 46.9814 44.1805 47.7095 45.6687L48.8308 47.9584L49.4684 47.5404C50.7572 46.6945 51.2075 44.8073 50.4795 43.3191L49.3581 41.0273Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M45.4197 44.7333C43.4677 45.2205 42.3316 47.0199 42.8789 48.7562L43.7244 51.424L44.6866 51.1813C46.6385 50.6983 47.7747 48.897 47.2227 47.1607L46.3819 44.4929L45.4197 44.7333Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M42.7396 50.5541L42.6372 47.9587L41.6457 47.9874C39.6328 48.043 38.0613 49.4552 38.1223 51.141L38.2247 53.7346L39.2162 53.7077C41.2291 53.6543 42.801 52.2417 42.7396 50.5541Z"
-                    fill="#390943"
-                  ></path>
-                  <path
-                    d="M35.8343 57.0745C36.0284 57.0382 36.213 56.9906 36.411 56.968C50.9678 55.3349 61.5081 41.9252 59.9085 27.0742C58.8804 17.5529 52.9184 9.21036 44.3455 5.30213C43.8714 5.08323 43.3247 5.30213 43.1139 5.78187C42.9031 6.2616 43.1139 6.8249 43.5842 7.03817C51.5538 10.6699 57.0982 18.4263 58.0537 27.2821C59.541 41.09 49.74 53.5578 36.2073 55.0768C35.2666 55.1832 34.3616 55.4176 33.5091 55.7602C32.6524 55.4158 31.7495 55.1815 30.8088 55.0768C22.1316 54.1021 14.5233 48.4509 10.9628 40.3172C8.27018 34.1728 8.08357 27.3316 10.4386 21.0448C12.7974 14.7594 17.4066 9.78527 23.4316 7.04273C23.9019 6.82948 24.1127 6.26619 23.9019 5.78643C23.6888 5.3064 23.1383 5.08929 22.668 5.3064C16.1911 8.25855 11.2275 13.6056 8.69493 20.3668C6.1623 27.1279 6.36234 34.4906 9.26028 41.0972C13.0912 49.8418 21.2703 55.9238 30.6043 56.9723C30.7985 56.9952 30.9831 57.0428 31.179 57.077C29.6302 58.2268 28.3875 59.7951 27.6335 61.6644C27.4393 62.1515 27.667 62.7095 28.1429 62.9073C28.2604 62.9531 28.3799 62.9757 28.4957 62.9757C28.8634 62.9757 29.2103 62.755 29.3596 62.3874C30.1696 60.3753 31.6625 58.7954 33.5116 57.8571C35.3535 58.7954 36.8557 60.3753 37.6636 62.3874C37.8129 62.7529 38.1598 62.9757 38.5275 62.9757C38.645 62.9757 38.7646 62.9528 38.8803 62.9052C39.3579 62.7071 39.5839 62.1515 39.3841 61.664C38.6249 59.7894 37.3819 58.2229 35.8331 57.0751L35.8343 57.0745Z"
-                    fill="#390943"
-                  ></path>
-                </svg>
+            <div class="personal-guidance-flex">
+              <div class="personal-guidance-icon">
+                <div class="personal-guidance-expert">
+                  <svg
+                    class="benefit-image"
+                    width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M16.1959 9.4073C18.0612 8.54048 18.9675 6.08491 18.2213 3.92077L17.0731 0.596436L16.1487 1.02459C14.2833 1.88947 13.3771 4.34504 14.1232 6.51112L15.2752 9.83782L16.1959 9.4073Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M11.2497 13.8859C12.8162 12.7238 13.1766 10.4716 12.0524 8.85733L10.3178 6.37256L9.54333 6.94377C7.97683 8.10591 7.61643 10.3581 8.74064 11.9723L10.4716 14.4588L11.2497 13.8859Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M5.16763 12.1482L4.4428 12.9216C2.97878 14.4908 3.18295 16.8427 4.89805 18.1769L7.53796 20.2344L8.26088 19.4593C9.72907 17.8922 9.52489 15.5382 7.80563 14.2057L5.16763 12.1482Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M1.55298 20.0815C0.626465 22.1099 1.37308 24.5778 3.22365 25.5993L6.074 27.1653L6.53167 26.1625C7.46164 24.1341 6.71158 21.6662 4.861 20.6428L2.0162 19.0791L1.55298 20.0815Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M0.0852227 28.2823C-0.331276 30.5406 0.819025 32.7909 2.65858 33.3075L5.48443 34.0966L5.69081 32.9798C6.10731 30.7191 4.95353 28.4712 3.11745 27.9546L0.291602 27.1655L0.0852227 28.2823Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M8.08619 39.8156L8.06767 38.821C8.02891 36.8138 6.33851 35.2176 4.29671 35.2523L1.15515 35.3085L1.17366 36.3031C1.21069 38.3103 2.89905 39.9065 4.94085 39.8718L8.08619 39.8156Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M7.70707 46.6795L10.3965 45.8759L10.1655 44.9088C9.70172 42.9509 7.90523 41.7857 6.15487 42.307L3.46545 43.1089L3.69644 44.0777C4.15869 46.0373 5.95337 47.1987 7.70707 46.6795Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M15.0172 50.6786L14.5429 49.8202C13.5818 48.0837 11.3788 47.4496 9.62822 48.4009L6.93103 49.8613L7.40904 50.7198C8.37011 52.4543 10.5695 53.0887 12.3237 52.137L15.0172 50.6786Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M20.1216 53.6765C18.7609 52.2972 16.4576 52.2055 14.9808 53.4745L12.7068 55.4221L13.3782 56.1042C14.7388 57.4835 17.0421 57.5718 18.519 56.3062L20.793 54.3567L20.1216 53.6765Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M21.459 57.4488L19.6379 59.6701L20.5213 60.1422C22.3075 61.1006 24.7149 60.7055 25.901 59.2622L27.7241 57.041L26.8408 56.5672C25.0546 55.6102 22.6472 56.0055 21.459 57.4488Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M22.1464 11.5035C20.7774 10.6478 18.8432 10.8928 17.8296 12.0538L17.3276 12.6286L19.436 13.9478C20.8085 14.8035 22.7431 14.56 23.7567 13.3993L24.2587 12.823L22.1464 11.5035Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M19.6378 15.559L17.5746 14.6691C16.2373 14.0895 14.6964 14.7474 14.1379 16.1385L13.8619 16.8254L15.9221 17.7134C17.2625 18.293 18.8003 17.6351 19.3588 16.2459L19.6378 15.559Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M17.1862 20.2139L17.3275 19.4677L14.447 19.1118C12.5761 18.8797 10.8271 19.9096 10.5378 21.4119L10.3965 22.1562L13.2749 22.5123C15.1435 22.7428 16.8988 21.7145 17.1861 20.2138L17.1862 20.2139Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M9.2545 26.5041L9.33348 27.1652L12.0669 26.9837C13.8479 26.8658 15.162 25.6903 15.0044 24.3591L14.9254 23.6997L12.1878 23.8812C10.4087 23.9975 9.09463 25.173 9.2545 26.5042V26.5041Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M9.39725 32.2796L9.64803 32.941L11.9382 32.2363C13.4256 31.7783 14.2175 30.3223 13.7071 28.9835L13.4527 28.3203L11.1661 29.025C9.6767 29.4847 8.88485 30.9407 9.39725 32.2796Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M11.3539 38.7173L13.5851 37.4359C15.0337 36.6006 15.4534 34.8746 14.5203 33.5813L14.0598 32.9414L11.8286 34.2212C10.38 35.0565 9.96029 36.7824 10.8933 38.0793L11.3539 38.7173Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M14.0008 44.493L15.4802 42.5681C16.4416 41.3128 16.3955 39.3369 15.3787 38.1517L14.8783 37.562L13.3989 39.4891C12.4375 40.7444 12.4836 42.7186 13.5004 43.9055L14.0008 44.493Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M17.5312 47.5383L18.1662 47.9584L19.2886 45.6667C20.0189 44.1764 19.5666 42.2893 18.2766 41.4435L17.6416 41.0273L16.5192 43.3169C15.7922 44.8056 16.2446 46.6963 17.5312 47.5382V47.5383Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M22.3176 51.1854L23.2804 51.424L24.1217 48.7576C24.6671 47.023 23.535 45.2249 21.5841 44.7334L20.6214 44.4929L19.7754 47.1634C19.2278 48.8962 20.3649 50.7003 22.3176 51.1854Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M28.7795 53.7346L28.8773 51.141C28.9435 49.4513 27.3656 48.043 25.3555 47.9874L24.3585 47.9587L24.2607 50.5541C24.1945 52.2417 25.7725 53.6542 27.7825 53.7077L28.7795 53.7346Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M51.7273 9.83782L52.8751 6.51112C53.6248 4.34892 52.7151 1.89335 50.8504 1.02459L49.93 0.596436L48.7784 3.9228C48.0325 6.08305 48.9385 8.5382 50.8032 9.40932L51.7273 9.83782Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M57.4544 6.94377L56.6802 6.37256L54.9499 8.85732C53.8226 10.4715 54.1825 12.7237 55.7523 13.8859L56.5264 14.4588L58.2567 11.9723C59.3837 10.3564 59.0254 8.10417 57.4544 6.94377Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M61.836 12.1482L59.1924 14.2057C57.4749 15.542 57.2723 17.8939 58.7365 19.4593L59.4604 20.2344L62.0999 18.1769C63.8174 16.8389 64.02 14.4887 62.5599 12.9216L61.836 12.1482Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M60.469 26.1626L60.9268 27.1653L63.7738 25.5994C65.6268 24.5803 66.3753 22.1143 65.4448 20.0818L64.9908 19.0791L62.14 20.6428C60.2852 21.6645 59.5388 24.1345 60.469 26.1625L60.469 26.1626Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M66.6502 27.1655L63.2591 27.9546C61.0517 28.4669 59.6713 30.7148 60.1711 32.9798L60.4188 34.0966L63.8098 33.3075C66.0131 32.7952 67.3976 30.5453 66.8978 28.2823L66.6502 27.1655Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M58.9322 38.821L58.9137 39.8155L62.0553 39.8718C64.0991 39.9082 65.7871 38.31 65.8262 36.3031L65.8447 35.3086L62.7032 35.2524C60.6576 35.214 58.9692 36.8121 58.9322 38.821Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M56.8343 44.909L56.6034 45.8761L59.2949 46.6798C61.041 47.199 62.8367 46.0338 63.3035 44.0778L63.5344 43.109L60.843 42.307C59.0968 41.7857 57.3012 42.9509 56.8343 44.909Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M52.4608 49.8187L51.9828 50.6765L54.68 52.1372C56.4305 53.0878 58.6336 52.4559 59.5947 50.7212L60.069 49.8635L57.3755 48.4027C55.6233 47.4483 53.4239 48.0838 52.4608 49.8187Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M46.8814 53.6782L46.2069 54.3582L48.4835 56.3071C49.9618 57.5722 52.2619 57.4824 53.6186 56.1052L54.2931 55.4233L52.0202 53.4762C50.5399 52.2042 48.238 52.2975 46.8814 53.6782Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M40.1592 56.5681L39.276 57.0418L41.0966 59.2625C42.2824 60.7054 44.6972 61.1007 46.479 60.1422L47.3622 59.6702L45.5394 57.4495C44.3557 56.0052 41.9449 55.6099 40.1591 56.568L40.1592 56.5681Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M44.8498 11.5035L42.7415 12.8228L43.2434 13.3992C44.257 14.5601 46.1877 14.8035 47.5602 13.9477L49.6725 12.6284L49.1705 12.0536C48.1552 10.8928 46.2206 10.6478 44.8498 11.5035Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M49.4222 14.6683L47.3621 15.5584L47.638 16.2454C48.1965 17.6351 49.7359 18.2931 51.0747 17.7134L53.1379 16.8252L52.8587 16.1381C52.3004 14.7469 50.7644 14.0905 49.4222 14.6683Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M52.5487 19.1113L49.6724 19.4672L49.8137 20.2135C50.103 21.7142 51.8517 22.744 53.7271 22.512L56.6034 22.1561L56.4621 21.4118C56.1751 19.9089 54.424 18.8809 52.5487 19.1114V19.1113Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M54.8092 23.8812L52.0705 23.6997L51.9956 24.3591C51.8381 25.6903 53.1477 26.8658 54.9282 26.9837L57.6668 27.1652L57.7458 26.5041C57.9037 25.1745 56.5899 23.9992 54.8091 23.8812L54.8092 23.8812Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M57.6052 32.2796C58.1127 30.9408 57.3203 29.4848 55.832 29.025L53.5441 28.3203L53.2931 28.9835C52.7821 30.3223 53.5744 31.7784 55.0631 32.2363L57.351 32.941L57.6052 32.2796Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M56.1073 38.0793C57.0379 36.7821 56.6224 35.0581 55.1708 34.2212L52.941 32.9414L52.4807 33.5813C51.5461 34.875 51.9656 36.601 53.4172 37.4359L55.643 38.7173L56.1073 38.0793Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M53.2368 43.9055C54.5924 42.7243 54.6494 40.7444 53.3719 39.4891L51.3987 37.562L50.7283 38.1517C49.3727 39.3329 49.3157 41.3128 50.5955 42.5681L52.5606 44.493L53.2368 43.9055Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M49.3581 41.0273L48.7205 41.4474C47.4352 42.2912 46.9814 44.1805 47.7095 45.6687L48.8308 47.9584L49.4684 47.5404C50.7572 46.6945 51.2075 44.8073 50.4795 43.3191L49.3581 41.0273Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M45.4197 44.7333C43.4677 45.2205 42.3316 47.0199 42.8789 48.7562L43.7244 51.424L44.6866 51.1813C46.6385 50.6983 47.7747 48.897 47.2227 47.1607L46.3819 44.4929L45.4197 44.7333Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M42.7396 50.5541L42.6372 47.9587L41.6457 47.9874C39.6328 48.043 38.0613 49.4552 38.1223 51.141L38.2247 53.7346L39.2162 53.7077C41.2291 53.6543 42.801 52.2417 42.7396 50.5541Z"
+                      fill="#390943"
+                    ></path>
+                    <path
+                      d="M35.8343 57.0745C36.0284 57.0382 36.213 56.9906 36.411 56.968C50.9678 55.3349 61.5081 41.9252 59.9085 27.0742C58.8804 17.5529 52.9184 9.21036 44.3455 5.30213C43.8714 5.08323 43.3247 5.30213 43.1139 5.78187C42.9031 6.2616 43.1139 6.8249 43.5842 7.03817C51.5538 10.6699 57.0982 18.4263 58.0537 27.2821C59.541 41.09 49.74 53.5578 36.2073 55.0768C35.2666 55.1832 34.3616 55.4176 33.5091 55.7602C32.6524 55.4158 31.7495 55.1815 30.8088 55.0768C22.1316 54.1021 14.5233 48.4509 10.9628 40.3172C8.27018 34.1728 8.08357 27.3316 10.4386 21.0448C12.7974 14.7594 17.4066 9.78527 23.4316 7.04273C23.9019 6.82948 24.1127 6.26619 23.9019 5.78643C23.6888 5.3064 23.1383 5.08929 22.668 5.3064C16.1911 8.25855 11.2275 13.6056 8.69493 20.3668C6.1623 27.1279 6.36234 34.4906 9.26028 41.0972C13.0912 49.8418 21.2703 55.9238 30.6043 56.9723C30.7985 56.9952 30.9831 57.0428 31.179 57.077C29.6302 58.2268 28.3875 59.7951 27.6335 61.6644C27.4393 62.1515 27.667 62.7095 28.1429 62.9073C28.2604 62.9531 28.3799 62.9757 28.4957 62.9757C28.8634 62.9757 29.2103 62.755 29.3596 62.3874C30.1696 60.3753 31.6625 58.7954 33.5116 57.8571C35.3535 58.7954 36.8557 60.3753 37.6636 62.3874C37.8129 62.7529 38.1598 62.9757 38.5275 62.9757C38.645 62.9757 38.7646 62.9528 38.8803 62.9052C39.3579 62.7071 39.5839 62.1515 39.3841 61.664C38.6249 59.7894 37.3819 58.2229 35.8331 57.0751L35.8343 57.0745Z"
+                      fill="#390943"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-              <div class="benefit-text">
-                <h1>Personal Guidance for New Buyers</h1>
-                <p>
+
+              <div class="personal-guidance-text">
+                <h1 class="personal-guidance-heading">
+                  Personal Guidance for New Buyers
+                </h1>
+                <p class="personal-guidance-para">
                   Clear steps. Smart advice. A smooth path from your first
                   showing to your first set of keys.
                 </p>
               </div>
             </div>
 
-            <div class="benefit-item sell-benefit-padding-top-bottom">
-              <div class="benefit-icon">
+            <div class="languages-flex">
+              <div class="languages-icon">
                 <svg
-                  class="benefit-image"
+                  class="support-image"
                   width="67"
                   height="68"
                   viewBox="0 0 67 68"
@@ -890,65 +980,34 @@
                   ></path>
                 </svg>
               </div>
-              <div class="benefit-text">
-                <h1>Seamless Communication, Every Step of the Way</h1>
-                <p>
+
+              <div class="languages-options">
+                <h1 class="languages-heading">
+                  Seamless Communication, Every Step of the Way
+                </h1>
+                <p class="languages-para">
                   Fluent in English, Hindi, and Gujarati — ensuring smooth
                   communication and cultural understanding.
                 </p>
               </div>
             </div>
-
-            <div class="benefit-item sell-benefit-padding-top-bottom">
-              <div class="benefit-icon">
-                <svg
-                  class="benefit-image"
-                  width="57"
-                  height="33"
-                  viewBox="0 0 57 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M5.41669 18.9745C5.2839 19.2194 4.97939 19.3133 4.7321 19.1828L0.258287 16.8085C0.0155917 16.6735 -0.0759906 16.3689 0.0499387 16.1217L8.14533 0.89608L8.14304 0.89837C8.20715 0.779313 8.31475 0.690021 8.44297 0.651098C8.49334 0.63736 8.54371 0.628202 8.59408 0.628202C8.67651 0.628202 8.75664 0.648809 8.82991 0.687734L13.3014 3.06658C13.4205 3.12839 13.5075 3.23601 13.5487 3.36422C13.5876 3.49473 13.5739 3.6321 13.5098 3.75116L5.41669 18.9745ZM43.8236 22.9972C44.0411 22.7362 44.0045 22.15 43.7298 21.3693C43.1322 20.8129 41.3509 19.4987 36.4212 16.4009L36.4052 16.3895C34.1912 14.915 32.5885 14.2716 31.5076 14.4205C30.6445 14.5418 30.1248 15.1783 29.4654 15.9843L29.4631 15.9865C28.8724 16.8108 28.11 17.4954 27.2285 17.9968C25.1473 18.9698 22.6677 18.3242 21.3237 16.4582C20.8109 15.6339 20.7697 14.6013 21.2138 13.7382C21.9877 11.9042 24.2017 9.91691 26.4616 8.40587C23.7691 7.16265 21.269 7.02525 18.8576 7.98001C16.8428 8.77676 15.0318 7.97315 13.4521 6.97031L7.63182 17.9216C9.20244 18.739 11.5813 20.5592 14.4778 22.7755C20.0367 27.0318 28.4442 33.4674 31.4847 32.0827C32.1235 31.7919 32.5196 31.0776 32.6684 29.958L29.9003 28.7399C29.7195 28.6643 29.5752 28.5178 29.502 28.3346C29.4287 28.1538 29.4333 27.9477 29.5111 27.7691C29.5913 27.5883 29.7401 27.4486 29.9232 27.3776C30.1087 27.3089 30.3125 27.3181 30.491 27.4005L33.7033 28.8155C34.3719 29.0215 35.2511 29.1887 35.7387 28.8407V28.8429C36.0776 28.511 36.2699 28.0576 36.2722 27.5837L31.2467 24.5065C31.0795 24.4058 30.9582 24.2432 30.9101 24.0532C30.8643 23.8632 30.8941 23.664 30.9971 23.4968C31.1001 23.3297 31.2627 23.2106 31.455 23.1648C31.645 23.1213 31.8442 23.1557 32.0091 23.2587L37.2681 26.4778C38.5159 26.6014 39.4066 26.432 39.8461 25.9787V25.981C40.2148 25.5093 40.3636 24.9026 40.2537 24.3165L33.6647 20.2044C33.351 19.98 33.2663 19.5496 33.47 19.2222C33.6761 18.8948 34.102 18.7826 34.4408 18.9681L41.2111 23.19C43.1343 23.5335 43.6769 23.174 43.8234 23L43.8236 22.9972ZM44.4738 20.0826C42.1431 18.3128 39.7162 16.6711 37.2049 15.1694C34.6475 13.4682 32.7723 12.7722 31.3026 12.976C29.8739 13.1752 29.052 14.178 28.3284 15.0641C27.8659 15.7257 27.2661 16.2821 26.5701 16.6919C25.1506 17.3421 23.47 16.9094 22.5404 15.6548C22.458 15.5288 22.2062 15.1465 22.5588 14.3085C23.7264 11.5359 29.5576 7.84063 31.6916 7.42839C32.96 7.24751 34.2513 7.27499 35.5128 7.51081C37.72 7.79701 40.2064 8.11984 43.5037 6.56295L49.3767 17.6124L44.4723 20.0828L44.4738 20.0826ZM56.7366 16.4742L52.2697 18.8531C52.0224 18.9836 51.7179 18.8897 51.5851 18.6424L43.4897 3.41877C43.3592 3.17149 43.4531 2.86468 43.7003 2.73192L48.1718 0.355374H48.1695C48.2428 0.318741 48.3229 0.298133 48.4031 0.298133C48.5931 0.295844 48.7671 0.398874 48.8587 0.566013L56.9502 15.7897C57.0761 16.037 56.9845 16.3415 56.7395 16.4743L56.7366 16.4742Z"
-                    fill="#390943"
-                  ></path>
-                </svg>
-              </div>
-              <div class="benefit-text">
-                <h1>Strategic Support for Investors & New Builds</h1>
-                <p>
-                  Market insight and builder knowledge that reveal real value,
-                  today and long term.
-                </p>
-              </div>
-            </div>
           </div>
-          <div class="sell-left-content right-margin">
-            <h2 class="home">
+
+          <div class="find-home-info">
+            <h2 class="find-home-heading">
               Find Your Home. <br />
               Shape Your Future.
             </h2>
-            <p class="sell-description">
+            <p class="find-home-para">
               The right home isn&apos;t found by chance; it&apos;s chosen with
               purpose. Whether you&apos;re a first-time buyer, upgrading, or
-              investing, I&apos;ll help you move with clarity and confidence.
-              <br />
+              investing, I&apos;m here to help you move with clarity and
+              confidence.
             </p>
-            <!-- <div class="sell-btn-flex">
-              <p class="sell-text">
-                You deserve a guide who listens, tailors, and empowers.
-              </p>
-              <a href="#" class="sell-button">GET MY BUYER'S GUIDE</a>
-            </div> -->
-
-            <div class="sell-left-image-container">
+            <div class="sell-home-image">
               <img
-                src="https://iss-cdn.myrealpage.com/5s1OgkFUJBSZxzj534wdg9StNgl8iqh09WIGKyTPKRc/rs:auto:0:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9taW5pbWFsaXN0LW1vZGVybi1saXZpbmctcm9vbS5qcGc_dD0xNzM5NDc4ODI1MTQ3?t=1739478825147"
-                alt="Modern interior with dining table"
+                src="img/jpg/minimalist-modern-living-room.jpg"
+                alt="minimalist-modern-living-room"
               />
             </div>
           </div>
@@ -1039,92 +1098,39 @@
               </div>
             </div>
           </div>
-          <!-- Navigation Arrows for Testimonials -->
-          <!-- <div class="carousel-nav">
-            <button id="prev-btn">&larr;</button>
-            <button id="next-btn">&rarr;</button>
-          </div> -->
         </div>
       </section>
-
-      <!-- Blog Section -->
-      <!-- <section class="blog-section reveal">
-        <div class="blog-container">
-          <div class="blog-header">
-            <h2>Smart Decisions Start With Smart Information</h2>
-          </div>
-          <div class="blog-grid"> -->
-      <!-- Blog Post 1 -->
-      <!-- <div class="blog-card">
-              <img
-                src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?ixid=M3wyMjY3NjN8MHwxfHNlYXJjaHwxMjN8fG1vZGVybiUyMGxpZ2h0bmluZyUyMGF0JTIwaG9tZXxlbnwwfHx8fDE3Mzk1NjkwMDV8MA&ixlib=rb-4.0.3&w=1200"
-                alt="What Renovations Should You Make to Your Home Before Selling?"
-              />
-              <div class="blog-card-content">
-                <h3>
-                  What Renovations Should You Make to Your Home Before Selling?
-                </h3>
-                <p class="blog-card-meta">
-                  POSTED BY SABAH FADAI ON FEB 14, 2025
-                </p>
-                <p class="blog-card-text">
-                  Getting your home ready to sell doesn't mean you need to spend
-                  a fortune. The right updates can help...
-                </p>
-                <a href="#" class="read-post-button">READ POST</a>
-              </div>
-            </div> -->
-      <!-- Blog Post 2 -->
-      <!-- <div class="blog-card">
-              <img
-                src="https://images.pexels.com/photos/19396040/pexels-photo-19396040.jpeg?w=1200"
-                alt="How Do You Get the Best Price For Your Home in Toronto?"
-              />
-              <div class="blog-card-content">
-                <h3>How Do You Get the Best Price For Your Home in Toronto?</h3>
-                <p class="blog-card-meta">
-                  POSTED BY SABAH FADAI ON FEB 14, 2025
-                </p>
-                <p class="blog-card-text">
-                  Getting top dollar for your home in Toronto doesn't happen by
-                  luck. It takes preparation, strategy, and...
-                </p>
-                <a href="#" class="read-post-button">READ POST</a>
-              </div>
-            </div> -->
-      <!-- Blog Post 3 -->
-      <!-- <div class="blog-card">
-              <img
-                src="https://iss-cdn.myrealpage.com/Foo3ZHxBxyMCWJHSCUHjSGtMJxcM308Rm3W-nlyU33g/rs:auto:1600:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL0ltYWdlcy9yZWFsdG9yLWluLXRvcm9udG8tYWR2aWNlLXJ1dHVsLXZhZGFkb3JpeWEuanBnP3Q9MTczOTU2ODY3NjkxOQ?t=1739568676919"
-                alt="When Should You Sell?"
-              />
-              <div class="blog-card-content">
-                <h3>When Should You Sell?</h3>
-                <p class="blog-card-meta">
-                  POSTED BY SABAH FADAI ON FEB 14, 2025
-                </p>
-                <p class="blog-card-text">
-                  It's a question I hear all the time: "When is the right time
-                  to sell my home?" The truth is, there isn't...
-                </p>
-                <a href="#" class="read-post-button">READ POST</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
       <!-- Your Move Starts Here Section -->
       <section class="your-move-section reveal">
         <div class="container your-move-grid">
           <div class="your-move-image">
-            <img src="img/Sabah-Fadai-Photo.jpg" alt="SABAH FADAI Headshot" />
+            <picture>
+              <source
+                srcset="img/avif/sabah-fadai-photo.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="img/webp/sabah-fadai-photo.webp"
+                type="image/webp"
+              />
+              <img
+                src="img/jpg/sabah-fadai-photo.jpg"
+                alt="Sabah Fadai portrait"
+                width="440"
+                height="550"
+                decoding="async"
+                sizes="(max-width: 600px) 100vw, 440px"
+              />
+            </picture>
           </div>
           <div class="your-move-content">
             <h2>Your Journey Starts Right Here</h2>
             <p>Share your vision with me. I&apos;m here to make it real.</p>
-            <p>Let&apos;s find the perfect match for your needs. Your dream deal
-              is waiting. Subscribe now and let&apos;s get moving.</p>
+            <p>
+              Let&apos;s find the perfect match for your needs. Your dream deal
+              is waiting. Subscribe now and let&apos;s get moving.
+            </p>
             <form class="your-move-form">
               <div class="form-grid">
                 <div class="form-group">
@@ -1156,7 +1162,7 @@
               </div>
               <div class="submit-button-container">
                 <button type="submit" class="submit-button">
-                  LET'S GET STARTED
+                  LET&apos;s GET STARTED
                   <span style="margin-left: 0.5rem">&rarr;</span>
                 </button>
               </div>
@@ -1166,6 +1172,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="flex-wrap">
@@ -1185,6 +1192,7 @@
                 class="email-input"
               />
               <button class="subscribe-button">
+                <span class="sr-only">Subscribe</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1213,8 +1221,8 @@
             </div>
             <div class="link-list">
               <ul>
-                <li><a href="#">Seller's Guide</a></li>
-                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">Seller&apos;s Guide</a></li>
+                <li><a href="#">Buyer&apos;s Guide</a></li>
                 <li><a href="#">Instant Home Evaluation</a></li>
                 <li><a href="#">Blog & Resources</a></li>
               </ul>
@@ -1235,13 +1243,13 @@
               <p>Direct:+1 (778) 549-2522</p>
             </div>
             <!-- <div class="remax-logo-container">
-              <img
-                src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
-                alt="RE/MAX Metropolis Brokerage Logo"
-                class="remax-logo"
-              />
-              <p>INDEPENDENTLY OWNED & OPERATED</p>
-            </div> -->
+                <img
+                  src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
+                  alt="RE/MAX Metropolis Brokerage Logo"
+                  class="remax-logo"
+                />
+                <p>INDEPENDENTLY OWNED & OPERATED</p>
+              </div> -->
             <div class="social-media-links">
               <a href="#"
                 ><i class="fab fa-facebook-f"></i
@@ -1262,13 +1270,6 @@
 
         <!-- Bottom Bar -->
         <div class="bottom-bar">
-          <!-- <div class="myrealpage-logo-container">
-            <img
-              src="https://placehold.co/100x20/000000/FFFFFF?text=my+RealPage"
-              alt="my RealPage logo"
-              class="myrealpage-logo"
-            />
-          </div> -->
           <div class="copyright-info">
             <p>
               &copy; 2025 SABAH FADAI. All rights reserved. |
