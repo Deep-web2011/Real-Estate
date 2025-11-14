@@ -3,15 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sabah-Fadai Real-Estate Home-page" />
     <link rel="icon" href="img/Sabah-favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="css/about.css" />
-    <title>SABAH Fadai PREC - Century 21 Realtor</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="img/jpg/house-for-sale-in-ontario.jpg"
+      fetchpriority="high"
+    />
+
+    <title>Sabah Fadai PREC | Century 21 Realtor in Canada | About Us</title>
   </head>
   <body>
     <header class="header">
@@ -20,14 +39,14 @@
           <img
             class="logo"
             alt="Sabah logo"
-            src="img/Sabah-Logo-fotor-bg-remover.png"
+            src="img/jpg/sabah-logo-bg-remover.png"
           />
         </a>
 
         <nav class="menu" id="mainMenu">
           <div class="head">
             <a href="#">
-              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+              <img class="logo" alt="Sabah logo" src="img/jpg/sabah-logo.jpg" />
             </a>
             <button
               type="button"
@@ -134,15 +153,23 @@
               My journey: From the Ring to Building Foundations
             </h2>
             <p class="paragraph-blueprint">
-              Boxing was more than a sport for me. For years, I trained hard to
-              master every punch and every move. The discipline, focus, and
-              heart I developed in the ring shaped who I am today.
+              Mixed Martial Arts (MMA) was more than a sport for me. For years,
+              I trained hard to master every punch, every kick, every take-down
+              and every submission. The discipline, focus, and heart I developed
+              in the cage shaped who I am today.
             </p>
             <p class="paragraph-investing">
-              Over time, I realized my real strength was not just about fighting
-              inside the ropes but about helping others win in their own lives.
-              After investing in different markets, I saw firsthand how smart
-              strategies can change futures.
+              Over time, I realized that I wasn&apos;t just fighting inside the
+              cage, but rather problem solving. Every opponent, like every offer
+              and negotiation in Real Estate, presents it&apos;s own challenges
+              that need solving. Unlike Real Estate, problems inside of the cage
+              need to be solved in matter of seconds and that requires decisions
+              to be made on the spot. Real Estate gives us the gift of time to
+              be able to make those hard decisions. I will be there in your
+              corner helping and guiding you every step of the way. With all of
+              the relative information at your disposal you can make the best
+              decision. Ultimately it is the right choices and decisions that
+              lead to success and achieving your goals.
             </p>
             <p class="paragraph-humanity">
               That is why I stepped into real estate. I want to guide people
@@ -153,7 +180,7 @@
               preparation, focus, and heart.
             </p>
 
-            <div class="list-container">
+            <div class="motivation-container">
               <div>
                 <p class="paragraph-success-stories">What keeps me going</p>
                 <ul style="padding: 0; margin: 0">
@@ -167,10 +194,14 @@
                     Unwavering support because no one should face this journey
                     alone
                   </li>
+                  <li class="list-item-success build-item-success">
+                    My family (My wife, two kids and my parents)
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
+
           <div class="success-video-wrapper">
             <video
               id="sabahVideo"
@@ -185,14 +216,19 @@
               muted
               preload="auto"
               data-speed="1"
-              poster="videos/Sabah-Fadai-Video.mp4"
+              poster="videos/sabah-fadai-video.mp4"
             >
-              <!-- Provide multiple source tags for wider browser compatibility -->
-              <source src="videos/Sabah-Fadai-Video.mp4" type="video/mp4" />
-              <!-- Example for other formats (uncomment and provide actual paths if available) -->
-              <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
+              <source src="videos/sabah-fadai-video.mp4" type="video/mp4" />
+              <!-- <source src="videos/Sabah-Fadai-Video.webm" type="video/webm" />
               <source src="videos/Sabah-Fadai-Video.ogg" type="video/ogg" />
-              Your browser does not support the video tag.
+              Your browser does not support the video tag. -->
+              <!-- <track
+                src="captions/sabah-video-captions.vtt"
+                kind="captions"
+                srclang="en"
+                label="English"
+                default
+              /> -->
             </video>
             <button id="playButton" class="play-button" style="display: none">
               ▶
@@ -207,14 +243,41 @@
           <!-- First Image Column -->
           <div class="image-column">
             <div class="image-wrapper">
-              <img src="img/Property.jpg" alt="Property Image 1" />
+              <picture>
+                <source srcset="" type="img/avif/property.jpg" />
+                <source srcset="img/webp/property.webp" type="image/webp" />
+                <img
+                  src="img/jpg/property.jpg"
+                  alt="Property Image 1"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
 
           <!-- Second Image Column -->
           <div class="image-column">
             <div class="image-wrapper">
-              <img src="img/Sabah-Fadai-Photo.jpg" alt="Agent Image 2" />
+              <picture>
+                <source
+                  srcset="img/avif/sabah-fadai-photo.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="img/webp/sabah-fadai-photo.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="img/jpg/sabah-fadai-photo.jpg"
+                  alt="Sabah Fadai portrait"
+                  width="440"
+                  height="550"
+                  decoding="async"
+                  sizes="(max-width: 600px) 100vw, 440px"
+                />
+              </picture>
             </div>
           </div>
 
@@ -244,20 +307,20 @@
         <div class="container awards-container reveal">
           <div class="awards-title">AWARDS</div>
           <div class="award-item">
-            <img class="award" src="img/Top-100.svg" alt="Top 100 Award" />
+            <img class="award" src="img/svg/top-100.svg" alt="Top 100 Award" />
           </div>
           <div class="award-item">
             <img
               class="hall-of-fame"
-              src="img/Hall-of-fame.svg"
+              src="img/svg/hall-of-fame.svg"
               alt="REMAX Hall of Fame 2023 Award"
             />
           </div>
           <div class="award-item">
-            <img src="img/Chairman.svg" alt="Chairman's 2022 Award" />
+            <img src="img/svg/chairman.svg" alt="Chairman's 2022 Award" />
           </div>
           <div class="award-item last-award">
-            <img src="img/Top 30.svg" alt="Top 30" />
+            <img src="img/svg/top-30.svg" alt="Top 30" />
           </div>
         </div>
       </section>
@@ -269,26 +332,34 @@
             <h2 class="heading-success">
               Success Is Built On Staying True To Your Roots
             </h2>
+
             <p class="paragraph-success">
-              Growth isn't about chasing awards. It's about staying consistent,
-              building real connections, and honoring where you started. Those
-              values helped me earn Top 30 Under 30 at RE/MAX Canada and #1 at
-              RE/MAX Metropolis Realty 2024.
+              A tree only grows tall and strong once its roots have been
+              established. Growth isn&apos;t about chasing awards. It&apos;s
+              about staying consistent, building real connections, and honoring
+              where you started. Those values (roots) helped me earn the awards
+              I have received.
             </p>
-            <p class="quote-success">"Consistency Wins. Integrity Lasts"</p>
+
+            <p class="quote-success">"Consistency Wins. Integrity Lasts."</p>
+
             <div class="list-container">
               <div>
                 <h2 class="paragraph-approach">This approach has helped me:</h2>
-                <ul style="padding: 0; margin: 0">
-                  <li class="list-item-success">Growth</li>
-                  <li class="list-item-success">Stronger Connections</li>
+                <ul style="padding: 0; margin: 0; list-style: none">
+                  <li class="list-item-success">Personal Growth</li>
+                  <li class="list-item-success">
+                    Building Stronger Connections
+                  </li>
                 </ul>
               </div>
+
               <div>
-                <ul style="padding: 0; margin: 0">
-                  <h2 class="paragraph-approach">
-                    Success isn't just measured by numbers — it's built on:
-                  </h2>
+                <h2 class="paragraph-approach">
+                  Success isn&apos;t just measured by numbers — it&apos;s built
+                  on:
+                </h2>
+                <ul style="padding: 0; margin: 0; list-style: none">
                   <li class="list-item-success">Integrity</li>
                   <li class="list-item-success">Consistency</li>
                   <li class="list-item-success">Client-first focus</li>
@@ -296,13 +367,33 @@
               </div>
             </div>
           </div>
+
           <div class="success-image-wrapper">
-            <img src="img/Sabah-Fadai-Photo.jpg" alt="Sabah-image" />
+            <picture>
+              <source
+                srcset="img/avif/sabah-fadai-photo.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="img/webp/sabah-fadai-photo.webp"
+                type="image/webp"
+              />
+              <img
+                src="img/jpg/sabah-fadai-photo.jpg"
+                alt="Sabah Fadai portrait"
+                width="440"
+                height="550"
+                decoding="async"
+                loading="lazy"
+                sizes="(max-width: 600px) 100vw, 440px"
+              />
+            </picture>
           </div>
         </div>
+
         <div class="cta-button-container">
           <a href="#" class="cta-button">
-            KNOW YOUR HOME'S TRUE VALUE TODAY
+            KNOW YOUR HOME&apos;s TRUE VALUE TODAY
             <span class="arrow-icon">&rarr;</span>
           </a>
         </div>
@@ -398,16 +489,30 @@
         </div>
       </section>
 
+      <!--Toranto Image Section-->
       <section class="image-section">
-        <img
-          src="https://iss-cdn.myrealpage.com/vrWMKPAQHlP4w1FAIAJnXuSBHcx16_EqVGBrA8LulsM/rs:auto:1200:0:0/g:sm/bG9jYWw6Ly8vZGF0YS9hcHAvd3BzL3IvdS90L3UvcnV0dWwtdmFkYWRvcml5YS5teXJlYWxwYWdld2Vic2l0ZS5jb20vX21lZGlhL3F1aWNrLXVwbG9hZHMvdG9yb250by1yZWFsLWVzdGF0ZS5qcGc_dD0xNzM5NDc4NTcwNjM1?t=1739478570635"
-          alt="city-center"
-        />
-        <div class="container">
-          <h1 class="reveal">Explore Handpicked Opportunities</h1>
-        </div>
+        <picture>
+          <source
+            srcset="img/avif/toronto-real-estate.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="img/webp/toronto-real-estate.webp"
+            type="image/webp"
+          />
+          <img
+            src="img/jpg/toronto-real-estate.jpg"
+            alt="Toronto real estate skyline"
+            width="700"
+            height="541"
+            decoding="async"
+          />
+        </picture>
+
+        <h1 class="reveal">Explore Handpicked Opportunities</h1>
       </section>
 
+      <!--Listing sections-->
       <section class="listings-section">
         <div class="container listings-grid">
           <!-- Left: Listings Content -->
@@ -415,9 +520,8 @@
             <ul class="listings-list">
               <li>
                 <a href="#"
-                  >Garrison Crossing Real Estate<span class="arrow"
-                    >&rarr;</span
-                  ></a
+                  >Garrison Crossing Real Estate
+                  <span class="arrow">&rarr;</span></a
                 >
               </li>
               <li>
@@ -427,7 +531,7 @@
               </li>
               <li>
                 <a href="#"
-                  >Promontory Real Estate<span class="arrow">&rarr;</span></a
+                  >Promontory Real Estate <span class="arrow">&rarr;</span></a
                 >
               </li>
               <li>
@@ -448,17 +552,21 @@
 
           <!-- Right: Listing Image -->
           <div class="listings-image-container">
-            <img
-              src="img/Canada_street.png"
-              alt="Classic Building"
-              onerror="this.onerror=null;"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="img/avif/canada-street.avif" type="image/avif" />
+              <source srcset="img/webp/canada-street.webp" type="image/webp" />
+              <img
+                src="img/jpg/canada-street.jpg"
+                alt="Classic Building"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="flex-wrap">
@@ -478,6 +586,7 @@
                 class="email-input"
               />
               <button class="subscribe-button">
+                <span class="sr-only">Subscribe</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -506,8 +615,8 @@
             </div>
             <div class="link-list">
               <ul>
-                <li><a href="#">Seller's Guide</a></li>
-                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">Seller&apos;s Guide</a></li>
+                <li><a href="#">Buyer&apos;s Guide</a></li>
                 <li><a href="#">Instant Home Evaluation</a></li>
                 <li><a href="#">Blog & Resources</a></li>
               </ul>
@@ -528,13 +637,13 @@
               <p>Direct:+1 (778) 549-2522</p>
             </div>
             <!-- <div class="remax-logo-container">
-              <img
-                src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
-                alt="RE/MAX Metropolis Brokerage Logo"
-                class="remax-logo"
-              />
-              <p>INDEPENDENTLY OWNED & OPERATED</p>
-            </div> -->
+                <img
+                  src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
+                  alt="RE/MAX Metropolis Brokerage Logo"
+                  class="remax-logo"
+                />
+                <p>INDEPENDENTLY OWNED & OPERATED</p>
+              </div> -->
             <div class="social-media-links">
               <a href="#"
                 ><i class="fab fa-facebook-f"></i
@@ -555,13 +664,6 @@
 
         <!-- Bottom Bar -->
         <div class="bottom-bar">
-          <!-- <div class="myrealpage-logo-container">
-            <img
-              src="https://placehold.co/100x20/000000/FFFFFF?text=my+RealPage"
-              alt="my RealPage logo"
-              class="myrealpage-logo"
-            />
-          </div> -->
           <div class="copyright-info">
             <p>
               &copy; 2025 SABAH FADAI. All rights reserved. |
@@ -572,5 +674,5 @@
       </div>
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 </html>
