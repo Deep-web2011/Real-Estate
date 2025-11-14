@@ -3,15 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sabah-Fadai Real-Estate Home-page" />
     <link rel="icon" href="img/Sabah-favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="css/home-evaluation.css" />
-    <title>Instant Home Evaluation | SABAH Fadai</title>
+    <link rel="stylesheet" href="css/general.css" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="img/jpg/house-for-sale-in-ontario.jpg"
+      fetchpriority="high"
+    />
+    <title>
+      Sabah Fadai PREC | Century 21 Realtor in Canada | Home Evaluation
+    </title>
   </head>
   <body>
     <header class="header">
@@ -20,14 +41,14 @@
           <img
             class="logo"
             alt="Sabah logo"
-            src="img/Sabah-Logo-fotor-bg-remover.png"
+            src="img/jpg/sabah-logo-bg-remover.png"
           />
         </a>
 
         <nav class="menu" id="mainMenu">
           <div class="head">
             <a href="#">
-              <img class="logo" alt="Sabah logo" src="img/Sabah-Logo.jpg" />
+              <img class="logo" alt="Sabah logo" src="img/jpg/sabah-logo.jpg" />
             </a>
             <button
               type="button"
@@ -149,14 +170,15 @@
             </p>
             <br />
             <p>
-              Remember, in real estate, like in boxing, it’s not about fast
-              punches but the ones that land right. Let’s make every move count.
+              Remember, in real estate, like in boxing, it&apos;s not about fast
+              punches but the ones that land right. Let&apos;s make every move
+              count.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="container contact-section">
+      <section class="container home-evaluation-section">
         <div>
           <form class="contact-form-grid reveal">
             <div class="form-group">
@@ -173,14 +195,14 @@
             </div>
             <div class="form-group">
               <label for="email"
-                >What's your email address?:
+                >What&apos;s your email address?:
                 <span class="required-asterisk">*</span></label
               >
               <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
               <label for="address"
-                >What's your Street Address & City?:
+                >What&apos;s your Street Address & City?:
                 <span class="required-asterisk">*</span></label
               >
               <input type="text" id="address" name="address" required />
@@ -191,18 +213,15 @@
               </button>
             </div>
             <div class="social-icons-container">
-              <a href="#" class="social-icon"><i class="fas fa-rss"></i></a>
               <a href="#" class="social-icon"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a href="#" class="social-icon"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
               <a href="#" class="social-icon"
-                ><i class="fab fa-linkedin-in"></i
+                ><i class="fab fa-whatsapp"></i
               ></a>
-              <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
             </div>
           </form>
 
@@ -233,120 +252,115 @@
           </div>
         </div>
       </section>
+    </main>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="flex-wrap">
-            <!-- Left Section: Logo, Newsletter -->
-            <div class="section-left">
-              <div class="logo-title">
-                <h2>SABAH FADAI</h2>
-                <p>Realtor® CNE. M.ENG</p>
-              </div>
-              <p class="newsletter-text">
-                Get exclusive access to my properties directly to your inbox!
-              </p>
-              <div class="email-input-group">
-                <input
-                  type="email"
-                  placeholder="E-mail Address*"
-                  class="email-input"
-                />
-                <button class="subscribe-button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                </button>
-              </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="flex-wrap">
+          <!-- Left Section: Logo, Newsletter -->
+          <div class="section-left">
+            <div class="logo-title">
+              <h2>SABAH FADAI</h2>
+              <p>Realtor® CNE. M.ENG</p>
             </div>
-
-            <!-- Middle Section: Links -->
-            <div class="section-middle">
-              <div class="link-list">
-                <ul>
-                  <li><a href="#">Featured Listings</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                </ul>
-              </div>
-              <div class="link-list">
-                <ul>
-                  <li><a href="#">Seller's Guide</a></li>
-                  <li><a href="#">Buyer's Guide</a></li>
-                  <li><a href="#">Instant Home Evaluation</a></li>
-                  <li><a href="#">Blog & Resources</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Right Section: Contact Info & Social Media -->
-            <div class="section-right">
-              <div class="contact-info">
-                <p class="font-medium">
-                  RE/MAX METROPOLIS BROKERAGE, INDEPENDENTLY OWNED & OPERATED
-                </p>
-                <p>45428 Luckakuck Way #190, Chilliwack, BC V2R 3S9, Canada</p>
-                <p style="margin-top: 0.5rem">
-                  <a href="mailto:SABAH FADAIV408@gmail.com"
-                    >sabah.fadai@century21.ca</a
-                  >
-                </p>
-                <p>Direct:+1 (778) 549-2522</p>
-              </div>
-              <!-- <div class="remax-logo-container">
-              <img
-                src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
-                alt="RE/MAX Metropolis Brokerage Logo"
-                class="remax-logo"
+            <p class="newsletter-text">
+              Get exclusive access to my properties directly to your inbox!
+            </p>
+            <div class="email-input-group">
+              <input
+                type="email"
+                placeholder="E-mail Address*"
+                class="email-input"
               />
-              <p>INDEPENDENTLY OWNED & OPERATED</p>
-            </div> -->
-              <div class="social-media-links">
-                <a href="#"
-                  ><i class="fab fa-facebook-f"></i
-                  ><span style="margin-left: 1rem">Facebook</span></a
+              <button class="subscribe-button">
+                <span class="sr-only">Subscribe</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
                 >
-                <a href="#"
-                  ><i class="fab fa-instagram"></i
-                  ><span style="margin-left: 1rem">Instagram</span></a
-                >
-
-                <a href="#"
-                  ><i class="fab fa-whatsapp"></i
-                  ><span style="margin-left: 1rem">WhatsApp</span></a
-                >
-              </div>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
 
-          <!-- Bottom Bar -->
-          <div class="bottom-bar">
-            <!-- <div class="myrealpage-logo-container">
-            <img
-              src="https://placehold.co/100x20/000000/FFFFFF?text=my+RealPage"
-              alt="my RealPage logo"
-              class="myrealpage-logo"
-            />
-          </div> -->
-            <div class="copyright-info">
-              <p>
-                &copy; 2025 SABAH FADAI. All rights reserved. |
-                <a href="#">Privacy Policy</a>
+          <!-- Middle Section: Links -->
+          <div class="section-middle">
+            <div class="link-list">
+              <ul>
+                <li><a href="#">Featured Listings</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+              </ul>
+            </div>
+            <div class="link-list">
+              <ul>
+                <li><a href="#">Seller&apos;s Guide</a></li>
+                <li><a href="#">Buyer&apos;s Guide</a></li>
+                <li><a href="#">Instant Home Evaluation</a></li>
+                <li><a href="#">Blog & Resources</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right Section: Contact Info & Social Media -->
+          <div class="section-right">
+            <div class="contact-info">
+              <p class="font-medium">
+                RE/MAX METROPOLIS BROKERAGE, INDEPENDENTLY OWNED & OPERATED
               </p>
+              <p>45428 Luckakuck Way #190, Chilliwack, BC V2R 3S9, Canada</p>
+              <p style="margin-top: 0.5rem">
+                <a href="mailto:SABAH FADAIV408@gmail.com"
+                  >sabah.fadai@century21.ca</a
+                >
+              </p>
+              <p>Direct:+1 (778) 549-2522</p>
+            </div>
+            <!-- <div class="remax-logo-container">
+                <img
+                  src="https://placehold.co/150x50/000000/FFFFFF?text=RE/MAX+METROPOLIS+BROKERAGE"
+                  alt="RE/MAX Metropolis Brokerage Logo"
+                  class="remax-logo"
+                />
+                <p>INDEPENDENTLY OWNED & OPERATED</p>
+              </div> -->
+            <div class="social-media-links">
+              <a href="#"
+                ><i class="fab fa-facebook-f"></i
+                ><span style="margin-left: 1rem">Facebook</span></a
+              >
+              <a href="#"
+                ><i class="fab fa-instagram"></i
+                ><span style="margin-left: 1rem">Instagram</span></a
+              >
+
+              <a href="#"
+                ><i class="fab fa-whatsapp"></i
+                ><span style="margin-left: 1rem">WhatsApp</span></a
+              >
             </div>
           </div>
         </div>
-      </footer>
-    </main>
+
+        <!-- Bottom Bar -->
+        <div class="bottom-bar">
+          <div class="copyright-info">
+            <p>
+              &copy; 2025 SABAH FADAI. All rights reserved. |
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 </html>
