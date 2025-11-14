@@ -1,0 +1,693 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+  min-height: 70vh;
+  background-image: url("../img/jpg/house-for-sale-in-ontario.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-inner-content {
+  position: relative;
+  z-index: 2;
+}
+.header .about-intro {
+  position: absolute;
+  left: 8%;
+  bottom: 10%;
+  font-family: var(--font-Mukta);
+  z-index: 1;
+}
+
+.about-intro h3 {
+  font-size: var(--text-size7);
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.about-intro h2 {
+  font-size: var(--text-size15);
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.header-inner-content {
+  padding: 0;
+}
+
+.header .logo {
+  margin-left: 0;
+}
+
+.header-inner-content {
+  padding: 0;
+}
+
+/***************************/
+/* BUILD SECTION STYLES */
+/***************************/
+
+.build-section {
+  padding: 15rem 2rem;
+}
+
+.build-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  justify-items: start;
+}
+
+.heading-build {
+  font-size: var(--text-size13);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+}
+
+.paragraph-blueprint,
+.paragraph-investing,
+.paragraph-humanity,
+.paragraph-success-stories {
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: #5c5c5c;
+  font-family: var(--font-Mukta);
+}
+
+.success-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.success-video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.list-item-success,
+.build-item-success {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #5c5c5c;
+  padding-left: 1.5rem;
+  position: relative;
+  list-style: none;
+  font-family: var(--font-Mukta);
+}
+
+.build-item-success {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.list-item-success::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-bg);
+  font-weight: bold;
+}
+
+/***************************/
+/* Layout styles */
+/***************************/
+.layout-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.image-column {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.image-column:first-child {
+  grid-column: 1 / 2;
+}
+
+.image-column:nth-child(2) {
+  grid-column: 2 / 3;
+}
+
+.image-wrapper {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.text-content-column {
+  text-align: left;
+  grid-column: 3 / -1;
+  margin-left: 3rem;
+}
+
+.text-content-column .heading-large,
+.text-content-column .heading-medium {
+  font-size: var(--text-size11);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #390943;
+  font-family: var(--font-heading);
+}
+
+.text-content-column .paragraph {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #5c5c5c;
+  font-family: var(--font-Mukta);
+}
+
+/********************************/
+/* AWARD SECTION STYLES */
+/*********************************/
+.awards-section {
+  margin-top: 6rem;
+  background-color: var(--color-bg);
+  padding: 40px 20px;
+  text-align: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.awards-container {
+  display: grid;
+  grid-template-columns: auto repeat(4, minmax(100px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+  white-space: nowrap;
+}
+
+.awards-title {
+  color: #ffffff;
+  font-size: 5em;
+  font-weight: 500;
+  margin-right: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  min-width: min-content;
+  font-family: var(--font-heading);
+  flex-shrink: 0;
+}
+
+.award-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  min-width: 120px;
+  flex-shrink: 0;
+  white-space: normal;
+}
+
+.award-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.award-item .hall-of-fame {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/********************************/
+/* SUCESS SECTION STYLES */
+/*********************************/
+.success-section {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.success-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4rem;
+  justify-items: start;
+  align-items: center;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.success-text-content {
+  text-align: left;
+}
+
+.heading-success {
+  font-size: var(--text-size10);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 17px;
+  color: #390943;
+  font-family: var(--font-heading);
+}
+
+.paragraph-success {
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: #5c5c5c;
+  font-family: var(--font-Mukta);
+}
+
+.quote-success {
+  font-size: var(--text-size8) !important;
+  font-weight: 500 !important;
+  color: #390943;
+  line-height: 1.2 !important;
+  font-family: var(--font-heading);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph-approach {
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: #5c5c5c;
+  font-family: var(--font-Mukta);
+}
+
+.success-image-wrapper {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.success-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.cta-button-container {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 18px 48px;
+  background-color: var(--color-bg);
+  color: #ffffff;
+  font-family: var(--font-Mukta);
+  font-size: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.cta-button .arrow-icon {
+  margin-left: 0.75rem;
+  font-size: 1.25rem;
+}
+
+/**********************************/
+/* Image Section */
+/*********************************/
+
+.image-section {
+  overflow: hidden;
+  margin-top: -1rem;
+  position: relative;
+}
+
+.image-section img {
+  width: 100%;
+  height: 341px;
+  display: block;
+  object-fit: cover;
+}
+
+.image-section h1 {
+  position: absolute;
+  z-index: 3;
+  font-size: var(--text-size8);
+  padding: 0 2em;
+  color: #fff;
+  bottom: 5%;
+  left: 8%;
+  font-family: var(--font-Mukta);
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+/**********************************/
+/* Listing Section */
+/*********************************/
+
+.listings-section {
+  padding: 2rem 4rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.listings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listings-list li:first-child {
+  border-top: 1px solid #b8bbbe;
+}
+
+.listings-list li {
+  border-bottom: 1px solid #b8bbbe;
+  padding: 2rem 0;
+}
+
+.listings-list li:last-child {
+  border-bottom: 1px solid #b8bbbe;
+}
+
+.listings-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-btn-primary);
+  font-size: var(--text-size6);
+  font-weight: 550;
+  font-family: "Mukta", sans-serif !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.listings-list > li {
+  transition: transform 0.3s ease-in-out;
+}
+
+.listings-list .arrow {
+  font-size: var(--text-size6);
+  color: var(--color-bg);
+  transition: transform 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.listings-image-container {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30%;
+  left: 55%;
+}
+
+.listings-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.listings-list > li:hover {
+  transform: scale(1.02, 1.02);
+}
+
+/*****************************/
+/* testimonials */
+/*****************************/
+.testimonials-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.testimonial-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.testimonials-header h2 {
+  font-size: var(--text-size12);
+  font-weight: 600;
+  color: var(--color-bg);
+  margin-bottom: 0;
+  font-family: var(--font-heading);
+}
+
+.google-reviews-button {
+  background-color: var(--color-bg);
+  color: #ffffff;
+  padding: 2.5rem 5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  justify-content: center;
+  font-size: 2rem;
+  font-family: var(--font-Mukta);
+  letter-spacing: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.google-reviews-button:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15);
+}
+
+.star-icon {
+  font-size: 1.5rem;
+  color: #ffb400;
+}
+
+.testimonials-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 2rem) / 3);
+  gap: 2rem;
+  align-items: stretch;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testimonials-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  padding: 2rem 0;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.testimonial-text {
+  font-size: var(--text-size6);
+  color: var(--color-btn-primary);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-family: var(--font-Mukta);
+  line-height: 1.45;
+}
+
+.testimonial-author {
+  font-size: var(--text-size4);
+  color: var(--color-btn-primary);
+  text-transform: uppercase;
+  font-family: var(--font-Mukta);
+  font-weight: 700;
+}
+
+.footer {
+  margin-top: 8rem;
+}
+
+/***********************************/
+/* Big Tablet-style */
+/************************************/
+@media (max-width: 60em) {
+  .build-container,
+  .success-container {
+    grid-template-columns: 1fr;
+  }
+  .layout-container {
+    grid-template-columns: unset;
+  }
+  .text-content-column {
+    margin: 3rem 0 0 0;
+  }
+}
+
+@media (max-width: 54em) {
+  .awards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .awards-container .last-award {
+    grid-column: 1 / -1 !important;
+  }
+  .testimonials-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+@media (max-width: 40em) {
+  .awards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-build,
+  .text-content-column .heading-large,
+  .text-content-column .heading-medium,
+  .heading-success,
+  .quote-success {
+    font-size: var(--text-size8) !important;
+  }
+  .paragraph-blueprint,
+  .paragraph-investing,
+  .paragraph-humanity,
+  .paragraph-success-stories,
+  .build-item-success,
+  .text-content-column .paragraph,
+  .list-item-success,
+  .build-item-success {
+    font-size: 14px;
+  }
+
+  .paragraph-approach {
+    font-size: 15px;
+  }
+
+  .google-reviews-button {
+    padding: 2rem 3rem !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 30em) {
+  .header .about-intro {
+    bottom: 7%;
+    left: 5%;
+  }
+
+  .build-section {
+    padding: 10rem 0;
+  }
+
+  .cta-button {
+    font-size: 15px;
+    padding: 18px 36px;
+  }
+  .image-section h1 {
+    padding: 0 !important;
+    left: 5% !important;
+  }
+}

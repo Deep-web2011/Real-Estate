@@ -1,0 +1,277 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+  min-height: 70vh;
+  background-image: url("../img/jpg/house-for-sale-in-ontario.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-inner-content {
+  position: relative;
+  z-index: 2;
+}
+.header .home-evaluation-intro {
+  position: absolute;
+  left: 8%;
+  bottom: 10%;
+  font-family: var(--font-Mukta);
+  z-index: 1;
+}
+
+.home-evaluation-intro h1 {
+  font-size: var(--text-size11);
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.header-inner-content {
+  padding: 0;
+}
+
+.header .logo {
+  margin-left: 0;
+}
+
+.header-inner-content {
+  padding: 0;
+}
+
+/************** Home Evaluation Section **************/
+.home-evaluation-heading {
+  margin-top: 10rem;
+}
+
+.home-evaluation-title h4 {
+  font-size: var(--text-size8);
+  font-family: var(--font-heading);
+  font-weight: 350;
+  margin-bottom: 2rem;
+}
+
+.home-evaluation-paragraph {
+  margin-top: 4rem;
+  font-family: var(--font-Mukta);
+  color: #5c5c5c;
+  font-size: 15px;
+}
+
+.home-evaluation-paragraph p {
+  margin-top: 0.2rem;
+}
+
+/************** Contact Section **************/
+.home-evaluation-section {
+  margin-top: 8rem !important;
+  border-radius: 10px !important;
+}
+
+.contact-section {
+  margin-top: 8rem;
+  border-radius: 10px;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+}
+
+.contact-form-grid .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-form-grid label {
+  font-size: 1.6rem;
+  color: #222222;
+  margin-bottom: 5px;
+  font-weight: 450;
+  font-family: var(--font-Mukta);
+}
+
+.contact-form-grid label .required-asterisk {
+  color: red;
+}
+
+.contact-form-grid input[type="text"],
+.contact-form-grid input[type="email"] {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  border-bottom: 1px solid #390943;
+  font-size: 1.6rem;
+  font-family: var(--font-Mukta);
+  outline: none;
+  transition: border-color 0.3s ease;
+  text-transform: capitalize;
+}
+
+.contact-form-grid input[type="text"]:focus,
+.contact-form-grid input[type="email"]:focus {
+  border-color: green;
+}
+
+.submit-button-container {
+  grid-column: 1 / -1;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #390943;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: var(--font-Mukta);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-button i {
+  font-size: 1.8rem;
+}
+
+.submit-button:hover {
+  transform: scale(1.05, 1.05);
+}
+
+/************** social icons **************/
+
+.social-icons-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  color: #555;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #390943;
+  color: #fff;
+  border-color: #390943;
+  transform: scale(1.03, 1.03);
+}
+
+/************** accordion Styles **************/
+.accordion-container {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #390943;
+}
+
+.accordion-item:first-child {
+  border-top: 1px solid #390943;
+}
+
+.accordion-header {
+  padding: 15px 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #390943;
+}
+
+.accordion-header a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  transition: transform 0.3s ease;
+  font-family: var(--font-heading);
+  font-size: var(--text-size5);
+  font-weight: 300;
+  color: #222222;
+  padding: 4px 0;
+}
+
+.accordion-header a:hover {
+  transform: translateX(20px);
+}
+
+.accordion-header i {
+  margin-right: 10px !important;
+  font-size: var(--text-size5);
+  color: #390943;
+}
+
+.footer {
+  margin-top: 7rem;
+}
+
+/************** Media Queries **************/
+@media (max-width: 47em) {
+  .header .home-evaluation-intro {
+    bottom: 4%;
+    left: 5%;
+  }
+
+  .home-evaluation-intro h1 {
+    font-size: var(--text-size7);
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .submit-button-container {
+    text-align: center;
+  }
+}

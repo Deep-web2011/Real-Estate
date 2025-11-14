@@ -1,0 +1,254 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+  min-height: 70vh;
+  background-image: url("../img/jpg/house-for-sale-in-ontario.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-inner-content {
+  position: relative;
+  z-index: 2;
+}
+.header .mortgage-calculator-intro {
+  position: absolute;
+  left: 8%;
+  bottom: 10%;
+  font-family: var(--font-Mukta);
+  z-index: 1;
+}
+
+.mortgage-calculator-intro h2 {
+  font-size: var(--text-size13);
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.mortgage-calculator-intro h3 {
+  font-size: 17px;
+  color: #ffffff;
+  margin-top: 2rem;
+  line-height: 1.5;
+  font-weight: 250;
+  font-family: var(--font-Mukta);
+}
+
+.header-inner-content {
+  padding: 0;
+}
+
+.header .logo {
+  margin-left: 0;
+}
+
+.header-inner-content {
+  padding: 0;
+}
+
+/******************* Mortgage Calculator Section *******************/
+.mortgage-calculator-section {
+  padding: 40px;
+  background-color: #ffffff;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  margin-top: 8rem;
+}
+
+.mortgage-calculator-section h2 {
+  font-size: 2.8rem;
+  color: var(--color-bg);
+  margin-bottom: 30px;
+  font-family: var(--font-heading);
+}
+
+.mortgage-calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  align-items: center;
+}
+
+.mortgage-calculator-grid .form-group {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.mortgage-calculator-grid label {
+  font-size: 1.8rem;
+  color: #000;
+  white-space: nowrap;
+  font-family: var(--font-Mukta);
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.mortgage-calculator-grid input[type="number"],
+.mortgage-calculator-grid input[type="text"],
+.mortgage-calculator-grid select {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-family: var(--font-Mukta);
+  max-width: 200px;
+}
+
+.form-group select {
+  font-weight: bold;
+}
+
+.mortgage-calculator-grid input[type="number"]:focus,
+.mortgage-calculator-grid input[type="text"]:focus,
+.mortgage-calculator-grid select:focus {
+  border-color: var(--color-bg);
+  outline: none;
+}
+
+.calculate-button-container {
+  text-align: right;
+  margin-top: 30px;
+  padding-right: 20px;
+}
+
+.calculate-button {
+  background-color: var(--color-bg);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 9px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-family: var(--font-Mukta);
+  width: auto;
+  max-width: 180px;
+}
+
+.calculate-button:hover {
+  transform: scale(1.05);
+}
+
+/*************** Results Section ******************/
+.results-container {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #390943;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+  text-align: left;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.result-label {
+  font-size: 1.6rem;
+  color: #555;
+  font-family: var(--font-Mukta);
+}
+
+.result-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-bg);
+  font-family: var(--font-Mukta);
+}
+
+/*************** chart container ******************/
+.chart-container {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 400px;
+}
+
+/*************** Responsive Styles ******************/
+@media (max-width: 53.125em) {
+  .mortgage-calculator-section {
+    margin-top: 4rem;
+    padding: 0 2rem;
+  }
+  .mortgage-calculator-grid,
+  .results-container {
+    grid-template-columns: 1fr;
+  }
+  .mortgage-calculator-grid .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mortgage-calculator-grid label {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 5px;
+    width: auto;
+  }
+  .mortgage-calculator-grid input[type="number"],
+  .mortgage-calculator-grid input[type="text"],
+  .mortgage-calculator-grid select {
+    max-width: 100%;
+    width: 100%;
+  }
+  .calculate-button-container {
+    text-align: center;
+    padding-right: 0;
+  }
+  .calculate-button {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .chart-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 38em) {
+  .header .mortgage-calculator-intro {
+    bottom: 5%;
+    left: 5%;
+  }
+
+  .mortgage-calculator-intro h2 {
+    font-size: var(--text-size10);
+  }
+}
