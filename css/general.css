@@ -638,7 +638,7 @@ body.menu-active {
   font-family: var(--font-Mukta);
 }
 
-@media (max-width: 1191px) {
+@media (max-width: 74.4375em) {
   .header {
     padding: 0 2rem;
   }
@@ -855,28 +855,12 @@ body.menu-active {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64em) {
   .header {
     padding-left: 5rem;
   }
 }
 
-@media (max-width: 60em) {
-  .listings-section {
-    padding: 2rem 0;
-  }
-
-  .listings-grid {
-    align-items: center;
-  }
-
-  .listings-image-container {
-    position: relative;
-    left: 0;
-    bottom: 0;
-  }
-
-}
 
 @media (max-width: 50em) {
   /**************/
@@ -899,10 +883,9 @@ body.menu-active {
   .container {
     padding: 0 2rem;
   }
-
 }
 
-@media (max-width: 500px) {
+@media (max-width: 31.25em) {
   .header {
     padding-left: 3rem;
   }
