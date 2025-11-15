@@ -69,13 +69,12 @@ img {
 .header-inner-content {
   padding: 0;
 }
-
 /***************************/
 /* BUILD SECTION STYLES */
 /***************************/
 
 .build-section {
-  padding: 15rem 2rem;
+  padding: 15rem 0;
 }
 
 .build-container {
@@ -283,7 +282,7 @@ img {
 /* SUCESS SECTION STYLES */
 /*********************************/
 .success-section {
-  padding: 6rem 2rem;
+  padding: 6rem 0;
   background-color: #ffffff;
   text-align: center;
 }
