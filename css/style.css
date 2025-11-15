@@ -23,7 +23,7 @@
 }
 
 .hero-heading {
-  font-size: 9.5rem;
+  font-size: 9.2rem;
   color: #fff;
   margin-bottom: 1.6rem;
   line-height: 1.15;
@@ -370,7 +370,6 @@
 .listings-list > li:hover {
   transform: scale(1.02, 1.02);
 }
-
 
 /**************************/
 /* sell section and find home section*/
@@ -863,12 +862,12 @@
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
 
-@media (max-width: 85em) {
+@media (max-width: 89em) {
   .hero-heading {
-    font-size: 8.5rem;
+    font-size: 8.2rem;
   }
   .hero-subheading {
-    font-size: 75px;
+    font-size: 72px;
   }
 }
 
@@ -888,8 +887,13 @@
   }
 
   .hero-heading {
-    font-size: 7.5rem;
+    font-size: 6.5rem;
   }
+
+  .hero-subheading {
+    font-size: 55px;
+  }
+
   .hero-text-box {
     text-align: center;
   }
@@ -919,10 +923,6 @@
     align-items: stretch;
   }
 
-  .hero-subheading {
-    font-size: 65px;
-  }
-
   .image-section h1 {
     left: 0px !important;
   }
@@ -931,10 +931,6 @@
 @media (max-width: 60em) {
   .hero-icons-container {
     padding: 0 2rem;
-  }
-
-  .hero-content {
-    width: 95%;
   }
 
   .every-move-content {
@@ -959,20 +955,26 @@
   }
 }
 
-@media (max-width: 50em) {
-  .hero-heading {
-    font-size: 55px;
-    margin-top: 5rem;
+@media (max-width: 54em) {
+  .testimonials-grid {
+    grid-auto-columns: calc((100% - 2rem) / 2);
   }
+}
+
+@media (max-width: 50em) {
   .hero-text-box {
     margin-left: 0;
   }
   .hero-content {
     width: 100%;
   }
+  .hero-heading {
+    font-size: 50px;
+    margin-top: 5rem;
+  }
 
   .hero-subheading {
-    font-size: 48px;
+    font-size: 40px;
     margin-top: -1rem;
   }
   .social-icons-columns .social-icons {
@@ -1054,6 +1056,9 @@
   .sell-button {
     display: block;
   }
+   .testimonials-grid {
+    grid-auto-columns: 100%;
+  }
 }
 
 @media (max-width: 40em) {
@@ -1097,12 +1102,15 @@
 
 @media (max-width: 38.25em) {
   .hero-heading {
-    font-size: 48px;
+    font-size: 4rem;
+  }
+
+  .hero-subheading {
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 35em) {
-  
   .listings-grid {
     grid-template-columns: 1fr;
   }
@@ -1114,26 +1122,34 @@
 
 @media (max-width: 33em) {
   .hero-heading {
-    font-size: 38px;
+    font-size: 3.2rem;
   }
 
   .hero-subheading {
-    font-size: 28px;
+    font-size: 2.5rem;
   }
 
   .image-section h1 {
     font-size: var(--text-size6) !important;
   }
+
+  .testimonials-header h2 {
+    font-size: var(--text-size10);
+  }
+  .google-reviews-button {
+    font-size: 1.2rem !important;
+  }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 23em) {
   .hero-heading {
-    font-size: 35px;
+    font-size: 2.7rem;
   }
-
   .hero-subheading {
-    font-size: 28px;
+    font-size: 2rem;
   }
 
-  
+  .hero-paragraph {
+    font-size: 15px;
+  }
 }
