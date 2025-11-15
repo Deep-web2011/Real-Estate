@@ -499,7 +499,7 @@ img {
 .testimonials-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-top: 2rem;
+ 
 }
 
 .testimonial-container {
@@ -723,6 +723,9 @@ img {
   .build-section {
     padding: 6rem 0;
   }
+  .cta-button-container {
+    padding: 0 2rem;
+  }
   .testimonials-grid {
     grid-auto-columns: 100%;
   }
@@ -751,7 +754,7 @@ img {
     padding: 18px 36px;
   }
 
-  .image-section h1 {
+   .image-section h1 {
     left: 2% !important;
     bottom: 10%;
   }
