@@ -36,6 +36,7 @@ img {
   position: relative;
   z-index: 2;
 }
+
 .header .about-intro {
   position: absolute;
   left: 8%;
@@ -110,7 +111,6 @@ img {
   padding-bottom: 100%;
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 .success-video-wrapper video {
@@ -184,7 +184,6 @@ img {
   width: 100%;
   position: relative;
   border-radius: 20px;
-  overflow: hidden;
 }
 
 .image-wrapper img {
@@ -617,11 +616,35 @@ img {
   .success-container {
     grid-template-columns: 1fr;
   }
+
   .layout-container {
     grid-template-columns: unset;
   }
+
   .text-content-column {
     margin: 3rem 0 0 0;
+  }
+
+  .testimonials-grid {
+    grid-auto-columns: calc((100% - 2rem) / 2);
+  }
+
+  .image-section h1 {
+    left: 0;
+  }
+
+  .listings-section {
+    padding: 2rem 0;
+  }
+
+  .listings-grid {
+    align-items: center;
+  }
+
+  .listings-image-container {
+    position: relative;
+    left: 0;
+    bottom: 0;
   }
 }
 
@@ -633,9 +656,21 @@ img {
   .awards-container .last-award {
     grid-column: 1 / -1 !important;
   }
+
   .testimonials-header {
     flex-direction: column !important;
     align-items: stretch !important;
+  }
+}
+
+@media (max-width: 45em) {
+  .layout-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .image-column:first-child,
+  .image-column:nth-child(2),
+  .text-content-column {
+    grid-column: 1 / span 2;
   }
 }
 
@@ -651,6 +686,7 @@ img {
   .quote-success {
     font-size: var(--text-size8) !important;
   }
+
   .paragraph-blueprint,
   .paragraph-investing,
   .paragraph-humanity,
@@ -670,6 +706,27 @@ img {
     padding: 2rem 3rem !important;
     font-size: 1.5rem !important;
   }
+  .image-section h1 {
+    font-size: var(--text-size7);
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 35em) {
+  .testimonials-grid {
+    grid-auto-columns: 100%;
+  }
+
+  .testimonials-header h2 {
+    font-size: var(--text-size10);
+  }
+
+  .google-reviews-button {
+    font-size: 1.2rem !important;
+  }
 }
 
 @media (max-width: 30em) {
@@ -686,6 +743,7 @@ img {
     font-size: 15px;
     padding: 18px 36px;
   }
+
   .image-section h1 {
     padding: 0 !important;
     left: 5% !important;
