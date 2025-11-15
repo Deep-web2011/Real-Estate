@@ -26,6 +26,7 @@
 :root {
   /* Font families */
   --font-heading: "DM Serif Text", serif;
+  --font-primary: "DM Serif Text", serif;;
   --font-Mukta: "Mukta", sans-serif;
 
   /* Colors */
