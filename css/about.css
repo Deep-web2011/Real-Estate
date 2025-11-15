@@ -752,7 +752,7 @@ img {
   }
 
   .image-section h1 {
-    padding: 0 !important;
-    left: 5% !important;
+    left: 2% !important;
+    font-size: var(--text-size5);
   }
 }
