@@ -111,6 +111,7 @@ img {
   padding-bottom: 100%;
   display: flex;
   justify-content: center;
+  
 }
 
 .success-video-wrapper video {
@@ -122,6 +123,7 @@ img {
   border-radius: 20px;
   object-fit: cover;
   display: block;
+   box-shadow: 0 15px 30px rgb(0 0 0 / 50%);
 }
 
 .list-container {
@@ -616,6 +618,9 @@ img {
   .success-container {
     grid-template-columns: 1fr;
   }
+  .build-section {
+    padding: 8rem 0;
+  }
 
   .layout-container {
     grid-template-columns: unset;
@@ -716,6 +721,9 @@ img {
 }
 
 @media (max-width: 35em) {
+  .build-section {
+    padding: 6rem 0;
+  }
   .testimonials-grid {
     grid-auto-columns: 100%;
   }
