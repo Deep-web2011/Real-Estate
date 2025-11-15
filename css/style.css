@@ -953,11 +953,22 @@
   .communities-content-left h3 {
     font-size: var(--text-size11);
   }
-}
-
-@media (max-width: 54em) {
   .testimonials-grid {
     grid-auto-columns: calc((100% - 2rem) / 2);
+  }
+
+  .listings-section {
+    padding: 2rem 0;
+  }
+
+  .listings-grid {
+    align-items: center;
+  }
+
+  .listings-image-container {
+    position: relative;
+    left: 0;
+    bottom: 0;
   }
 }
 
@@ -1056,7 +1067,7 @@
   .sell-button {
     display: block;
   }
-   .testimonials-grid {
+  .testimonials-grid {
     grid-auto-columns: 100%;
   }
 }
@@ -1091,12 +1102,16 @@
   }
 
   .image-section h1 {
-    font-size: var(--text-size7) !important;
+    font-size: var(--text-size7);
   }
 
   .google-reviews-button {
-    padding: 2rem 3rem !important;
-    font-size: 1.5rem !important;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1118,14 +1133,6 @@
   .testimonials-grid {
     grid-auto-columns: 100%;
   }
-}
-
-@media (max-width: 33em) {
-
-  .image-section h1 {
-    font-size: var(--text-size6) !important;
-  }
-
   .testimonials-header h2 {
     font-size: var(--text-size10);
   }
@@ -1134,9 +1141,17 @@
   }
 }
 
-@media (max-width: 23em) {
+@media (max-width: 33em) {
+  .image-section h1 {
+    font-size: var(--text-size6) !important;
+  }
+}
 
+@media (max-width: 23em) {
   .hero-paragraph {
     font-size: 15px;
+  }
+  .evaluation-content {
+    padding: 0 4rem;
   }
 }
