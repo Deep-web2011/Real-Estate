@@ -754,5 +754,6 @@ img {
   .image-section h1 {
     left: 2% !important;
     font-size: var(--text-size5);
+    z-index: 9999;
   }
 }
