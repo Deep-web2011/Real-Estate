@@ -876,9 +876,6 @@ body.menu-active {
     bottom: 0;
   }
 
-  .testimonials-grid {
-    grid-auto-columns: calc((100% - 2 * 2rem) / 2);
-  }
 }
 
 @media (max-width: 50em) {
@@ -903,13 +900,6 @@ body.menu-active {
     padding: 0 2rem;
   }
 
-  /* .listings-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid {
-    grid-auto-columns: 100%;
-  } */
 }
 
 @media (max-width: 500px) {
