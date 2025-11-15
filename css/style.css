@@ -1145,13 +1145,13 @@
   .image-section h1 {
     font-size: var(--text-size6) !important;
   }
+  .evaluation-content {
+    padding: 0 4rem;
+  }
 }
 
 @media (max-width: 23em) {
   .hero-paragraph {
     font-size: 15px;
-  }
-  .evaluation-content {
-    padding: 0 4rem;
   }
 }
