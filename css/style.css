@@ -612,7 +612,7 @@
 .testimonials-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-top: 2rem;
+ 
 }
 
 .testimonial-container {
@@ -1146,7 +1146,7 @@
     font-size: var(--text-size6) !important;
   }
   .evaluation-content {
-    padding: 0 4rem;
+    padding: 0 4rem !important;
   }
 }
 
