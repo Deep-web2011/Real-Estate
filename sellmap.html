@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Value Estimator</title>
+
+    <!-- Leaflet CSS for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/sellmap.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="map-section">
+        <div id="map-header" class="header-bar">
+          <svg class="pin-icon-svg" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+            />
+          </svg>
+          <h1>Property Found!</h1>
+        </div>
+        <div id="map"></div>
+        <div class="property-found-text">Locating property...</div>
+        <div id="map-type-selector" class="map-type-selector">
+          <button id="map-view" class="active">Map</button>
+          <button id="satellite-view">Satellite</button>
+        </div>
+        <div id="map-address-bar" class="address-bar">
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="map-address-display" class="truncate"
+            >Fetching location...</span
+          >
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="header-logo-container">
+          <div class="home-value-logo">HOME<span>VALUE</span></div>
+        </div>
+
+        <div id="step-indicator" class="step-indicator">
+          <div id="step-1" class="step complete">
+            <span class="step-status"><i class="fas fa-check"></i></span>
+            ADDRESS
+          </div>
+          <div id="step-2" class="step current">
+            <span class="step-status">2</span>
+            PROPERTY INFO
+          </div>
+          <div id="step-3" class="step estimate">
+            <span class="step-status">3</span>
+            ESTIMATE
+          </div>
+        </div>
+
+        <div id="form-container">
+          <div id="step-1-form" class="form-step">
+            <h2 class="step-title">Where is your home?</h2>
+            <p class="step-subtitle">
+              Please enter your property address to begin your free value
+              estimate.
+            </p>
+            <form id="address-form">
+              <div
+                id="address-error-container"
+                class="form-error-message"
+              ></div>
+              <div class="form-group">
+                <label for="street-address">Street Address *</label>
+                <input
+                  type="text"
+                  id="street-address"
+                  placeholder="e.g., 123 Main St"
+                />
+              </div>
+              <div class="form-group">
+                <label for="unit">Unit/Apt (Optional)</label>
+                <input type="text" id="unit" placeholder="e.g., #4B" />
+              </div>
+              <div class="form-group">
+                <label for="city-state-zip"
+                  >City, State/Province, ZIP/Postal *</label
+                >
+                <input
+                  type="text"
+                  id="city-state-zip"
+                  placeholder="e.g., Toronto, ON M1B 5K7"
+                  required
+                />
+              </div>
+              <button type="submit" class="continue-btn">
+                Next: Verify Property
+              </button>
+            </form>
+          </div>
+
+          <div id="step-2-form" class="form-step active">
+            <h2 class="step-title">Tell us about your property.</h2>
+            <p class="step-subtitle">
+              This helps us narrow down your estimate and connect you with the
+              right expert.
+            </p>
+            <form id="property-form">
+              <div
+                id="property-error-container"
+                class="form-error-message"
+              ></div>
+              <div class="form-group">
+                <label for="sell-time"
+                  >How soon are you looking to sell? *</label
+                >
+                <select id="sell-time" class="custom-select">
+                  <option value="">Select an option</option>
+                  <option>Immediately</option>
+                  <option>1-3 Months</option>
+                  <option>3-6 Months</option>
+                  <option>6-12 Months</option>
+                  <option>Just browsing</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="condition"
+                  >What is the condition of your home? *</label
+                >
+                <select id="condition" class="custom-select">
+                  <option value="">Select an option</option>
+                  <option>Excellent/New</option>
+                  <option>Good/Well-maintained</option>
+                  <option>Fair/Needs some repairs</option>
+                  <option>Poor/Major renovations needed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="property-type"
+                  >What type of property is this? *</label
+                >
+                <select id="property-type" class="custom-select">
+                  <option value="">Select an option</option>
+                  <option>Single Family Home</option>
+                  <option>Condo/Apartment</option>
+                  <option>Townhouse</option>
+                  <option>Multi-family</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="agent"
+                  >Are you currently working with a real estate agent? *</label
+                >
+                <select id="agent" class="custom-select">
+                  <option value="">Select an option</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <button type="submit" class="continue-btn">
+                Continue to Estimate
+              </button>
+            </form>
+          </div>
+
+          <div id="step-3-form" class="form-step">
+            <h2 class="step-title">Where should we send your estimate?</h2>
+            <form id="contact-form">
+              <div
+                id="contact-error-container"
+                class="form-error-message"
+              ></div>
+              <div class="form-group">
+                <label for="full-name">Full name *</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  placeholder="Full name *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="user-email">your@email.com *</label>
+                <input
+                  type="email"
+                  id="user-email"
+                  placeholder="your@email.com *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone-number">Phone number *</label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  placeholder="10-digit phone number *"
+                  required
+                />
+              </div>
+              <div class="consent-group">
+                <input type="checkbox" id="consent-check" required />
+                <label for="consent-check">
+                  By submitting this form, I agree to be contacted by Pathway
+                  Executives Realty Inc. via email, phone, and text about real
+                  estate services.
+                </label>
+              </div>
+              <button type="submit" class="continue-btn confirm-btn">
+                Confirm valuation
+              </button>
+            </form>
+          </div>
+
+          <div id="step-4-form" class="form-step thank-you-screen">
+            <div class="thank-you-box">
+              <h2 class="thank-you-title">Hi, User</h2>
+              <p class="thank-you-text">
+                Thanks for submitting your information, our team is already hard
+                at work.
+              </p>
+              <a href="tel:CALL +1(778) 549-2522" class="call-btn">CALL +1(778) 549-2522</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const API_KEY = "pk.5e35cc8c57351374e6e45c78f90da3bf";
+      const fallbackLat = 43.6617;
+      const fallbackLon = -79.39;
+      const defaultAddress = "657 Dupont St, Toronto, ON, CA, M6G 1Z4";
+
+      const mapAddressDisplay = document.getElementById("map-address-display");
+      const propertyFoundText = document.querySelector(".property-found-text");
+
+      const steps = [
+        document.getElementById("step-1"),
+        document.getElementById("step-2"),
+        document.getElementById("step-3"),
+      ];
+      const stepForms = [
+        document.getElementById("step-1-form"),
+        document.getElementById("step-2-form"),
+        document.getElementById("step-3-form"),
+        document.getElementById("step-4-form"),
+      ];
+
+      let currentStep = 2;
+
+      function updateStepUI(stepNumber, mapAddress = null) {
+        currentStep = stepNumber;
+        steps.forEach((step, i) => {
+          const num = i + 1;
+          step.classList.remove("current", "complete");
+          if (num < currentStep) {
+            step.classList.add("complete");
+            step.querySelector(".step-status").innerHTML =
+              '<i class="fas fa-check"></i>';
+          } else if (num === currentStep) {
+            step.classList.add("current");
+            step.querySelector(".step-status").textContent = num;
+          } else {
+            step.querySelector(".step-status").textContent = num;
+          }
+        });
+        stepForms.forEach((form, i) => {
+          form.classList.toggle("active", i + 1 === currentStep);
+        });
+        if (mapAddress) {
+          mapAddressDisplay.textContent = mapAddress;
+        }
+        document.querySelector(".content-section").scrollTop = 0;
+      }
+
+      function displayMessage(msg, type = "success") {
+        propertyFoundText.textContent = msg;
+        propertyFoundText.classList.remove("show", "error");
+        if (type === "error") {
+          propertyFoundText.classList.add("error");
+        }
+        propertyFoundText.classList.add("show");
+        setTimeout(() => propertyFoundText.classList.remove("show"), 5000);
+      }
+
+      async function exponentialBackoffFetch(url, maxRetries = 3) {
+        for (let i = 0; i < maxRetries; i++) {
+          try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error("HTTP Status " + res.status);
+            return res;
+          } catch (err) {
+            if (i === maxRetries - 1) throw err;
+            await new Promise((r) => setTimeout(r, Math.pow(2, i) * 1000));
+          }
+        }
+      }
+
+      async function geocodeAddress(fullAddress) {
+        const url = `https://us1.locationiq.com/v1/search?key=${API_KEY}&q=${encodeURIComponent(
+          fullAddress
+        )}&format=json&limit=1`;
+        try {
+          const res = await exponentialBackoffFetch(url);
+          const data = await res.json();
+          if (data && data.length > 0) {
+            const lat = parseFloat(data[0].lat),
+              lon = parseFloat(data[0].lon);
+            mapAddressDisplay.textContent = data[0].display_name;
+            initMap(lat, lon, data[0].display_name);
+            displayMessage(
+              "Good News! Neighbourhood sold data found.",
+              "success"
+            );
+          } else throw new Error("No location found");
+        } catch (err) {
+          mapAddressDisplay.textContent = "Showing fallback location";
+          initMap(fallbackLat, fallbackLon, "Fallback region");
+          displayMessage(
+            "Could not locate address. Showing default area.",
+            "error"
+          );
+        }
+      }
+
+      function initMap(lat, lon, popupText) {
+        let map;
+        if (window.mapInstance) {
+          map = window.mapInstance;
+          map.setView([lat, lon], 15);
+          map.eachLayer((l) => {
+            if (l instanceof L.Marker) map.removeLayer(l);
+          });
+        } else {
+          map = L.map("map", { attributionControl: false }).setView(
+            [lat, lon],
+            15
+          );
+          window.mapInstance = map;
+          const satelliteLayer = L.tileLayer(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            { maxZoom: 18 }
+          );
+          const mapLayer = L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            { maxZoom: 19 }
+          ).addTo(map);
+          window.layers = {
+            satellite: satelliteLayer,
+            map: mapLayer,
+            current: "map",
+          };
+          setupMapControls();
+        }
+        L.marker([lat, lon]).addTo(map).bindPopup(popupText).openPopup();
+      }
+
+      function setupMapControls() {
+        const mapBtn = document.getElementById("map-view");
+        const satBtn = document.getElementById("satellite-view");
+        function switchLayer(id) {
+          const map = window.mapInstance;
+          if (window.layers.current === id) return;
+          map.removeLayer(window.layers[window.layers.current]);
+          window.layers[id].addTo(map);
+          window.layers.current = id;
+          mapBtn.classList.toggle("active", id === "map");
+          satBtn.classList.toggle("active", id === "satellite");
+        }
+        mapBtn.addEventListener("click", () => switchLayer("map"));
+        satBtn.addEventListener("click", () => switchLayer("satellite"));
+      }
+
+      function validateFields(formId, fields) {
+        const errorBox = document.getElementById(formId + "-error-container");
+        let errors = [];
+        errorBox.classList.remove("show");
+        errorBox.innerHTML = "";
+        fields.forEach((f) => {
+          const el = document.getElementById(f.id);
+          const value = el.value.trim();
+          el.classList.remove("invalid");
+          let isInvalid = value === "" || value === "Select an option";
+          if (
+            f.id === "user-email" &&
+            value != "" &&
+            !/\S+@\S+\.\S+/.test(value)
+          ) {
+            isInvalid = true;
+            errors.push("Email is invalid.");
+          }
+          if (f.id === "phone-number") {
+            const digits = value.replace(/\D/g, "");
+            if (digits.length !== 10) {
+              isInvalid = true;
+              errors.push("Phone number must be exactly 10 digits.");
+            }
+          }
+          if (f.id === "consent-check" && !el.checked) {
+            isInvalid = true;
+            errors.push("You must agree to the terms and services.");
+          }
+          if (isInvalid) {
+            el.classList.add("invalid");
+            if (!errors.includes(`${f.name} is required.`)) {
+              errors.push(`${f.name} is required.`);
+            }
+          }
+        });
+        if (errors.length > 0) {
+          errorBox.innerHTML =
+            "<ul>" + errors.map((e) => `<li>${e}</li>`).join("") + "</ul>";
+          errorBox.classList.add("show");
+          document.querySelector(".content-section").scrollTop = 0;
+          return false;
+        }
+        return true;
+      }
+
+      document
+        .getElementById("address-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const street = document.getElementById("street-address").value.trim();
+          const cityZip = document
+            .getElementById("city-state-zip")
+            .value.trim();
+          const unit = document.getElementById("unit").value.trim();
+          if (street && cityZip) {
+            const fullAddress = unit
+              ? `${street}, Unit ${unit}, ${cityZip}`
+              : `${street}, ${cityZip}`;
+            mapAddressDisplay.textContent = fullAddress;
+            updateStepUI(2, fullAddress);
+            initMap(fallbackLat + 0.01, fallbackLon, fullAddress);
+          } else {
+            const box = document.getElementById("address-error-container");
+            box.innerHTML =
+              "<ul><li>Street Address and City/ZIP are required.</li></ul>";
+            box.classList.add("show");
+          }
+        });
+
+      const propertyFormFields = [
+        { id: "sell-time", name: "Time to sell" },
+        { id: "condition", name: "Home condition" },
+        { id: "property-type", name: "Property type" },
+        { id: "agent", name: "Agent status" },
+      ];
+      document
+        .getElementById("property-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (validateFields("property", propertyFormFields)) {
+            updateStepUI(3, mapAddressDisplay.textContent);
+          }
+        });
+
+      const contactFormFields = [
+        { id: "full-name", name: "Full name" },
+        { id: "user-email", name: "Email" },
+        { id: "phone-number", name: "Phone number" },
+        { id: "consent-check", name: "Consent" },
+      ];
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (validateFields("contact", contactFormFields)) {
+            displayMessage(
+              "Thank you! Your valuation is confirmed.",
+              "success"
+            );
+            const btn = document.querySelector("#contact-form .confirm-btn");
+            btn.textContent = "Valuation Sent!";
+            btn.disabled = true;
+            updateStepUI(4);
+          }
+        });
+
+      window.onload = function () {
+        geocodeAddress(defaultAddress);
+        updateStepUI(2, defaultAddress);
+      };
+    </script>
+  </body>
+</html>
