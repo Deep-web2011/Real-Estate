@@ -235,102 +235,102 @@
       // ----------------------
       // CONFIG
       // ----------------------
-      const API_KEY = "pk.5e35cc8c57351374e6e45c78f90da3bf";
-      const fallbackLat = 43.6617;
-      const fallbackLon = -79.39;
+      const API_KEY = 'pk.5e35cc8c57351374e6e45c78f90da3bf'
+      const fallbackLat = 43.6617
+      const fallbackLon = -79.39
 
       // ----------------------
       // GET DYNAMIC ADDRESS FROM URL
       // ----------------------
       function getAddressFromURL() {
-        const params = new URLSearchParams(window.location.search);
-        const address = params.get("address");
-        return address ? decodeURIComponent(address) : null;
+        const params = new URLSearchParams(window.location.search)
+        const address = params.get('address')
+        return address ? decodeURIComponent(address) : null
       }
 
-      let dynamicAddress = getAddressFromURL();
+      let dynamicAddress = getAddressFromURL()
       const defaultAddress =
-        dynamicAddress || "657 Dupont St, Toronto, ON, CA, M6G 1Z4";
+        dynamicAddress || '657 Dupont St, Toronto, ON, CA, M6G 1Z4'
 
       // ----------------------
       // DOM REFERENCES
       // ----------------------
-      const addressForm = document.getElementById("address-form");
-      const propertyForm = document.getElementById("property-form");
-      const contactForm = document.getElementById("contact-form");
+      const addressForm = document.getElementById('address-form')
+      const propertyForm = document.getElementById('property-form')
+      const contactForm = document.getElementById('contact-form')
 
-      const mapHeader = document.getElementById("map-header");
-      const mapTypeSelector = document.getElementById("map-type-selector");
-      const mapAddressBar = document.getElementById("map-address-bar");
-      const mapAddressDisplay = document.getElementById("map-address-display");
-      const propertyFoundText = document.querySelector(".property-found-text");
+      const mapHeader = document.getElementById('map-header')
+      const mapTypeSelector = document.getElementById('map-type-selector')
+      const mapAddressBar = document.getElementById('map-address-bar')
+      const mapAddressDisplay = document.getElementById('map-address-display')
+      const propertyFoundText = document.querySelector('.property-found-text')
 
       const steps = [
-        document.getElementById("step-1"),
-        document.getElementById("step-2"),
-        document.getElementById("step-3"),
-      ];
+        document.getElementById('step-1'),
+        document.getElementById('step-2'),
+        document.getElementById('step-3')
+      ]
 
       const stepForms = [
-        document.getElementById("step-1-form"),
-        document.getElementById("step-2-form"),
-        document.getElementById("step-3-form"),
-      ];
+        document.getElementById('step-1-form'),
+        document.getElementById('step-2-form'),
+        document.getElementById('step-3-form')
+      ]
 
-      let currentStep = 2; // default
+      let currentStep = 2 // default
 
       // ----------------------
       // STEP UI
       // ----------------------
       function updateStepUI(stepNumber, mapAddress = null) {
-        currentStep = stepNumber;
+        currentStep = stepNumber
 
         steps.forEach((step, i) => {
-          const num = i + 1;
-          step.classList.remove("current", "complete");
+          const num = i + 1
+          step.classList.remove('current', 'complete')
 
           if (num < currentStep) {
-            step.classList.add("complete");
-            step.querySelector(".step-status").innerHTML =
-              '<i class="fas fa-check"></i>';
+            step.classList.add('complete')
+            step.querySelector('.step-status').innerHTML =
+              '<i class="fas fa-check"></i>'
           } else if (num === currentStep) {
-            step.classList.add("current");
-            step.querySelector(".step-status").textContent = num;
+            step.classList.add('current')
+            step.querySelector('.step-status').textContent = num
           } else {
-            step.querySelector(".step-status").textContent = num;
+            step.querySelector('.step-status').textContent = num
           }
-        });
+        })
 
         stepForms.forEach((form, i) => {
-          form.classList.toggle("active", i + 1 === currentStep);
-        });
+          form.classList.toggle('active', i + 1 === currentStep)
+        })
 
-        const showMap = currentStep >= 2;
-        mapHeader.classList.toggle("active", showMap);
-        mapTypeSelector.classList.toggle("active", showMap);
-        mapAddressBar.classList.toggle("active", showMap);
+        const showMap = currentStep >= 2
+        mapHeader.classList.toggle('active', showMap)
+        mapTypeSelector.classList.toggle('active', showMap)
+        mapAddressBar.classList.toggle('active', showMap)
 
         if (mapAddress) {
-          mapAddressDisplay.textContent = mapAddress;
+          mapAddressDisplay.textContent = mapAddress
         }
 
-        document.querySelector(".content-section").scrollTop = 0;
+        document.querySelector('.content-section').scrollTop = 0
       }
 
       // ----------------------
       // MESSAGE POPUP
       // ----------------------
-      function displayMessage(message, type = "success") {
-        propertyFoundText.textContent = message;
-        propertyFoundText.classList.remove("show", "error");
+      function displayMessage(message, type = 'success') {
+        propertyFoundText.textContent = message
+        propertyFoundText.classList.remove('show', 'error')
 
-        if (type === "error") {
-          propertyFoundText.classList.add("error");
+        if (type === 'error') {
+          propertyFoundText.classList.add('error')
         }
 
-        propertyFoundText.classList.add("show");
+        propertyFoundText.classList.add('show')
 
-        setTimeout(() => propertyFoundText.classList.remove("show"), 5000);
+        setTimeout(() => propertyFoundText.classList.remove('show'), 5000)
       }
 
       // ----------------------
@@ -339,12 +339,12 @@
       async function exponentialBackoffFetch(url, maxRetries = 3) {
         for (let i = 0; i < maxRetries; i++) {
           try {
-            const res = await fetch(url);
-            if (!res.ok) throw new Error("HTTP Status " + res.status);
-            return res;
+            const res = await fetch(url)
+            if (!res.ok) throw new Error('HTTP Status ' + res.status)
+            return res
           } catch (err) {
-            if (i === maxRetries - 1) throw err;
-            await new Promise((r) => setTimeout(r, Math.pow(2, i) * 1000));
+            if (i === maxRetries - 1) throw err
+            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000))
           }
         }
       }
@@ -355,34 +355,34 @@
       async function geocodeAddress(fullAddress) {
         const url = `https://us1.locationiq.com/v1/search?key=${API_KEY}&q=${encodeURIComponent(
           fullAddress
-        )}&format=json&limit=1`;
+        )}&format=json&limit=1`
 
         try {
-          const res = await exponentialBackoffFetch(url);
-          const data = await res.json();
+          const res = await exponentialBackoffFetch(url)
+          const data = await res.json()
 
           if (data && data.length > 0) {
-            const lat = parseFloat(data[0].lat);
-            const lon = parseFloat(data[0].lon);
-            const formattedAddress = data[0].display_name;
+            const lat = parseFloat(data[0].lat)
+            const lon = parseFloat(data[0].lon)
+            const formattedAddress = data[0].display_name
 
-            mapAddressDisplay.textContent = formattedAddress;
-            initMap(lat, lon, formattedAddress);
+            mapAddressDisplay.textContent = formattedAddress
+            initMap(lat, lon, formattedAddress)
 
             displayMessage(
-              "Good News! Neighbourhood sold data found.",
-              "success"
-            );
+              'Good News! Neighbourhood sold data found.',
+              'success'
+            )
           } else {
-            throw new Error("No location found");
+            throw new Error('No location found')
           }
         } catch (err) {
-          mapAddressDisplay.textContent = "Showing fallback location";
-          initMap(fallbackLat, fallbackLon, "Fallback region");
+          mapAddressDisplay.textContent = 'Showing fallback location'
+          initMap(fallbackLat, fallbackLon, 'Fallback region')
           displayMessage(
-            "Could not locate address. Showing default area.",
-            "error"
-          );
+            'Could not locate address. Showing default area.',
+            'error'
+          )
         }
       }
 
@@ -390,198 +390,198 @@
       // LEAFLET MAP INIT
       // ----------------------
       function initMap(lat, lon, popupText) {
-        let map;
+        let map
 
         if (window.mapInstance) {
-          map = window.mapInstance;
-          map.setView([lat, lon], 15);
+          map = window.mapInstance
+          map.setView([lat, lon], 15)
 
-          map.eachLayer((layer) => {
-            if (layer instanceof L.Marker) map.removeLayer(layer);
-          });
+          map.eachLayer(layer => {
+            if (layer instanceof L.Marker) map.removeLayer(layer)
+          })
         } else {
-          map = L.map("map", { attributionControl: false }).setView(
+          map = L.map('map', { attributionControl: false }).setView(
             [lat, lon],
             15
-          );
-          window.mapInstance = map;
+          )
+          window.mapInstance = map
 
           const satelliteLayer = L.tileLayer(
-            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
             { maxZoom: 18 }
-          );
+          )
 
           const mapLayer = L.tileLayer(
-            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             { maxZoom: 19 }
-          ).addTo(map);
+          ).addTo(map)
 
           window.layers = {
             satellite: satelliteLayer,
             map: mapLayer,
-            current: "map",
-          };
+            current: 'map'
+          }
 
-          setupMapControls();
+          setupMapControls()
         }
 
-        L.marker([lat, lon]).addTo(map).bindPopup(popupText).openPopup();
+        L.marker([lat, lon]).addTo(map).bindPopup(popupText).openPopup()
       }
 
       // ----------------------
       // MAP CONTROLS
       // ----------------------
       function setupMapControls() {
-        const mapBtn = document.getElementById("map-view");
-        const satBtn = document.getElementById("satellite-view");
+        const mapBtn = document.getElementById('map-view')
+        const satBtn = document.getElementById('satellite-view')
 
         function switchLayer(id) {
-          const map = window.mapInstance;
+          const map = window.mapInstance
 
-          if (window.layers.current === id) return;
+          if (window.layers.current === id) return
 
-          map.removeLayer(window.layers[window.layers.current]);
-          window.layers[id].addTo(map);
-          window.layers.current = id;
+          map.removeLayer(window.layers[window.layers.current])
+          window.layers[id].addTo(map)
+          window.layers.current = id
 
-          mapBtn.classList.toggle("active", id === "map");
-          satBtn.classList.toggle("active", id === "satellite");
+          mapBtn.classList.toggle('active', id === 'map')
+          satBtn.classList.toggle('active', id === 'satellite')
         }
 
-        mapBtn.addEventListener("click", () => switchLayer("map"));
-        satBtn.addEventListener("click", () => switchLayer("satellite"));
+        mapBtn.addEventListener('click', () => switchLayer('map'))
+        satBtn.addEventListener('click', () => switchLayer('satellite'))
       }
 
       // ----------------------
       // VALIDATION
       // ----------------------
       function validateFields(formId, fields) {
-        const errorBox = document.getElementById(formId + "-error-container");
-        let errors = [];
+        const errorBox = document.getElementById(formId + '-error-container')
+        let errors = []
 
-        errorBox.classList.remove("show");
-        errorBox.innerHTML = "";
+        errorBox.classList.remove('show')
+        errorBox.innerHTML = ''
 
-        fields.forEach((f) => {
-          const el = document.getElementById(f.id);
-          const value = el.value.trim();
-          el.classList.remove("invalid");
+        fields.forEach(f => {
+          const el = document.getElementById(f.id)
+          const value = el.value.trim()
+          el.classList.remove('invalid')
 
-          let isInvalid = value === "" || value === "Select an option";
+          let isInvalid = value === '' || value === 'Select an option'
 
           if (
-            f.id === "user-email" &&
-            value !== "" &&
+            f.id === 'user-email' &&
+            value !== '' &&
             !/\S+@\S+\.\S+/.test(value)
           ) {
-            isInvalid = true;
-            errors.push("Email is invalid.");
+            isInvalid = true
+            errors.push('Email is invalid.')
           }
 
-          if (f.id === "phone-number") {
-            const digits = value.replace(/\D/g, "");
+          if (f.id === 'phone-number') {
+            const digits = value.replace(/\D/g, '')
             if (digits.length !== 10) {
-              isInvalid = true;
-              errors.push("Phone number must be exactly 10 digits.");
+              isInvalid = true
+              errors.push('Phone number must be exactly 10 digits.')
             }
           }
 
-          if (f.id === "consent-check" && !el.checked) {
-            isInvalid = true;
-            errors.push("You must agree to the terms and services.");
+          if (f.id === 'consent-check' && !el.checked) {
+            isInvalid = true
+            errors.push('You must agree to the terms and services.')
           }
 
           if (isInvalid) {
-            el.classList.add("invalid");
+            el.classList.add('invalid')
             if (!errors.includes(`${f.name} is required.`)) {
-              errors.push(`${f.name} is required.`);
+              errors.push(`${f.name} is required.`)
             }
           }
-        });
+        })
 
         if (errors.length > 0) {
           errorBox.innerHTML =
-            "<ul>" + errors.map((e) => `<li>${e}</li>`).join("") + "</ul>";
-          errorBox.classList.add("show");
-          document.querySelector(".content-section").scrollTop = 0;
-          return false;
+            '<ul>' + errors.map(e => `<li>${e}</li>`).join('') + '</ul>'
+          errorBox.classList.add('show')
+          document.querySelector('.content-section').scrollTop = 0
+          return false
         }
 
-        return true;
+        return true
       }
 
       // ----------------------
       // STEP 1 FORM
       // ----------------------
-      addressForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+      addressForm.addEventListener('submit', e => {
+        e.preventDefault()
 
-        const street = document.getElementById("street-address").value.trim();
-        const cityZip = document.getElementById("city-state-zip").value.trim();
-        const unit = document.getElementById("unit").value.trim();
+        const street = document.getElementById('street-address').value.trim()
+        const cityZip = document.getElementById('city-state-zip').value.trim()
+        const unit = document.getElementById('unit').value.trim()
 
         if (street && cityZip) {
           const fullAddress = unit
             ? `${street}, Unit ${unit}, ${cityZip}`
-            : `${street}, ${cityZip}`;
+            : `${street}, ${cityZip}`
 
-          mapAddressDisplay.textContent = fullAddress;
-          updateStepUI(2, fullAddress);
-          initMap(fallbackLat + 0.01, fallbackLon, fullAddress);
+          mapAddressDisplay.textContent = fullAddress
+          updateStepUI(2, fullAddress)
+          initMap(fallbackLat + 0.01, fallbackLon, fullAddress)
         } else {
-          const box = document.getElementById("address-error-container");
+          const box = document.getElementById('address-error-container')
           box.innerHTML =
-            "<ul><li>Street Address and City/ZIP are required.</li></ul>";
-          box.classList.add("show");
+            '<ul><li>Street Address and City/ZIP are required.</li></ul>'
+          box.classList.add('show')
         }
-      });
+      })
 
       // ----------------------
       // STEP 2 FORM
       // ----------------------
       const propertyFormFields = [
-        { id: "sell-time", name: "Time to sell" },
-        { id: "condition", name: "Home condition" },
-        { id: "property-type", name: "Property type" },
-        { id: "agent", name: "Agent status" },
-      ];
+        { id: 'sell-time', name: 'Time to sell' },
+        { id: 'condition', name: 'Home condition' },
+        { id: 'property-type', name: 'Property type' },
+        { id: 'agent', name: 'Agent status' }
+      ]
 
-      propertyForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        if (validateFields("property", propertyFormFields)) {
-          updateStepUI(3, mapAddressDisplay.textContent);
+      propertyForm.addEventListener('submit', e => {
+        e.preventDefault()
+        if (validateFields('property', propertyFormFields)) {
+          updateStepUI(3, mapAddressDisplay.textContent)
         }
-      });
+      })
 
       // ----------------------
       // STEP 3 FORM
       // ----------------------
       const contactFormFields = [
-        { id: "full-name", name: "Full name" },
-        { id: "user-email", name: "Email" },
-        { id: "phone-number", name: "Phone number" },
-        { id: "consent-check", name: "Consent" },
-      ];
+        { id: 'full-name', name: 'Full name' },
+        { id: 'user-email', name: 'Email' },
+        { id: 'phone-number', name: 'Phone number' },
+        { id: 'consent-check', name: 'Consent' }
+      ]
 
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+      contactForm.addEventListener('submit', e => {
+        e.preventDefault()
 
-        if (validateFields("contact", contactFormFields)) {
-          displayMessage("Thank you! Your valuation is confirmed.", "success");
+        if (validateFields('contact', contactFormFields)) {
+          displayMessage('Thank you! Your valuation is confirmed.', 'success')
 
-          const btn = document.querySelector("#contact-form .confirm-btn");
-          btn.textContent = "Valuation Sent!";
-          btn.disabled = true;
+          const btn = document.querySelector('#contact-form .confirm-btn')
+          btn.textContent = 'Valuation Sent!'
+          btn.disabled = true
         }
-      });
+      })
 
       // ----------------------
       // ON PAGE LOAD
       // ----------------------
       window.onload = function () {
-        geocodeAddress(defaultAddress);
-        updateStepUI(2, defaultAddress);
-      };
+        geocodeAddress(defaultAddress)
+        updateStepUI(2, defaultAddress)
+      }
     </script>
   </body>
 </html>
