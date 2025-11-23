@@ -1,72 +1,76 @@
-// Replace with your active LocationIQ key
-var locationiqKey = "pk.5e35cc8c57351374e6e45c78f90da3bf";
+//
+const API_KEY = "618b6ae42ae5401ea10ede800e7b82c4";
+//selectors
 
-$("#search-box-input").autocomplete({
-  minChars: 3,
-  deferRequestBy: 250,
-  serviceUrl: "https://api.locationiq.com/v1/autocomplete.php",
-  paramName: "q",
-  params: {
-    key: locationiqKey,
-    format: "json",
-    limit: 10,
-  },
-  ajaxSettings: {
-    dataType: "json",
-  },
-  transformResult: function (response) {
-    // Map the API response to autocomplete format
-    var suggestions = $.map(response, function (dataItem) {
-      return {
-        value: dataItem.display_name,
-        data: dataItem,
-      };
-    });
-    return { suggestions: suggestions };
-  },
-  onSelect: function (suggestion) {
-    displayLatLon(
-      suggestion.data.display_name,
-      suggestion.data.lat,
-      suggestion.data.lon
-    );
-  },
-});
+const input = document.getElementById("addressInput");
+const sug = document.getElementById("suggestions");
 
-// Optional: Reset button
-// $("#reset-autocomplete").click(function() {
-//   $("#search-box-input").val("");
-//   $("#result").html("");
-// });
+// ----------------------------
+// AUTOCOMPLETE FUNCTION
+// ----------------------------
+async function getSuggestions(query) {
+  if (!query) {
+    sug.hidden = true;
+    return;
+  }
 
-// Display coordinates
-function displayLatLon(display_name, lat, lng) {
-  $("#result").html(
-    "<strong>Selected:</strong> " +
-      display_name +
-      "<br/><strong>Lat:</strong> " +
-      lat +
-      "<br/><strong>Lon:</strong> " +
-      lng
-  );
+  const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
+    query
+  )}&limit=5&apiKey=${API_KEY}`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+  const countryLists = data?.features;
+
+  sug.innerHTML = "";
+  if (!countryLists.length) {
+    sug.hidden = true;
+    return;
+  }
+
+  countryLists.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item.properties.formatted;
+    li.onclick = () => {
+      input.value = item.properties.formatted;
+      sug.hidden = true;
+    };
+    sug.appendChild(li);
+    sug.hidden = false;
+  });
 }
 
+// ----------------------------
+// INPUT LISTENER (DEBOUNCE)
+// ----------------------------
+let timer;
 
-document.addEventListener("DOMContentLoaded", function() {
-  const btn = document.getElementById("show-map-btn");
+input.oninput = (e) => {
+  clearTimeout(timer);
+  timer = setTimeout(() => getSuggestions(e.target.value), 300);
+};
 
-  btn.addEventListener("click", function(e) {
-    e.preventDefault(); 
-    const address = document.getElementById("search-box-input").value.trim();
-    const unit = document.querySelector(".unit-input").value.trim();
+//search input suggestions
+input.addEventListener("focus", () => {
+  if (input.value.trim().length > 0) {
+    getSuggestions(input.value.trim());
+  }
+} , false);
 
-    if (!address) {
-      alert("Please enter an address");
-      return;
-    }
+// click outside hide suggestions
+document.addEventListener("click", (e) => {
+  if (!document.querySelector(".search-box").contains(e.target)) {
+    sug.hidden = true;
+  }
+} , false);
 
-    // Redirect to sellmap.html with query parameters
-    const url = `sellmap.html?address=${encodeURIComponent(address)}&unit=${encodeURIComponent(unit)}`;
-    window.location.href = url;
-  });
-});
+// ----------------------------
+// BUTTON → REDIRECT
+// ----------------------------
+
+function goToMap() {
+  const address = input.value.trim();
+  if (!address) return alert("Please enter an address");
+
+  window.location.href = "map.html?address=" + encodeURIComponent(address);
+}
