@@ -1,77 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/selling.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <title>Free Home Valuation</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
-  </head>
 
+    <title>Search Address</title>
+    <link rel="stylesheet" href="css/autocompleteaddress.css" />
+    <link rel="stylesheet" href="css/general.css" />
+  </head>
   <body>
     <main>
       <section class="home-value">
-        <!-- Background Image -->
         <div class="home-image">
-          <picture>
-            <source
-              srcset="img/avif/toronto-real-estate.avif"
-              type="image/avif"
-            />
-            <source
-              srcset="img/webp/toronto-real-estate.webp"
-              type="image/webp"
-            />
-            <img
-              src="img/jpg/toronto-real-estate.jpg"
-              alt="Toronto real estate skyline"
-              decoding="async"
-            />
-          </picture>
+          <img
+            src="./toronto-real-estate.jpg"
+            alt="Toronto real estate skyline"
+            decoding="async"
+          />
         </div>
 
-        <!-- Overlay Content -->
         <div class="home-overlay">
-          <h1 class="title">Free Home Valuation</h1>
-
+          <h1 class="address">Find Address</h1>
           <div class="search-box">
-            <!-- Address input -->
-            <div id="search-box">
-              <div
-                class="locationiq-autocomplete-control locationiq-bounds locationiq-control locationiq-autocomplete-expanded"
-                id="search-box-area"
-              >
-                <input
-                  class="locationiq-autocomplete-input ui-autocomplete-input"
-                  id="search-box-input"
-                  title="Search"
-                  placeholder="Search for an address..."
-                />
-                <a class="locationiq-autocomplete-search-icon"></a>
-                <!-- <a class="locationiq-reset-control" id="reset-autocomplete" title="Reset">x</a> -->
-              </div>
+            <div class="home-value-flex">
+              <input
+                type="text"
+                id="addressInput"
+                placeholder="Search address..."
+                autocomplete="off"
+              />
+
+              <ul id="suggestions" hidden></ul>
             </div>
 
-            <!-- Unit number -->
-            <input
-              type="text"
-              placeholder="Unit # (if exists)"
-              class="unit-input"
-            />
-
-            <!-- Button -->
-            <a href="sellmap.html" class="btn" id="show-map-btn">Show me</a>
+            <button onclick="goToMap()">Search</button>
           </div>
-
-          <p class="subtext">
-            Type your address below to find out how much your property is worth.
-          </p>
         </div>
       </section>
     </main>
 
-    <script src="autocomplete.js"></script>
+   <script src="autocomplete.js"></script>
   </body>
 </html>
