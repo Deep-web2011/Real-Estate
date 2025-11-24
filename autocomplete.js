@@ -14,10 +14,13 @@ async function getSuggestions(query) {
     return;
   }
 
-  const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
-    query
-  )}&filter=countrycode:ca&limit=5&apiKey=${API_KEY}`;
+  // const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
+  //   query
+  // )}&filter=countrycode:ca&limit=5&apiKey=${API_KEY}`;
 
+const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
+  query
+)}&filter=countrycode:ca&type=street,address,postcode&bias=countrycode:ca&limit=5&apiKey=${API_KEY}`;
 
   const res = await fetch(url);
   const data = await res.json();
