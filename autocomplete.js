@@ -16,7 +16,8 @@ async function getSuggestions(query) {
 
   const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
     query
-  )}&limit=5&apiKey=${API_KEY}`;
+  )}&filter=countrycode:ca&limit=5&apiKey=${API_KEY}`;
+
 
   const res = await fetch(url);
   const data = await res.json();
