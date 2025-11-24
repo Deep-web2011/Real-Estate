@@ -18,9 +18,16 @@ async function getSuggestions(query) {
   //   query
   // )}&filter=countrycode:ca&limit=5&apiKey=${API_KEY}`;
 
-const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
-  query
-)}&filter=countrycode:ca&type=street,address,postcode&bias=countrycode:ca&limit=5&apiKey=${API_KEY}`;
+const params = new URLSearchParams({
+  text: query,
+  filter: "countrycode:ca",
+  type: "street,address,postcode",
+  bias: "countrycode:ca",
+  limit: 5,
+  apiKey: API_KEY,
+});
+
+const url = `https://api.geoapify.com/v1/geocode/autocomplete?${params}`;
 
   const res = await fetch(url);
   const data = await res.json();
