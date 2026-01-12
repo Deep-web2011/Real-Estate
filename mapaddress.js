@@ -41,9 +41,6 @@ async function loadMap() {
 
 loadMap();
 
-
-
-
 //forms
 const steps = document.querySelectorAll("[data-step]");
 const stepIndicators = document.querySelectorAll(".step-item");
@@ -53,18 +50,18 @@ let current = 0;
 steps[current]?.classList.add("active");
 
 // NEXT buttons
-document.addEventListener("click", (e) => {
+document.addEventListener("click", function (e) {
   if (e.target.hasAttribute("data-next")) {
-    e.preventDefault()
-    if (!validateStep(current)) return;
-    markStepComplete(current);
-    
-    // Move to next form step
-    steps[current]?.classList.remove("active");
+    e.preventDefault();
+
+    const valid = markStepComplete(current);
+    if (!valid) return;
+
+    steps[current].classList.remove("active");
     current++;
     steps[current]?.classList.add("active");
 
-    // Show popup on step 3
+    // update progress line
     if (current === 2) {
       document.querySelector(".center-div").classList.add("active");
       document.querySelector(".main-container").classList.add("blur-bg");
@@ -72,121 +69,95 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 // VALIDATION
-function validateStep(stepIndex) {
-  const inputs =
-    steps[stepIndex]?.querySelectorAll("input[required], select") || [];
-  let valid = true;
 
-  inputs.forEach((input) => {
-    const value = input.value.trim();
+function validation(e) {
+  if (!e.target.matches("input[required], select[required]")) return;
 
-    if (input.id === "phone") {
-      const phoneError = document.getElementById("phone-error");
+  const span = e.target.parentElement.querySelector(".error-msg");
 
-      if (!/^\d{10}$/.test(value)) {
-        input.style.border = "2px solid red";
-        phoneError.style.display = "inline";
-        valid = false;
-      } else {
-        input.style.border = "2px solid green";
-        phoneError.style.display = "none";
-      }
-    }
-
-    else if (input.id === "email") {
-      const emailError = document.getElementById("email-error");
-
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        input.style.border = "2px solid red";
-        emailError.style.display = "inline";
-        valid = false;
-      } else {
-        input.style.border = "2px solid green";
-        emailError.style.display = "none";
-      }
-    }
-
-    else if (input.type === "checkbox") {
-      if (!input.checked) {
-        input.style.outline = "2px solid red";
-        valid = false;
-      } else {
-        input.style.outline = "2px solid green";
-      }
-    }
-
-    else {
-      if (!value) {
-        input.style.border = "2px solid red";
-        valid = false;
-      } else {
-        input.style.border = "2px solid green";
-      }
-    }
-  });
-
-  return valid;
+  if (!e.target.checkValidity()) {
+    e.target.style.border = "2px solid red";
+    if (span) span.style.display = "block";
+  } else {
+    e.target.style.border = "2px solid green";
+    if (span) span.style.display = "none";
+  }
 }
 
+document.addEventListener("input", validation);
 
 // MARK STEP COMPLETE
-function markStepComplete(stepIndex) {
-  const inputs =
-    steps[stepIndex]?.querySelectorAll("input[required], select") || [];
+function markStepComplete(index) {
+  const fields = steps[index].querySelectorAll(
+    "input[required], select[required]"
+  );
+  let valid = true;
 
-  const allFilled = Array.from(inputs).every((input) => {
-    if (input.id === "email")
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+  fields.forEach((field) => {
+    const span = field.parentElement.querySelector(".error-msg"); // span must be right after input
 
-    if (input.id === "phone")
-      return /^\d{10}$/.test(input.value.trim());
+    if (!field.checkValidity()) {
+      // <-- Browser built-in validation
+      field.style.border = "2px solid red";
+      valid = false;
 
-    if (input.type === "checkbox")
-      return input.checked;
+      // show error message
+      if (span) span.style.display = "block";
+    } else {
+      field.style.border = "2px solid green";
 
-    return input.value.trim() !== "";
+      // hide error message
+      if (span) span.style.display = "none";
+    }
   });
 
-  if (allFilled && stepIndicators[stepIndex]) {
-    const circle = stepIndicators[stepIndex].querySelector(".circle");
+  if (valid && stepIndicators[index]) {
+    const circle = stepIndicators[index].querySelector(".circle");
     if (circle) {
       circle.innerHTML = '<i class="fas fa-check"></i>';
       circle.classList.add("completed");
     }
+  } else if (stepIndicators[index]) {
+    // optional: remove check if step is invalid
+    const circle = stepIndicators[index].querySelector(".circle");
+    if (circle) {
+      circle.innerHTML = index + 1; // restore step number
+      circle.classList.remove("completed");
+    }
   }
+
+  return valid;
 }
 
+//Modal
+const centerDiv = document.querySelector(".center-div");
+const mainContainer = document.querySelector(".main-container");
+const contentSection = document.querySelector(".content-section");
+const closeIcon = document.querySelector(".fa-xmark");
+const stepsValid = document.querySelectorAll("[data-step]");
 
-// REAL-TIME VALIDATION
-document.querySelectorAll("input[required], select").forEach((field) => {
-  field.addEventListener("input", () => {
-    validateStep(current);
-    markStepComplete(current);
-  });
+function closePopup() {
+  centerDiv.classList.remove("active");
+  mainContainer.classList.remove("blur-bg");
+  contentSection.classList.remove("hidden");
 
-  if (field.type === "checkbox") {
-    field.addEventListener("change", () => {
-      validateStep(current);
-      markStepComplete(current);
-    });
+  // Restore first step (
+  stepsValid.forEach((step) => step.classList.remove("active"));
+  steps[0]?.classList.add("active");
+  current = 0;
+  markStepComplete(current);
+}
+
+/* Click outside popup */
+centerDiv.addEventListener("click", (e) => {
+  if (e.target === centerDiv) {
+    closePopup();
   }
 });
 
+/* Click X icon */
+closeIcon.addEventListener("click", closePopup);
 
-// CLOSE POPUP WHEN CLICKING X
-// document.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("fa-xmark")) {
-//     document.querySelector(".center-div").classList.remove("active");
-//     document.querySelector(".main-container").classList.remove("blur-bg");
-//   }
-// });
 
-// CLOSE POPUP WHEN CLICKING OUTSIDE
-// document.querySelector(".center-div").addEventListener("click", (e) => {
-//   if (e.target.classList.contains("center-div")) {
-//     document.querySelector(".center-div").classList.remove("active");
-//     document.querySelector(".main-container").classList.remove("blur-bg");
-//   }
-// });
+
