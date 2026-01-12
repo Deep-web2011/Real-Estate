@@ -118,7 +118,7 @@
               <div class="form-group">
                 <label for="email">Email *</label>
                 <input type="email" name="email" id="email" required />
-                <span id="email-error" style="color: red; display: none">
+                <span class="error-msg">
                   Enter valid email id
                 </span>
               </div>
@@ -126,7 +126,7 @@
               <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="text" name="phone" id="phone" required />
-                <span id="phone-error" style="color: red; display: none"
+                <span class="error-msg"
                   >Phone must be 10 digits</span
                 >
               </div>
@@ -149,9 +149,9 @@
 
       <div class="center-div">
         <div class="card thank-you-card" data-step>
-          <div>
+          <div class="thank-you-card-title-icon">
             <h2 class="step-title">Hi User!</h2>
-            <!-- <span><i class="fa-solid fa-xmark"></i></span> -->
+            <span><i class="fa-solid fa-xmark"></i></span>
           </div>
           <p class="thank-you-text">
             Thanks for submitting your information, our team is already hard at
