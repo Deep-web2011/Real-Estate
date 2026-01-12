@@ -487,6 +487,10 @@ body.menu-active {
   display: block;
 }
 
+.header .menu .dropdown.active > a > i {
+        transform: rotate(180deg);
+}
+
 .header .menu .dropdown > a {
   display: inline-flex;
   align-items: center;
