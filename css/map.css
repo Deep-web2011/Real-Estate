@@ -6,21 +6,25 @@ body {
 
 .main-container {
   display: flex;
-  height: 100vh;
   width: 100%;
   margin: 0 auto;
+  height: auto;
 }
 
 .map-section {
   position: relative;
   flex: 2;
   height: 100dvh;
+  overflow: hidden;
 }
 
 #map {
   width: 100%;
+  height: 100%;
   min-height: 360px;
+  touch-action: pan-x pan-y;
 }
+
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   font-family: var(--font-Mukta);
@@ -284,6 +288,8 @@ body {
   font-size: 13px;
   font-weight: 500;
 }
+
+
 /* animations */
 @keyframes popup {
   0% {
@@ -324,6 +330,10 @@ body {
 
 /* responsive */
 @media (max-width: 1023px) {
+  .map-section {
+    height: 70dvh;
+  }
+
   .main-container {
     flex-direction: column;
     height: auto;
